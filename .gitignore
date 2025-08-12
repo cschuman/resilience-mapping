@@ -53,6 +53,7 @@ Desktop.ini
 # Data files - ignore raw downloads but keep processed results
 data/raw/*.xlsx
 data/raw/*.txt
+data/raw/*.csv
 data/external/*.zip
 data/external/*.shp
 data/external/*.dbf
@@ -60,10 +61,11 @@ data/external/*.shx
 data/external/*.prj
 data/external/*.cpg
 data/external/*.xml
+data/external/*.geojson
+figures/*.geojson
 
 # Keep important processed files and docs
 !data/processed/*.csv
-!data/raw/places_tract.csv
 !figures/index.html
 !figures/*.png
 !.gitkeep
