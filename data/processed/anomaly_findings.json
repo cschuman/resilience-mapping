@@ -1,0 +1,10 @@
+{
+  "poverty_anomalies": {
+    "poverty_100_count": 4,
+    "poverty_0_count": 1,
+    "poverty_100_mean_resilience": 0.30742575,
+    "poverty_0_mean_resilience": 4.13887
+  },
+  "population_anomalies": {
+    "tiny_population_count": 21,
+    "smallest_population": 

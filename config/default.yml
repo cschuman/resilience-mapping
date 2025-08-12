@@ -1,0 +1,20 @@
+paths:
+  raw_dir: data/raw
+  interim_dir: data/interim
+  processed_dir: data/processed
+  external_dir: data/external
+  figures_dir: figures
+
+  # Prefilled, can be overridden by env or flags
+  places_tract_csv_url: "https://data.cdc.gov/api/views/em5e-5hvn/rows.csv?accessType=DOWNLOAD"
+  fara_xlsx_url: "https://ers.usda.gov/sites/default/files/_laserfiche/DataFiles/80591/FoodAccessResearchAtlasData2019.xlsx"
+  # Optional: national tracts shapefile (convert to GeoJSON outside or supply a direct GeoJSON)
+  tracts_shp_zip_url: "https://www2.census.gov/geo/tiger/GENZ2023/shp/cb_2023_us_tract_500k.zip"
+  tracts_geojson_path: "data/external/tracts_full.geojson"   # put a converted GeoJSON here if you want maps
+
+model:
+  outcomes: ["obesity", "diabetes", "hypertension", "chd", "physical_inactivity"]
+  burden_method: "zmean"   # zmean or pca
+  top_pct: 0.10            # 10% flagged as resilient
+  include_no_vehicle: true
+  state_fixed_effects: true

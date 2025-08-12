@@ -1,0 +1,69 @@
+# Go binaries
+bin/
+resilience
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Go dependencies
+vendor/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+ENV/
+.venv
+*.egg-info/
+dist/
+build/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.directory
+.Trash-*
+
+# Environment files
+.env
+.env.local
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Data files - ignore raw downloads but keep processed results
+data/raw/*.xlsx
+data/raw/*.txt
+data/external/*.zip
+data/external/*.shp
+data/external/*.dbf
+data/external/*.shx
+data/external/*.prj
+data/external/*.cpg
+data/external/*.xml
+
+# Keep important processed files and docs
+!data/processed/*.csv
+!data/raw/places_tract.csv
+!figures/index.html
+!figures/*.png
+!.gitkeep

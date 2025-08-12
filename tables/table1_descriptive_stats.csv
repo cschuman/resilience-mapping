@@ -1,0 +1,8 @@
+Variable,N,Mean,SD,Min,Max,Missing
+Health Burden Index,68170,0.000,0.722,-2.47,6.34,0
+Resilience Score,68170,-0.000,1.000,-11.03,4.75,0
+LILA (1+10 miles),68170,12.8%,-,0,1,0
+LILA (0.5+10 miles),68170,27.9%,-,0,1,0
+LILA (1+20 miles),68170,11.2%,-,0,1,0
+Low Income Tract,68170,42.1%,-,0,1,0
+Rural,68170,24.6%,-,0,1,0

@@ -1,0 +1,27 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "GEOID": "04005000500",
+        "NAME": "Census Tract 5, Coconino County, Arizona"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-111.0, 35.0], [-111.0, 35.1], [-110.9, 35.1], [-110.9, 35.0], [-111.0, 35.0]]]
+      }
+    },
+    {
+      "type": "Feature", 
+      "properties": {
+        "GEOID": "06013308001",
+        "NAME": "Census Tract 3080.01, Contra Costa County, California"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-122.0, 38.0], [-122.0, 38.1], [-121.9, 38.1], [-121.9, 38.0], [-122.0, 38.0]]]
+      }
+    }
+  ]
+}
