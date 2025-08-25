@@ -1,0 +1,78 @@
+# Docker ignore file
+# Created: January 31, 2025
+# Purpose: Exclude unnecessary files from Docker builds
+
+# Git files
+.git
+.gitignore
+.github
+
+# Development files
+.env
+.env.local
+.env.development
+.env.test
+*.log
+*.pid
+
+# Documentation
+*.md
+docs/
+README*
+CHANGELOG*
+LICENSE*
+
+# Build artifacts
+bin/
+build/
+dist/
+tmp/
+*.tmp
+
+# Test files
+*_test.go
+test/
+coverage.out
+coverage.html
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Development tools
+air
+.air.toml
+
+# Data files
+data/
+figures/
+*.csv
+*.json
+*.geojson
+
+# Node.js (if any frontend tooling)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python virtual environment (if any Python tooling)
+venv/
+__pycache__/
+*.py[cod]
+
+# Kubernetes and deployment files
+k8s/
+deploy/
+helm/
+
+# Backup files
+*.bak
+*.backup

@@ -1,0 +1,437 @@
+# Health Resilience Mapping Platform - Development Environment
+# Created: January 31, 2025
+# Purpose: Local development services for 27-person team
+
+version: '3.8'
+
+services:
+  # ============================================================================
+  # DATABASE SERVICES
+  # ============================================================================
+  
+  db:
+    image: postgis/postgis:14-3.2
+    container_name: resilience-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: resilience_dev
+      POSTGRES_USER: resilience
+      POSTGRES_PASSWORD: resilience_dev_password_2025
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8 --locale=C"
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./migrations/init:/docker-entrypoint-initdb.d
+      - ./scripts/db:/scripts:ro
+    networks:
+      - resilience-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U resilience -d resilience_dev"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    labels:
+      - "resilience.service=database"
+      - "resilience.environment=development"
+
+  # ============================================================================
+  # CACHE & SESSION STORAGE
+  # ============================================================================
+  
+  redis:
+    image: redis:7-alpine
+    container_name: resilience-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+      - ./config/redis.conf:/usr/local/etc/redis/redis.conf:ro
+    command: redis-server /usr/local/etc/redis/redis.conf
+    networks:
+      - resilience-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    labels:
+      - "resilience.service=cache"
+      - "resilience.environment=development"
+
+  # ============================================================================
+  # SEARCH ENGINE
+  # ============================================================================
+  
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.5.0
+    container_name: resilience-elasticsearch
+    restart: unless-stopped
+    environment:
+      - node.name=resilience-es-dev
+      - cluster.name=resilience-cluster
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - xpack.security.enabled=false
+      - xpack.security.enrollment.enabled=false
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+      - ./config/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+    networks:
+      - resilience-network
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:9200/_cluster/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    labels:
+      - "resilience.service=search"
+      - "resilience.environment=development"
+
+  # ============================================================================
+  # EMAIL TESTING (DEVELOPMENT ONLY)
+  # ============================================================================
+  
+  mailhog:
+    image: mailhog/mailhog:v1.0.1
+    container_name: resilience-mailhog
+    restart: unless-stopped
+    ports:
+      - "1025:1025"   # SMTP port
+      - "8025:8025"   # Web UI port
+    networks:
+      - resilience-network
+    labels:
+      - "resilience.service=email"
+      - "resilience.environment=development"
+
+  # ============================================================================
+  # API SERVER (OPTIONAL - usually run natively for development)
+  # ============================================================================
+  
+  api:
+    build:
+      context: .
+      dockerfile: deployments/docker/api.Dockerfile
+      target: development
+    container_name: resilience-api
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+      - "2345:2345"   # Debugger port
+    environment:
+      # Database
+      DATABASE_URL: postgres://resilience:resilience_dev_password_2025@db:5432/resilience_dev?sslmode=disable
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: resilience_dev
+      DB_USER: resilience
+      DB_PASSWORD: resilience_dev_password_2025
+      
+      # Cache
+      REDIS_URL: redis://redis:6379
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      
+      # Search
+      ELASTICSEARCH_URL: http://elasticsearch:9200
+      ELASTICSEARCH_HOST: elasticsearch
+      ELASTICSEARCH_PORT: 9200
+      
+      # Email (development)
+      SMTP_HOST: mailhog
+      SMTP_PORT: 1025
+      SMTP_USER: test@resilience-mapping.local
+      SMTP_PASSWORD: password
+      
+      # Application
+      APP_ENV: development
+      APP_PORT: 8080
+      APP_DEBUG: true
+      LOG_LEVEL: debug
+      
+      # JWT
+      JWT_SECRET: development-jwt-secret-change-in-production-2025
+      JWT_EXPIRY: 24h
+      
+      # CORS
+      CORS_ALLOWED_ORIGINS: "http://localhost:3000,http://localhost:3001,http://localhost:3002"
+      
+      # Rate Limiting
+      RATE_LIMIT_REQUESTS_PER_MINUTE: 1000
+      
+      # File Storage (local development)
+      STORAGE_TYPE: local
+      STORAGE_PATH: /app/storage
+      
+      # Monitoring
+      ENABLE_METRICS: true
+      METRICS_PORT: 9090
+    volumes:
+      - .:/app:cached
+      - go_mod_cache:/go/pkg/mod
+      - api_storage:/app/storage
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      elasticsearch:
+        condition: service_healthy
+    networks:
+      - resilience-network
+    profiles:
+      - api  # Only start when explicitly requested: docker-compose --profile api up
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    labels:
+      - "resilience.service=api"
+      - "resilience.environment=development"
+
+  # ============================================================================
+  # FRONTEND SERVICES (OPTIONAL - usually run natively for development)
+  # ============================================================================
+  
+  frontend-stories:
+    build:
+      context: .
+      dockerfile: deployments/docker/frontend.Dockerfile
+      target: development
+      args:
+        FRONTEND_DIR: frontend
+    container_name: resilience-frontend-stories
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8080
+      NEXT_PUBLIC_SITE_URL: http://localhost:3000
+      NEXT_PUBLIC_RESEARCH_URL: http://localhost:3001
+      NEXT_PUBLIC_POLICY_URL: http://localhost:3002
+      NEXT_PUBLIC_ENV: development
+      NODE_ENV: development
+    volumes:
+      - ./frontend:/app:cached
+      - /app/node_modules
+      - /app/.next
+    networks:
+      - resilience-network
+    profiles:
+      - frontend
+    depends_on:
+      - api
+    labels:
+      - "resilience.service=frontend-stories"
+      - "resilience.environment=development"
+
+  frontend-research:
+    build:
+      context: .
+      dockerfile: deployments/docker/frontend.Dockerfile
+      target: development
+      args:
+        FRONTEND_DIR: frontend-research
+    container_name: resilience-frontend-research
+    restart: unless-stopped
+    ports:
+      - "3001:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8080
+      NEXT_PUBLIC_SITE_URL: http://localhost:3001
+      NEXT_PUBLIC_STORIES_URL: http://localhost:3000
+      NEXT_PUBLIC_POLICY_URL: http://localhost:3002
+      NEXT_PUBLIC_ENV: development
+      NODE_ENV: development
+    volumes:
+      - ./frontend-research:/app:cached
+      - /app/node_modules
+      - /app/.next
+    networks:
+      - resilience-network
+    profiles:
+      - frontend
+    depends_on:
+      - api
+    labels:
+      - "resilience.service=frontend-research"
+      - "resilience.environment=development"
+
+  frontend-policy:
+    build:
+      context: .
+      dockerfile: deployments/docker/frontend.Dockerfile
+      target: development
+      args:
+        FRONTEND_DIR: frontend-policy
+    container_name: resilience-frontend-policy
+    restart: unless-stopped
+    ports:
+      - "3002:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8080
+      NEXT_PUBLIC_SITE_URL: http://localhost:3002
+      NEXT_PUBLIC_STORIES_URL: http://localhost:3000
+      NEXT_PUBLIC_RESEARCH_URL: http://localhost:3001
+      NEXT_PUBLIC_ENV: development
+      NODE_ENV: development
+    volumes:
+      - ./frontend-policy:/app:cached
+      - /app/node_modules
+      - /app/.next
+    networks:
+      - resilience-network
+    profiles:
+      - frontend
+    depends_on:
+      - api
+    labels:
+      - "resilience.service=frontend-policy"
+      - "resilience.environment=development"
+
+  # ============================================================================
+  # MONITORING & OBSERVABILITY (OPTIONAL)
+  # ============================================================================
+  
+  prometheus:
+    image: prom/prometheus:v2.40.0
+    container_name: resilience-prometheus
+    restart: unless-stopped
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./config/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--web.enable-lifecycle'
+    networks:
+      - resilience-network
+    profiles:
+      - monitoring
+    labels:
+      - "resilience.service=monitoring"
+      - "resilience.environment=development"
+
+  grafana:
+    image: grafana/grafana:9.2.0
+    container_name: resilience-grafana
+    restart: unless-stopped
+    ports:
+      - "3333:3000"
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: resilience_dev_2025
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./config/grafana/dashboards:/etc/grafana/provisioning/dashboards:ro
+      - ./config/grafana/datasources:/etc/grafana/provisioning/datasources:ro
+    networks:
+      - resilience-network
+    profiles:
+      - monitoring
+    depends_on:
+      - prometheus
+    labels:
+      - "resilience.service=dashboard"
+      - "resilience.environment=development"
+
+# ============================================================================
+# NETWORKS
+# ============================================================================
+
+networks:
+  resilience-network:
+    name: resilience-network
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+
+# ============================================================================
+# VOLUMES
+# ============================================================================
+
+volumes:
+  postgres_data:
+    name: resilience-postgres-data
+    driver: local
+  
+  redis_data:
+    name: resilience-redis-data
+    driver: local
+  
+  elasticsearch_data:
+    name: resilience-elasticsearch-data
+    driver: local
+  
+  prometheus_data:
+    name: resilience-prometheus-data
+    driver: local
+  
+  grafana_data:
+    name: resilience-grafana-data
+    driver: local
+  
+  go_mod_cache:
+    name: resilience-go-mod-cache
+    driver: local
+  
+  api_storage:
+    name: resilience-api-storage
+    driver: local
+
+# ============================================================================
+# USAGE INSTRUCTIONS
+# ============================================================================
+
+# Basic Development Setup (recommended):
+# 1. Start infrastructure services only:
+#    docker-compose up -d
+#
+# 2. Run API and frontend natively:
+#    make api-dev      (in one terminal)
+#    make frontend-dev (in another terminal)
+#
+# Full Docker Development:
+# 1. Start everything with Docker:
+#    docker-compose --profile api --profile frontend up -d
+#
+# Monitoring (optional):
+# 1. Start with monitoring:
+#    docker-compose --profile monitoring up -d
+#
+# View service URLs:
+# - API Server:        http://localhost:8080
+# - Stories Site:      http://localhost:3000
+# - Research Site:     http://localhost:3001
+# - Policy Site:       http://localhost:3002
+# - Database:          localhost:5432
+# - Redis:             localhost:6379
+# - Elasticsearch:     http://localhost:9200
+# - MailHog UI:        http://localhost:8025
+# - Prometheus:        http://localhost:9090
+# - Grafana:           http://localhost:3333 (admin/resilience_dev_2025)
+#
+# Useful Commands:
+# - View logs:         docker-compose logs -f [service]
+# - Scale service:     docker-compose up -d --scale api=3
+# - Rebuild service:   docker-compose build [service]
+# - Stop all:          docker-compose down
+# - Reset volumes:     docker-compose down -v
+# - Clean everything:  docker-compose down -v --remove-orphans
+#
+# For more commands, run: make help

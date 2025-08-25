@@ -1,0 +1,533 @@
+basePath: /v1
+host: api.resilience-mapping.org
+info:
+  contact:
+    email: support@resilience-mapping.org
+    name: API Support
+    url: https://resilience-mapping.org/support
+  description: API for accessing community resilience data, stories, and policy insights
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+  termsOfService: https://resilience-mapping.org/terms
+  title: Health Resilience Mapping API
+  version: "1.0"
+paths:
+  /auth/login:
+    post:
+      consumes:
+      - application/json
+      description: Authenticate user and return JWT token
+      parameters:
+      - description: Login credentials
+        in: body
+        name: credentials
+        required: true
+        schema:
+          additionalProperties: true
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Login successful
+          schema:
+            additionalProperties: true
+            type: object
+        "401":
+          description: Invalid credentials
+          schema:
+            additionalProperties: true
+            type: object
+      summary: User login
+      tags:
+      - authentication
+  /auth/register:
+    post:
+      consumes:
+      - application/json
+      description: Create a new user account with community verification
+      parameters:
+      - description: User registration data
+        in: body
+        name: user
+        required: true
+        schema:
+          additionalProperties: true
+          type: object
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: User created successfully
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Invalid input
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Register new user
+      tags:
+      - authentication
+  /communities:
+    get:
+      consumes:
+      - application/json
+      description: Retrieve a paginated list of public communities with optional filtering
+      parameters:
+      - description: Search query
+        in: query
+        name: q
+        type: string
+      - description: Filter by state code
+        in: query
+        name: state
+        type: string
+      - description: Filter by county code
+        in: query
+        name: county
+        type: string
+      - description: Show only unexpectedly resilient communities
+        in: query
+        name: resilient
+        type: boolean
+      - description: Minimum resilience score
+        in: query
+        name: min_score
+        type: number
+      - description: Maximum resilience score
+        in: query
+        name: max_score
+        type: number
+      - description: Minimum population
+        in: query
+        name: min_population
+        type: integer
+      - description: Maximum population
+        in: query
+        name: max_population
+        type: integer
+      - default: resilience_score
+        description: Sort by field
+        in: query
+        name: sort
+        type: string
+      - default: 20
+        description: Number of results to return
+        in: query
+        name: limit
+        type: integer
+      - default: 0
+        description: Number of results to skip
+        in: query
+        name: offset
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: List of communities
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: Internal server error
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Get list of communities
+      tags:
+      - communities
+  /communities/{id}:
+    get:
+      consumes:
+      - application/json
+      description: Retrieve detailed information for a specific public community
+      parameters:
+      - description: Community ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Community details
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Invalid community ID
+          schema:
+            additionalProperties: true
+            type: object
+        "403":
+          description: Community information is private
+          schema:
+            additionalProperties: true
+            type: object
+        "404":
+          description: Community not found
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: Internal server error
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Get community by ID
+      tags:
+      - communities
+  /communities/{id}/stories:
+    get:
+      consumes:
+      - application/json
+      description: Retrieve published stories for a specific community
+      parameters:
+      - description: Community ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Community stories
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Invalid community ID
+          schema:
+            additionalProperties: true
+            type: object
+        "404":
+          description: Community not found or private
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: Internal server error
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Get stories for community
+      tags:
+      - communities
+      - stories
+  /communities/nearby:
+    get:
+      consumes:
+      - application/json
+      description: Find public communities within a specified geographic radius
+      parameters:
+      - description: Latitude
+        in: query
+        name: lat
+        required: true
+        type: number
+      - description: Longitude
+        in: query
+        name: lng
+        required: true
+        type: number
+      - default: 50
+        description: Search radius in kilometers
+        in: query
+        name: radius
+        type: number
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Nearby communities
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Invalid coordinates
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: Internal server error
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Find nearby communities
+      tags:
+      - communities
+      - geography
+  /communities/resilient:
+    get:
+      consumes:
+      - application/json
+      description: Retrieve communities that show unexpected resilience based on research
+        metrics
+      parameters:
+      - default: 100
+        description: Number of results to return
+        in: query
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Resilient communities
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: Internal server error
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Get resilient communities
+      tags:
+      - communities
+      - resilience
+  /communities/search:
+    get:
+      consumes:
+      - application/json
+      description: Perform full-text search on public communities
+      parameters:
+      - description: Search query
+        in: query
+        name: q
+        required: true
+        type: string
+      - default: 10
+        description: Number of results to return
+        in: query
+        name: limit
+        type: integer
+      - default: 0
+        description: Number of results to skip
+        in: query
+        name: offset
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Search results
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Search query is required
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: Internal server error
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Search communities
+      tags:
+      - communities
+      - search
+  /communities/stats:
+    get:
+      consumes:
+      - application/json
+      description: Retrieve aggregate statistics for all public communities
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Community statistics
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: Internal server error
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Get community statistics
+      tags:
+      - communities
+      - statistics
+  /health:
+    get:
+      consumes:
+      - application/json
+      description: Basic health check endpoint for the API
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: API is healthy
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Health check
+      tags:
+      - health
+  /health/metrics:
+    get:
+      consumes:
+      - application/json
+      description: Get detailed system metrics for monitoring and debugging
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: System metrics
+          schema:
+            additionalProperties: true
+            type: object
+      summary: System metrics
+      tags:
+      - health
+      - metrics
+  /health/ready:
+    get:
+      consumes:
+      - application/json
+      description: Readiness check for Kubernetes deployment
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: API is ready
+          schema:
+            additionalProperties: true
+            type: object
+        "503":
+          description: API is not ready
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Readiness check
+      tags:
+      - health
+  /health/status:
+    get:
+      consumes:
+      - application/json
+      description: Get comprehensive system status including all dependencies
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: System is operational
+          schema:
+            additionalProperties: true
+            type: object
+        "503":
+          description: System is degraded
+          schema:
+            additionalProperties: true
+            type: object
+      summary: System status
+      tags:
+      - health
+      - status
+  /search:
+    get:
+      consumes:
+      - application/json
+      description: Search across communities, stories, and other content
+      parameters:
+      - description: Search query
+        in: query
+        name: q
+        required: true
+        type: string
+      - default: 10
+        description: Number of results to return
+        in: query
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Search results
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Invalid search query
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Global search
+      tags:
+      - search
+  /stories:
+    get:
+      consumes:
+      - application/json
+      description: Retrieve a paginated list of published stories
+      parameters:
+      - description: Filter by community ID
+        in: query
+        name: community_id
+        type: integer
+      - description: Filter by category
+        in: query
+        name: category
+        type: string
+      - default: 20
+        description: Number of results to return
+        in: query
+        name: limit
+        type: integer
+      - default: 0
+        description: Number of results to skip
+        in: query
+        name: offset
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: List of stories
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Get list of stories
+      tags:
+      - stories
+  /stories/{id}:
+    get:
+      consumes:
+      - application/json
+      description: Retrieve detailed information for a specific story
+      parameters:
+      - description: Story ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Story details
+          schema:
+            additionalProperties: true
+            type: object
+        "404":
+          description: Story not found
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Get story by ID
+      tags:
+      - stories
+schemes:
+- https
+- http
+swagger: "2.0"
