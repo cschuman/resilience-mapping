@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "app/backend/api.go": {
+      "runtime": "vercel-go"
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/app/backend/api.go"
+    }
+  ]
+}
