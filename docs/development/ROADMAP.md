@@ -1,36 +1,58 @@
 # 🗺️ Health Resilience Mapping - Development Roadmap
 
-## 🚨 Priority 1: Critical Fixes (Immediate)
+> **Last Updated**: December 24, 2025
+> **Status**: CRITICAL DATA QUALITY SPRINT IN PROGRESS
+> **Reference**: See `docs/team-profiles/team-management/STATE_OF_THE_UNION_2025-12-24.md` for full leadership analysis
 
-### 1.1 Fix State Fixed Effects Bug
-- **Issue**: `internal/model/expected.go:77-82` uses wrong index for state assignment
-- **Impact**: Incorrect regression coefficients affecting all resilience scores
-- **Action**: Fix loop to reference row's actual state, not loop index
-- **File**: `internal/model/expected.go`
-- **Estimated effort**: 1 hour
+---
 
-### 1.2 Add Data Validation
+## 🚨 PHASE 0: DATA QUALITY SPRINT (BLOCKING - Week 1-2)
+
+**All platform development is blocked until these issues are resolved.**
+
+### 0.1 Fix State Fixed Effects Bug ✅ FIXED
+- **Issue**: `app/backend/expected.go:77-82` inner loop variable `i` shadowed outer loop
+- **Impact**: CATASTROPHIC - All 68,170 resilience scores were potentially wrong
+- **Root Cause**: Inner loop `for i:=1; i<len(stateList); i++` shadowed outer loop, causing `burdened[i]` to use wrong index
+- **Fix Applied**: Renamed inner loop variable to `si` to avoid shadowing
+- **File**: `app/backend/expected.go`
+- **Status**: COMPLETED December 24, 2025
+
+### 0.2 Filter Institutional Populations (CRITICAL)
+- **Issue**: 498 tracts with >20% group quarters (prisons/dorms) contaminate analysis
+- **Impact**: Top "resilient" tract is 98.8% prison population
+- **Actions**:
+  - Add group quarters filter to data pipeline
+  - Exclude tracts with >10% institutional population (stricter threshold)
+  - Document exclusion criteria
+  - Re-run analysis with clean dataset
+- **Files**: `app/analytics/analyze_resilience.py`
+- **Owner**: Miguel Santos
+- **Estimated effort**: 2 days
+
+### 0.3 Re-run Analysis & Validate
+- **Issue**: Current 1,059 communities list based on buggy analysis
+- **Actions**:
+  - Execute corrected model
+  - Compare new vs old resilience scores
+  - Validate top 100 communities manually
+  - Document changes in findings
+- **Owner**: Miguel Santos + Research Team
+- **Estimated effort**: 1 week
+
+### 0.4 Add Data Validation
 - **Issue**: No validation of downloaded data integrity
-- **Impact**: Corrupt data could produce invalid results
 - **Actions**:
   - Add checksums for downloaded files
   - Validate CSV/Excel structure before processing
   - Check for required columns in PLACES and FARA data
 - **Estimated effort**: 3 hours
 
-### 1.3 Filter Institutional Populations
-- **Issue**: 498 tracts with >20% group quarters (prisons/dorms) contaminate analysis
-- **Impact**: "Resilient" tracts may just be prisons with controlled food service
-- **Actions**:
-  - Add group quarters filter to FARA data load
-  - Flag and exclude tracts with >20% institutional population
-  - Document exclusion criteria
-- **Files**: `internal/data/load.go`, `config/default.yml`
-- **Estimated effort**: 2 hours
+---
 
-## 📊 Priority 2: Data Quality Improvements (Week 1)
+## 📊 Priority 1: Data Quality Improvements (Week 2-3)
 
-### 2.1 Handle Temporal Misalignment
+### 1.1 Handle Temporal Misalignment
 - **Issue**: 4-year gap between FARA (2019) and PLACES (2023)
 - **Actions**:
   - Document temporal assumptions in README
@@ -250,27 +272,34 @@
 - [ ] 2+ policy adoptions
 - [ ] 10+ community contributions
 
-## 📅 Timeline
+## 📅 Revised Timeline (December 2025)
 
-### Month 1
-- Week 1: Critical fixes + Data quality
-- Week 2: Testing infrastructure
-- Week 3: Methodology enhancements
-- Week 4: Code review & integration
+### PHASE 0: Data Quality Sprint (Week 1-2) - BLOCKING
+- Week 1: Fix state FE bug ✅, filter institutional populations, re-run analysis
+- Week 2: Validate top 100 communities, document findings changes, research sign-off
 
-### Month 2
-- Week 1-2: Infrastructure improvements
-- Week 3-4: Performance optimization
+### PHASE 1: Community Trust Building (Weeks 1-6) - PARALLEL
+- Week 2: Form Community Advisory Board
+- Weeks 3-5: Pilot engagement with 5 communities
+- Week 4: Develop consent protocols
+- Week 5: Legal review
 
-### Month 3
-- Week 1-2: Analysis extensions
-- Week 3-4: Documentation & dissemination
+### PHASE 2: Technical Build (Weeks 3-10)
+- Weeks 3-4: Monorepo setup, design system, infrastructure
+- Weeks 5-6: Core features (map, search, community pages)
+- Weeks 7-8: Three-site MVP
+- Weeks 9-10: Performance, accessibility, security audits
+
+### PHASE 3: Tiered Launch
+- Research Site: After data quality sprint complete
+- Stories Site: 2 weeks after research site (with consented communities)
+- Policy Site: 4 weeks after research site
 
 ### Ongoing
-- Community support
-- Bug fixes
-- Feature requests
-- Research updates
+- Community support and consent building
+- Bug fixes and data quality monitoring
+- Feature requests (post-launch)
+- Research updates and peer review
 
 ## 🤝 Contributors Needed
 
@@ -298,5 +327,5 @@
 
 ---
 
-*Last Updated: January 2025*
-*Version: 1.0.0*
+*Last Updated: December 24, 2025*
+*Version: 2.0.0 - Post Leadership Deep Dive*

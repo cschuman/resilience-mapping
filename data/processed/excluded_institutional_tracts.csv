@@ -1,0 +1,3982 @@
+CensusTract,State,County,PCTGQTRS,GroupQuartersFlag
+1003010500,Alabama,Baldwin County,11.61,0
+1005950200,Alabama,Barbour County,40.43,0
+1005950400,Alabama,Barbour County,30.68,0
+1007010004,Alabama,Bibb County,24.57,0
+1011952200,Alabama,Bullock County,23.8,0
+1015000600,Alabama,Calhoun County,18.67,0
+1015000800,Alabama,Calhoun County,19.07,0
+1015002101,Alabama,Calhoun County,35.2,0
+1039962500,Alabama,Covington County,10.5,0
+1043965401,Alabama,Cullman County,10.94,0
+1045020000,Alabama,Dale County,11.87,0
+1051030100,Alabama,Elmore County,37.36,0
+1051030600,Alabama,Elmore County,14.63,0
+1053970200,Alabama,Escambia County,10.06,0
+1053970400,Alabama,Escambia County,50.28,0
+1055001200,Alabama,Etowah County,22.11,0
+1069040600,Alabama,Houston County,11.29,0
+1069041400,Alabama,Houston County,11.25,0
+1073001600,Alabama,Jefferson County,17.73,0
+1073002000,Alabama,Jefferson County,11.4,0
+1073002700,Alabama,Jefferson County,42.03,0
+1073003001,Alabama,Jefferson County,34.11,0
+1073004500,Alabama,Jefferson County,46.21,0
+1073010200,Alabama,Jefferson County,13.45,0
+1073010704,Alabama,Jefferson County,37.63,0
+1073012200,Alabama,Jefferson County,36.88,0
+1077010100,Alabama,Lauderdale County,46.76,0
+1077010400,Alabama,Lauderdale County,12.3,0
+1081040700,Alabama,Lee County,83.93,1
+1083020500,Alabama,Limestone County,10.2,0
+1083020801,Alabama,Limestone County,29.16,0
+1087231700,Alabama,Macon County,76.01,1
+1089000202,Alabama,Madison County,47.99,0
+1089001500,Alabama,Madison County,22.6,0
+1089002200,Alabama,Madison County,10.09,0
+1089003100,Alabama,Madison County,38.83,0
+1089010622,Alabama,Madison County,11.46,0
+1089011100,Alabama,Madison County,42.1,0
+1093964400,Alabama,Marion County,11.12,0
+1097000200,Alabama,Mobile County,30.51,0
+1097001001,Alabama,Mobile County,17.25,0
+1097001200,Alabama,Mobile County,38.89,0
+1097003302,Alabama,Mobile County,20.84,0
+1097003605,Alabama,Mobile County,100.0,1
+1101000100,Alabama,Montgomery County,27.94,0
+1101000200,Alabama,Montgomery County,48.85,0
+1101000900,Alabama,Montgomery County,65.09,0
+1101001000,Alabama,Montgomery County,11.69,0
+1101001400,Alabama,Montgomery County,11.22,0
+1101001500,Alabama,Montgomery County,41.17,0
+1101005407,Alabama,Montgomery County,12.09,0
+1101005501,Alabama,Montgomery County,57.89,0
+1103000400,Alabama,Morgan County,15.09,0
+1103000600,Alabama,Morgan County,20.19,0
+1105687000,Alabama,Perry County,12.97,0
+1109189100,Alabama,Pike County,24.08,0
+1115040502,Alabama,St. Clair County,14.63,0
+1117030319,Alabama,Shelby County,12.08,0
+1117030407,Alabama,Shelby County,48.0,0
+1117030701,Alabama,Shelby County,21.06,0
+1121010301,Alabama,Talladega County,10.26,0
+1121010700,Alabama,Talladega County,57.13,0
+1121010900,Alabama,Talladega County,14.87,0
+1121011200,Alabama,Talladega County,18.88,0
+1125010403,Alabama,Tuscaloosa County,14.31,0
+1125011200,Alabama,Tuscaloosa County,93.4,1
+1125011401,Alabama,Tuscaloosa County,23.88,0
+1125011600,Alabama,Tuscaloosa County,22.93,0
+1125011701,Alabama,Tuscaloosa County,26.1,0
+1125012600,Alabama,Tuscaloosa County,10.01,0
+2013000100,Alaska,Aleutians East Borough,54.95,0
+2016000100,Alaska,Aleutians West Census Area,37.47,0
+2016000200,Alaska,Aleutians West Census Area,47.97,0
+2020000204,Alaska,Anchorage Municipality,12.57,0
+2020000300,Alaska,Anchorage Municipality,24.26,0
+2020000400,Alaska,Anchorage Municipality,12.43,0
+2020000901,Alaska,Anchorage Municipality,15.35,0
+2020001000,Alaska,Anchorage Municipality,10.14,0
+2020001100,Alaska,Anchorage Municipality,32.45,0
+2020001602,Alaska,Anchorage Municipality,12.29,0
+2090000200,Alaska,Fairbanks North Star Borough,15.65,0
+2090001100,Alaska,Fairbanks North Star Borough,19.05,0
+2090001300,Alaska,Fairbanks North Star Borough,17.92,0
+2090001800,Alaska,Fairbanks North Star Borough,15.49,0
+2122000100,Alaska,Kenai Peninsula Borough,46.92,0
+2122001300,Alaska,Kenai Peninsula Borough,14.9,0
+2150000500,Alaska,Kodiak Island Borough,10.07,0
+2170000200,Alaska,Matanuska-Susitna Borough,23.51,0
+2185000300,Alaska,North Slope Borough,99.92,1
+4001970300,Arizona,Apache County,12.15,0
+4003000500,Arizona,Cochise County,41.02,0
+4003001000,Arizona,Cochise County,13.04,0
+4003001401,Arizona,Cochise County,58.75,0
+4003001402,Arizona,Cochise County,10.63,0
+4005000800,Arizona,Coconino County,16.96,0
+4005001000,Arizona,Coconino County,85.48,1
+4007001200,Arizona,Gila County,11.23,0
+4009961600,Arizona,Graham County,69.69,1
+4009961700,Arizona,Graham County,20.71,0
+4013061017,Arizona,Maricopa County,100.0,1
+4013061100,Arizona,Maricopa County,19.15,0
+4013071516,Arizona,Maricopa County,11.02,0
+4013113100,Arizona,Maricopa County,32.66,0
+4013113400,Arizona,Maricopa County,100.0,1
+4013113802,Arizona,Maricopa County,23.53,0
+4013114000,Arizona,Maricopa County,25.17,0
+4013114100,Arizona,Maricopa County,72.51,1
+4013114200,Arizona,Maricopa County,14.49,0
+4013114301,Arizona,Maricopa County,75.1,1
+4013114703,Arizona,Maricopa County,83.98,1
+4013318700,Arizona,Maricopa County,84.3,1
+4013319000,Arizona,Maricopa County,72.59,1
+4013319101,Arizona,Maricopa County,16.66,0
+4013522800,Arizona,Maricopa County,17.92,0
+4013610000,Arizona,Maricopa County,15.99,0
+4013616000,Arizona,Maricopa County,18.95,0
+4013723306,Arizona,Maricopa County,96.67,1
+4013980400,Arizona,Maricopa County,53.33,0
+4015953602,Arizona,Mohave County,15.72,0
+4015954800,Arizona,Mohave County,21.18,0
+4017960200,Arizona,Navajo County,12.38,0
+4017960500,Arizona,Navajo County,34.48,0
+4019000500,Arizona,Pima County,68.93,1
+4019000800,Arizona,Pima County,20.8,0
+4019002501,Arizona,Pima County,31.18,0
+4019002904,Arizona,Pima County,12.91,0
+4019003600,Arizona,Pima County,15.55,0
+4019004113,Arizona,Pima County,100.0,1
+4019004430,Arizona,Pima County,20.33,0
+4021000803,Arizona,Pinal County,93.7,1
+4021000901,Arizona,Pinal County,86.75,1
+4021002002,Arizona,Pinal County,91.81,1
+4021002102,Arizona,Pinal County,13.86,0
+4025000300,Arizona,Yavapai County,13.62,0
+4025000900,Arizona,Yavapai County,17.22,0
+4025001601,Arizona,Yavapai County,11.1,0
+4027000100,Arizona,Yuma County,30.0,0
+4027011800,Arizona,Yuma County,28.91,0
+4027980005,Arizona,Yuma County,100.0,1
+4027980006,Arizona,Yuma County,36.16,0
+5005950400,Arkansas,Baxter County,10.29,0
+5007021201,Arkansas,Benton County,22.06,0
+5017080100,Arkansas,Chicot County,15.94,0
+5019953601,Arkansas,Clark County,20.28,0
+5019953602,Arkansas,Clark County,36.33,0
+5027950400,Arkansas,Columbia County,14.01,0
+5031000602,Arkansas,Craighead County,31.43,0
+5035030703,Arkansas,Crittenden County,13.09,0
+5043490300,Arkansas,Drew County,12.84,0
+5045030403,Arkansas,Faulkner County,14.97,0
+5045030701,Arkansas,Faulkner County,27.41,0
+5045030800,Arkansas,Faulkner County,26.67,0
+5051010700,Arkansas,Garland County,12.49,0
+5051010800,Arkansas,Garland County,16.51,0
+5059020500,Arkansas,Hot Spring County,27.11,0
+5065960300,Arkansas,Izard County,20.86,0
+5067480400,Arkansas,Jackson County,38.06,0
+5069000102,Arkansas,Jefferson County,94.95,1
+5069000502,Arkansas,Jefferson County,37.49,0
+5069001000,Arkansas,Jefferson County,21.16,0
+5069002103,Arkansas,Jefferson County,33.26,0
+5071951900,Arkansas,Johnson County,10.76,0
+5075470100,Arkansas,Lawrence County,17.21,0
+5077470100,Arkansas,Lee County,59.02,0
+5079960600,Arkansas,Lincoln County,63.83,0
+5091020400,Arkansas,Miller County,24.91,0
+5115951400,Arkansas,Pope County,52.48,0
+5119001200,Arkansas,Pulaski County,51.06,0
+5119001900,Arkansas,Pulaski County,10.66,0
+5119002600,Arkansas,Pulaski County,16.02,0
+5119003500,Arkansas,Pulaski County,21.22,0
+5119004005,Arkansas,Pulaski County,38.84,0
+5119004400,Arkansas,Pulaski County,10.34,0
+5119004500,Arkansas,Pulaski County,14.06,0
+5119004800,Arkansas,Pulaski County,15.63,0
+5123960600,Arkansas,St. Francis County,46.83,0
+5131000300,Arkansas,Sebastian County,23.94,0
+5143010701,Arkansas,Washington County,12.1,0
+5143011300,Arkansas,Washington County,63.54,0
+5145070800,Arkansas,White County,41.14,0
+6001401300,California,Alameda County,16.44,0
+6001401400,California,Alameda County,11.78,0
+6001401500,California,Alameda County,15.78,0
+6001403100,California,Alameda County,44.01,0
+6001406400,California,Alameda County,14.64,0
+6001407800,California,Alameda County,28.37,0
+6001408000,California,Alameda County,13.14,0
+6001422000,California,Alameda County,17.31,0
+6001422500,California,Alameda County,36.9,0
+6001422600,California,Alameda County,97.12,1
+6001422700,California,Alameda County,39.88,0
+6001422800,California,Alameda County,64.94,0
+6001423700,California,Alameda County,17.26,0
+6001428700,California,Alameda County,14.93,0
+6001430500,California,Alameda County,10.5,0
+6001435102,California,Alameda County,21.12,0
+6001450102,California,Alameda County,60.09,0
+6001982000,California,Alameda County,23.94,0
+6005000301,California,Amador County,70.86,1
+6007000300,California,Butte County,12.2,0
+6007000603,California,Butte County,30.1,0
+6007002500,California,Butte County,12.54,0
+6013316000,California,Contra Costa County,43.43,0
+6013352101,California,Contra Costa County,30.98,0
+6013352102,California,Contra Costa County,10.24,0
+6015000201,California,Del Norte County,48.25,0
+6017031200,California,El Dorado County,10.94,0
+6019000100,California,Fresno County,82.76,1
+6019000400,California,Fresno County,17.34,0
+6019001408,California,Fresno County,15.97,0
+6019005408,California,Fresno County,88.48,1
+6019007901,California,Fresno County,100.0,1
+6019008000,California,Fresno County,11.14,0
+6023000100,California,Humboldt County,15.81,0
+6023000500,California,Humboldt County,13.89,0
+6023001000,California,Humboldt County,17.98,0
+6023001200,California,Humboldt County,14.3,0
+6025010101,California,Imperial County,90.5,1
+6025012301,California,Imperial County,79.96,1
+6029001500,California,Kern County,12.14,0
+6029002806,California,Kern County,14.25,0
+6029003304,California,Kern County,53.96,0
+6029003900,California,Kern County,70.8,1
+6029004302,California,Kern County,100.0,1
+6029004601,California,Kern County,100.0,1
+6029004603,California,Kern County,100.0,1
+6029004604,California,Kern County,30.37,0
+6029004701,California,Kern County,13.71,0
+6029005700,California,Kern County,10.29,0
+6029006002,California,Kern County,99.95,1
+6029006500,California,Kern County,50.74,0
+6031000300,California,Kings County,26.09,0
+6031001602,California,Kings County,100.0,1
+6031981800,California,Kings County,100.0,1
+6035040400,California,Lassen County,86.57,1
+6035040600,California,Lassen County,29.57,0
+6037115103,California,Los Angeles County,97.15,1
+6037121802,California,Los Angeles County,13.48,0
+6037127805,California,Los Angeles County,11.54,0
+6037181600,California,Los Angeles County,34.05,0
+6037190201,California,Los Angeles County,13.97,0
+6037190700,California,Los Angeles County,10.51,0
+6037191000,California,Los Angeles County,12.11,0
+6037191110,California,Los Angeles County,21.0,0
+6037191201,California,Los Angeles County,23.18,0
+6037192700,California,Los Angeles County,10.25,0
+6037201700,California,Los Angeles County,14.25,0
+6037203300,California,Los Angeles County,46.11,0
+6037206020,California,Los Angeles County,94.3,1
+6037206200,California,Los Angeles County,29.47,0
+6037206300,California,Los Angeles County,66.51,0
+6037207400,California,Los Angeles County,97.36,1
+6037209810,California,Los Angeles County,20.23,0
+6037221401,California,Los Angeles County,11.22,0
+6037221820,California,Los Angeles County,10.08,0
+6037221900,California,Los Angeles County,26.83,0
+6037222700,California,Los Angeles County,81.86,1
+6037224700,California,Los Angeles County,62.87,0
+6037226002,California,Los Angeles County,18.83,0
+6037231100,California,Los Angeles County,23.28,0
+6037262301,California,Los Angeles County,19.83,0
+6037265201,California,Los Angeles County,24.46,0
+6037265301,California,Los Angeles County,99.86,1
+6037265304,California,Los Angeles County,21.76,0
+6037276500,California,Los Angeles County,65.83,0
+6037400800,California,Los Angeles County,53.84,0
+6037401901,California,Los Angeles County,93.36,1
+6037402403,California,Los Angeles County,24.75,0
+6037402404,California,Los Angeles County,99.49,1
+6037403200,California,Los Angeles County,99.49,1
+6037404202,California,Los Angeles County,14.82,0
+6037430721,California,Los Angeles County,17.69,0
+6037461502,California,Los Angeles County,15.69,0
+6037463500,California,Los Angeles County,15.7,0
+6037501600,California,Los Angeles County,11.61,0
+6037504001,California,Los Angeles County,40.11,0
+6037504102,California,Los Angeles County,13.64,0
+6037540501,California,Los Angeles County,26.49,0
+6037543321,California,Los Angeles County,10.89,0
+6037543503,California,Los Angeles County,14.98,0
+6037550000,California,Los Angeles County,64.49,0
+6037551600,California,Los Angeles County,100.0,1
+6037572800,California,Los Angeles County,46.96,0
+6037574202,California,Los Angeles County,13.47,0
+6037574601,California,Los Angeles County,97.42,1
+6037574700,California,Los Angeles County,92.31,1
+6037609900,California,Los Angeles County,13.67,0
+6037701100,California,Los Angeles County,72.65,1
+6037701502,California,Los Angeles County,13.25,0
+6037701902,California,Los Angeles County,10.63,0
+6037800331,California,Los Angeles County,14.36,0
+6037800406,California,Los Angeles County,12.22,0
+6037800410,California,Los Angeles County,58.15,0
+6037900300,California,Los Angeles County,15.91,0
+6037901003,California,Los Angeles County,100.0,1
+6037910811,California,Los Angeles County,27.54,0
+6037920011,California,Los Angeles County,25.87,0
+6037920026,California,Los Angeles County,23.87,0
+6037920033,California,Los Angeles County,10.29,0
+6037920200,California,Los Angeles County,100.0,1
+6037920332,California,Los Angeles County,26.74,0
+6037930301,California,Los Angeles County,25.85,0
+6037980009,California,Los Angeles County,14.29,0
+6037980013,California,Los Angeles County,83.05,1
+6037980015,California,Los Angeles County,35.38,0
+6037980026,California,Los Angeles County,15.0,0
+6037980028,California,Los Angeles County,75.0,1
+6037980031,California,Los Angeles County,80.35,1
+6037980033,California,Los Angeles County,80.33,1
+6039000201,California,Madera County,80.85,1
+6041110100,California,Marin County,12.65,0
+6041122000,California,Marin County,100.0,1
+6041131100,California,Marin County,11.08,0
+6043000400,California,Mariposa County,30.08,0
+6045011400,California,Mendocino County,10.45,0
+6047000503,California,Merced County,40.98,0
+6047000901,California,Merced County,16.73,0
+6047001801,California,Merced County,26.03,0
+6053010608,California,Monterey County,30.88,0
+6053010900,California,Monterey County,99.4,1
+6053011400,California,Monterey County,11.25,0
+6053012600,California,Monterey County,91.75,1
+6053014104,California,Monterey County,99.94,1
+6055200202,California,Napa County,17.75,0
+6055200900,California,Napa County,97.48,1
+6055201300,California,Napa County,33.69,0
+6055201700,California,Napa County,19.86,0
+6059011504,California,Orange County,20.14,0
+6059052404,California,Orange County,95.81,1
+6059062614,California,Orange County,34.57,0
+6059062628,California,Orange County,23.93,0
+6059063807,California,Orange County,11.72,0
+6059063906,California,Orange County,13.72,0
+6059075100,California,Orange County,22.33,0
+6059076102,California,Orange County,42.42,0
+6059076205,California,Orange County,25.51,0
+6059980000,California,Orange County,52.63,0
+6061021501,California,Placer County,13.45,0
+6065030300,California,Riverside County,29.62,0
+6065031501,California,Riverside County,14.31,0
+6065040902,California,Riverside County,11.27,0
+6065042209,California,Riverside County,17.51,0
+6065043247,California,Riverside County,12.86,0
+6065044300,California,Riverside County,19.12,0
+6065044404,California,Riverside County,15.32,0
+6065046500,California,Riverside County,51.23,0
+6065046601,California,Riverside County,88.3,1
+6065981000,California,Riverside County,100.0,1
+6067000700,California,Sacramento County,76.41,1
+6067005201,California,Sacramento County,43.32,0
+6067005301,California,Sacramento County,59.9,0
+6067009638,California,Sacramento County,40.07,0
+6067988300,California,Sacramento County,98.95,1
+6071001903,California,San Bernardino County,25.93,0
+6071002207,California,San Bernardino County,64.72,0
+6071002706,California,San Bernardino County,14.76,0
+6071004510,California,San Bernardino County,23.79,0
+6071005701,California,San Bernardino County,13.9,0
+6071006301,California,San Bernardino County,10.89,0
+6071006500,California,San Bernardino County,22.06,0
+6071008401,California,San Bernardino County,11.87,0
+6071009117,California,San Bernardino County,20.96,0
+6071010402,California,San Bernardino County,39.65,0
+6071012200,California,San Bernardino County,78.59,1
+6071012300,California,San Bernardino County,100.0,1
+6071025000,California,San Bernardino County,15.18,0
+6071980200,California,San Bernardino County,99.2,1
+6073002801,California,San Diego County,11.96,0
+6073002804,California,San Diego County,14.14,0
+6073002904,California,San Diego County,27.24,0
+6073003800,California,San Diego County,100.0,1
+6073005100,California,San Diego County,27.76,0
+6073005200,California,San Diego County,10.8,0
+6073005300,California,San Diego County,45.94,0
+6073005500,California,San Diego County,93.43,1
+6073005700,California,San Diego County,38.04,0
+6073006200,California,San Diego County,22.22,0
+6073006300,California,San Diego County,99.45,1
+6073006500,California,San Diego County,17.71,0
+6073007200,California,San Diego County,29.0,0
+6073008305,California,San Diego County,81.32,1
+6073008702,California,San Diego County,16.81,0
+6073009106,California,San Diego County,48.94,0
+6073009400,California,San Diego County,62.91,0
+6073009901,California,San Diego County,95.85,1
+6073010014,California,San Diego County,26.33,0
+6073011300,California,San Diego County,98.42,1
+6073015802,California,San Diego County,12.6,0
+6073016615,California,San Diego County,26.54,0
+6073018700,California,San Diego County,44.26,0
+6073019701,California,San Diego County,12.44,0
+6073021302,California,San Diego County,40.85,0
+6073021600,California,San Diego County,31.5,0
+6073021900,California,San Diego County,73.87,1
+6075011700,California,San Francisco County,10.32,0
+6075011901,California,San Francisco County,13.66,0
+6075012100,California,San Francisco County,16.07,0
+6075012202,California,San Francisco County,16.08,0
+6075012402,California,San Francisco County,13.56,0
+6075012501,California,San Francisco County,30.98,0
+6075012502,California,San Francisco County,14.66,0
+6075015700,California,San Francisco County,30.8,0
+6075017700,California,San Francisco County,13.02,0
+6075017902,California,San Francisco County,24.24,0
+6075018000,California,San Francisco County,42.0,0
+6075022802,California,San Francisco County,22.68,0
+6075026002,California,San Francisco County,11.68,0
+6075030500,California,San Francisco County,29.25,0
+6075033201,California,San Francisco County,58.46,0
+6075060700,California,San Francisco County,11.84,0
+6075980200,California,San Francisco County,59.69,0
+6075980300,California,San Francisco County,73.68,1
+6075980501,California,San Francisco County,15.56,0
+6075980900,California,San Francisco County,18.0,0
+6077000300,California,San Joaquin County,11.85,0
+6077001200,California,San Joaquin County,29.3,0
+6077003113,California,San Joaquin County,12.85,0
+6077003803,California,San Joaquin County,34.25,0
+6077005131,California,San Joaquin County,11.21,0
+6077005501,California,San Joaquin County,71.32,1
+6079010603,California,San Luis Obispo County,10.8,0
+6079010901,California,San Luis Obispo County,80.54,1
+6079011400,California,San Luis Obispo County,99.72,1
+6079011504,California,San Luis Obispo County,59.4,0
+6079012800,California,San Luis Obispo County,91.87,1
+6081610202,California,San Mateo County,39.07,0
+6083000101,California,Santa Barbara County,17.09,0
+6083000700,California,Santa Barbara County,14.4,0
+6083002604,California,Santa Barbara County,93.83,1
+6083002606,California,Santa Barbara County,11.54,0
+6083002922,California,Santa Barbara County,75.51,1
+6083002924,California,Santa Barbara County,21.04,0
+6085500200,California,Santa Clara County,27.74,0
+6085500902,California,Santa Clara County,65.69,0
+6085501300,California,Santa Clara County,18.28,0
+6085503122,California,Santa Clara County,11.19,0
+6085504504,California,Santa Clara County,26.36,0
+6085505007,California,Santa Clara County,10.56,0
+6085505203,California,Santa Clara County,28.34,0
+6085505600,California,Santa Clara County,26.93,0
+6085511608,California,Santa Clara County,91.78,1
+6085511705,California,Santa Clara County,10.15,0
+6085513000,California,Santa Clara County,35.59,0
+6087100400,California,Santa Cruz County,87.1,1
+6087100700,California,Santa Cruz County,29.48,0
+6089010100,California,Shasta County,14.17,0
+6089010804,California,Shasta County,18.8,0
+6095250801,California,Solano County,11.72,0
+6095252502,California,Solano County,32.48,0
+6095252802,California,Solano County,66.81,0
+6095253000,California,Solano County,100.0,1
+6097150500,California,Sonoma County,13.33,0
+6097151310,California,Sonoma County,37.54,0
+6097152000,California,Sonoma County,12.51,0
+6097152100,California,Sonoma County,24.17,0
+6099001800,California,Stanislaus County,27.14,0
+6107000900,California,Tulare County,15.74,0
+6107004000,California,Tulare County,98.57,1
+6109985202,California,Tuolumne County,100.0,1
+6111001503,California,Ventura County,23.94,0
+6111004305,California,Ventura County,34.8,0
+6111004600,California,Ventura County,21.97,0
+6111005700,California,Ventura County,33.7,0
+6111006302,California,Ventura County,37.95,0
+6111980000,California,Ventura County,100.0,1
+6113010501,California,Yolo County,54.64,0
+6113010703,California,Yolo County,24.79,0
+6115040100,California,Yuba County,12.57,0
+6115040902,California,Yuba County,23.78,0
+8001008100,Colorado,Adams County,29.04,0
+8001008604,Colorado,Adams County,27.1,0
+8005006856,Colorado,Arapahoe County,16.2,0
+8005007104,Colorado,Arapahoe County,11.11,0
+8011966700,Colorado,Bent County,33.97,0
+8013012300,Colorado,Boulder County,73.55,1
+8013012401,Colorado,Boulder County,11.21,0
+8013012511,Colorado,Boulder County,24.13,0
+8013012707,Colorado,Boulder County,19.64,0
+8015000402,Colorado,Chaffee County,35.06,0
+8025969600,Colorado,Crowley County,46.06,0
+8029964800,Colorado,Delta County,14.46,0
+8031001500,Colorado,Denver County,15.16,0
+8031001600,Colorado,Denver County,17.12,0
+8031001702,Colorado,Denver County,14.69,0
+8031001902,Colorado,Denver County,88.09,1
+8031002602,Colorado,Denver County,11.7,0
+8031003003,Colorado,Denver County,31.39,0
+8031003004,Colorado,Denver County,18.21,0
+8031003102,Colorado,Denver County,21.19,0
+8031004106,Colorado,Denver County,31.5,0
+8031004202,Colorado,Denver County,13.51,0
+8031005502,Colorado,Denver County,19.23,0
+8031015400,Colorado,Denver County,14.13,0
+8041001600,Colorado,El Paso County,55.41,0
+8041002300,Colorado,El Paso County,13.45,0
+8041003801,Colorado,El Paso County,14.25,0
+8041003802,Colorado,El Paso County,99.96,1
+8041004008,Colorado,El Paso County,25.96,0
+8041004402,Colorado,El Paso County,97.02,1
+8041004403,Colorado,El Paso County,12.46,0
+8041004501,Colorado,El Paso County,36.22,0
+8041007800,Colorado,El Paso County,19.78,0
+8043980100,Colorado,Fremont County,100.0,1
+8043980200,Colorado,Fremont County,100.0,1
+8043980300,Colorado,Fremont County,100.0,1
+8051963700,Colorado,Gunnison County,12.41,0
+8059010000,Colorado,Jefferson County,45.73,0
+8059011202,Colorado,Jefferson County,10.88,0
+8059980400,Colorado,Jefferson County,100.0,1
+8063962100,Colorado,Kit Carson County,19.1,0
+8067970800,Colorado,La Plata County,18.99,0
+8069000600,Colorado,Larimer County,80.72,1
+8069001605,Colorado,Larimer County,27.19,0
+8071000800,Colorado,Las Animas County,17.32,0
+8073961700,Colorado,Lincoln County,27.92,0
+8075966200,Colorado,Logan County,13.24,0
+8075966400,Colorado,Logan County,68.0,1
+8077000500,Colorado,Mesa County,49.15,0
+8077000900,Colorado,Mesa County,13.7,0
+8101000300,Colorado,Pueblo County,100.0,1
+8101000903,Colorado,Pueblo County,84.43,1
+8101003004,Colorado,Pueblo County,11.76,0
+8101003500,Colorado,Pueblo County,27.72,0
+8123000200,Colorado,Weld County,36.76,0
+8123000300,Colorado,Weld County,99.89,1
+8123000600,Colorado,Weld County,61.26,0
+8123001902,Colorado,Weld County,11.25,0
+9001060100,Connecticut,Fairfield County,35.14,0
+9001060700,Connecticut,Fairfield County,35.0,0
+9001070400,Connecticut,Fairfield County,36.74,0
+9001070600,Connecticut,Fairfield County,17.14,0
+9001071900,Connecticut,Fairfield County,18.84,0
+9001072600,Connecticut,Fairfield County,11.62,0
+9001210800,Connecticut,Fairfield County,17.5,0
+9001211100,Connecticut,Fairfield County,97.38,1
+9001230502,Connecticut,Fairfield County,14.72,0
+9003417300,Connecticut,Hartford County,98.33,1
+9003477102,Connecticut,Hartford County,29.53,0
+9003497200,Connecticut,Hartford County,28.28,0
+9003497300,Connecticut,Hartford County,14.35,0
+9003500500,Connecticut,Hartford County,12.66,0
+9003500700,Connecticut,Hartford County,100.0,1
+9003501700,Connecticut,Hartford County,10.7,0
+9003502700,Connecticut,Hartford County,36.03,0
+9003503800,Connecticut,Hartford County,77.02,1
+9003510200,Connecticut,Hartford County,12.99,0
+9003515101,Connecticut,Hartford County,11.9,0
+9003524200,Connecticut,Hartford County,10.73,0
+9003524300,Connecticut,Hartford County,46.32,0
+9005300400,Connecticut,Litchfield County,10.41,0
+9007541500,Connecticut,Middlesex County,54.76,0
+9007541700,Connecticut,Middlesex County,16.15,0
+9007680200,Connecticut,Middlesex County,11.25,0
+9009140300,Connecticut,New Haven County,14.18,0
+9009141300,Connecticut,New Haven County,39.57,0
+9009141600,Connecticut,New Haven County,17.93,0
+9009165700,Connecticut,New Haven County,12.62,0
+9009166002,Connecticut,New Haven County,42.56,0
+9009343101,Connecticut,New Haven County,36.49,0
+9009348111,Connecticut,New Haven County,15.82,0
+9009351900,Connecticut,New Haven County,18.85,0
+9009361401,Connecticut,New Haven County,51.53,0
+9009361402,Connecticut,New Haven County,89.66,1
+9009361500,Connecticut,New Haven County,32.97,0
+9011690900,Connecticut,New London County,10.14,0
+9011702600,Connecticut,New London County,47.02,0
+9011716101,Connecticut,New London County,34.47,0
+9011870300,Connecticut,New London County,40.51,0
+9011870502,Connecticut,New London County,42.18,0
+9011980000,Connecticut,New London County,99.71,1
+9013538100,Connecticut,Tolland County,100.0,1
+9013881200,Connecticut,Tolland County,96.73,1
+9013881300,Connecticut,Tolland County,35.5,0
+9013881500,Connecticut,Tolland County,12.19,0
+9015800300,Connecticut,Windham County,40.98,0
+10001040900,Delaware,Kent County,25.38,0
+10001043300,Delaware,Kent County,38.77,0
+10003003002,Delaware,New Castle County,47.33,0
+10003014300,Delaware,New Castle County,43.86,0
+10003014403,Delaware,New Castle County,29.54,0
+10003014502,Delaware,New Castle County,39.54,0
+10003015200,Delaware,New Castle County,10.19,0
+10003016904,Delaware,New Castle County,63.24,0
+10005050504,Delaware,Sussex County,25.16,0
+11001000201,District of Columbia,District of Columbia,99.8,1
+11001000202,District of Columbia,District of Columbia,20.92,0
+11001000901,District of Columbia,District of Columbia,42.2,0
+11001002302,District of Columbia,District of Columbia,14.34,0
+11001003400,District of Columbia,District of Columbia,49.34,0
+11001003500,District of Columbia,District of Columbia,40.53,0
+11001003700,District of Columbia,District of Columbia,12.18,0
+11001004702,District of Columbia,District of Columbia,16.65,0
+11001005600,District of Columbia,District of Columbia,28.61,0
+11001005900,District of Columbia,District of Columbia,18.35,0
+11001006202,District of Columbia,District of Columbia,48.48,0
+11001006804,District of Columbia,District of Columbia,98.91,1
+11001007000,District of Columbia,District of Columbia,22.72,0
+11001007301,District of Columbia,District of Columbia,16.04,0
+11001008803,District of Columbia,District of Columbia,51.55,0
+11001009201,District of Columbia,District of Columbia,40.64,0
+11001009501,District of Columbia,District of Columbia,34.79,0
+11001010300,District of Columbia,District of Columbia,12.39,0
+11001010400,District of Columbia,District of Columbia,14.68,0
+11001010700,District of Columbia,District of Columbia,10.45,0
+11001010800,District of Columbia,District of Columbia,79.26,1
+11001010900,District of Columbia,District of Columbia,13.92,0
+11001011100,District of Columbia,District of Columbia,11.61,0
+12001000200,Florida,Alachua County,14.43,0
+12001000809,Florida,Alachua County,25.51,0
+12001000901,Florida,Alachua County,70.84,1
+12001000902,Florida,Alachua County,99.11,1
+12001001400,Florida,Alachua County,45.15,0
+12001001902,Florida,Alachua County,25.36,0
+12003040201,Florida,Baker County,18.57,0
+12005000300,Florida,Bay County,11.45,0
+12005000500,Florida,Bay County,16.35,0
+12005000700,Florida,Bay County,13.69,0
+12005001600,Florida,Bay County,12.32,0
+12007000200,Florida,Bradford County,23.21,0
+12007000400,Florida,Bradford County,34.33,0
+12009062109,Florida,Brevard County,44.31,0
+12009064901,Florida,Brevard County,14.83,0
+12009067100,Florida,Brevard County,14.89,0
+12009980000,Florida,Brevard County,100.0,1
+12011030600,Florida,Broward County,37.87,0
+12011042302,Florida,Broward County,20.16,0
+12011042500,Florida,Broward County,18.85,0
+12011070204,Florida,Broward County,17.1,0
+12011070314,Florida,Broward County,13.78,0
+12011110341,Florida,Broward County,17.22,0
+12013010300,Florida,Calhoun County,23.07,0
+12015010100,Florida,Charlotte County,28.51,0
+12015010501,Florida,Charlotte County,11.23,0
+12015021003,Florida,Charlotte County,13.21,0
+12017451400,Florida,Citrus County,17.26,0
+12019031400,Florida,Clay County,10.92,0
+12021010604,Florida,Collier County,26.8,0
+12021011204,Florida,Collier County,10.86,0
+12023110300,Florida,Columbia County,40.29,0
+12023110700,Florida,Columbia County,10.11,0
+12027010102,Florida,DeSoto County,52.79,0
+12027010404,Florida,DeSoto County,10.61,0
+12029970101,Florida,Dixie County,28.52,0
+12031001000,Florida,Duval County,79.31,1
+12031010301,Florida,Duval County,14.93,0
+12031013200,Florida,Duval County,55.39,0
+12031013800,Florida,Duval County,31.45,0
+12031013901,Florida,Duval County,40.79,0
+12031014404,Florida,Duval County,29.16,0
+12031014800,Florida,Duval County,24.54,0
+12031017200,Florida,Duval County,28.33,0
+12033000600,Florida,Escambia County,10.52,0
+12033001401,Florida,Escambia County,72.82,1
+12033001600,Florida,Escambia County,61.81,0
+12033002400,Florida,Escambia County,85.61,1
+12033002804,Florida,Escambia County,46.39,0
+12033003305,Florida,Escambia County,24.48,0
+12033003607,Florida,Escambia County,54.96,0
+12033004000,Florida,Escambia County,36.21,0
+12035060103,Florida,Flagler County,10.59,0
+12037970100,Florida,Franklin County,37.04,0
+12039020400,Florida,Gadsden County,25.79,0
+12039020702,Florida,Gadsden County,11.55,0
+12041950202,Florida,Gilchrist County,32.01,0
+12043000300,Florida,Glades County,39.51,0
+12045960100,Florida,Gulf County,36.15,0
+12047960100,Florida,Hamilton County,37.1,0
+12049970300,Florida,Hardee County,21.3,0
+12051000600,Florida,Hendry County,22.16,0
+12053040911,Florida,Hernando County,21.7,0
+12055960800,Florida,Highlands County,17.12,0
+12057003700,Florida,Hillsborough County,44.69,0
+12057004000,Florida,Hillsborough County,55.0,0
+12057004100,Florida,Hillsborough County,17.87,0
+12057004200,Florida,Hillsborough County,19.72,0
+12057005000,Florida,Hillsborough County,55.69,0
+12057007300,Florida,Hillsborough County,14.97,0
+12057010702,Florida,Hillsborough County,11.01,0
+12057010812,Florida,Hillsborough County,12.03,0
+12057010900,Florida,Hillsborough County,91.4,1
+12057012211,Florida,Hillsborough County,94.01,1
+12057014009,Florida,Hillsborough County,14.26,0
+12059960400,Florida,Holmes County,22.69,0
+12061050200,Florida,Indian River County,13.61,0
+12063210100,Florida,Jackson County,36.27,0
+12063210300,Florida,Jackson County,36.36,0
+12063210800,Florida,Jackson County,27.75,0
+12063210900,Florida,Jackson County,32.64,0
+12065250101,Florida,Jefferson County,21.9,0
+12067960100,Florida,Lafayette County,63.94,0
+12069030803,Florida,Lake County,20.69,0
+12071001201,Florida,Lee County,21.11,0
+12071040115,Florida,Lee County,53.23,0
+12071080100,Florida,Lee County,12.71,0
+12071080300,Florida,Lee County,26.18,0
+12071090100,Florida,Lee County,12.08,0
+12073000400,Florida,Leon County,61.35,0
+12073000500,Florida,Leon County,31.94,0
+12073000600,Florida,Leon County,24.31,0
+12073001101,Florida,Leon County,35.6,0
+12073001300,Florida,Leon County,99.98,1
+12073001401,Florida,Leon County,17.36,0
+12073002003,Florida,Leon County,46.95,0
+12073002509,Florida,Leon County,28.42,0
+12077950200,Florida,Liberty County,30.07,0
+12079110302,Florida,Madison County,27.71,0
+12081001602,Florida,Manatee County,31.84,0
+12081001914,Florida,Manatee County,15.11,0
+12081002010,Florida,Manatee County,13.01,0
+12083000301,Florida,Marion County,54.2,0
+12083001600,Florida,Marion County,42.69,0
+12083001900,Florida,Marion County,14.71,0
+12085001000,Florida,Martin County,13.46,0
+12085001802,Florida,Martin County,52.39,0
+12086000124,Florida,Miami-Dade County,27.79,0
+12086000501,Florida,Miami-Dade County,12.93,0
+12086001005,Florida,Miami-Dade County,10.68,0
+12086001102,Florida,Miami-Dade County,17.87,0
+12086002201,Florida,Miami-Dade County,13.35,0
+12086002702,Florida,Miami-Dade County,10.85,0
+12086002800,Florida,Miami-Dade County,21.84,0
+12086003001,Florida,Miami-Dade County,25.14,0
+12086003004,Florida,Miami-Dade County,24.2,0
+12086003706,Florida,Miami-Dade County,99.69,1
+12086008904,Florida,Miami-Dade County,93.96,1
+12086009100,Florida,Miami-Dade County,28.46,0
+12086011404,Florida,Miami-Dade County,16.42,0
+12086014100,Florida,Miami-Dade County,100.0,1
+12086015100,Florida,Miami-Dade County,14.74,0
+12086020200,Florida,Miami-Dade County,26.55,0
+12086980300,Florida,Miami-Dade County,99.32,1
+12086980400,Florida,Miami-Dade County,100.0,1
+12086980700,Florida,Miami-Dade County,82.16,1
+12086981000,Florida,Miami-Dade County,100.0,1
+12087970200,Florida,Monroe County,15.24,0
+12087980100,Florida,Monroe County,60.0,0
+12091020302,Florida,Okaloosa County,23.45,0
+12091020800,Florida,Okaloosa County,10.42,0
+12091021200,Florida,Okaloosa County,20.47,0
+12093910101,Florida,Okeechobee County,33.83,0
+12095014400,Florida,Orange County,10.51,0
+12095014504,Florida,Orange County,44.26,0
+12095016001,Florida,Orange County,57.39,0
+12095016507,Florida,Orange County,47.98,0
+12095016508,Florida,Orange County,27.04,0
+12095016510,Florida,Orange County,43.72,0
+12095016511,Florida,Orange County,32.23,0
+12095016731,Florida,Orange County,41.46,0
+12095017017,Florida,Orange County,53.76,0
+12095018300,Florida,Orange County,13.4,0
+12095018900,Florida,Orange County,18.96,0
+12097041600,Florida,Osceola County,10.77,0
+12099002300,Florida,Palm Beach County,10.29,0
+12099002600,Florida,Palm Beach County,11.54,0
+12099002700,Florida,Palm Beach County,20.76,0
+12099003800,Florida,Palm Beach County,23.35,0
+12099006911,Florida,Palm Beach County,11.97,0
+12099007008,Florida,Palm Beach County,14.09,0
+12099007100,Florida,Palm Beach County,99.82,1
+12099007818,Florida,Palm Beach County,48.84,0
+12099008102,Florida,Palm Beach County,100.0,1
+12099008302,Florida,Palm Beach County,34.49,0
+12101031902,Florida,Pasco County,19.59,0
+12101032200,Florida,Pasco County,21.35,0
+12101032904,Florida,Pasco County,25.39,0
+12103020105,Florida,Pinellas County,27.95,0
+12103021600,Florida,Pinellas County,26.75,0
+12103023400,Florida,Pinellas County,10.09,0
+12103024510,Florida,Pinellas County,56.48,0
+12103025018,Florida,Pinellas County,10.46,0
+12103026101,Florida,Pinellas County,40.37,0
+12103026809,Florida,Pinellas County,13.98,0
+12103028600,Florida,Pinellas County,20.65,0
+12105010402,Florida,Polk County,28.52,0
+12105011731,Florida,Polk County,22.88,0
+12105012404,Florida,Polk County,67.75,1
+12105015200,Florida,Polk County,22.6,0
+12105015702,Florida,Polk County,36.17,0
+12105015802,Florida,Polk County,35.27,0
+12105016400,Florida,Polk County,21.23,0
+12107951000,Florida,Putnam County,12.37,0
+12109020400,Florida,St. Johns County,32.67,0
+12111380800,Florida,St. Lucie County,41.84,0
+12113010808,Florida,Santa Rosa County,43.28,0
+12115000102,Florida,Sarasota County,19.4,0
+12115000200,Florida,Sarasota County,21.32,0
+12115001000,Florida,Sarasota County,18.57,0
+12117020101,Florida,Seminole County,12.07,0
+12117020201,Florida,Seminole County,14.02,0
+12117020803,Florida,Seminole County,12.3,0
+12119910900,Florida,Sumter County,100.0,1
+12119911000,Florida,Sumter County,94.49,1
+12123950400,Florida,Taylor County,38.78,0
+12125960100,Florida,Union County,51.68,0
+12125960200,Florida,Union County,39.01,0
+12127081500,Florida,Volusia County,17.01,0
+12127081900,Florida,Volusia County,15.14,0
+12127082000,Florida,Volusia County,51.11,0
+12127083206,Florida,Volusia County,77.71,1
+12127090400,Florida,Volusia County,23.02,0
+12127090500,Florida,Volusia County,19.73,0
+12127092500,Florida,Volusia County,32.31,0
+12129010202,Florida,Wakulla County,39.46,0
+12131950200,Florida,Walton County,31.86,0
+12133970302,Florida,Washington County,36.15,0
+13009970500,Georgia,Baldwin County,27.24,0
+13009970701,Georgia,Baldwin County,24.2,0
+13009970702,Georgia,Baldwin County,27.6,0
+13009970800,Georgia,Baldwin County,14.99,0
+13021010500,Georgia,Bibb County,47.57,0
+13021012101,Georgia,Bibb County,13.36,0
+13021013603,Georgia,Bibb County,25.62,0
+13021013700,Georgia,Bibb County,36.84,0
+13023790300,Georgia,Bleckley County,21.48,0
+13031110404,Georgia,Bulloch County,54.77,0
+13035150300,Georgia,Butts County,27.05,0
+13037950100,Georgia,Calhoun County,52.26,0
+13039010500,Georgia,Camden County,58.25,0
+13045910501,Georgia,Carroll County,26.7,0
+13049010100,Georgia,Charlton County,19.2,0
+13051000100,Georgia,Chatham County,50.25,0
+13051000300,Georgia,Chatham County,37.33,0
+13051000601,Georgia,Chatham County,29.46,0
+13051002800,Georgia,Chatham County,13.74,0
+13051004212,Georgia,Chatham County,16.54,0
+13051004300,Georgia,Chatham County,28.37,0
+13051010102,Georgia,Chatham County,41.17,0
+13051010501,Georgia,Chatham County,27.82,0
+13051010700,Georgia,Chatham County,10.16,0
+13051011200,Georgia,Chatham County,10.03,0
+13051980000,Georgia,Chatham County,100.0,1
+13053020201,Georgia,Chattahoochee County,77.26,1
+13053020206,Georgia,Chattahoochee County,34.31,0
+13055010500,Georgia,Chattooga County,28.42,0
+13059000402,Georgia,Clarke County,90.48,1
+13059000600,Georgia,Clarke County,19.55,0
+13059002100,Georgia,Clarke County,26.09,0
+13059140500,Georgia,Clarke County,19.59,0
+13063040606,Georgia,Clayton County,23.59,0
+13063040612,Georgia,Clayton County,25.87,0
+13067030229,Georgia,Cobb County,51.57,0
+13067030800,Georgia,Cobb County,23.82,0
+13067030905,Georgia,Cobb County,30.57,0
+13069010300,Georgia,Coffee County,35.34,0
+13083040300,Georgia,Dade County,20.85,0
+13087970300,Georgia,Decatur County,13.21,0
+13089022402,Georgia,DeKalb County,65.86,0
+13089023115,Georgia,DeKalb County,99.72,1
+13089023802,Georgia,DeKalb County,28.16,0
+13091960100,Georgia,Dodge County,37.83,0
+13091960400,Georgia,Dodge County,10.5,0
+13093970100,Georgia,Dooly County,31.92,0
+13095010302,Georgia,Dougherty County,14.73,0
+13095010700,Georgia,Dougherty County,22.53,0
+13095011200,Georgia,Dougherty County,17.12,0
+13095011300,Georgia,Dougherty County,15.99,0
+13095011400,Georgia,Dougherty County,19.27,0
+13097080304,Georgia,Douglas County,15.67,0
+13115000300,Georgia,Floyd County,52.16,0
+13115000600,Georgia,Floyd County,13.04,0
+13115002100,Georgia,Floyd County,12.49,0
+13121000600,Georgia,Fulton County,21.97,0
+13121000700,Georgia,Fulton County,70.87,1
+13121001001,Georgia,Fulton County,45.29,0
+13121001002,Georgia,Fulton County,88.8,1
+13121001900,Georgia,Fulton County,56.75,0
+13121002100,Georgia,Fulton County,33.37,0
+13121002400,Georgia,Fulton County,11.79,0
+13121002800,Georgia,Fulton County,65.83,0
+13121002900,Georgia,Fulton County,17.95,0
+13121003500,Georgia,Fulton County,52.97,0
+13121003800,Georgia,Fulton County,87.85,1
+13121004300,Georgia,Fulton County,56.42,0
+13121006801,Georgia,Fulton County,99.13,1
+13121007400,Georgia,Fulton County,10.79,0
+13121011900,Georgia,Fulton County,24.03,0
+13127000800,Georgia,Glynn County,13.87,0
+13135050548,Georgia,Gwinnett County,26.19,0
+13137000601,Georgia,Habersham County,27.39,0
+13139000800,Georgia,Hall County,13.73,0
+13139001201,Georgia,Hall County,14.56,0
+13141480400,Georgia,Hancock County,21.73,0
+13153020600,Georgia,Houston County,32.98,0
+13157010701,Georgia,Jackson County,14.09,0
+13167960200,Georgia,Johnson County,31.09,0
+13171970200,Georgia,Lamar County,17.2,0
+13177020300,Georgia,Lee County,11.32,0
+13179010102,Georgia,Liberty County,73.66,1
+13179010103,Georgia,Liberty County,23.33,0
+13185010102,Georgia,Lowndes County,11.59,0
+13185010201,Georgia,Lowndes County,38.98,0
+13185011100,Georgia,Lowndes County,55.43,0
+13185011301,Georgia,Lowndes County,10.45,0
+13185011402,Georgia,Lowndes County,31.04,0
+13187960201,Georgia,Lumpkin County,15.14,0
+13193000300,Georgia,Macon County,34.07,0
+13205090400,Georgia,Mitchell County,24.5,0
+13207050200,Georgia,Monroe County,16.27,0
+13209950200,Georgia,Montgomery County,15.06,0
+13215000900,Georgia,Muscogee County,10.52,0
+13215001000,Georgia,Muscogee County,14.71,0
+13215002500,Georgia,Muscogee County,36.29,0
+13215010606,Georgia,Muscogee County,98.36,1
+13215010802,Georgia,Muscogee County,28.83,0
+13215011100,Georgia,Muscogee County,34.94,0
+13217100400,Georgia,Newton County,25.93,0
+13225040400,Georgia,Peach County,30.55,0
+13235950100,Georgia,Pulaski County,39.44,0
+13245000600,Georgia,Richmond County,22.15,0
+13245000700,Georgia,Richmond County,21.61,0
+13245000900,Georgia,Richmond County,17.74,0
+13245001000,Georgia,Richmond County,21.39,0
+13245010204,Georgia,Richmond County,10.02,0
+13245010511,Georgia,Richmond County,21.27,0
+13245010800,Georgia,Richmond County,57.15,0
+13245011000,Georgia,Richmond County,13.55,0
+13247060201,Georgia,Rockdale County,10.27,0
+13255160700,Georgia,Spalding County,10.41,0
+13259950400,Georgia,Stewart County,39.1,0
+13261950700,Georgia,Sumter County,12.96,0
+13267950201,Georgia,Tattnall County,26.88,0
+13267950202,Georgia,Tattnall County,30.04,0
+13267950300,Georgia,Tattnall County,30.14,0
+13269950100,Georgia,Taylor County,14.89,0
+13271950100,Georgia,Telfair County,26.99,0
+13277960300,Georgia,Tift County,17.12,0
+13281960100,Georgia,Towns County,14.53,0
+13285960300,Georgia,Troup County,14.76,0
+13285960700,Georgia,Troup County,13.7,0
+13295020601,Georgia,Walker County,10.16,0
+13299950200,Georgia,Ware County,28.58,0
+13303950500,Georgia,Washington County,28.82,0
+13305970500,Georgia,Wayne County,35.81,0
+13309780200,Georgia,Wheeler County,40.07,0
+13313000502,Georgia,Whitfield County,11.44,0
+13315960100,Georgia,Wilcox County,46.96,0
+15001020202,Hawaii,Hawaii County,29.87,0
+15001020300,Hawaii,Hawaii County,13.4,0
+15001020500,Hawaii,Hawaii County,10.79,0
+15003001801,Hawaii,Honolulu County,11.07,0
+15003002003,Hawaii,Honolulu County,17.24,0
+15003002701,Hawaii,Honolulu County,67.72,1
+15003003900,Hawaii,Honolulu County,58.78,0
+15003004800,Hawaii,Honolulu County,10.05,0
+15003005700,Hawaii,Honolulu County,19.69,0
+15003005900,Hawaii,Honolulu County,43.57,0
+15003006600,Hawaii,Honolulu County,53.74,0
+15003007303,Hawaii,Honolulu County,98.83,1
+15003007400,Hawaii,Honolulu County,29.64,0
+15003007502,Hawaii,Honolulu County,77.25,1
+15003008502,Hawaii,Honolulu County,30.2,0
+15003009503,Hawaii,Honolulu County,74.11,1
+15003009507,Hawaii,Honolulu County,35.98,0
+15003009801,Hawaii,Honolulu County,10.3,0
+15003010202,Hawaii,Honolulu County,24.43,0
+15003010503,Hawaii,Honolulu County,11.01,0
+15003010801,Hawaii,Honolulu County,36.68,0
+15003010802,Hawaii,Honolulu County,28.92,0
+15003011000,Hawaii,Honolulu County,14.77,0
+15003011400,Hawaii,Honolulu County,60.33,0
+15003980200,Hawaii,Honolulu County,100.0,1
+15003981100,Hawaii,Honolulu County,31.58,0
+15003981300,Hawaii,Honolulu County,25.0,0
+15003981400,Hawaii,Honolulu County,70.1,1
+15009031101,Hawaii,Maui County,12.64,0
+16001000100,Idaho,Ada County,14.37,0
+16001000900,Idaho,Ada County,17.88,0
+16001002000,Idaho,Ada County,18.47,0
+16001010501,Idaho,Ada County,69.24,1
+16005000600,Idaho,Bannock County,10.58,0
+16005000700,Idaho,Bannock County,18.46,0
+16005001603,Idaho,Bannock County,11.81,0
+16027021300,Idaho,Canyon County,24.17,0
+16027021500,Idaho,Canyon County,12.59,0
+16035940000,Idaho,Clearwater County,10.61,0
+16039960500,Idaho,Elmore County,14.55,0
+16049960300,Idaho,Idaho County,19.79,0
+16057005400,Idaho,Latah County,44.65,0
+16065950301,Idaho,Madison County,12.13,0
+17001000202,Illinois,Adams County,18.31,0
+17001000400,Illinois,Adams County,13.63,0
+17001000500,Illinois,Adams County,11.68,0
+17001000700,Illinois,Adams County,11.88,0
+17003957600,Illinois,Alexander County,14.89,0
+17005951300,Illinois,Bond County,29.61,0
+17009970500,Illinois,Brown County,48.72,0
+17019000401,Illinois,Champaign County,76.07,1
+17019000402,Illinois,Champaign County,17.58,0
+17019001400,Illinois,Champaign County,48.65,0
+17019005900,Illinois,Champaign County,61.42,0
+17019006000,Illinois,Champaign County,66.69,0
+17021958700,Illinois,Christian County,26.23,0
+17027900500,Illinois,Clinton County,23.97,0
+17029000800,Illinois,Coles County,62.11,0
+17031010202,Illinois,Cook County,11.18,0
+17031010300,Illinois,Cook County,12.68,0
+17031010400,Illinois,Cook County,26.76,0
+17031020902,Illinois,Cook County,10.76,0
+17031030103,Illinois,Cook County,18.98,0
+17031030104,Illinois,Cook County,45.67,0
+17031030701,Illinois,Cook County,12.65,0
+17031031200,Illinois,Cook County,10.98,0
+17031031501,Illinois,Cook County,11.88,0
+17031071000,Illinois,Cook County,41.65,0
+17031071100,Illinois,Cook County,16.03,0
+17031081000,Illinois,Cook County,14.67,0
+17031081201,Illinois,Cook County,12.12,0
+17031140200,Illinois,Cook County,15.05,0
+17031252201,Illinois,Cook County,11.72,0
+17031320400,Illinois,Cook County,80.26,1
+17031320600,Illinois,Cook County,14.33,0
+17031380700,Illinois,Cook County,15.85,0
+17031410200,Illinois,Cook County,24.74,0
+17031411000,Illinois,Cook County,12.15,0
+17031411100,Illinois,Cook County,15.01,0
+17031420200,Illinois,Cook County,17.41,0
+17031420300,Illinois,Cook County,41.04,0
+17031430700,Illinois,Cook County,11.9,0
+17031490500,Illinois,Cook County,12.98,0
+17031560100,Illinois,Cook County,15.21,0
+17031690300,Illinois,Cook County,16.02,0
+17031740200,Illinois,Cook County,10.94,0
+17031806801,Illinois,Cook County,10.82,0
+17031808100,Illinois,Cook County,15.42,0
+17031808702,Illinois,Cook County,82.98,1
+17031808800,Illinois,Cook County,12.01,0
+17031809800,Illinois,Cook County,14.61,0
+17031811900,Illinois,Cook County,14.8,0
+17031823605,Illinois,Cook County,13.28,0
+17031824400,Illinois,Cook County,10.88,0
+17031830202,Illinois,Cook County,11.15,0
+17031830700,Illinois,Cook County,22.23,0
+17031832500,Illinois,Cook County,15.5,0
+17031836200,Illinois,Cook County,79.73,1
+17031837300,Illinois,Cook County,13.01,0
+17031837800,Illinois,Cook County,11.44,0
+17031838200,Illinois,Cook County,35.17,0
+17031838600,Illinois,Cook County,12.77,0
+17031839100,Illinois,Cook County,31.33,0
+17031839500,Illinois,Cook County,11.39,0
+17031839600,Illinois,Cook County,11.32,0
+17031841600,Illinois,Cook County,16.72,0
+17031841900,Illinois,Cook County,36.67,0
+17031842000,Illinois,Cook County,75.51,1
+17031843300,Illinois,Cook County,17.92,0
+17031843500,Illinois,Cook County,90.84,1
+17033880500,Illinois,Crawford County,32.38,0
+17037001001,Illinois,DeKalb County,11.72,0
+17037002200,Illinois,DeKalb County,87.32,1
+17043841902,Illinois,DuPage County,43.81,0
+17043842603,Illinois,DuPage County,27.08,0
+17043842900,Illinois,DuPage County,17.13,0
+17043846103,Illinois,DuPage County,12.13,0
+17043846202,Illinois,DuPage County,11.04,0
+17043846209,Illinois,DuPage County,13.26,0
+17051950800,Illinois,Fayette County,31.35,0
+17057953500,Illinois,Fulton County,42.83,0
+17077011700,Illinois,Jackson County,40.64,0
+17081050400,Illinois,Jefferson County,33.47,0
+17083010300,Illinois,Jersey County,11.31,0
+17087980000,Illinois,Johnson County,97.72,1
+17089852202,Illinois,Kane County,10.86,0
+17089853001,Illinois,Kane County,19.11,0
+17089854700,Illinois,Kane County,13.57,0
+17091012000,Illinois,Kankakee County,33.95,0
+17091012500,Illinois,Kankakee County,25.39,0
+17095000500,Illinois,Knox County,33.75,0
+17095000800,Illinois,Knox County,42.24,0
+17097862200,Illinois,Lake County,17.72,0
+17097862502,Illinois,Lake County,17.06,0
+17097863003,Illinois,Lake County,99.02,1
+17097863004,Illinois,Lake County,11.14,0
+17097863005,Illinois,Lake County,99.98,1
+17097863400,Illinois,Lake County,23.68,0
+17097864801,Illinois,Lake County,11.02,0
+17097866200,Illinois,Lake County,10.9,0
+17099962300,Illinois,LaSalle County,19.32,0
+17101880800,Illinois,Lawrence County,41.25,0
+17103000400,Illinois,Lee County,32.02,0
+17105960200,Illinois,Livingston County,23.58,0
+17105960700,Illinois,Livingston County,33.51,0
+17107953100,Illinois,Logan County,14.11,0
+17107953500,Illinois,Logan County,54.39,0
+17109010400,Illinois,McDonough County,16.37,0
+17109010500,Illinois,McDonough County,91.08,1
+17113000200,Illinois,McLean County,88.39,1
+17113001302,Illinois,McLean County,62.26,0
+17113001600,Illinois,McLean County,11.5,0
+17115000500,Illinois,Macon County,16.58,0
+17115001600,Illinois,Macon County,33.65,0
+17115002000,Illinois,Macon County,12.29,0
+17115002903,Illinois,Macon County,11.03,0
+17115003100,Illinois,Macon County,24.02,0
+17117956300,Illinois,Macoupin County,10.84,0
+17119403101,Illinois,Madison County,20.07,0
+17135958000,Illinois,Montgomery County,34.31,0
+17137951800,Illinois,Morgan County,24.77,0
+17137952000,Illinois,Morgan County,34.6,0
+17143001200,Illinois,Peoria County,20.58,0
+17143001900,Illinois,Peoria County,11.74,0
+17143002000,Illinois,Peoria County,50.56,0
+17143004500,Illinois,Peoria County,13.63,0
+17145030200,Illinois,Perry County,30.4,0
+17149952700,Illinois,Pike County,11.89,0
+17151971200,Illinois,Pope County,14.35,0
+17157951200,Illinois,Randolph County,61.15,0
+17161020400,Illinois,Rock Island County,18.35,0
+17161022600,Illinois,Rock Island County,18.17,0
+17161022800,Illinois,Rock Island County,28.92,0
+17163501700,Illinois,St. Clair County,17.06,0
+17163502404,Illinois,St. Clair County,16.85,0
+17165955800,Illinois,Saline County,12.85,0
+17167000300,Illinois,Sangamon County,11.32,0
+17167000900,Illinois,Sangamon County,13.08,0
+17167001400,Illinois,Sangamon County,31.94,0
+17167001500,Illinois,Sangamon County,21.49,0
+17167003000,Illinois,Sangamon County,19.28,0
+17169970100,Illinois,Schuyler County,17.55,0
+17179021801,Illinois,Tazewell County,29.69,0
+17183000100,Illinois,Vermilion County,16.1,0
+17183011200,Illinois,Vermilion County,32.28,0
+17187870400,Illinois,Warren County,19.46,0
+17197882000,Illinois,Will County,23.3,0
+17197882802,Illinois,Will County,13.42,0
+17197883000,Illinois,Will County,12.17,0
+17197884101,Illinois,Will County,28.32,0
+17197980100,Illinois,Will County,96.81,1
+17199021400,Illinois,Williamson County,20.61,0
+17201000507,Illinois,Winnebago County,10.48,0
+17201002600,Illinois,Winnebago County,32.32,0
+17201003605,Illinois,Winnebago County,23.54,0
+18003000900,Indiana,Allen County,10.45,0
+18003001200,Indiana,Allen County,24.37,0
+18003001300,Indiana,Allen County,54.81,0
+18003003500,Indiana,Allen County,13.52,0
+18003004300,Indiana,Allen County,15.27,0
+18003980001,Indiana,Allen County,86.45,1
+18017951400,Indiana,Cass County,12.18,0
+18019050200,Indiana,Clark County,17.59,0
+18035000902,Indiana,Delaware County,96.52,1
+18035002800,Indiana,Delaware County,17.85,0
+18039000302,Indiana,Elkhart County,14.21,0
+18039001300,Indiana,Elkhart County,15.39,0
+18043070500,Indiana,Floyd County,13.21,0
+18053000800,Indiana,Grant County,37.89,0
+18053010700,Indiana,Grant County,27.49,0
+18063210700,Indiana,Hendricks County,23.5,0
+18065975500,Indiana,Henry County,42.81,0
+18067000700,Indiana,Howard County,13.5,0
+18069961500,Indiana,Huntington County,15.58,0
+18073101300,Indiana,Jasper County,14.12,0
+18077966300,Indiana,Jefferson County,24.1,0
+18077966400,Indiana,Jefferson County,14.61,0
+18081611000,Indiana,Johnson County,20.78,0
+18083955300,Indiana,Knox County,44.52,0
+18085961900,Indiana,Kosciusko County,13.13,0
+18085962100,Indiana,Kosciusko County,10.48,0
+18089020600,Indiana,Lake County,11.13,0
+18089020900,Indiana,Lake County,12.82,0
+18089042504,Indiana,Lake County,17.64,0
+18089042607,Indiana,Lake County,11.31,0
+18091040100,Indiana,LaPorte County,57.19,0
+18091042300,Indiana,LaPorte County,15.31,0
+18091042600,Indiana,LaPorte County,36.45,0
+18095001100,Indiana,Madison County,18.53,0
+18095001300,Indiana,Madison County,16.65,0
+18095011600,Indiana,Madison County,98.07,1
+18095011900,Indiana,Madison County,15.43,0
+18097321900,Indiana,Marion County,42.35,0
+18097340111,Indiana,Marion County,18.41,0
+18097340500,Indiana,Marion County,13.36,0
+18097353300,Indiana,Marion County,14.39,0
+18097354200,Indiana,Marion County,26.52,0
+18097354500,Indiana,Marion County,12.63,0
+18097356200,Indiana,Marion County,49.12,0
+18097380300,Indiana,Marion County,18.44,0
+18097391000,Indiana,Marion County,17.68,0
+18103952900,Indiana,Miami County,57.76,0
+18105000201,Indiana,Monroe County,88.43,1
+18105000202,Indiana,Monroe County,99.13,1
+18105000302,Indiana,Monroe County,10.89,0
+18105001600,Indiana,Monroe County,12.09,0
+18107957000,Indiana,Montgomery County,18.04,0
+18121030300,Indiana,Parke County,28.42,0
+18123952200,Indiana,Perry County,25.18,0
+18127050900,Indiana,Porter County,41.56,0
+18133956200,Indiana,Putnam County,23.24,0
+18133956300,Indiana,Putnam County,20.9,0
+18133956600,Indiana,Putnam County,42.08,0
+18141001700,Indiana,St. Joseph County,17.54,0
+18141002700,Indiana,St. Joseph County,39.77,0
+18141002900,Indiana,St. Joseph County,14.19,0
+18141010600,Indiana,St. Joseph County,17.35,0
+18141011202,Indiana,St. Joseph County,89.13,1
+18151971400,Indiana,Steuben County,23.03,0
+18153050500,Indiana,Sullivan County,50.19,0
+18157000100,Indiana,Tippecanoe County,17.38,0
+18157005400,Indiana,Tippecanoe County,31.97,0
+18157005500,Indiana,Tippecanoe County,17.59,0
+18157010300,Indiana,Tippecanoe County,76.14,1
+18157010400,Indiana,Tippecanoe County,100.0,1
+18163000300,Indiana,Vanderburgh County,29.47,0
+18163001400,Indiana,Vanderburgh County,10.14,0
+18163001700,Indiana,Vanderburgh County,14.93,0
+18163001800,Indiana,Vanderburgh County,45.68,0
+18163001900,Indiana,Vanderburgh County,11.41,0
+18163002000,Indiana,Vanderburgh County,19.71,0
+18163003500,Indiana,Vanderburgh County,22.64,0
+18163010403,Indiana,Vanderburgh County,37.05,0
+18167010100,Indiana,Vigo County,19.95,0
+18167010300,Indiana,Vigo County,10.38,0
+18167011100,Indiana,Vigo County,49.15,0
+18167011200,Indiana,Vigo County,36.06,0
+18169102200,Indiana,Wabash County,18.44,0
+18177000400,Indiana,Wayne County,13.7,0
+18177000600,Indiana,Wayne County,13.78,0
+18177000800,Indiana,Wayne County,21.23,0
+19013000100,Iowa,Black Hawk County,22.58,0
+19013002303,Iowa,Black Hawk County,75.2,1
+19015020600,Iowa,Boone County,19.14,0
+19017004000,Iowa,Bremer County,53.79,0
+19021960500,Iowa,Buena Vista County,16.28,0
+19053960200,Iowa,Decatur County,15.45,0
+19061000100,Iowa,Dubuque County,11.03,0
+19061000400,Iowa,Dubuque County,10.97,0
+19061000600,Iowa,Dubuque County,11.23,0
+19061000701,Iowa,Dubuque County,26.53,0
+19061000900,Iowa,Dubuque County,17.63,0
+19061001201,Iowa,Dubuque County,11.15,0
+19063070300,Iowa,Emmet County,11.36,0
+19065080200,Iowa,Fayette County,13.24,0
+19087970300,Iowa,Henry County,10.13,0
+19087970400,Iowa,Henry County,19.9,0
+19099040800,Iowa,Jasper County,22.96,0
+19101090100,Iowa,Jefferson County,27.83,0
+19103000100,Iowa,Johnson County,15.36,0
+19103000301,Iowa,Johnson County,12.36,0
+19103001100,Iowa,Johnson County,11.36,0
+19103002100,Iowa,Johnson County,60.39,0
+19103002300,Iowa,Johnson County,49.96,0
+19105070300,Iowa,Jones County,23.35,0
+19111490200,Iowa,Lee County,20.45,0
+19113001300,Iowa,Linn County,11.9,0
+19113001900,Iowa,Linn County,50.05,0
+19113002200,Iowa,Linn County,17.9,0
+19113010800,Iowa,Linn County,14.52,0
+19123950600,Iowa,Mahaska County,10.95,0
+19125030300,Iowa,Marion County,39.1,0
+19127950700,Iowa,Marshall County,15.29,0
+19129040302,Iowa,Mills County,15.2,0
+19145490400,Iowa,Page County,36.93,0
+19153000300,Iowa,Polk County,15.59,0
+19153001100,Iowa,Polk County,31.35,0
+19153004702,Iowa,Polk County,12.74,0
+19153005100,Iowa,Polk County,11.96,0
+19153010500,Iowa,Polk County,15.71,0
+19153010702,Iowa,Polk County,11.05,0
+19155031700,Iowa,Pottawattamie County,19.25,0
+19157370300,Iowa,Poweshiek County,25.24,0
+19163010800,Iowa,Scott County,11.63,0
+19163010900,Iowa,Scott County,23.05,0
+19163011300,Iowa,Scott County,29.98,0
+19167070600,Iowa,Sioux County,17.02,0
+19167070700,Iowa,Sioux County,16.21,0
+19169000800,Iowa,Story County,99.41,1
+19169001100,Iowa,Story County,30.21,0
+19169001200,Iowa,Story County,83.51,1
+19179960300,Iowa,Wapello County,10.87,0
+19181020700,Iowa,Warren County,15.1,0
+19181020800,Iowa,Warren County,18.15,0
+19187000900,Iowa,Webster County,42.34,0
+19191950200,Iowa,Winneshiek County,36.6,0
+19193000500,Iowa,Woodbury County,18.13,0
+20005081700,Kansas,Atchison County,18.87,0
+20015020100,Kansas,Butler County,20.26,0
+20029977300,Kansas,Cloud County,12.75,0
+20035493500,Kansas,Cowley County,20.98,0
+20035494000,Kansas,Cowley County,16.88,0
+20037957600,Kansas,Crawford County,17.53,0
+20043020100,Kansas,Doniphan County,16.2,0
+20045000300,Kansas,Douglas County,28.08,0
+20045000400,Kansas,Douglas County,85.41,1
+20045000502,Kansas,Douglas County,19.51,0
+20045001001,Kansas,Douglas County,23.74,0
+20045001203,Kansas,Douglas County,10.66,0
+20051072900,Kansas,Ellis County,11.79,0
+20053086700,Kansas,Ellsworth County,22.32,0
+20055960507,Kansas,Finney County,15.19,0
+20079030100,Kansas,Harvey County,11.88,0
+20091053202,Kansas,Johnson County,10.1,0
+20091053502,Kansas,Johnson County,18.81,0
+20091053711,Kansas,Johnson County,26.73,0
+20103070500,Kansas,Leavenworth County,19.77,0
+20103071102,Kansas,Leavenworth County,44.8,0
+20103981900,Kansas,Leavenworth County,34.2,0
+20111000100,Kansas,Lyon County,16.88,0
+20113788200,Kansas,McPherson County,12.41,0
+20115489600,Kansas,Marion County,12.92,0
+20125951000,Kansas,Montgomery County,18.89,0
+20137951700,Kansas,Norton County,14.49,0
+20145970200,Kansas,Pawnee County,19.18,0
+20155000200,Kansas,Reno County,12.28,0
+20155000800,Kansas,Reno County,35.98,0
+20159967300,Kansas,Rice County,13.84,0
+20161000303,Kansas,Riley County,53.14,0
+20161000700,Kansas,Riley County,12.89,0
+20161001002,Kansas,Riley County,33.76,0
+20161001100,Kansas,Riley County,32.07,0
+20173000900,Kansas,Sedgwick County,21.19,0
+20173002600,Kansas,Sedgwick County,15.43,0
+20173004300,Kansas,Sedgwick County,33.41,0
+20173006600,Kansas,Sedgwick County,12.08,0
+20173007800,Kansas,Sedgwick County,17.53,0
+20173009000,Kansas,Sedgwick County,12.05,0
+20177001800,Kansas,Shawnee County,17.02,0
+20177003100,Kansas,Shawnee County,11.83,0
+20177004000,Kansas,Shawnee County,20.03,0
+20209040002,Kansas,Wyandotte County,100.0,1
+20209042001,Kansas,Wyandotte County,16.5,0
+20209042501,Kansas,Wyandotte County,100.0,1
+21001970402,Kentucky,Adair County,20.54,0
+21013961100,Kentucky,Bell County,21.19,0
+21019031002,Kentucky,Boyd County,22.59,0
+21021930100,Kentucky,Boyle County,11.16,0
+21021930300,Kentucky,Boyle County,39.9,0
+21035010301,Kentucky,Calloway County,78.89,1
+21037053200,Kentucky,Campbell County,21.84,0
+21037053302,Kentucky,Campbell County,23.51,0
+21043960500,Kentucky,Carter County,11.81,0
+21047200200,Kentucky,Christian County,13.74,0
+21047200300,Kentucky,Christian County,12.67,0
+21047201503,Kentucky,Christian County,100.0,1
+21051950300,Kentucky,Clay County,28.92,0
+21059000300,Kentucky,Daviess County,17.53,0
+21059001100,Kentucky,Daviess County,14.65,0
+21059001401,Kentucky,Daviess County,12.08,0
+21061920300,Kentucky,Edmonson County,13.14,0
+21061980100,Kentucky,Edmonson County,75.0,1
+21063920100,Kentucky,Elliott County,18.65,0
+21067000200,Kentucky,Fayette County,25.71,0
+21067000801,Kentucky,Fayette County,90.3,1
+21067000802,Kentucky,Fayette County,53.37,0
+21067001300,Kentucky,Fayette County,18.35,0
+21067003701,Kentucky,Fayette County,68.35,1
+21067003702,Kentucky,Fayette County,33.24,0
+21073070600,Kentucky,Franklin County,28.3,0
+21075960200,Kentucky,Fulton County,13.12,0
+21085950300,Kentucky,Grayson County,19.47,0
+21093000201,Kentucky,Hardin County,35.2,0
+21093980100,Kentucky,Hardin County,99.74,1
+21101020602,Kentucky,Henderson County,11.21,0
+21111003000,Kentucky,Jefferson County,12.82,0
+21111003500,Kentucky,Jefferson County,30.54,0
+21111004900,Kentucky,Jefferson County,43.02,0
+21111005000,Kentucky,Jefferson County,17.36,0
+21111005300,Kentucky,Jefferson County,50.87,0
+21111005900,Kentucky,Jefferson County,20.79,0
+21111006900,Kentucky,Jefferson County,10.45,0
+21111008700,Kentucky,Jefferson County,10.01,0
+21111008900,Kentucky,Jefferson County,18.19,0
+21113060400,Kentucky,Jessamine County,17.01,0
+21117065400,Kentucky,Kenton County,18.9,0
+21117067000,Kentucky,Kenton County,24.68,0
+21119960300,Kentucky,Knott County,14.4,0
+21125970600,Kentucky,Laurel County,15.4,0
+21129950100,Kentucky,Lee County,21.22,0
+21143960100,Kentucky,Lyon County,17.43,0
+21145030300,Kentucky,McCracken County,28.68,0
+21147960400,Kentucky,McCreary County,24.92,0
+21151010400,Kentucky,Madison County,10.84,0
+21151010500,Kentucky,Madison County,89.93,1
+21151011302,Kentucky,Madison County,21.35,0
+21155970300,Kentucky,Marion County,28.43,0
+21159950200,Kentucky,Martin County,20.43,0
+21175950400,Kentucky,Morgan County,39.01,0
+21177960200,Kentucky,Muhlenberg County,13.9,0
+21177960600,Kentucky,Muhlenberg County,10.59,0
+21185030200,Kentucky,Oldham County,79.16,1
+21195930300,Kentucky,Pike County,21.27,0
+21205950200,Kentucky,Rowan County,26.94,0
+21209040206,Kentucky,Scott County,23.21,0
+21211040502,Kentucky,Shelby County,16.97,0
+21221980100,Kentucky,Trigg County,77.78,1
+21225950201,Kentucky,Union County,23.09,0
+21227010100,Kentucky,Warren County,30.65,0
+21227010400,Kentucky,Warren County,93.57,1
+21233960200,Kentucky,Webster County,10.71,0
+21235920600,Kentucky,Whitley County,25.87,0
+22003950200,Louisiana,Allen Parish,45.74,0
+22003950500,Louisiana,Allen Parish,19.86,0
+22009030700,Louisiana,Avoyelles Parish,26.61,0
+22009030900,Louisiana,Avoyelles Parish,10.86,0
+22011960700,Louisiana,Beauregard Parish,10.74,0
+22015010805,Louisiana,Bossier Parish,11.09,0
+22015010900,Louisiana,Bossier Parish,21.09,0
+22017021100,Louisiana,Caddo Parish,12.57,0
+22017021200,Louisiana,Caddo Parish,11.91,0
+22017021700,Louisiana,Caddo Parish,16.69,0
+22017024203,Louisiana,Caddo Parish,11.5,0
+22017024602,Louisiana,Caddo Parish,24.36,0
+22017025200,Louisiana,Caddo Parish,11.0,0
+22017025300,Louisiana,Caddo Parish,24.08,0
+22019001100,Louisiana,Calcasieu Parish,17.05,0
+22019001600,Louisiana,Calcasieu Parish,33.15,0
+22021000300,Louisiana,Caldwell Parish,11.88,0
+22025000100,Louisiana,Catahoula Parish,16.92,0
+22027950200,Louisiana,Claiborne Parish,57.31,0
+22029000500,Louisiana,Concordia Parish,30.43,0
+22033002801,Louisiana,East Baton Rouge Parish,16.71,0
+22033002802,Louisiana,East Baton Rouge Parish,58.33,0
+22033003000,Louisiana,East Baton Rouge Parish,39.58,0
+22033003103,Louisiana,East Baton Rouge Parish,66.78,0
+22033005300,Louisiana,East Baton Rouge Parish,14.82,0
+22035000200,Louisiana,East Carroll Parish,41.63,0
+22037951502,Louisiana,East Feliciana Parish,30.57,0
+22039950100,Louisiana,Evangeline Parish,10.5,0
+22039950300,Louisiana,Evangeline Parish,10.19,0
+22041950200,Louisiana,Franklin Parish,11.17,0
+22043020402,Louisiana,Grant Parish,33.91,0
+22045030301,Louisiana,Iberia Parish,14.16,0
+22047953200,Louisiana,Iberville Parish,49.1,0
+22049970300,Louisiana,Jackson Parish,21.93,0
+22051024700,Louisiana,Jefferson Parish,12.47,0
+22051025900,Louisiana,Jefferson Parish,27.51,0
+22055000100,Louisiana,Lafayette Parish,42.52,0
+22055002200,Louisiana,Lafayette Parish,35.71,0
+22057022000,Louisiana,Lafourche Parish,36.62,0
+22059970100,Louisiana,LaSalle Parish,13.01,0
+22059970200,Louisiana,LaSalle Parish,10.83,0
+22061960300,Louisiana,Lincoln Parish,39.58,0
+22061961000,Louisiana,Lincoln Parish,28.61,0
+22065960200,Louisiana,Madison Parish,28.44,0
+22065960300,Louisiana,Madison Parish,15.92,0
+22069000600,Louisiana,Natchitoches Parish,23.19,0
+22071006000,Louisiana,Orleans Parish,37.21,0
+22071007000,Louisiana,Orleans Parish,70.86,1
+22071009900,Louisiana,Orleans Parish,14.21,0
+22071012101,Louisiana,Orleans Parish,27.74,0
+22071012102,Louisiana,Orleans Parish,63.03,0
+22071013400,Louisiana,Orleans Parish,22.19,0
+22071013900,Louisiana,Orleans Parish,18.64,0
+22071014500,Louisiana,Orleans Parish,100.0,1
+22071980000,Louisiana,Orleans Parish,100.0,1
+22073000401,Louisiana,Ouachita Parish,34.35,0
+22073000402,Louisiana,Ouachita Parish,25.98,0
+22073001400,Louisiana,Ouachita Parish,14.58,0
+22073010603,Louisiana,Ouachita Parish,29.31,0
+22073011000,Louisiana,Ouachita Parish,11.66,0
+22079011600,Louisiana,Rapides Parish,11.77,0
+22079011700,Louisiana,Rapides Parish,13.6,0
+22079012600,Louisiana,Rapides Parish,12.03,0
+22079013700,Louisiana,Rapides Parish,18.02,0
+22079013800,Louisiana,Rapides Parish,19.69,0
+22079013900,Louisiana,Rapides Parish,13.34,0
+22083970400,Louisiana,Richland Parish,22.46,0
+22085000500,Louisiana,Sabine Parish,10.76,0
+22087030400,Louisiana,St. Bernard Parish,19.03,0
+22089062700,Louisiana,St. Charles Parish,10.6,0
+22095070900,Louisiana,St. John the Baptist Parish,10.37,0
+22105953400,Louisiana,Tangipahoa Parish,10.57,0
+22105954001,Louisiana,Tangipahoa Parish,11.53,0
+22105954200,Louisiana,Tangipahoa Parish,32.35,0
+22109001300,Louisiana,Terrebonne Parish,11.36,0
+22111960400,Louisiana,Union Parish,11.11,0
+22115950701,Louisiana,Vernon Parish,99.79,1
+22117950101,Louisiana,Washington Parish,27.79,0
+22121020200,Louisiana,West Baton Rouge Parish,16.03,0
+22123000300,Louisiana,West Carroll Parish,13.18,0
+22125951701,Louisiana,West Feliciana Parish,62.22,0
+22127960200,Louisiana,Winn Parish,25.37,0
+23001020300,Maine,Androscoggin County,18.32,0
+23001020900,Maine,Androscoggin County,13.24,0
+23003951600,Maine,Aroostook County,22.82,0
+23003952000,Maine,Aroostook County,13.68,0
+23005000600,Maine,Cumberland County,24.31,0
+23005002002,Maine,Cumberland County,13.72,0
+23005003500,Maine,Cumberland County,10.31,0
+23005004002,Maine,Cumberland County,20.66,0
+23005004803,Maine,Cumberland County,12.01,0
+23005011202,Maine,Cumberland County,20.41,0
+23005017002,Maine,Cumberland County,19.63,0
+23007971200,Maine,Franklin County,14.14,0
+23009966400,Maine,Hancock County,22.59,0
+23011010500,Maine,Kennebec County,11.62,0
+23011024200,Maine,Kennebec County,28.67,0
+23013970400,Maine,Knox County,13.24,0
+23019000300,Maine,Penobscot County,13.55,0
+23019006300,Maine,Penobscot County,76.9,1
+23019031100,Maine,Penobscot County,14.48,0
+23029956200,Maine,Washington County,11.05,0
+23031025400,Maine,York County,44.01,0
+24001000200,Maryland,Allegany County,33.24,0
+24001000500,Maryland,Allegany County,12.62,0
+24001001300,Maryland,Allegany County,61.09,0
+24001001800,Maryland,Allegany County,36.06,0
+24003702701,Maryland,Anne Arundel County,11.34,0
+24003706101,Maryland,Anne Arundel County,10.55,0
+24003706700,Maryland,Anne Arundel County,90.88,1
+24003740400,Maryland,Anne Arundel County,100.0,1
+24003740603,Maryland,Anne Arundel County,66.53,0
+24003980000,Maryland,Anne Arundel County,27.78,0
+24005401000,Maryland,Baltimore County,17.43,0
+24005402201,Maryland,Baltimore County,14.33,0
+24005404202,Maryland,Baltimore County,17.17,0
+24005408400,Maryland,Baltimore County,11.38,0
+24005490301,Maryland,Baltimore County,20.85,0
+24005490302,Maryland,Baltimore County,32.5,0
+24005490605,Maryland,Baltimore County,88.23,1
+24005490701,Maryland,Baltimore County,34.15,0
+24005492500,Maryland,Baltimore County,94.09,1
+24013505203,Maryland,Carroll County,22.37,0
+24013507500,Maryland,Carroll County,25.23,0
+24017850201,Maryland,Charles County,19.95,0
+24017851001,Maryland,Charles County,16.47,0
+24021750600,Maryland,Frederick County,21.48,0
+24021766800,Maryland,Frederick County,28.98,0
+24025303802,Maryland,Harford County,19.52,0
+24025306500,Maryland,Harford County,43.41,0
+24027601203,Maryland,Howard County,27.15,0
+24029950300,Maryland,Kent County,23.38,0
+24031700312,Maryland,Montgomery County,12.13,0
+24031700723,Maryland,Montgomery County,10.81,0
+24031701218,Maryland,Montgomery County,16.08,0
+24031701702,Maryland,Montgomery County,11.96,0
+24033800410,Maryland,Prince George's County,19.58,0
+24033800605,Maryland,Prince George's County,22.6,0
+24033801217,Maryland,Prince George's County,12.38,0
+24033805908,Maryland,Prince George's County,11.4,0
+24033807200,Maryland,Prince George's County,72.27,1
+24037875801,Maryland,St. Mary's County,22.49,0
+24037876200,Maryland,St. Mary's County,22.78,0
+24039930101,Maryland,Somerset County,28.33,0
+24039980400,Maryland,Somerset County,96.8,1
+24043000900,Maryland,Washington County,12.3,0
+24043011000,Maryland,Washington County,100.0,1
+24045010400,Maryland,Wicomico County,25.25,0
+24045010502,Maryland,Wicomico County,11.26,0
+24047951300,Maryland,Worcester County,14.67,0
+24510040200,Maryland,Baltimore city,44.15,0
+24510100300,Maryland,Baltimore city,100.0,1
+24510120202,Maryland,Baltimore city,41.89,0
+24510120600,Maryland,Baltimore city,19.7,0
+24510130806,Maryland,Baltimore city,12.09,0
+24510140100,Maryland,Baltimore city,14.03,0
+24510150400,Maryland,Baltimore city,16.51,0
+24510160300,Maryland,Baltimore city,20.09,0
+24510180200,Maryland,Baltimore city,15.66,0
+24510190300,Maryland,Baltimore city,11.25,0
+24510270902,Maryland,Baltimore city,20.15,0
+24510270903,Maryland,Baltimore city,34.74,0
+24510271102,Maryland,Baltimore city,70.01,1
+24510280500,Maryland,Baltimore city,45.22,0
+25001013700,Massachusetts,Barnstable County,23.38,0
+25001014100,Massachusetts,Barnstable County,40.14,0
+25003920101,Massachusetts,Berkshire County,25.66,0
+25003920102,Massachusetts,Berkshire County,35.11,0
+25003921300,Massachusetts,Berkshire County,18.43,0
+25003925100,Massachusetts,Berkshire County,10.78,0
+25005611102,Massachusetts,Bristol County,31.72,0
+25005642200,Massachusetts,Bristol County,11.96,0
+25005653102,Massachusetts,Bristol County,21.06,0
+25005985500,Massachusetts,Bristol County,75.08,1
+25005985600,Massachusetts,Bristol County,38.58,0
+25009204101,Massachusetts,Essex County,14.16,0
+25009204102,Massachusetts,Essex County,18.87,0
+25009212100,Massachusetts,Essex County,13.52,0
+25009216100,Massachusetts,Essex County,25.7,0
+25009217600,Massachusetts,Essex County,23.1,0
+25009221800,Massachusetts,Essex County,12.63,0
+25009254200,Massachusetts,Essex County,19.11,0
+25011041400,Massachusetts,Franklin County,10.02,0
+25013801102,Massachusetts,Hampden County,16.46,0
+25013801200,Massachusetts,Hampden County,11.9,0
+25013801601,Massachusetts,Hampden County,24.73,0
+25013801700,Massachusetts,Hampden County,24.57,0
+25013810414,Massachusetts,Hampden County,16.42,0
+25013812103,Massachusetts,Hampden County,14.7,0
+25013812903,Massachusetts,Hampden County,97.07,1
+25015820400,Massachusetts,Hampshire County,97.5,1
+25015820600,Massachusetts,Hampshire County,94.77,1
+25015820802,Massachusetts,Hampshire County,99.91,1
+25015821200,Massachusetts,Hampshire County,90.93,1
+25015821700,Massachusetts,Hampshire County,10.34,0
+25015821901,Massachusetts,Hampshire County,10.42,0
+25015822000,Massachusetts,Hampshire County,87.82,1
+25017310100,Massachusetts,Middlesex County,11.09,0
+25017315401,Massachusetts,Middlesex County,13.28,0
+25017316400,Massachusetts,Middlesex County,12.15,0
+25017339500,Massachusetts,Middlesex County,25.73,0
+25017350600,Massachusetts,Middlesex County,40.33,0
+25017353101,Massachusetts,Middlesex County,16.95,0
+25017353102,Massachusetts,Middlesex County,88.0,1
+25017353200,Massachusetts,Middlesex County,32.53,0
+25017353600,Massachusetts,Middlesex County,36.01,0
+25017353700,Massachusetts,Middlesex County,42.95,0
+25017353900,Massachusetts,Middlesex County,63.4,0
+25017354000,Massachusetts,Middlesex County,26.68,0
+25017354100,Massachusetts,Middlesex County,11.35,0
+25017361200,Massachusetts,Middlesex County,19.71,0
+25017368400,Massachusetts,Middlesex County,32.89,0
+25017368901,Massachusetts,Middlesex County,33.94,0
+25017368902,Massachusetts,Middlesex County,20.69,0
+25017369000,Massachusetts,Middlesex County,30.3,0
+25017373500,Massachusetts,Middlesex County,15.19,0
+25017373600,Massachusetts,Middlesex County,55.28,0
+25017374000,Massachusetts,Middlesex County,16.67,0
+25017374800,Massachusetts,Middlesex County,26.78,0
+25017383101,Massachusetts,Middlesex County,20.49,0
+25017383502,Massachusetts,Middlesex County,39.84,0
+25017388200,Massachusetts,Middlesex County,20.16,0
+25017388300,Massachusetts,Middlesex County,35.66,0
+25021402500,Massachusetts,Norfolk County,19.09,0
+25021404202,Massachusetts,Norfolk County,32.11,0
+25021404400,Massachusetts,Norfolk County,33.56,0
+25021409101,Massachusetts,Norfolk County,36.05,0
+25021411302,Massachusetts,Norfolk County,12.62,0
+25021416102,Massachusetts,Norfolk County,35.85,0
+25021417701,Massachusetts,Norfolk County,10.52,0
+25021442101,Massachusetts,Norfolk County,11.49,0
+25023510900,Massachusetts,Plymouth County,11.89,0
+25023511702,Massachusetts,Plymouth County,10.65,0
+25023525300,Massachusetts,Plymouth County,99.56,1
+25023530600,Massachusetts,Plymouth County,23.82,0
+25023561200,Massachusetts,Plymouth County,83.27,1
+25025000502,Massachusetts,Suffolk County,50.66,0
+25025000803,Massachusetts,Suffolk County,75.68,1
+25025010103,Massachusetts,Suffolk County,84.24,1
+25025010104,Massachusetts,Suffolk County,39.34,0
+25025010204,Massachusetts,Suffolk County,36.68,0
+25025010300,Massachusetts,Suffolk County,85.68,1
+25025010404,Massachusetts,Suffolk County,39.14,0
+25025010405,Massachusetts,Suffolk County,70.08,1
+25025010500,Massachusetts,Suffolk County,13.83,0
+25025010701,Massachusetts,Suffolk County,14.37,0
+25025020303,Massachusetts,Suffolk County,24.44,0
+25025030300,Massachusetts,Suffolk County,20.22,0
+25025070101,Massachusetts,Suffolk County,20.91,0
+25025070200,Massachusetts,Suffolk County,33.14,0
+25025071201,Massachusetts,Suffolk County,12.68,0
+25025080100,Massachusetts,Suffolk County,47.22,0
+25025080601,Massachusetts,Suffolk County,48.3,0
+25025080801,Massachusetts,Suffolk County,31.97,0
+25025081100,Massachusetts,Suffolk County,13.81,0
+25025120105,Massachusetts,Suffolk County,16.12,0
+25025160601,Massachusetts,Suffolk County,10.21,0
+25025980101,Massachusetts,Suffolk County,100.0,1
+25025980300,Massachusetts,Suffolk County,99.41,1
+25025981100,Massachusetts,Suffolk County,50.96,0
+25025981202,Massachusetts,Suffolk County,100.0,1
+25025981501,Massachusetts,Suffolk County,100.0,1
+25027707500,Massachusetts,Worcester County,20.76,0
+25027710800,Massachusetts,Worcester County,10.13,0
+25027711100,Massachusetts,Worcester County,31.62,0
+25027713100,Massachusetts,Worcester County,20.57,0
+25027727100,Massachusetts,Worcester County,10.72,0
+25027729100,Massachusetts,Worcester County,26.18,0
+25027730600,Massachusetts,Worcester County,20.93,0
+25027730902,Massachusetts,Worcester County,26.86,0
+25027731202,Massachusetts,Worcester County,99.82,1
+25027731600,Massachusetts,Worcester County,30.47,0
+25027731700,Massachusetts,Worcester County,24.56,0
+25027732002,Massachusetts,Worcester County,15.16,0
+25027732902,Massachusetts,Worcester County,98.05,1
+25027755200,Massachusetts,Worcester County,10.33,0
+25027761400,Massachusetts,Worcester County,19.82,0
+26003000300,Michigan,Alger County,28.33,0
+26013000200,Michigan,Baraga County,19.53,0
+26017286500,Michigan,Bay County,20.82,0
+26021021300,Michigan,Berrien County,26.31,0
+26023951300,Michigan,Branch County,42.86,0
+26025000700,Michigan,Calhoun County,17.13,0
+26025002600,Michigan,Calhoun County,15.07,0
+26025003400,Michigan,Calhoun County,43.58,0
+26025003500,Michigan,Calhoun County,17.16,0
+26033970300,Michigan,Chippewa County,19.13,0
+26033970900,Michigan,Chippewa County,41.1,0
+26033980200,Michigan,Chippewa County,100.0,1
+26037010901,Michigan,Clinton County,11.22,0
+26045021100,Michigan,Eaton County,10.06,0
+26049002000,Michigan,Genesee County,10.09,0
+26049002800,Michigan,Genesee County,46.52,0
+26049010111,Michigan,Genesee County,11.21,0
+26049013600,Michigan,Genesee County,28.75,0
+26053950100,Michigan,Gogebic County,43.33,0
+26053950400,Michigan,Gogebic County,10.38,0
+26055550300,Michigan,Grand Traverse County,19.04,0
+26057000300,Michigan,Gratiot County,24.29,0
+26057000400,Michigan,Gratiot County,99.83,1
+26057000500,Michigan,Gratiot County,17.84,0
+26059050700,Michigan,Hillsdale County,18.84,0
+26061000800,Michigan,Houghton County,31.73,0
+26065004100,Michigan,Ingham County,19.18,0
+26065004490,Michigan,Ingham County,100.0,1
+26065004491,Michigan,Ingham County,100.0,1
+26065004492,Michigan,Ingham County,100.0,1
+26065004493,Michigan,Ingham County,99.94,1
+26065004494,Michigan,Ingham County,99.94,1
+26065006301,Michigan,Ingham County,14.81,0
+26065006600,Michigan,Ingham County,10.87,0
+26065980000,Michigan,Ingham County,95.47,1
+26067032100,Michigan,Ionia County,44.01,0
+26067982200,Michigan,Ionia County,99.65,1
+26073000400,Michigan,Isabella County,31.83,0
+26073000500,Michigan,Isabella County,27.66,0
+26073000700,Michigan,Isabella County,30.03,0
+26075000200,Michigan,Jackson County,10.2,0
+26075000600,Michigan,Jackson County,19.54,0
+26075005400,Michigan,Jackson County,16.45,0
+26075005800,Michigan,Jackson County,100.0,1
+26077000201,Michigan,Kalamazoo County,24.67,0
+26077000500,Michigan,Kalamazoo County,17.98,0
+26077001504,Michigan,Kalamazoo County,86.3,1
+26077001801,Michigan,Kalamazoo County,14.37,0
+26081000200,Michigan,Kent County,31.65,0
+26081001101,Michigan,Kent County,22.68,0
+26081002000,Michigan,Kent County,14.45,0
+26081002400,Michigan,Kent County,25.09,0
+26081003600,Michigan,Kent County,15.2,0
+26081004400,Michigan,Kent County,23.3,0
+26081011803,Michigan,Kent County,13.68,0
+26085961200,Michigan,Lake County,13.36,0
+26087336500,Michigan,Lapeer County,100.0,1
+26091061301,Michigan,Lenawee County,13.84,0
+26091061400,Michigan,Lenawee County,12.24,0
+26091061500,Michigan,Lenawee County,21.96,0
+26091061700,Michigan,Lenawee County,27.47,0
+26095960100,Michigan,Luce County,26.09,0
+26099218000,Michigan,Macomb County,16.88,0
+26099232000,Michigan,Macomb County,12.66,0
+26099245200,Michigan,Macomb County,48.82,0
+26099982200,Michigan,Macomb County,100.0,1
+26099982300,Michigan,Macomb County,93.81,1
+26101000500,Michigan,Manistee County,27.83,0
+26103000300,Michigan,Marquette County,17.06,0
+26103000500,Michigan,Marquette County,91.59,1
+26103002800,Michigan,Marquette County,25.34,0
+26107960700,Michigan,Mecosta County,12.86,0
+26107981300,Michigan,Mecosta County,98.78,1
+26111290400,Michigan,Midland County,25.14,0
+26115831500,Michigan,Monroe County,10.26,0
+26115831800,Michigan,Monroe County,10.45,0
+26115831900,Michigan,Monroe County,15.91,0
+26117971000,Michigan,Montcalm County,35.79,0
+26121000100,Michigan,Muskegon County,13.54,0
+26121000402,Michigan,Muskegon County,82.58,1
+26121004200,Michigan,Muskegon County,11.71,0
+26125140900,Michigan,Oakland County,33.67,0
+26125161600,Michigan,Oakland County,13.65,0
+26125161900,Michigan,Oakland County,14.05,0
+26125192800,Michigan,Oakland County,79.77,1
+26139024500,Michigan,Ottawa County,39.08,0
+26139024900,Michigan,Ottawa County,34.69,0
+26145000100,Michigan,Saginaw County,13.75,0
+26145001700,Michigan,Saginaw County,22.81,0
+26145010100,Michigan,Saginaw County,15.28,0
+26145010200,Michigan,Saginaw County,50.61,0
+26147624000,Michigan,St. Clair County,18.37,0
+26161400200,Michigan,Washtenaw County,96.96,1
+26161400300,Michigan,Washtenaw County,24.0,0
+26161402200,Michigan,Washtenaw County,51.38,0
+26161411100,Michigan,Washtenaw County,92.48,1
+26161414000,Michigan,Washtenaw County,11.31,0
+26161421900,Michigan,Washtenaw County,99.06,1
+26161422900,Michigan,Washtenaw County,95.15,1
+26163505500,Michigan,Wayne County,14.27,0
+26163506400,Michigan,Wayne County,67.27,1
+26163515200,Michigan,Wayne County,20.72,0
+26163516300,Michigan,Wayne County,18.43,0
+26163517200,Michigan,Wayne County,41.59,0
+26163518000,Michigan,Wayne County,10.69,0
+26163518500,Michigan,Wayne County,10.08,0
+26163520200,Michigan,Wayne County,38.86,0
+26163520300,Michigan,Wayne County,15.26,0
+26163521100,Michigan,Wayne County,11.35,0
+26163522000,Michigan,Wayne County,20.62,0
+26163522500,Michigan,Wayne County,29.82,0
+26163530200,Michigan,Wayne County,16.65,0
+26163531900,Michigan,Wayne County,30.32,0
+26163533000,Michigan,Wayne County,11.2,0
+26163545300,Michigan,Wayne County,10.27,0
+26163553300,Michigan,Wayne County,10.71,0
+26163553600,Michigan,Wayne County,11.06,0
+26163572500,Michigan,Wayne County,12.03,0
+26163584200,Michigan,Wayne County,14.21,0
+26163985300,Michigan,Wayne County,25.0,0
+26163985500,Michigan,Wayne County,81.82,1
+27003050229,Minnesota,Anoka County,25.9,0
+27007450600,Minnesota,Beltrami County,27.67,0
+27009020206,Minnesota,Benton County,14.0,0
+27013170600,Minnesota,Blue Earth County,13.67,0
+27013171101,Minnesota,Blue Earth County,31.78,0
+27013171600,Minnesota,Blue Earth County,21.82,0
+27015960200,Minnesota,Brown County,15.1,0
+27017070500,Minnesota,Carlton County,22.65,0
+27025110200,Minnesota,Chisago County,14.97,0
+27027020400,Minnesota,Clay County,57.73,0
+27053003800,Minnesota,Hennepin County,12.96,0
+27053005901,Minnesota,Hennepin County,24.64,0
+27053005902,Minnesota,Hennepin County,15.51,0
+27053021502,Minnesota,Hennepin County,10.6,0
+27053026610,Minnesota,Hennepin County,10.58,0
+27053104400,Minnesota,Hennepin County,24.94,0
+27053104800,Minnesota,Hennepin County,24.96,0
+27053104900,Minnesota,Hennepin County,50.42,0
+27053105400,Minnesota,Hennepin County,32.15,0
+27053106900,Minnesota,Hennepin County,21.33,0
+27053125600,Minnesota,Hennepin County,13.66,0
+27053126100,Minnesota,Hennepin County,19.93,0
+27053126200,Minnesota,Hennepin County,21.6,0
+27083360500,Minnesota,Lyon County,16.48,0
+27103480400,Minnesota,Nicollet County,40.2,0
+27109002300,Minnesota,Olmsted County,15.9,0
+27115950400,Minnesota,Pine County,27.68,0
+27119020600,Minnesota,Polk County,13.82,0
+27123032100,Minnesota,Ramsey County,22.5,0
+27123033000,Minnesota,Ramsey County,34.21,0
+27123033100,Minnesota,Ramsey County,10.49,0
+27123033400,Minnesota,Ramsey County,13.81,0
+27123034000,Minnesota,Ramsey County,11.5,0
+27123034900,Minnesota,Ramsey County,43.81,0
+27123035100,Minnesota,Ramsey County,36.28,0
+27123035900,Minnesota,Ramsey County,23.52,0
+27123036300,Minnesota,Ramsey County,24.67,0
+27123040802,Minnesota,Ramsey County,100.0,1
+27123040803,Minnesota,Ramsey County,10.68,0
+27123041302,Minnesota,Ramsey County,21.58,0
+27123042001,Minnesota,Ramsey County,23.61,0
+27123042504,Minnesota,Ramsey County,10.6,0
+27131070501,Minnesota,Rice County,46.87,0
+27131070602,Minnesota,Rice County,55.95,0
+27131070700,Minnesota,Rice County,32.81,0
+27137000300,Minnesota,St. Louis County,17.17,0
+27137000400,Minnesota,St. Louis County,24.84,0
+27137001900,Minnesota,St. Louis County,22.12,0
+27137002200,Minnesota,St. Louis County,14.9,0
+27137015700,Minnesota,St. Louis County,61.04,0
+27139080500,Minnesota,Scott County,27.88,0
+27141031500,Minnesota,Sherburne County,19.91,0
+27145011301,Minnesota,Stearns County,21.79,0
+27145011304,Minnesota,Stearns County,24.0,0
+27145011600,Minnesota,Stearns County,76.23,1
+27149480200,Minnesota,Stevens County,18.9,0
+27161790500,Minnesota,Waseca County,25.78,0
+27163070801,Minnesota,Washington County,100.0,1
+27163070802,Minnesota,Washington County,100.0,1
+27169670300,Minnesota,Winona County,29.37,0
+27169670500,Minnesota,Winona County,26.6,0
+27169670600,Minnesota,Winona County,12.93,0
+28001000100,Mississippi,Adams County,25.99,0
+28011950600,Mississippi,Bolivar County,11.28,0
+28021950300,Mississippi,Claiborne County,18.69,0
+28027950200,Mississippi,Coahoma County,13.88,0
+28035000900,Mississippi,Forrest County,56.0,0
+28035010700,Mississippi,Forrest County,11.39,0
+28039950200,Mississippi,George County,19.18,0
+28041950100,Mississippi,Greene County,36.41,0
+28047000900,Mississippi,Harrison County,81.28,1
+28047002500,Mississippi,Harrison County,30.13,0
+28047003208,Mississippi,Harrison County,19.98,0
+28047980000,Mississippi,Harrison County,100.0,1
+28049001500,Mississippi,Hinds County,14.64,0
+28049001600,Mississippi,Hinds County,24.7,0
+28049002700,Mississippi,Hinds County,29.92,0
+28049003000,Mississippi,Hinds County,10.22,0
+28049010700,Mississippi,Hinds County,27.08,0
+28049011500,Mississippi,Hinds County,58.11,0
+28055950100,Mississippi,Issaquena County,17.85,0
+28057950300,Mississippi,Itawamba County,23.45,0
+28059042200,Mississippi,Jackson County,12.59,0
+28063950200,Mississippi,Jefferson County,25.13,0
+28067951000,Mississippi,Jones County,27.79,0
+28069030100,Mississippi,Kemper County,13.07,0
+28071950301,Mississippi,Lafayette County,73.14,1
+28075000800,Mississippi,Lauderdale County,31.02,0
+28075010400,Mississippi,Lauderdale County,41.51,0
+28075010700,Mississippi,Lauderdale County,21.31,0
+28079040400,Mississippi,Leake County,17.3,0
+28083950300,Mississippi,Leflore County,14.14,0
+28083950400,Mississippi,Leflore County,16.12,0
+28087000700,Mississippi,Lowndes County,15.77,0
+28089030105,Mississippi,Madison County,15.21,0
+28091950400,Mississippi,Marion County,13.74,0
+28093950402,Mississippi,Marshall County,31.21,0
+28105950100,Mississippi,Oktibbeha County,10.73,0
+28105950400,Mississippi,Oktibbeha County,30.64,0
+28105950601,Mississippi,Oktibbeha County,22.85,0
+28109950300,Mississippi,Pearl River County,20.19,0
+28117950300,Mississippi,Prentiss County,12.13,0
+28121020500,Mississippi,Rankin County,98.82,1
+28131020100,Mississippi,Stone County,13.29,0
+28131020202,Mississippi,Stone County,10.77,0
+28133950100,Mississippi,Sunflower County,50.74,0
+28133950500,Mississippi,Sunflower County,14.87,0
+28135950300,Mississippi,Tallahatchie County,43.23,0
+28137950400,Mississippi,Tate County,15.5,0
+28157950200,Mississippi,Wilkinson County,18.68,0
+28163950100,Mississippi,Yazoo County,45.25,0
+29001951000,Missouri,Adair County,93.85,1
+29007950100,Missouri,Audrain County,36.0,0
+29007950400,Missouri,Audrain County,12.0,0
+29019000200,Missouri,Boone County,20.17,0
+29019000300,Missouri,Boone County,14.15,0
+29019000500,Missouri,Boone County,31.75,0
+29019002100,Missouri,Boone County,10.51,0
+29019002200,Missouri,Boone County,84.07,1
+29021000600,Missouri,Buchanan County,40.72,0
+29021000701,Missouri,Buchanan County,27.33,0
+29021001200,Missouri,Buchanan County,14.0,0
+29027070300,Missouri,Callaway County,31.41,0
+29027070400,Missouri,Callaway County,23.3,0
+29029950300,Missouri,Camden County,13.9,0
+29031880800,Missouri,Cape Girardeau County,54.94,0
+29047021401,Missouri,Clay County,23.98,0
+29051010500,Missouri,Cole County,19.07,0
+29051020198,Missouri,Cole County,47.62,0
+29053950200,Missouri,Cooper County,40.5,0
+29063080100,Missouri,DeKalb County,40.0,0
+29077000100,Missouri,Greene County,27.59,0
+29077000200,Missouri,Greene County,70.74,1
+29077000600,Missouri,Greene County,14.38,0
+29077000700,Missouri,Greene County,29.65,0
+29077000800,Missouri,Greene County,32.86,0
+29077005800,Missouri,Greene County,22.22,0
+29089960300,Missouri,Howard County,16.89,0
+29095001100,Missouri,Jackson County,17.03,0
+29095004300,Missouri,Jackson County,13.28,0
+29095007400,Missouri,Jackson County,14.05,0
+29095007500,Missouri,Jackson County,27.11,0
+29095013408,Missouri,Jackson County,10.93,0
+29095015200,Missouri,Jackson County,17.14,0
+29095015400,Missouri,Jackson County,10.51,0
+29095015800,Missouri,Jackson County,24.11,0
+29095015900,Missouri,Jackson County,53.89,0
+29097010100,Missouri,Jasper County,14.05,0
+29101960400,Missouri,Johnson County,38.07,0
+29101980000,Missouri,Johnson County,32.7,0
+29111970100,Missouri,Lewis County,17.13,0
+29117480100,Missouri,Livingston County,28.64,0
+29127960400,Missouri,Marion County,13.28,0
+29133950100,Missouri,Mississippi County,42.32,0
+29135385400,Missouri,Moniteau County,31.31,0
+29147470300,Missouri,Nodaway County,31.36,0
+29147470500,Missouri,Nodaway County,13.54,0
+29161890400,Missouri,Phelps County,29.47,0
+29161890800,Missouri,Phelps County,23.61,0
+29163460300,Missouri,Pike County,32.24,0
+29169470389,Missouri,Pulaski County,76.05,1
+29169470600,Missouri,Pulaski County,61.27,0
+29175490600,Missouri,Randolph County,30.06,0
+29183310501,Missouri,St. Charles County,44.3,0
+29183310502,Missouri,St. Charles County,15.85,0
+29183310601,Missouri,St. Charles County,25.92,0
+29187950300,Missouri,St. Francois County,34.4,0
+29187950902,Missouri,St. Francois County,43.76,0
+29189216300,Missouri,St. Louis County,61.77,0
+29189216500,Missouri,St. Louis County,30.38,0
+29189220300,Missouri,St. Louis County,12.03,0
+29189221503,Missouri,St. Louis County,16.85,0
+29195090500,Missouri,Saline County,20.39,0
+29213480502,Missouri,Taney County,15.8,0
+29215480100,Missouri,Texas County,21.05,0
+29217950300,Missouri,Vernon County,12.61,0
+29221460300,Missouri,Washington County,19.85,0
+29225470402,Missouri,Webster County,21.04,0
+29510106500,Missouri,St. Louis city,15.27,0
+29510111100,Missouri,St. Louis city,10.15,0
+29510112400,Missouri,St. Louis city,11.21,0
+29510118400,Missouri,St. Louis city,63.07,0
+29510118600,Missouri,St. Louis city,23.94,0
+29510119102,Missouri,St. Louis city,10.35,0
+29510119300,Missouri,St. Louis city,44.46,0
+29510121100,Missouri,St. Louis city,19.17,0
+29510125500,Missouri,St. Louis city,15.39,0
+29510125600,Missouri,St. Louis city,18.16,0
+29510126600,Missouri,St. Louis city,18.26,0
+29510127000,Missouri,St. Louis city,37.57,0
+30001000300,Montana,Beaverhead County,10.07,0
+30013001200,Montana,Cascade County,19.44,0
+30013010700,Montana,Cascade County,10.26,0
+30017961600,Montana,Custer County,11.83,0
+30021000300,Montana,Dawson County,10.12,0
+30023000500,Montana,Deer Lodge County,22.42,0
+30031001101,Montana,Gallatin County,57.38,0
+30037000100,Montana,Golden Valley County,10.07,0
+30049000800,Montana,Lewis and Clark County,23.28,0
+30049001100,Montana,Lewis and Clark County,10.06,0
+30051050100,Montana,Liberty County,17.23,0
+30063000300,Montana,Missoula County,13.5,0
+30063000500,Montana,Missoula County,31.19,0
+30067980600,Montana,Park County,42.42,0
+30073977200,Montana,Pondera County,18.16,0
+30077000200,Montana,Powell County,27.2,0
+30081000800,Montana,Ravalli County,17.03,0
+30099000300,Montana,Teton County,13.13,0
+30101980000,Montana,Toole County,100.0,1
+30111000300,Montana,Yellowstone County,13.41,0
+30111000402,Montana,Yellowstone County,13.48,0
+30111000600,Montana,Yellowstone County,27.09,0
+31001965600,Nebraska,Adams County,13.67,0
+31001966100,Nebraska,Adams County,20.97,0
+31019969600,Nebraska,Buffalo County,28.8,0
+31045950700,Nebraska,Dawes County,14.04,0
+31055000500,Nebraska,Douglas County,52.41,0
+31055001200,Nebraska,Douglas County,17.5,0
+31055001600,Nebraska,Douglas County,94.61,1
+31055001800,Nebraska,Douglas County,33.22,0
+31055002200,Nebraska,Douglas County,15.5,0
+31055003800,Nebraska,Douglas County,10.3,0
+31055004700,Nebraska,Douglas County,30.75,0
+31055007001,Nebraska,Douglas County,23.12,0
+31055007405,Nebraska,Douglas County,33.12,0
+31097967600,Nebraska,Johnson County,29.79,0
+31109000202,Nebraska,Lancaster County,19.28,0
+31109000500,Nebraska,Lancaster County,13.96,0
+31109000600,Nebraska,Lancaster County,99.95,1
+31109000900,Nebraska,Lancaster County,11.47,0
+31109001900,Nebraska,Lancaster County,38.37,0
+31109002002,Nebraska,Lancaster County,10.27,0
+31109002701,Nebraska,Lancaster County,14.43,0
+31109003401,Nebraska,Lancaster County,20.88,0
+31109003500,Nebraska,Lancaster County,100.0,1
+31109003601,Nebraska,Lancaster County,100.0,1
+31109983200,Nebraska,Lancaster County,96.97,1
+31127968100,Nebraska,Nemaha County,10.63,0
+31151960600,Nebraska,Saline County,11.08,0
+31153010302,Nebraska,Sarpy County,44.57,0
+31157953400,Nebraska,Scotts Bluff County,12.18,0
+31159960300,Nebraska,Seward County,17.04,0
+31177050101,Nebraska,Washington County,14.66,0
+31179978700,Nebraska,Wayne County,21.35,0
+32003000204,Nevada,Clark County,19.1,0
+32003000301,Nevada,Clark County,15.47,0
+32003000401,Nevada,Clark County,51.24,0
+32003000516,Nevada,Clark County,16.97,0
+32003000700,Nevada,Clark County,69.65,1
+32003002603,Nevada,Clark County,29.53,0
+32003004402,Nevada,Clark County,16.08,0
+32003004602,Nevada,Clark County,13.71,0
+32003005703,Nevada,Clark County,11.04,0
+32003006001,Nevada,Clark County,17.11,0
+32003007500,Nevada,Clark County,80.55,1
+32003007800,Nevada,Clark County,31.08,0
+32027960100,Nevada,Pershing County,24.89,0
+32031000102,Nevada,Washoe County,13.97,0
+32031001502,Nevada,Washoe County,27.68,0
+32031002617,Nevada,Washoe County,17.72,0
+32031003307,Nevada,Washoe County,11.94,0
+32031980000,Nevada,Washoe County,94.01,1
+32033970200,Nevada,White Pine County,20.71,0
+32510000600,Nevada,Carson City,22.52,0
+32510000800,Nevada,Carson City,41.23,0
+33005970600,New Hampshire,Cheshire County,19.29,0
+33005971401,New Hampshire,Cheshire County,50.76,0
+33007950600,New Hampshire,Coos County,17.74,0
+33009961000,New Hampshire,Grafton County,32.65,0
+33009961602,New Hampshire,Grafton County,44.71,0
+33011000102,New Hampshire,Hillsborough County,14.07,0
+33011001900,New Hampshire,Hillsborough County,17.85,0
+33011002800,New Hampshire,Hillsborough County,26.37,0
+33013003006,New Hampshire,Merrimack County,10.34,0
+33013032400,New Hampshire,Merrimack County,10.41,0
+33013032500,New Hampshire,Merrimack County,12.36,0
+33013032600,New Hampshire,Merrimack County,42.77,0
+33013038000,New Hampshire,Merrimack County,13.52,0
+33013040000,New Hampshire,Merrimack County,11.31,0
+33013041000,New Hampshire,Merrimack County,20.74,0
+33015060000,New Hampshire,Rockingham County,11.3,0
+33015065007,New Hampshire,Rockingham County,24.65,0
+33017080203,New Hampshire,Strafford County,77.2,1
+33017080204,New Hampshire,Strafford County,78.14,1
+34001002400,New Jersey,Atlantic County,11.12,0
+34001011404,New Jersey,Atlantic County,10.82,0
+34001983400,New Jersey,Atlantic County,98.06,1
+34003023602,New Jersey,Bergen County,17.13,0
+34003032104,New Jersey,Bergen County,59.15,0
+34003042302,New Jersey,Bergen County,18.69,0
+34003054400,New Jersey,Bergen County,10.63,0
+34005702204,New Jersey,Burlington County,18.22,0
+34005704600,New Jersey,Burlington County,14.71,0
+34005704700,New Jersey,Burlington County,12.46,0
+34005704801,New Jersey,Burlington County,21.14,0
+34005704802,New Jersey,Burlington County,87.72,1
+34005981802,New Jersey,Burlington County,98.48,1
+34005982111,New Jersey,Burlington County,43.74,0
+34007610300,New Jersey,Camden County,28.26,0
+34007610400,New Jersey,Camden County,38.22,0
+34007610600,New Jersey,Camden County,13.16,0
+34007611500,New Jersey,Camden County,12.06,0
+34009020500,New Jersey,Cape May County,20.06,0
+34009021001,New Jersey,Cape May County,23.37,0
+34009022000,New Jersey,Cape May County,21.15,0
+34011010103,New Jersey,Cumberland County,100.0,1
+34011010402,New Jersey,Cumberland County,99.6,1
+34011020200,New Jersey,Cumberland County,16.86,0
+34011020503,New Jersey,Cumberland County,51.08,0
+34013001000,New Jersey,Essex County,27.7,0
+34013001100,New Jersey,Essex County,47.36,0
+34013004100,New Jersey,Essex County,12.31,0
+34013006700,New Jersey,Essex County,13.77,0
+34013007400,New Jersey,Essex County,46.7,0
+34013008100,New Jersey,Essex County,21.46,0
+34013009200,New Jersey,Essex County,15.77,0
+34013019200,New Jersey,Essex County,26.87,0
+34013021702,New Jersey,Essex County,10.88,0
+34013022900,New Jersey,Essex County,40.62,0
+34013023000,New Jersey,Essex County,11.53,0
+34013980100,New Jersey,Essex County,100.0,1
+34013980200,New Jersey,Essex County,98.64,1
+34015501402,New Jersey,Gloucester County,16.98,0
+34015501404,New Jersey,Gloucester County,52.3,0
+34017002900,New Jersey,Hudson County,11.6,0
+34017007200,New Jersey,Hudson County,11.48,0
+34017007800,New Jersey,Hudson County,11.4,0
+34017012700,New Jersey,Hudson County,32.41,0
+34017014101,New Jersey,Hudson County,14.23,0
+34017018701,New Jersey,Hudson County,48.02,0
+34017020000,New Jersey,Hudson County,14.54,0
+34019010701,New Jersey,Hunterdon County,23.9,0
+34019011001,New Jersey,Hunterdon County,18.1,0
+34019011800,New Jersey,Hunterdon County,25.99,0
+34021001300,New Jersey,Mercer County,26.92,0
+34021001800,New Jersey,Mercer County,18.79,0
+34021002000,New Jersey,Mercer County,16.35,0
+34021002400,New Jersey,Mercer County,100.0,1
+34021003201,New Jersey,Mercer County,28.87,0
+34021003703,New Jersey,Mercer County,50.85,0
+34021004501,New Jersey,Mercer County,75.93,1
+34023001506,New Jersey,Middlesex County,12.47,0
+34023001901,New Jersey,Middlesex County,13.45,0
+34023005100,New Jersey,Middlesex County,44.57,0
+34023005300,New Jersey,Middlesex County,16.55,0
+34023006002,New Jersey,Middlesex County,54.64,0
+34023006203,New Jersey,Middlesex County,10.36,0
+34023008800,New Jersey,Middlesex County,73.86,1
+34023009000,New Jersey,Middlesex County,50.8,0
+34023009300,New Jersey,Middlesex County,13.22,0
+34025806201,New Jersey,Monmouth County,37.52,0
+34025809903,New Jersey,Monmouth County,17.78,0
+34025810401,New Jersey,Monmouth County,27.34,0
+34027042600,New Jersey,Morris County,21.04,0
+34027043200,New Jersey,Morris County,37.29,0
+34027043301,New Jersey,Morris County,13.46,0
+34027043700,New Jersey,Morris County,11.85,0
+34029723100,New Jersey,Ocean County,12.65,0
+34031154001,New Jersey,Passaic County,41.45,0
+34031181800,New Jersey,Passaic County,33.87,0
+34031182200,New Jersey,Passaic County,15.77,0
+34031223900,New Jersey,Passaic County,99.01,1
+34031246001,New Jersey,Passaic County,31.44,0
+34033021300,New Jersey,Salem County,20.52,0
+34035050100,New Jersey,Somerset County,10.67,0
+34037373500,New Jersey,Sussex County,17.1,0
+34037373700,New Jersey,Sussex County,13.13,0
+34039033500,New Jersey,Union County,16.87,0
+34039039900,New Jersey,Union County,48.12,0
+34041031402,New Jersey,Warren County,13.34,0
+35001000801,New Mexico,Bernalillo County,13.83,0
+35001001800,New Mexico,Bernalillo County,82.7,1
+35001002100,New Mexico,Bernalillo County,56.39,0
+35001940600,New Mexico,Bernalillo County,28.57,0
+35005000300,New Mexico,Chaves County,10.49,0
+35006974201,New Mexico,Cibola County,12.95,0
+35006974700,New Mexico,Cibola County,26.49,0
+35009000900,New Mexico,Curry County,19.78,0
+35013000201,New Mexico,DoÃ±a Ana County,17.83,0
+35013001000,New Mexico,DoÃ±a Ana County,43.34,0
+35013001500,New Mexico,DoÃ±a Ana County,12.21,0
+35013001900,New Mexico,DoÃ±a Ana County,15.39,0
+35015000100,New Mexico,Eddy County,15.83,0
+35019961600,New Mexico,Guadalupe County,12.18,0
+35025000702,New Mexico,Lea County,43.67,0
+35029000600,New Mexico,Luna County,17.59,0
+35035000601,New Mexico,Otero County,17.7,0
+35035000602,New Mexico,Otero County,10.04,0
+35035000902,New Mexico,Otero County,11.03,0
+35041000300,New Mexico,Roosevelt County,21.33,0
+35045000402,New Mexico,San Juan County,12.69,0
+35045000607,New Mexico,San Juan County,19.27,0
+35047957300,New Mexico,San Miguel County,13.79,0
+35049000400,New Mexico,Santa Fe County,11.01,0
+35049010601,New Mexico,Santa Fe County,12.36,0
+35049980000,New Mexico,Santa Fe County,90.31,1
+35053978302,New Mexico,Socorro County,12.89,0
+35059950200,New Mexico,Union County,14.55,0
+35061970700,New Mexico,Valencia County,17.69,0
+36001000401,New York,Albany County,25.82,0
+36001000404,New York,Albany County,99.5,1
+36001000502,New York,Albany County,48.14,0
+36001001100,New York,Albany County,12.57,0
+36001002100,New York,Albany County,27.48,0
+36001013601,New York,Albany County,26.43,0
+36001013703,New York,Albany County,37.96,0
+36001014301,New York,Albany County,10.97,0
+36001014608,New York,Albany County,37.75,0
+36003950300,New York,Allegany County,21.25,0
+36003950800,New York,Allegany County,48.86,0
+36005000100,New York,Bronx County,100.0,1
+36005001900,New York,Bronx County,26.08,0
+36005009300,New York,Bronx County,14.9,0
+36005011800,New York,Bronx County,24.82,0
+36005014300,New York,Bronx County,19.74,0
+36005016200,New York,Bronx County,11.48,0
+36005016900,New York,Bronx County,18.76,0
+36005021700,New York,Bronx County,10.07,0
+36005022000,New York,Bronx County,12.51,0
+36005023100,New York,Bronx County,13.86,0
+36005024800,New York,Bronx County,10.76,0
+36005026300,New York,Bronx County,11.64,0
+36005028400,New York,Bronx County,82.66,1
+36005029600,New York,Bronx County,38.29,0
+36005030100,New York,Bronx County,22.93,0
+36005030900,New York,Bronx County,22.08,0
+36005031000,New York,Bronx County,19.3,0
+36005031400,New York,Bronx County,10.07,0
+36005031800,New York,Bronx County,10.22,0
+36005031900,New York,Bronx County,100.0,1
+36005033500,New York,Bronx County,22.64,0
+36005034300,New York,Bronx County,13.16,0
+36005035100,New York,Bronx County,27.84,0
+36005036700,New York,Bronx County,20.32,0
+36005036800,New York,Bronx County,11.49,0
+36005039700,New York,Bronx County,64.15,0
+36007000700,New York,Broome County,10.45,0
+36007001300,New York,Broome County,12.2,0
+36007012800,New York,Broome County,16.14,0
+36007012900,New York,Broome County,15.21,0
+36007014302,New York,Broome County,67.92,1
+36009961300,New York,Cattaraugus County,27.84,0
+36011040800,New York,Cayuga County,22.01,0
+36011042100,New York,Cayuga County,37.99,0
+36013030100,New York,Chautauqua County,11.48,0
+36013035902,New York,Chautauqua County,92.64,1
+36013036300,New York,Chautauqua County,16.51,0
+36015000300,New York,Chemung County,99.94,1
+36015000600,New York,Chemung County,25.56,0
+36015000700,New York,Chemung County,22.92,0
+36015011200,New York,Chemung County,16.76,0
+36019100400,New York,Clinton County,39.66,0
+36019101100,New York,Clinton County,98.54,1
+36021001300,New York,Columbia County,12.69,0
+36023970800,New York,Cortland County,94.44,1
+36025970900,New York,Delaware County,99.78,1
+36027060201,New York,Dutchess County,27.06,0
+36027070401,New York,Dutchess County,38.85,0
+36027140101,New York,Dutchess County,32.79,0
+36027150003,New York,Dutchess County,44.86,0
+36027160003,New York,Dutchess County,17.49,0
+36027220100,New York,Dutchess County,30.34,0
+36027220201,New York,Dutchess County,14.16,0
+36027410000,New York,Dutchess County,51.76,0
+36027610000,New York,Dutchess County,99.28,1
+36027640002,New York,Dutchess County,93.85,1
+36029002502,New York,Erie County,11.43,0
+36029004602,New York,Erie County,99.85,1
+36029005202,New York,Erie County,25.13,0
+36029005300,New York,Erie County,46.91,0
+36029006201,New York,Erie County,100.0,1
+36029009110,New York,Erie County,99.95,1
+36029009112,New York,Erie County,14.75,0
+36029009401,New York,Erie County,10.43,0
+36029014904,New York,Erie County,100.0,1
+36029016100,New York,Erie County,97.76,1
+36029016500,New York,Erie County,53.17,0
+36029016900,New York,Erie County,11.59,0
+36031960498,New York,Essex County,12.41,0
+36031960598,New York,Essex County,28.17,0
+36033950502,New York,Franklin County,72.85,1
+36033950800,New York,Franklin County,25.83,0
+36033951100,New York,Franklin County,13.1,0
+36037950400,New York,Genesee County,14.67,0
+36039080800,New York,Greene County,100.0,1
+36043011200,New York,Herkimer County,14.58,0
+36045060200,New York,Jefferson County,11.77,0
+36045060803,New York,Jefferson County,15.83,0
+36045060804,New York,Jefferson County,34.08,0
+36045062400,New York,Jefferson County,12.61,0
+36047000301,New York,Kings County,11.46,0
+36047000501,New York,Kings County,25.48,0
+36047000900,New York,Kings County,13.52,0
+36047001100,New York,Kings County,10.71,0
+36047001300,New York,Kings County,31.34,0
+36047001800,New York,Kings County,99.24,1
+36047002901,New York,Kings County,15.13,0
+36047003100,New York,Kings County,38.59,0
+36047003700,New York,Kings County,27.95,0
+36047003900,New York,Kings County,12.38,0
+36047004100,New York,Kings County,12.42,0
+36047004900,New York,Kings County,18.68,0
+36047015300,New York,Kings County,16.18,0
+36047019300,New York,Kings County,24.68,0
+36047022100,New York,Kings County,10.31,0
+36047029400,New York,Kings County,29.99,0
+36047034000,New York,Kings County,29.85,0
+36047035200,New York,Kings County,40.37,0
+36047036502,New York,Kings County,17.05,0
+36047044700,New York,Kings County,16.93,0
+36047045300,New York,Kings County,20.23,0
+36047061600,New York,Kings County,18.96,0
+36047062200,New York,Kings County,12.67,0
+36047080800,New York,Kings County,81.04,1
+36047087800,New York,Kings County,15.07,0
+36047090200,New York,Kings County,14.08,0
+36047090800,New York,Kings County,15.46,0
+36047097400,New York,Kings County,21.11,0
+36047109800,New York,Kings County,15.49,0
+36047113400,New York,Kings County,16.74,0
+36051030500,New York,Livingston County,99.67,1
+36051030800,New York,Livingston County,17.43,0
+36051031000,New York,Livingston County,99.8,1
+36053030501,New York,Madison County,25.38,0
+36053030700,New York,Madison County,22.07,0
+36053030900,New York,Madison County,47.66,0
+36055001000,New York,Monroe County,17.91,0
+36055003500,New York,Monroe County,29.72,0
+36055003802,New York,Monroe County,100.0,1
+36055003805,New York,Monroe County,34.39,0
+36055009400,New York,Monroe County,38.94,0
+36055010901,New York,Monroe County,10.61,0
+36055012201,New York,Monroe County,42.99,0
+36055013001,New York,Monroe County,24.87,0
+36055013103,New York,Monroe County,44.4,0
+36055013205,New York,Monroe County,10.15,0
+36055015301,New York,Monroe County,84.14,1
+36059300100,New York,Nassau County,13.91,0
+36059406701,New York,Nassau County,14.04,0
+36059407301,New York,Nassau County,59.44,0
+36059407402,New York,Nassau County,16.14,0
+36059407802,New York,Nassau County,70.47,1
+36059416402,New York,Nassau County,13.73,0
+36059518203,New York,Nassau County,18.35,0
+36059980100,New York,Nassau County,100.0,1
+36059981100,New York,Nassau County,99.86,1
+36059982100,New York,Nassau County,97.92,1
+36061001502,New York,New York County,13.7,0
+36061002900,New York,New York County,24.12,0
+36061003100,New York,New York County,46.63,0
+36061003602,New York,New York County,22.56,0
+36061004000,New York,New York County,19.59,0
+36061004200,New York,New York County,47.07,0
+36061004800,New York,New York County,16.54,0
+36061005200,New York,New York County,21.19,0
+36061005501,New York,New York County,10.82,0
+36061005900,New York,New York County,14.61,0
+36061006100,New York,New York County,26.82,0
+36061006200,New York,New York County,42.28,0
+36061006500,New York,New York County,15.8,0
+36061006800,New York,New York County,20.58,0
+36061006900,New York,New York County,12.47,0
+36061007400,New York,New York County,11.3,0
+36061009500,New York,New York County,36.25,0
+36061010000,New York,New York County,10.09,0
+36061010100,New York,New York County,28.23,0
+36061010200,New York,New York County,19.57,0
+36061011100,New York,New York County,10.88,0
+36061011300,New York,New York County,15.38,0
+36061011500,New York,New York County,12.9,0
+36061014300,New York,New York County,100.0,1
+36061014500,New York,New York County,16.04,0
+36061015802,New York,New York County,14.49,0
+36061016002,New York,New York County,17.76,0
+36061016800,New York,New York County,27.7,0
+36061019600,New York,New York County,10.43,0
+36061019900,New York,New York County,27.3,0
+36061020101,New York,New York County,64.64,0
+36061020300,New York,New York County,64.52,0
+36061020500,New York,New York County,51.24,0
+36061020600,New York,New York County,11.83,0
+36061020701,New York,New York County,24.48,0
+36061023802,New York,New York County,49.95,0
+36061024000,New York,New York County,100.0,1
+36061025100,New York,New York County,10.45,0
+36061026700,New York,New York County,24.16,0
+36061029700,New York,New York County,100.0,1
+36061031900,New York,New York County,90.91,1
+36063024406,New York,Niagara County,37.68,0
+36065021301,New York,Oneida County,13.17,0
+36065021303,New York,Oneida County,16.35,0
+36065025003,New York,Oneida County,55.73,0
+36065025900,New York,Oneida County,99.3,1
+36065026100,New York,Oneida County,19.61,0
+36065026500,New York,Oneida County,96.19,1
+36065026600,New York,Oneida County,99.55,1
+36067001600,New York,Onondaga County,18.74,0
+36067003000,New York,Onondaga County,15.82,0
+36067003200,New York,Onondaga County,31.78,0
+36067004301,New York,Onondaga County,48.41,0
+36067004302,New York,Onondaga County,79.03,1
+36067004600,New York,Onondaga County,13.59,0
+36067005300,New York,Onondaga County,10.99,0
+36067005602,New York,Onondaga County,96.17,1
+36067006101,New York,Onondaga County,13.62,0
+36067014600,New York,Onondaga County,20.78,0
+36067014900,New York,Onondaga County,21.87,0
+36067016100,New York,Onondaga County,10.7,0
+36067016300,New York,Onondaga County,13.6,0
+36069051900,New York,Ontario County,37.3,0
+36071000100,New York,Orange County,23.18,0
+36071011500,New York,Orange County,25.42,0
+36071011900,New York,Orange County,21.45,0
+36071013600,New York,Orange County,64.25,0
+36071014700,New York,Orange County,15.14,0
+36073040600,New York,Orleans County,26.44,0
+36075021401,New York,Oswego County,45.82,0
+36075021604,New York,Oswego County,10.7,0
+36077591200,New York,Otsego County,62.78,0
+36077591300,New York,Otsego County,98.69,1
+36079010200,New York,Putnam County,15.01,0
+36081003900,New York,Queens County,15.52,0
+36081009900,New York,Queens County,100.0,1
+36081014202,New York,Queens County,12.19,0
+36081017100,New York,Queens County,25.0,0
+36081019900,New York,Queens County,40.37,0
+36081032000,New York,Queens County,23.29,0
+36081035700,New York,Queens County,12.41,0
+36081038302,New York,Queens County,94.64,1
+36081042600,New York,Queens County,100.0,1
+36081043400,New York,Queens County,17.23,0
+36081043701,New York,Queens County,22.42,0
+36081045200,New York,Queens County,35.65,0
+36081046400,New York,Queens County,15.22,0
+36081047200,New York,Queens County,10.32,0
+36081084602,New York,Queens County,19.18,0
+36081093800,New York,Queens County,15.01,0
+36081096400,New York,Queens County,11.33,0
+36081097204,New York,Queens County,18.68,0
+36081101001,New York,Queens County,12.12,0
+36081116100,New York,Queens County,10.85,0
+36081126700,New York,Queens County,48.58,0
+36081138502,New York,Queens County,100.0,1
+36081146300,New York,Queens County,13.13,0
+36081155102,New York,Queens County,14.36,0
+36081156700,New York,Queens County,46.31,0
+36083040600,New York,Rensselaer County,25.69,0
+36083040700,New York,Rensselaer County,16.34,0
+36083041300,New York,Rensselaer County,42.41,0
+36083052402,New York,Rensselaer County,14.74,0
+36085000300,New York,Richmond County,10.02,0
+36085002700,New York,Richmond County,31.12,0
+36085003900,New York,Richmond County,11.33,0
+36085004700,New York,Richmond County,31.58,0
+36085007500,New York,Richmond County,14.82,0
+36085018100,New York,Richmond County,10.22,0
+36085018702,New York,Richmond County,10.65,0
+36085022600,New York,Richmond County,11.17,0
+36085027900,New York,Richmond County,17.41,0
+36087013001,New York,Rockland County,23.17,0
+36087013002,New York,Rockland County,10.21,0
+36087013003,New York,Rockland County,26.02,0
+36087013200,New York,Rockland County,19.29,0
+36089491100,New York,St. Lawrence County,96.17,1
+36089491200,New York,St. Lawrence County,98.2,1
+36089491400,New York,St. Lawrence County,29.8,0
+36089491900,New York,St. Lawrence County,99.86,1
+36089492100,New York,St. Lawrence County,25.78,0
+36089492700,New York,St. Lawrence County,14.57,0
+36091061303,New York,Saratoga County,99.84,1
+36093020300,New York,Schenectady County,27.93,0
+36093021001,New York,Schenectady County,67.63,1
+36093033400,New York,Schenectady County,43.37,0
+36095740300,New York,Schoharie County,100.0,1
+36099950800,New York,Seneca County,35.66,0
+36103122300,New York,Suffolk County,10.94,0
+36103135005,New York,Suffolk County,13.07,0
+36103158007,New York,Suffolk County,98.97,1
+36103159106,New York,Suffolk County,12.71,0
+36103190401,New York,Suffolk County,13.63,0
+36103201100,New York,Suffolk County,10.37,0
+36105951100,New York,Sullivan County,42.14,0
+36105952100,New York,Sullivan County,14.91,0
+36109000200,New York,Tompkins County,11.79,0
+36109000300,New York,Tompkins County,90.28,1
+36109000400,New York,Tompkins County,85.15,1
+36109000600,New York,Tompkins County,13.51,0
+36109001100,New York,Tompkins County,17.23,0
+36109001200,New York,Tompkins County,96.53,1
+36111951300,New York,Ulster County,13.7,0
+36111952600,New York,Ulster County,13.68,0
+36111953500,New York,Ulster County,54.36,0
+36111954400,New York,Ulster County,24.82,0
+36111954500,New York,Ulster County,36.56,0
+36111954700,New York,Ulster County,14.24,0
+36111955400,New York,Ulster County,24.13,0
+36115081000,New York,Washington County,39.55,0
+36119002204,New York,Westchester County,20.39,0
+36119004300,New York,Westchester County,13.76,0
+36119005702,New York,Westchester County,18.43,0
+36119006600,New York,Westchester County,14.23,0
+36119008602,New York,Westchester County,30.33,0
+36119009300,New York,Westchester County,13.4,0
+36119009702,New York,Westchester County,13.21,0
+36119010300,New York,Westchester County,11.38,0
+36119010400,New York,Westchester County,16.65,0
+36119010901,New York,Westchester County,12.9,0
+36119011400,New York,Westchester County,11.46,0
+36119011800,New York,Westchester County,12.53,0
+36119013201,New York,Westchester County,15.23,0
+36119013700,New York,Westchester County,10.47,0
+36119981000,New York,Westchester County,72.38,1
+36119982000,New York,Westchester County,98.17,1
+36119983000,New York,Westchester County,99.73,1
+36119984000,New York,Westchester County,95.61,1
+36119985000,New York,Westchester County,100.0,1
+36121970200,New York,Wyoming County,48.68,0
+36123150400,New York,Yates County,20.84,0
+37001021600,North Carolina,Alamance County,30.14,0
+37001021702,North Carolina,Alamance County,13.12,0
+37003040600,North Carolina,Alexander County,15.22,0
+37007920300,North Carolina,Anson County,26.78,0
+37011930100,North Carolina,Avery County,12.52,0
+37011930400,North Carolina,Avery County,34.58,0
+37015960400,North Carolina,Bertie County,16.13,0
+37019020603,North Carolina,Brunswick County,10.96,0
+37021000100,North Carolina,Buncombe County,32.76,0
+37021000400,North Carolina,Buncombe County,31.31,0
+37021000800,North Carolina,Buncombe County,21.5,0
+37021000900,North Carolina,Buncombe County,13.25,0
+37021002701,North Carolina,Buncombe County,16.7,0
+37023021301,North Carolina,Burke County,31.1,0
+37023021400,North Carolina,Burke County,11.48,0
+37031970101,North Carolina,Carteret County,12.34,0
+37031970303,North Carolina,Carteret County,19.77,0
+37033930200,North Carolina,Caswell County,22.44,0
+37035010402,North Carolina,Catawba County,16.84,0
+37045951501,North Carolina,Cleveland County,19.39,0
+37047931000,North Carolina,Columbus County,12.15,0
+37047931200,North Carolina,Columbus County,19.66,0
+37049961202,North Carolina,Craven County,79.67,1
+37051001100,North Carolina,Cumberland County,26.02,0
+37051002502,North Carolina,Cumberland County,12.4,0
+37051003402,North Carolina,Cumberland County,100.0,1
+37051003403,North Carolina,Cumberland County,11.66,0
+37051003404,North Carolina,Cumberland County,100.0,1
+37051003406,North Carolina,Cumberland County,35.85,0
+37051003407,North Carolina,Cumberland County,42.62,0
+37051003800,North Carolina,Cumberland County,23.75,0
+37051980200,North Carolina,Cumberland County,100.0,1
+37057061300,North Carolina,Davidson County,10.66,0
+37057061400,North Carolina,Davidson County,16.04,0
+37063001303,North Carolina,Durham County,58.43,0
+37063001501,North Carolina,Durham County,87.56,1
+37063001503,North Carolina,Durham County,93.97,1
+37063002200,North Carolina,Durham County,10.38,0
+37063002300,North Carolina,Durham County,39.44,0
+37065020600,North Carolina,Edgecombe County,14.84,0
+37065021200,North Carolina,Edgecombe County,11.87,0
+37067000100,North Carolina,Forsyth County,37.48,0
+37067000200,North Carolina,Forsyth County,38.98,0
+37067000801,North Carolina,Forsyth County,69.46,1
+37067000802,North Carolina,Forsyth County,22.67,0
+37067000900,North Carolina,Forsyth County,14.31,0
+37067001300,North Carolina,Forsyth County,69.28,1
+37067002806,North Carolina,Forsyth County,10.35,0
+37069060301,North Carolina,Franklin County,14.58,0
+37069060801,North Carolina,Franklin County,11.25,0
+37071031202,North Carolina,Gaston County,25.17,0
+37071031900,North Carolina,Gaston County,14.63,0
+37071032000,North Carolina,Gaston County,17.59,0
+37071032100,North Carolina,Gaston County,12.11,0
+37077970702,North Carolina,Granville County,20.39,0
+37077970703,North Carolina,Granville County,29.68,0
+37077970704,North Carolina,Granville County,100.0,1
+37079950102,North Carolina,Greene County,40.49,0
+37081010702,North Carolina,Guilford County,69.56,1
+37081010800,North Carolina,Guilford County,32.3,0
+37081011000,North Carolina,Guilford County,69.8,1
+37081011400,North Carolina,Guilford County,11.4,0
+37081013601,North Carolina,Guilford County,54.3,0
+37081016101,North Carolina,Guilford County,22.1,0
+37083931000,North Carolina,Halifax County,29.04,0
+37085070700,North Carolina,Harnett County,18.31,0
+37085070802,North Carolina,Harnett County,37.96,0
+37087920900,North Carolina,Haywood County,11.02,0
+37091950200,North Carolina,Hertford County,21.71,0
+37095920100,North Carolina,Hyde County,14.29,0
+37099950600,North Carolina,Jackson County,32.68,0
+37105030300,North Carolina,Lee County,14.37,0
+37111970300,North Carolina,McDowell County,10.12,0
+37111970901,North Carolina,McDowell County,14.32,0
+37115010600,North Carolina,Madison County,13.0,0
+37119000100,North Carolina,Mecklenburg County,15.68,0
+37119000500,North Carolina,Mecklenburg County,29.67,0
+37119000600,North Carolina,Mecklenburg County,36.39,0
+37119002500,North Carolina,Mecklenburg County,12.22,0
+37119002702,North Carolina,Mecklenburg County,11.0,0
+37119003903,North Carolina,Mecklenburg County,10.55,0
+37119004700,North Carolina,Mecklenburg County,43.13,0
+37119005200,North Carolina,Mecklenburg County,20.53,0
+37119005604,North Carolina,Mecklenburg County,63.3,0
+37119006109,North Carolina,Mecklenburg County,15.68,0
+37119006403,North Carolina,Mecklenburg County,33.73,0
+37123960200,North Carolina,Montgomery County,11.74,0
+37127011102,North Carolina,Nash County,13.3,0
+37129010700,North Carolina,New Hanover County,10.84,0
+37129011903,North Carolina,New Hanover County,45.23,0
+37133000500,North Carolina,Onslow County,96.99,1
+37133000600,North Carolina,Onslow County,99.32,1
+37133000900,North Carolina,Onslow County,22.52,0
+37133001000,North Carolina,Onslow County,73.29,1
+37133001800,North Carolina,Onslow County,14.52,0
+37135011400,North Carolina,Orange County,11.53,0
+37135011601,North Carolina,Orange County,98.3,1
+37135011602,North Carolina,Orange County,77.65,1
+37135011700,North Carolina,Orange County,29.26,0
+37137950102,North Carolina,Pamlico County,17.28,0
+37139960200,North Carolina,Pasquotank County,32.54,0
+37139960502,North Carolina,Pasquotank County,18.68,0
+37141920402,North Carolina,Pender County,23.92,0
+37147000400,North Carolina,Pitt County,69.91,1
+37147000800,North Carolina,Pitt County,12.84,0
+37151030302,North Carolina,Randolph County,10.39,0
+37153970100,North Carolina,Richmond County,20.18,0
+37155960502,North Carolina,Robeson County,27.9,0
+37155960801,North Carolina,Robeson County,25.04,0
+37159050400,North Carolina,Rowan County,26.73,0
+37159050500,North Carolina,Rowan County,27.08,0
+37159051201,North Carolina,Rowan County,15.98,0
+37159052000,North Carolina,Rowan County,17.72,0
+37163970600,North Carolina,Sampson County,12.33,0
+37165010400,North Carolina,Scotland County,26.09,0
+37167930101,North Carolina,Stanly County,11.07,0
+37167930200,North Carolina,Stanly County,21.68,0
+37175960300,North Carolina,Transylvania County,10.23,0
+37177960100,North Carolina,Tyrrell County,14.34,0
+37179020701,North Carolina,Union County,18.24,0
+37183050100,North Carolina,Wake County,43.57,0
+37183050400,North Carolina,Wake County,19.75,0
+37183050600,North Carolina,Wake County,29.45,0
+37183050800,North Carolina,Wake County,40.81,0
+37183050900,North Carolina,Wake County,31.28,0
+37183051101,North Carolina,Wake County,75.72,1
+37183051102,North Carolina,Wake County,97.39,1
+37183051400,North Carolina,Wake County,17.51,0
+37183052401,North Carolina,Wake County,29.98,0
+37183052409,North Carolina,Wake County,22.07,0
+37185950200,North Carolina,Warren County,14.14,0
+37189920500,North Carolina,Watauga County,70.74,1
+37191000500,North Carolina,Wayne County,25.55,0
+37191000800,North Carolina,Wayne County,19.48,0
+37191001101,North Carolina,Wayne County,14.44,0
+37191001102,North Carolina,Wayne County,10.99,0
+37193961100,North Carolina,Wilkes County,11.06,0
+37195000100,North Carolina,Wilson County,13.27,0
+37195000200,North Carolina,Wilson County,12.84,0
+38009952300,North Dakota,Bottineau County,10.92,0
+38015010900,North Dakota,Burleigh County,14.42,0
+38015011200,North Dakota,Burleigh County,14.26,0
+38017000300,North Dakota,Cass County,61.02,0
+38021973400,North Dakota,Dickey County,14.07,0
+38035010300,North Dakota,Grand Forks County,58.98,0
+38035011900,North Dakota,Grand Forks County,15.46,0
+38061955200,North Dakota,Mountrail County,12.98,0
+38077970900,North Dakota,Richland County,21.43,0
+38089963600,North Dakota,Stark County,15.16,0
+38093967300,North Dakota,Stutsman County,31.89,0
+38093967400,North Dakota,Stutsman County,13.12,0
+38097970200,North Dakota,Traill County,11.35,0
+38101010400,North Dakota,Ward County,13.36,0
+38101010900,North Dakota,Ward County,19.15,0
+39003010100,Ohio,Allen County,18.75,0
+39003010900,Ohio,Allen County,12.14,0
+39003011200,Ohio,Allen County,68.42,1
+39003014100,Ohio,Allen County,21.76,0
+39005970600,Ohio,Ashland County,28.5,0
+39007000101,Ohio,Ashtabula County,34.69,0
+39009972800,Ohio,Athens County,22.02,0
+39009973101,Ohio,Athens County,50.1,0
+39009973901,Ohio,Athens County,80.19,1
+39009973902,Ohio,Athens County,15.34,0
+39013012200,Ohio,Belmont County,45.05,0
+39017000400,Ohio,Butler County,15.39,0
+39017010104,Ohio,Butler County,91.68,1
+39017010201,Ohio,Butler County,98.56,1
+39017014600,Ohio,Butler County,25.36,0
+39023000700,Ohio,Clark County,44.59,0
+39023002100,Ohio,Clark County,12.06,0
+39027964700,Ohio,Clinton County,15.3,0
+39029951400,Ohio,Columbiana County,32.68,0
+39035103300,Ohio,Cuyahoga County,10.94,0
+39035103602,Ohio,Cuyahoga County,13.46,0
+39035107101,Ohio,Cuyahoga County,57.93,0
+39035107701,Ohio,Cuyahoga County,33.64,0
+39035107802,Ohio,Cuyahoga County,24.0,0
+39035108301,Ohio,Cuyahoga County,12.33,0
+39035109701,Ohio,Cuyahoga County,25.54,0
+39035111202,Ohio,Cuyahoga County,10.6,0
+39035112301,Ohio,Cuyahoga County,17.17,0
+39035113101,Ohio,Cuyahoga County,24.27,0
+39035113801,Ohio,Cuyahoga County,10.3,0
+39035117300,Ohio,Cuyahoga County,11.05,0
+39035118700,Ohio,Cuyahoga County,65.34,0
+39035118800,Ohio,Cuyahoga County,12.69,0
+39035119202,Ohio,Cuyahoga County,32.19,0
+39035131102,Ohio,Cuyahoga County,11.74,0
+39035131104,Ohio,Cuyahoga County,14.2,0
+39035134300,Ohio,Cuyahoga County,40.21,0
+39035141300,Ohio,Cuyahoga County,20.07,0
+39035185203,Ohio,Cuyahoga County,15.25,0
+39035187106,Ohio,Cuyahoga County,30.61,0
+39035193800,Ohio,Cuyahoga County,17.14,0
+39035193900,Ohio,Cuyahoga County,61.4,0
+39039958500,Ohio,Defiance County,12.75,0
+39041010100,Ohio,Delaware County,27.21,0
+39043041400,Ohio,Erie County,18.2,0
+39045032500,Ohio,Fairfield County,28.48,0
+39049001110,Ohio,Franklin County,12.23,0
+39049001121,Ohio,Franklin County,97.89,1
+39049001122,Ohio,Franklin County,50.33,0
+39049001300,Ohio,Franklin County,13.6,0
+39049001810,Ohio,Franklin County,11.8,0
+39049002780,Ohio,Franklin County,10.32,0
+39049003000,Ohio,Franklin County,23.38,0
+39049004000,Ohio,Franklin County,11.15,0
+39049004200,Ohio,Franklin County,26.06,0
+39049005300,Ohio,Franklin County,18.04,0
+39049007010,Ohio,Franklin County,32.06,0
+39049007550,Ohio,Franklin County,23.96,0
+39049008340,Ohio,Franklin County,10.04,0
+39049008380,Ohio,Franklin County,24.92,0
+39049008730,Ohio,Franklin County,35.09,0
+39049008900,Ohio,Franklin County,19.71,0
+39053954100,Ohio,Gallia County,10.96,0
+39057200104,Ohio,Greene County,39.24,0
+39057240600,Ohio,Greene County,36.34,0
+39057260100,Ohio,Greene County,37.39,0
+39057280300,Ohio,Greene County,29.86,0
+39061000700,Ohio,Hamilton County,42.51,0
+39061000900,Ohio,Hamilton County,49.58,0
+39061001600,Ohio,Hamilton County,34.36,0
+39061001700,Ohio,Hamilton County,17.88,0
+39061002800,Ohio,Hamilton County,24.2,0
+39061002900,Ohio,Hamilton County,36.13,0
+39061003000,Ohio,Hamilton County,68.84,1
+39061006500,Ohio,Hamilton County,29.34,0
+39061006600,Ohio,Hamilton County,11.18,0
+39061021304,Ohio,Hamilton County,13.73,0
+39061026300,Ohio,Hamilton County,11.34,0
+39061027100,Ohio,Hamilton County,10.46,0
+39063000900,Ohio,Hancock County,18.46,0
+39065000400,Ohio,Hardin County,30.64,0
+39073965500,Ohio,Hocking County,11.32,0
+39081000200,Ohio,Jefferson County,51.2,0
+39083007300,Ohio,Knox County,30.14,0
+39083007500,Ohio,Knox County,23.47,0
+39085200900,Ohio,Lake County,12.37,0
+39085204500,Ohio,Lake County,10.54,0
+39085205900,Ohio,Lake County,15.49,0
+39089757700,Ohio,Licking County,27.3,0
+39093060200,Ohio,Lorain County,40.24,0
+39093071500,Ohio,Lorain County,18.96,0
+39093091200,Ohio,Lorain County,40.95,0
+39093095100,Ohio,Lorain County,27.73,0
+39095001202,Ohio,Lucas County,35.57,0
+39095002700,Ohio,Lucas County,26.92,0
+39095002800,Ohio,Lucas County,41.09,0
+39095010400,Ohio,Lucas County,92.09,1
+39097041000,Ohio,Madison County,98.12,1
+39099800500,Ohio,Mahoning County,47.34,0
+39099802100,Ohio,Mahoning County,13.52,0
+39099804000,Ohio,Mahoning County,32.19,0
+39099804100,Ohio,Mahoning County,11.27,0
+39099813700,Ohio,Mahoning County,20.71,0
+39099813800,Ohio,Mahoning County,19.66,0
+39099814000,Ohio,Mahoning County,23.44,0
+39101010202,Ohio,Marion County,99.77,1
+39113001000,Ohio,Montgomery County,11.95,0
+39113001501,Ohio,Montgomery County,29.05,0
+39113003402,Ohio,Montgomery County,64.06,0
+39113003403,Ohio,Montgomery County,90.55,1
+39113003404,Ohio,Montgomery County,10.78,0
+39113004600,Ohio,Montgomery County,39.13,0
+39113040103,Ohio,Montgomery County,10.97,0
+39113060300,Ohio,Montgomery County,25.31,0
+39119912800,Ohio,Muskingum County,16.16,0
+39121968400,Ohio,Noble County,36.19,0
+39129021300,Ohio,Pickaway County,100.0,1
+39133600102,Ohio,Portage County,22.85,0
+39133601502,Ohio,Portage County,80.02,1
+39139001700,Ohio,Richland County,93.78,1
+39139003100,Ohio,Richland County,18.53,0
+39141955602,Ohio,Ross County,94.22,1
+39141956300,Ohio,Ross County,10.45,0
+39145002200,Ohio,Scioto County,29.16,0
+39145003600,Ohio,Scioto County,34.23,0
+39147963300,Ohio,Seneca County,12.36,0
+39147963400,Ohio,Seneca County,10.29,0
+39147963600,Ohio,Seneca County,12.35,0
+39151700100,Ohio,Stark County,28.53,0
+39151700700,Ohio,Stark County,19.29,0
+39151710700,Ohio,Stark County,33.94,0
+39151712201,Ohio,Stark County,14.75,0
+39151714400,Ohio,Stark County,11.29,0
+39153501100,Ohio,Summit County,18.42,0
+39153506800,Ohio,Summit County,38.63,0
+39153507400,Ohio,Summit County,15.91,0
+39153508301,Ohio,Summit County,42.64,0
+39153508900,Ohio,Summit County,47.82,0
+39153533102,Ohio,Summit County,10.31,0
+39155920500,Ohio,Trumbull County,19.46,0
+39155920700,Ohio,Trumbull County,27.92,0
+39155933800,Ohio,Trumbull County,13.23,0
+39159050400,Ohio,Union County,28.95,0
+39165031700,Ohio,Warren County,99.91,1
+39167020400,Ohio,Washington County,10.09,0
+39167020500,Ohio,Washington County,44.19,0
+39169000300,Ohio,Wayne County,10.67,0
+39169980000,Ohio,Wayne County,90.08,1
+39171950500,Ohio,Williams County,14.47,0
+39173021800,Ohio,Wood County,96.18,1
+40003956000,Oklahoma,Alfalfa County,35.38,0
+40005587900,Oklahoma,Atoka County,13.29,0
+40009966800,Oklahoma,Beckham County,28.13,0
+40011958900,Oklahoma,Blaine County,38.0,0
+40013796200,Oklahoma,Bryan County,18.08,0
+40015161600,Oklahoma,Caddo County,27.17,0
+40017300700,Oklahoma,Canadian County,30.99,0
+40021978100,Oklahoma,Cherokee County,15.04,0
+40027200100,Oklahoma,Cleveland County,57.61,0
+40027200700,Oklahoma,Cleveland County,84.19,1
+40027201201,Oklahoma,Cleveland County,11.08,0
+40027201202,Oklahoma,Cleveland County,94.8,1
+40027202405,Oklahoma,Cleveland County,41.16,0
+40031001400,Oklahoma,Comanche County,32.66,0
+40031002005,Oklahoma,Comanche County,46.67,0
+40031002401,Oklahoma,Comanche County,30.66,0
+40031002403,Oklahoma,Comanche County,57.1,0
+40031002404,Oklahoma,Comanche County,52.14,0
+40031002500,Oklahoma,Comanche County,14.01,0
+40035373300,Oklahoma,Craig County,17.5,0
+40037020101,Oklahoma,Creek County,11.12,0
+40037020102,Oklahoma,Creek County,22.21,0
+40039960600,Oklahoma,Custer County,17.84,0
+40051001000,Oklahoma,Grady County,15.74,0
+40055967100,Oklahoma,Greer County,37.93,0
+40063484800,Oklahoma,Hughes County,37.62,0
+40079040402,Oklahoma,Le Flore County,12.46,0
+40079040602,Oklahoma,Le Flore County,15.5,0
+40083600200,Oklahoma,Logan County,19.38,0
+40083600600,Oklahoma,Logan County,29.37,0
+40101000400,Oklahoma,Muskogee County,16.38,0
+40101000802,Oklahoma,Muskogee County,13.75,0
+40101001200,Oklahoma,Muskogee County,38.93,0
+40107080700,Oklahoma,Okfuskee County,30.48,0
+40109101000,Oklahoma,Oklahoma County,25.91,0
+40109102500,Oklahoma,Oklahoma County,22.51,0
+40109102600,Oklahoma,Oklahoma County,30.66,0
+40109103200,Oklahoma,Oklahoma County,63.72,0
+40109103500,Oklahoma,Oklahoma County,38.75,0
+40109103602,Oklahoma,Oklahoma County,93.32,1
+40109103700,Oklahoma,Oklahoma County,77.82,1
+40109105100,Oklahoma,Oklahoma County,14.03,0
+40109105700,Oklahoma,Oklahoma County,34.93,0
+40109106100,Oklahoma,Oklahoma County,11.49,0
+40109106801,Oklahoma,Oklahoma County,25.0,0
+40109107303,Oklahoma,Oklahoma County,10.96,0
+40109107500,Oklahoma,Oklahoma County,34.0,0
+40109108207,Oklahoma,Oklahoma County,44.94,0
+40109108208,Oklahoma,Oklahoma County,10.3,0
+40109108303,Oklahoma,Oklahoma County,10.69,0
+40109109100,Oklahoma,Oklahoma County,31.87,0
+40111000100,Oklahoma,Okmulgee County,23.35,0
+40113940001,Oklahoma,Osage County,20.01,0
+40115574600,Oklahoma,Ottawa County,13.23,0
+40119010300,Oklahoma,Payne County,47.16,0
+40119010400,Oklahoma,Payne County,74.51,1
+40119011400,Oklahoma,Payne County,15.79,0
+40121486300,Oklahoma,Pittsburg County,97.83,1
+40123088900,Oklahoma,Pontotoc County,27.62,0
+40125500500,Oklahoma,Pottawatomie County,24.31,0
+40125501001,Oklahoma,Pottawatomie County,12.89,0
+40131050105,Oklahoma,Rogers County,12.56,0
+40139950700,Oklahoma,Texas County,13.08,0
+40143002100,Oklahoma,Tulsa County,25.3,0
+40143002500,Oklahoma,Tulsa County,64.25,0
+40143007612,Oklahoma,Tulsa County,52.01,0
+40143007615,Oklahoma,Tulsa County,10.68,0
+40151954300,Oklahoma,Woods County,24.24,0
+40153953200,Oklahoma,Woodward County,22.2,0
+41001950500,Oregon,Baker County,11.6,0
+41003001101,Oregon,Benton County,25.86,0
+41003010600,Oregon,Benton County,34.05,0
+41003010702,Oregon,Benton County,40.71,0
+41005980000,Oregon,Clackamas County,78.45,1
+41007950300,Oregon,Clatsop County,11.91,0
+41029001301,Oregon,Jackson County,10.06,0
+41029001900,Oregon,Jackson County,25.77,0
+41031960100,Oregon,Jefferson County,32.65,0
+41035972000,Oregon,Klamath County,11.76,0
+41039003700,Oregon,Lane County,73.24,1
+41039003800,Oregon,Lane County,22.17,0
+41039003900,Oregon,Lane County,24.06,0
+41041951700,Oregon,Lincoln County,12.15,0
+41043020801,Oregon,Linn County,11.52,0
+41045970900,Oregon,Malheur County,49.62,0
+41047000200,Oregon,Marion County,38.73,0
+41047000701,Oregon,Marion County,35.48,0
+41047001803,Oregon,Marion County,48.71,0
+41051000301,Oregon,Multnomah County,19.56,0
+41051002100,Oregon,Multnomah County,13.85,0
+41051002303,Oregon,Multnomah County,12.27,0
+41051004002,Oregon,Multnomah County,28.59,0
+41051005100,Oregon,Multnomah County,16.31,0
+41051005600,Oregon,Multnomah County,35.69,0
+41051006300,Oregon,Multnomah County,23.38,0
+41051007300,Oregon,Multnomah County,73.61,1
+41051010600,Oregon,Multnomah County,35.15,0
+41051980000,Oregon,Multnomah County,100.0,1
+41053020303,Oregon,Polk County,28.22,0
+41059950400,Oregon,Umatilla County,26.77,0
+41059950800,Oregon,Umatilla County,22.45,0
+41061970700,Oregon,Union County,15.59,0
+41067032110,Oregon,Washington County,43.57,0
+41067032501,Oregon,Washington County,28.04,0
+41067033200,Oregon,Washington County,13.98,0
+41071030201,Oregon,Yamhill County,19.19,0
+41071030501,Oregon,Yamhill County,29.48,0
+41071030802,Oregon,Yamhill County,27.11,0
+42001030600,Pennsylvania,Adams County,10.63,0
+42001031501,Pennsylvania,Adams County,63.23,0
+42003010300,Pennsylvania,Allegheny County,91.09,1
+42003020100,Pennsylvania,Allegheny County,30.06,0
+42003040200,Pennsylvania,Allegheny County,48.35,0
+42003040400,Pennsylvania,Allegheny County,13.06,0
+42003040500,Pennsylvania,Allegheny County,19.92,0
+42003051000,Pennsylvania,Allegheny County,37.94,0
+42003070900,Pennsylvania,Allegheny County,11.07,0
+42003120800,Pennsylvania,Allegheny County,18.16,0
+42003140100,Pennsylvania,Allegheny County,53.38,0
+42003140200,Pennsylvania,Allegheny County,10.54,0
+42003451102,Pennsylvania,Allegheny County,21.15,0
+42003550900,Pennsylvania,Allegheny County,11.51,0
+42003552100,Pennsylvania,Allegheny County,36.28,0
+42003560400,Pennsylvania,Allegheny County,10.84,0
+42003980600,Pennsylvania,Allegheny County,36.36,0
+42003980900,Pennsylvania,Allegheny County,100.0,1
+42003981800,Pennsylvania,Allegheny County,86.98,1
+42003982200,Pennsylvania,Allegheny County,92.92,1
+42007601100,Pennsylvania,Beaver County,26.71,0
+42007602602,Pennsylvania,Beaver County,15.58,0
+42011000600,Pennsylvania,Berks County,29.19,0
+42011002900,Pennsylvania,Berks County,24.89,0
+42011010304,Pennsylvania,Berks County,23.56,0
+42011010903,Pennsylvania,Berks County,12.81,0
+42011014100,Pennsylvania,Berks County,47.22,0
+42013011002,Pennsylvania,Blair County,13.54,0
+42013100800,Pennsylvania,Blair County,22.69,0
+42017100807,Pennsylvania,Bucks County,13.0,0
+42017104603,Pennsylvania,Bucks County,22.08,0
+42017104702,Pennsylvania,Bucks County,10.61,0
+42017104800,Pennsylvania,Bucks County,27.19,0
+42017106100,Pennsylvania,Bucks County,25.49,0
+42019902400,Pennsylvania,Butler County,12.4,0
+42019910400,Pennsylvania,Butler County,27.42,0
+42019910500,Pennsylvania,Butler County,99.63,1
+42021000100,Pennsylvania,Cambria County,14.67,0
+42021011100,Pennsylvania,Cambria County,10.35,0
+42021012300,Pennsylvania,Cambria County,48.7,0
+42021012500,Pennsylvania,Cambria County,15.79,0
+42021012800,Pennsylvania,Cambria County,28.19,0
+42021013700,Pennsylvania,Cambria County,34.93,0
+42027011600,Pennsylvania,Centre County,24.9,0
+42027012000,Pennsylvania,Centre County,11.48,0
+42027012100,Pennsylvania,Centre County,91.21,1
+42027012200,Pennsylvania,Centre County,89.74,1
+42027981202,Pennsylvania,Centre County,99.9,1
+42029301700,Pennsylvania,Chester County,12.65,0
+42029302102,Pennsylvania,Chester County,17.05,0
+42029303901,Pennsylvania,Chester County,13.09,0
+42029307900,Pennsylvania,Chester County,33.13,0
+42029310400,Pennsylvania,Chester County,100.0,1
+42029311300,Pennsylvania,Chester County,25.97,0
+42031160600,Pennsylvania,Clarion County,27.41,0
+42033330600,Pennsylvania,Clearfield County,13.34,0
+42033330700,Pennsylvania,Clearfield County,16.39,0
+42033330900,Pennsylvania,Clearfield County,22.93,0
+42033331700,Pennsylvania,Clearfield County,32.49,0
+42035030700,Pennsylvania,Clinton County,28.44,0
+42037051100,Pennsylvania,Columbia County,45.33,0
+42039110202,Pennsylvania,Crawford County,22.94,0
+42039110700,Pennsylvania,Crawford County,10.57,0
+42039111100,Pennsylvania,Crawford County,10.67,0
+42039111700,Pennsylvania,Crawford County,30.46,0
+42041012200,Pennsylvania,Cumberland County,13.57,0
+42041012300,Pennsylvania,Cumberland County,35.09,0
+42041012400,Pennsylvania,Cumberland County,15.55,0
+42041013102,Pennsylvania,Cumberland County,48.68,0
+42041981001,Pennsylvania,Cumberland County,99.71,1
+42041981606,Pennsylvania,Cumberland County,98.52,1
+42043022900,Pennsylvania,Dauphin County,20.02,0
+42043024102,Pennsylvania,Dauphin County,38.07,0
+42045402200,Pennsylvania,Delaware County,12.86,0
+42045402600,Pennsylvania,Delaware County,13.22,0
+42045404700,Pennsylvania,Delaware County,37.95,0
+42045406904,Pennsylvania,Delaware County,16.73,0
+42045407201,Pennsylvania,Delaware County,21.73,0
+42045407202,Pennsylvania,Delaware County,23.03,0
+42045407600,Pennsylvania,Delaware County,20.59,0
+42045408101,Pennsylvania,Delaware County,10.15,0
+42045408300,Pennsylvania,Delaware County,30.05,0
+42045409602,Pennsylvania,Delaware County,30.55,0
+42045409701,Pennsylvania,Delaware County,21.18,0
+42045409702,Pennsylvania,Delaware County,77.69,1
+42045409802,Pennsylvania,Delaware County,38.86,0
+42045410100,Pennsylvania,Delaware County,21.43,0
+42045410301,Pennsylvania,Delaware County,20.27,0
+42045410700,Pennsylvania,Delaware County,23.41,0
+42049000100,Pennsylvania,Erie County,13.79,0
+42049000300,Pennsylvania,Erie County,15.76,0
+42049000900,Pennsylvania,Erie County,12.14,0
+42049001400,Pennsylvania,Erie County,34.21,0
+42049001900,Pennsylvania,Erie County,11.29,0
+42049002800,Pennsylvania,Erie County,23.36,0
+42049012202,Pennsylvania,Erie County,28.27,0
+42049012300,Pennsylvania,Erie County,20.99,0
+42049980109,Pennsylvania,Erie County,99.37,1
+42051261300,Pennsylvania,Fayette County,29.17,0
+42051262701,Pennsylvania,Fayette County,13.87,0
+42053530100,Pennsylvania,Forest County,56.88,0
+42055011100,Pennsylvania,Franklin County,11.96,0
+42055012000,Pennsylvania,Franklin County,12.23,0
+42059970501,Pennsylvania,Greene County,48.33,0
+42059970600,Pennsylvania,Greene County,20.67,0
+42061950300,Pennsylvania,Huntingdon County,40.31,0
+42061950400,Pennsylvania,Huntingdon County,18.61,0
+42063960900,Pennsylvania,Indiana County,21.37,0
+42063961101,Pennsylvania,Indiana County,28.58,0
+42063961102,Pennsylvania,Indiana County,62.62,0
+42069100200,Pennsylvania,Lackawanna County,25.55,0
+42069100300,Pennsylvania,Lackawanna County,49.58,0
+42069100800,Pennsylvania,Lackawanna County,27.09,0
+42069101000,Pennsylvania,Lackawanna County,12.44,0
+42069110403,Pennsylvania,Lackawanna County,21.62,0
+42069112000,Pennsylvania,Lackawanna County,18.83,0
+42071000100,Pennsylvania,Lancaster County,11.7,0
+42071000500,Pennsylvania,Lancaster County,19.39,0
+42071000700,Pennsylvania,Lancaster County,26.38,0
+42071010702,Pennsylvania,Lancaster County,27.87,0
+42071013400,Pennsylvania,Lancaster County,20.19,0
+42071013601,Pennsylvania,Lancaster County,50.54,0
+42071013602,Pennsylvania,Lancaster County,17.45,0
+42073000600,Pennsylvania,Lawrence County,17.99,0
+42073000700,Pennsylvania,Lawrence County,10.48,0
+42073010300,Pennsylvania,Lawrence County,50.16,0
+42075002500,Pennsylvania,Lebanon County,27.42,0
+42075003300,Pennsylvania,Lebanon County,28.44,0
+42077001200,Pennsylvania,Lehigh County,43.97,0
+42077002202,Pennsylvania,Lehigh County,55.89,0
+42077002302,Pennsylvania,Lehigh County,15.82,0
+42077006101,Pennsylvania,Lehigh County,14.99,0
+42077006903,Pennsylvania,Lehigh County,15.25,0
+42077009100,Pennsylvania,Lehigh County,14.77,0
+42079200100,Pennsylvania,Luzerne County,62.99,0
+42079201200,Pennsylvania,Luzerne County,32.52,0
+42079211204,Pennsylvania,Luzerne County,15.95,0
+42079211301,Pennsylvania,Luzerne County,44.9,0
+42079211800,Pennsylvania,Luzerne County,18.98,0
+42079213100,Pennsylvania,Luzerne County,13.04,0
+42079215600,Pennsylvania,Luzerne County,22.63,0
+42079216502,Pennsylvania,Luzerne County,11.66,0
+42079217002,Pennsylvania,Luzerne County,10.14,0
+42081000500,Pennsylvania,Lycoming County,38.66,0
+42081000600,Pennsylvania,Lycoming County,10.1,0
+42081000800,Pennsylvania,Lycoming County,46.72,0
+42081011200,Pennsylvania,Lycoming County,11.09,0
+42081011700,Pennsylvania,Lycoming County,19.6,0
+42083421000,Pennsylvania,McKean County,39.13,0
+42085032100,Pennsylvania,Mercer County,24.76,0
+42085032602,Pennsylvania,Mercer County,31.35,0
+42085032800,Pennsylvania,Mercer County,10.26,0
+42085033000,Pennsylvania,Mercer County,45.48,0
+42089300501,Pennsylvania,Monroe County,17.35,0
+42089300700,Pennsylvania,Monroe County,41.23,0
+42089301102,Pennsylvania,Monroe County,17.65,0
+42091200200,Pennsylvania,Montgomery County,12.29,0
+42091202500,Pennsylvania,Montgomery County,11.69,0
+42091202602,Pennsylvania,Montgomery County,12.96,0
+42091202603,Pennsylvania,Montgomery County,14.14,0
+42091203700,Pennsylvania,Montgomery County,31.59,0
+42091204500,Pennsylvania,Montgomery County,15.15,0
+42091205000,Pennsylvania,Montgomery County,34.01,0
+42091205100,Pennsylvania,Montgomery County,21.8,0
+42091206004,Pennsylvania,Montgomery County,29.67,0
+42091206300,Pennsylvania,Montgomery County,30.01,0
+42091206702,Pennsylvania,Montgomery County,99.68,1
+42091207104,Pennsylvania,Montgomery County,11.83,0
+42093050200,Pennsylvania,Montour County,16.54,0
+42095010700,Pennsylvania,Northampton County,16.21,0
+42095010800,Pennsylvania,Northampton County,16.03,0
+42095011100,Pennsylvania,Northampton County,92.3,1
+42095014100,Pennsylvania,Northampton County,36.61,0
+42095014300,Pennsylvania,Northampton County,16.12,0
+42095014400,Pennsylvania,Northampton County,12.2,0
+42095016700,Pennsylvania,Northampton County,10.5,0
+42097081200,Pennsylvania,Northumberland County,40.61,0
+42101000200,Pennsylvania,Philadelphia County,14.57,0
+42101000500,Pennsylvania,Philadelphia County,55.26,0
+42101000600,Pennsylvania,Philadelphia County,38.35,0
+42101000902,Pennsylvania,Philadelphia County,22.47,0
+42101001101,Pennsylvania,Philadelphia County,12.27,0
+42101005000,Pennsylvania,Philadelphia County,69.23,1
+42101007700,Pennsylvania,Philadelphia County,32.86,0
+42101008801,Pennsylvania,Philadelphia County,53.74,0
+42101008802,Pennsylvania,Philadelphia County,40.97,0
+42101009000,Pennsylvania,Philadelphia County,47.7,0
+42101010400,Pennsylvania,Philadelphia County,11.01,0
+42101010500,Pennsylvania,Philadelphia County,14.76,0
+42101011700,Pennsylvania,Philadelphia County,45.73,0
+42101012000,Pennsylvania,Philadelphia County,25.17,0
+42101012100,Pennsylvania,Philadelphia County,14.25,0
+42101012203,Pennsylvania,Philadelphia County,11.34,0
+42101012204,Pennsylvania,Philadelphia County,14.62,0
+42101013200,Pennsylvania,Philadelphia County,23.13,0
+42101013900,Pennsylvania,Philadelphia County,13.1,0
+42101014500,Pennsylvania,Philadelphia County,29.95,0
+42101014600,Pennsylvania,Philadelphia County,39.82,0
+42101014700,Pennsylvania,Philadelphia County,31.89,0
+42101015300,Pennsylvania,Philadelphia County,16.91,0
+42101016600,Pennsylvania,Philadelphia County,17.17,0
+42101020800,Pennsylvania,Philadelphia County,10.71,0
+42101024100,Pennsylvania,Philadelphia County,25.4,0
+42101026900,Pennsylvania,Philadelphia County,15.14,0
+42101027902,Pennsylvania,Philadelphia County,43.58,0
+42101033300,Pennsylvania,Philadelphia County,16.52,0
+42101036000,Pennsylvania,Philadelphia County,11.43,0
+42101036400,Pennsylvania,Philadelphia County,61.59,0
+42101036900,Pennsylvania,Philadelphia County,85.23,1
+42101037600,Pennsylvania,Philadelphia County,26.22,0
+42101037700,Pennsylvania,Philadelphia County,30.49,0
+42101038300,Pennsylvania,Philadelphia County,26.27,0
+42101038700,Pennsylvania,Philadelphia County,30.24,0
+42101038900,Pennsylvania,Philadelphia County,10.78,0
+42101980000,Pennsylvania,Philadelphia County,76.87,1
+42101980200,Pennsylvania,Philadelphia County,66.27,0
+42101980700,Pennsylvania,Philadelphia County,80.0,1
+42101989100,Pennsylvania,Philadelphia County,100.0,1
+42103950501,Pennsylvania,Pike County,20.23,0
+42107000400,Pennsylvania,Schuylkill County,59.37,0
+42107000900,Pennsylvania,Schuylkill County,21.34,0
+42109980705,Pennsylvania,Snyder County,82.32,1
+42111020800,Pennsylvania,Somerset County,38.15,0
+42111020900,Pennsylvania,Somerset County,23.15,0
+42113960100,Pennsylvania,Sullivan County,10.24,0
+42117950600,Pennsylvania,Tioga County,25.29,0
+42119980101,Pennsylvania,Union County,99.77,1
+42119980501,Pennsylvania,Union County,96.15,1
+42119980800,Pennsylvania,Union County,98.1,1
+42125704100,Pennsylvania,Washington County,50.83,0
+42125753700,Pennsylvania,Washington County,24.17,0
+42125754200,Pennsylvania,Washington County,13.9,0
+42125792100,Pennsylvania,Washington County,18.74,0
+42125792200,Pennsylvania,Washington County,48.75,0
+42127960900,Pennsylvania,Wayne County,45.35,0
+42129803902,Pennsylvania,Westmoreland County,20.99,0
+42129804702,Pennsylvania,Westmoreland County,29.04,0
+42129807402,Pennsylvania,Westmoreland County,19.74,0
+42133000900,Pennsylvania,York County,16.24,0
+42133010110,Pennsylvania,York County,31.58,0
+42133010510,Pennsylvania,York County,40.51,0
+44001030800,Rhode Island,Bristol County,39.56,0
+44005040900,Rhode Island,Newport County,23.58,0
+44005041200,Rhode Island,Newport County,73.47,1
+44007000101,Rhode Island,Providence County,23.58,0
+44007000600,Rhode Island,Providence County,12.67,0
+44007000700,Rhode Island,Providence County,11.53,0
+44007000800,Rhode Island,Providence County,43.51,0
+44007000900,Rhode Island,Providence County,11.01,0
+44007002000,Rhode Island,Providence County,16.59,0
+44007002400,Rhode Island,Providence County,29.3,0
+44007002700,Rhode Island,Providence County,21.14,0
+44007003601,Rhode Island,Providence County,32.13,0
+44007003602,Rhode Island,Providence County,73.12,1
+44007012103,Rhode Island,Providence County,10.7,0
+44007012601,Rhode Island,Providence County,62.64,0
+44007014200,Rhode Island,Providence County,66.47,0
+44009051400,Rhode Island,Washington County,90.73,1
+45001950200,South Carolina,Abbeville County,15.38,0
+45003021300,South Carolina,Aiken County,19.14,0
+45005970400,South Carolina,Allendale County,30.36,0
+45007000200,South Carolina,Anderson County,22.41,0
+45007001000,South Carolina,Anderson County,12.56,0
+45009960100,South Carolina,Bamberg County,14.2,0
+45013000400,South Carolina,Beaufort County,71.51,1
+45013001000,South Carolina,Beaufort County,77.91,1
+45015020102,South Carolina,Berkeley County,14.32,0
+45015020504,South Carolina,Berkeley County,12.08,0
+45015020724,South Carolina,Berkeley County,71.69,1
+45019000400,South Carolina,Charleston County,40.32,0
+45019000700,South Carolina,Charleston County,44.32,0
+45019003115,South Carolina,Charleston County,15.38,0
+45019003200,South Carolina,Charleston County,54.76,0
+45019003900,South Carolina,Charleston County,43.96,0
+45019005200,South Carolina,Charleston County,50.54,0
+45019005500,South Carolina,Charleston County,11.25,0
+45027960201,South Carolina,Clarendon County,42.37,0
+45031010600,South Carolina,Darlington County,10.74,0
+45035010400,South Carolina,Dorchester County,22.83,0
+45037970202,South Carolina,Edgefield County,30.82,0
+45037970400,South Carolina,Edgefield County,17.19,0
+45041000101,South Carolina,Florence County,14.32,0
+45041000500,South Carolina,Florence County,22.05,0
+45041001000,South Carolina,Florence County,12.97,0
+45045000100,South Carolina,Greenville County,51.92,0
+45045000500,South Carolina,Greenville County,10.81,0
+45045000700,South Carolina,Greenville County,24.11,0
+45045000900,South Carolina,Greenville County,11.72,0
+45045001203,South Carolina,Greenville County,78.62,1
+45045003201,South Carolina,Greenville County,19.28,0
+45045003801,South Carolina,Greenville County,33.62,0
+45045004002,South Carolina,Greenville County,27.26,0
+45047970201,South Carolina,Greenwood County,17.94,0
+45047970301,South Carolina,Greenwood County,23.81,0
+45049920400,South Carolina,Hampton County,21.73,0
+45051060405,South Carolina,Horry County,23.0,0
+45051070701,South Carolina,Horry County,11.78,0
+45053950202,South Carolina,Jasper County,17.78,0
+45057010200,South Carolina,Lancaster County,18.27,0
+45059920600,South Carolina,Laurens County,10.13,0
+45059920800,South Carolina,Laurens County,25.89,0
+45061920302,South Carolina,Lee County,32.58,0
+45063021027,South Carolina,Lexington County,10.2,0
+45063021029,South Carolina,Lexington County,27.4,0
+45065920200,South Carolina,McCormick County,21.72,0
+45069960302,South Carolina,Marlboro County,58.64,0
+45071950202,South Carolina,Newberry County,13.34,0
+45075011200,South Carolina,Orangeburg County,71.09,1
+45077011202,South Carolina,Pickens County,95.21,1
+45077011205,South Carolina,Pickens County,11.15,0
+45079000100,South Carolina,Richland County,16.05,0
+45079001000,South Carolina,Richland County,50.98,0
+45079001300,South Carolina,Richland County,17.09,0
+45079001600,South Carolina,Richland County,12.46,0
+45079002800,South Carolina,Richland County,42.97,0
+45079002900,South Carolina,Richland County,82.02,1
+45079003000,South Carolina,Richland County,35.45,0
+45079003100,South Carolina,Richland County,41.63,0
+45079010408,South Carolina,Richland County,99.87,1
+45079010501,South Carolina,Richland County,15.74,0
+45079010806,South Carolina,Richland County,100.0,1
+45079011501,South Carolina,Richland County,99.95,1
+45079011502,South Carolina,Richland County,29.4,0
+45079011702,South Carolina,Richland County,25.89,0
+45083020301,South Carolina,Spartanburg County,57.66,0
+45083021200,South Carolina,Spartanburg County,17.17,0
+45083021600,South Carolina,Spartanburg County,22.55,0
+45083021700,South Carolina,Spartanburg County,11.3,0
+45083021802,South Carolina,Spartanburg County,21.52,0
+45083023802,South Carolina,Spartanburg County,23.52,0
+45085000100,South Carolina,Sumter County,23.73,0
+45085000300,South Carolina,Sumter County,14.65,0
+45085000800,South Carolina,Sumter County,22.3,0
+45089970802,South Carolina,Williamsburg County,100.0,1
+45091060501,South Carolina,York County,11.42,0
+45091060600,South Carolina,York County,99.89,1
+46005956600,South Dakota,Beadle County,15.16,0
+46009967700,South Dakota,Bon Homme County,35.51,0
+46011958802,South Dakota,Brookings County,16.47,0
+46011958900,South Dakota,Brookings County,30.86,0
+46013951600,South Dakota,Brown County,13.29,0
+46025955800,South Dakota,Clark County,13.25,0
+46027965900,South Dakota,Clay County,35.55,0
+46035962900,South Dakota,Davison County,11.4,0
+46045962100,South Dakota,Edmunds County,15.39,0
+46049961100,South Dakota,Faulk County,21.02,0
+46061964100,South Dakota,Hanson County,15.61,0
+46067968600,South Dakota,Hutchinson County,10.09,0
+46067968800,South Dakota,Hutchinson County,17.61,0
+46081966301,South Dakota,Lawrence County,14.57,0
+46089963100,South Dakota,McPherson County,14.11,0
+46093020200,South Dakota,Meade County,40.77,0
+46099000100,South Dakota,Minnehaha County,39.68,0
+46099000500,South Dakota,Minnehaha County,15.65,0
+46099001500,South Dakota,Minnehaha County,15.1,0
+46099010600,South Dakota,Minnehaha County,20.71,0
+46103010200,South Dakota,Pennington County,15.11,0
+46103010500,South Dakota,Pennington County,17.28,0
+46135966301,South Dakota,Yankton County,18.78,0
+46135966302,South Dakota,Yankton County,20.9,0
+47007953200,Tennessee,Bledsoe County,23.58,0
+47009010600,Tennessee,Blount County,26.02,0
+47011010500,Tennessee,Bradley County,44.0,0
+47017962202,Tennessee,Carroll County,13.92,0
+47019070900,Tennessee,Carter County,17.01,0
+47023970200,Tennessee,Chester County,22.56,0
+47025970300,Tennessee,Claiborne County,14.06,0
+47037011700,Tennessee,Davidson County,11.35,0
+47037012802,Tennessee,Davidson County,32.95,0
+47037013000,Tennessee,Davidson County,99.59,1
+47037013601,Tennessee,Davidson County,20.35,0
+47037013602,Tennessee,Davidson County,90.24,1
+47037014200,Tennessee,Davidson County,25.48,0
+47037015501,Tennessee,Davidson County,10.61,0
+47037015613,Tennessee,Davidson County,38.86,0
+47037015900,Tennessee,Davidson County,36.03,0
+47037016400,Tennessee,Davidson County,63.7,0
+47037016500,Tennessee,Davidson County,93.61,1
+47037017000,Tennessee,Davidson County,24.73,0
+47037017702,Tennessee,Davidson County,29.99,0
+47037019500,Tennessee,Davidson County,38.57,0
+47051960700,Tennessee,Franklin County,37.71,0
+47059090200,Tennessee,Greene County,25.77,0
+47059090400,Tennessee,Greene County,10.88,0
+47065003100,Tennessee,Hamilton County,38.76,0
+47065010901,Tennessee,Hamilton County,10.09,0
+47065011203,Tennessee,Hamilton County,23.79,0
+47065011311,Tennessee,Hamilton County,19.36,0
+47065012400,Tennessee,Hamilton County,63.24,0
+47069950200,Tennessee,Hardeman County,53.45,0
+47081950500,Tennessee,Hickman County,51.52,0
+47089070300,Tennessee,Jefferson County,15.06,0
+47091956100,Tennessee,Johnson County,37.2,0
+47093000100,Tennessee,Knox County,15.2,0
+47093000901,Tennessee,Knox County,98.4,1
+47093000902,Tennessee,Knox County,91.46,1
+47093003700,Tennessee,Knox County,11.16,0
+47093005201,Tennessee,Knox County,14.53,0
+47093005502,Tennessee,Knox County,13.3,0
+47093006600,Tennessee,Knox County,21.06,0
+47093006900,Tennessee,Knox County,21.84,0
+47095960100,Tennessee,Lake County,43.92,0
+47097050100,Tennessee,Lauderdale County,61.95,0
+47113000300,Tennessee,Madison County,14.99,0
+47113000500,Tennessee,Madison County,22.51,0
+47113000700,Tennessee,Madison County,12.03,0
+47113000800,Tennessee,Madison County,31.71,0
+47113001605,Tennessee,Madison County,33.88,0
+47125100100,Tennessee,Montgomery County,32.0,0
+47125100800,Tennessee,Montgomery County,34.48,0
+47125101400,Tennessee,Montgomery County,14.82,0
+47125980100,Tennessee,Montgomery County,100.0,1
+47129110300,Tennessee,Morgan County,41.43,0
+47141000800,Tennessee,Putnam County,35.46,0
+47143975401,Tennessee,Rhea County,10.35,0
+47149041500,Tennessee,Rutherford County,98.04,1
+47149041800,Tennessee,Rutherford County,20.32,0
+47155080801,Tennessee,Sevier County,19.66,0
+47157001600,Tennessee,Shelby County,37.33,0
+47157002000,Tennessee,Shelby County,10.97,0
+47157003100,Tennessee,Shelby County,12.73,0
+47157003200,Tennessee,Shelby County,11.31,0
+47157003600,Tennessee,Shelby County,18.0,0
+47157003700,Tennessee,Shelby County,12.12,0
+47157007300,Tennessee,Shelby County,48.19,0
+47157010500,Tennessee,Shelby County,12.72,0
+47157011300,Tennessee,Shelby County,20.92,0
+47157011400,Tennessee,Shelby County,44.84,0
+47157020400,Tennessee,Shelby County,25.13,0
+47157021200,Tennessee,Shelby County,99.93,1
+47157980100,Tennessee,Shelby County,98.41,1
+47157980400,Tennessee,Shelby County,95.56,1
+47163043402,Tennessee,Sullivan County,12.49,0
+47165020700,Tennessee,Sumner County,13.17,0
+47167041000,Tennessee,Tipton County,18.71,0
+47179060700,Tennessee,Washington County,100.0,1
+47181950100,Tennessee,Wayne County,41.83,0
+47183968202,Tennessee,Weakley County,71.25,1
+47189030700,Tennessee,Wilson County,11.11,0
+48001950401,Texas,Anderson County,96.26,1
+48001950402,Texas,Anderson County,97.08,1
+48001950901,Texas,Anderson County,19.08,0
+48005001001,Texas,Angelina County,21.63,0
+48021950501,Texas,Bastrop County,18.97,0
+48025950201,Texas,Bee County,89.22,1
+48027020900,Texas,Bell County,16.91,0
+48027021500,Texas,Bell County,11.09,0
+48027021602,Texas,Bell County,41.42,0
+48027023202,Texas,Bell County,27.34,0
+48027023204,Texas,Bell County,52.25,0
+48027980001,Texas,Bell County,100.0,1
+48029110100,Texas,Bexar County,31.9,0
+48029110600,Texas,Bexar County,62.43,0
+48029110800,Texas,Bexar County,10.99,0
+48029110900,Texas,Bexar County,15.66,0
+48029120100,Texas,Bexar County,53.21,0
+48029121506,Texas,Bexar County,10.75,0
+48029131700,Texas,Bexar County,11.76,0
+48029141101,Texas,Bexar County,14.67,0
+48029152000,Texas,Bexar County,10.86,0
+48029161400,Texas,Bexar County,91.38,1
+48029161902,Texas,Bexar County,23.8,0
+48029171302,Texas,Bexar County,26.12,0
+48029181402,Texas,Bexar County,16.39,0
+48029181820,Texas,Bexar County,47.13,0
+48029190400,Texas,Bexar County,44.84,0
+48029192000,Texas,Bexar County,19.55,0
+48029192200,Texas,Bexar County,13.53,0
+48029980003,Texas,Bexar County,26.08,0
+48029980100,Texas,Bexar County,77.74,1
+48037010500,Texas,Bowie County,33.16,0
+48037011100,Texas,Bowie County,25.98,0
+48037011501,Texas,Bowie County,34.88,0
+48039661900,Texas,Brazoria County,51.41,0
+48039662200,Texas,Brazoria County,12.07,0
+48039663000,Texas,Brazoria County,24.6,0
+48039663100,Texas,Brazoria County,17.37,0
+48041000202,Texas,Brazos County,16.01,0
+48041000400,Texas,Brazos County,16.21,0
+48041001400,Texas,Brazos County,20.29,0
+48041002015,Texas,Brazos County,99.96,1
+48049950700,Texas,Brown County,34.11,0
+48049951300,Texas,Brown County,16.66,0
+48053960300,Texas,Burnet County,13.94,0
+48055960200,Texas,Caldwell County,23.97,0
+48055960500,Texas,Caldwell County,22.48,0
+48061012301,Texas,Cameron County,17.28,0
+48061013801,Texas,Cameron County,10.2,0
+48061014001,Texas,Cameron County,13.85,0
+48073950900,Texas,Cherokee County,39.43,0
+48075950100,Texas,Childress County,63.11,0
+48085030604,Texas,Collin County,33.73,0
+48085030701,Texas,Collin County,21.95,0
+48095950300,Texas,Concho County,38.85,0
+48099010201,Texas,Coryell County,98.58,1
+48099010300,Texas,Coryell County,23.01,0
+48099010503,Texas,Coryell County,100.0,1
+48099980000,Texas,Coryell County,15.38,0
+48113000401,Texas,Dallas County,13.85,0
+48113002200,Texas,Dallas County,21.02,0
+48113006002,Texas,Dallas County,13.48,0
+48113007823,Texas,Dallas County,26.54,0
+48113010000,Texas,Dallas County,75.79,1
+48113014204,Texas,Dallas County,18.37,0
+48113016521,Texas,Dallas County,21.63,0
+48113016902,Texas,Dallas County,41.69,0
+48113017001,Texas,Dallas County,23.34,0
+48113019302,Texas,Dallas County,46.73,0
+48113020400,Texas,Dallas County,25.19,0
+48115950402,Texas,Dawson County,53.31,0
+48121020601,Texas,Denton County,30.86,0
+48121020900,Texas,Denton County,44.62,0
+48121021000,Texas,Denton County,52.04,0
+48121021202,Texas,Denton County,27.79,0
+48123970200,Texas,DeWitt County,25.43,0
+48125950300,Texas,Dickens County,12.89,0
+48129950200,Texas,Donley County,11.67,0
+48131950100,Texas,Duval County,10.84,0
+48135002400,Texas,Ector County,11.45,0
+48141001502,Texas,El Paso County,21.41,0
+48141002100,Texas,El Paso County,11.34,0
+48141003402,Texas,El Paso County,15.38,0
+48141010101,Texas,El Paso County,48.24,0
+48141010102,Texas,El Paso County,47.28,0
+48141010103,Texas,El Paso County,58.39,0
+48141010203,Texas,El Paso County,41.63,0
+48141010339,Texas,El Paso County,36.33,0
+48143950400,Texas,Erath County,15.3,0
+48143950500,Texas,Erath County,11.41,0
+48145000400,Texas,Falls County,26.58,0
+48145000800,Texas,Falls County,33.57,0
+48147950401,Texas,Fannin County,46.45,0
+48147950402,Texas,Fannin County,12.98,0
+48157672800,Texas,Fort Bend County,12.43,0
+48157673700,Texas,Fort Bend County,97.74,1
+48157674700,Texas,Fort Bend County,11.14,0
+48161000600,Texas,Freestone County,27.48,0
+48163950200,Texas,Frio County,23.95,0
+48163950300,Texas,Frio County,26.81,0
+48167724000,Texas,Galveston County,74.89,1
+48169950100,Texas,Garza County,32.64,0
+48179950100,Texas,Gray County,30.96,0
+48181001400,Texas,Grayson County,14.82,0
+48183001100,Texas,Gregg County,27.96,0
+48183001500,Texas,Gregg County,21.14,0
+48185180400,Texas,Grimes County,95.86,1
+48187210300,Texas,Guadalupe County,12.04,0
+48189950600,Texas,Hale County,40.12,0
+48201100000,Texas,Harris County,51.32,0
+48201210100,Texas,Harris County,98.95,1
+48201232500,Texas,Harris County,15.57,0
+48201250301,Texas,Harris County,28.22,0
+48201253400,Texas,Harris County,13.12,0
+48201310100,Texas,Harris County,14.94,0
+48201312000,Texas,Harris County,42.92,0
+48201312100,Texas,Harris County,99.45,1
+48201312500,Texas,Harris County,32.28,0
+48201312800,Texas,Harris County,32.98,0
+48201312900,Texas,Harris County,10.48,0
+48201313100,Texas,Harris County,19.52,0
+48201314002,Texas,Harris County,10.66,0
+48201410702,Texas,Harris County,13.16,0
+48201412100,Texas,Harris County,99.74,1
+48201422800,Texas,Harris County,19.81,0
+48201510100,Texas,Harris County,14.15,0
+48203020402,Texas,Harrison County,16.32,0
+48205950200,Texas,Hartley County,23.19,0
+48207950300,Texas,Haskell County,13.59,0
+48209010200,Texas,Hays County,77.88,1
+48209010304,Texas,Hays County,11.98,0
+48215023512,Texas,Hidalgo County,84.92,1
+48215024600,Texas,Hidalgo County,11.52,0
+48217960600,Texas,Hill County,11.36,0
+48219950500,Texas,Hockley County,11.0,0
+48221160100,Texas,Hood County,11.12,0
+48225950300,Texas,Houston County,10.32,0
+48225950700,Texas,Houston County,48.42,0
+48227950300,Texas,Howard County,32.29,0
+48227950802,Texas,Howard County,73.31,1
+48231960600,Texas,Hunt County,24.76,0
+48237950100,Texas,Jack County,38.05,0
+48241950400,Texas,Jasper County,11.66,0
+48245000900,Texas,Jefferson County,10.06,0
+48245002600,Texas,Jefferson County,29.22,0
+48245011201,Texas,Jefferson County,11.42,0
+48245011202,Texas,Jefferson County,100.0,1
+48245011203,Texas,Jefferson County,100.0,1
+48245011302,Texas,Jefferson County,99.9,1
+48245011304,Texas,Jefferson County,44.12,0
+48251130408,Texas,Johnson County,14.28,0
+48251130800,Texas,Johnson County,11.81,0
+48253020101,Texas,Jones County,19.69,0
+48253020102,Texas,Jones County,99.91,1
+48255970200,Texas,Karnes County,10.82,0
+48255970300,Texas,Karnes County,40.02,0
+48265960600,Texas,Kerr County,13.23,0
+48273020300,Texas,Kleberg County,20.46,0
+48283950300,Texas,La Salle County,22.99,0
+48291700200,Texas,Liberty County,19.99,0
+48291700900,Texas,Liberty County,65.21,0
+48293970400,Texas,Limestone County,20.44,0
+48293970600,Texas,Limestone County,16.7,0
+48297950100,Texas,Live Oak County,21.97,0
+48303000201,Texas,Lubbock County,16.7,0
+48303000500,Texas,Lubbock County,87.41,1
+48303000700,Texas,Lubbock County,51.4,0
+48303010508,Texas,Lubbock County,11.73,0
+48309000100,Texas,McLennan County,19.92,0
+48309000300,Texas,McLennan County,97.96,1
+48309001300,Texas,McLennan County,11.99,0
+48309001800,Texas,McLennan County,35.19,0
+48309003300,Texas,McLennan County,15.38,0
+48309003601,Texas,McLennan County,11.25,0
+48313000100,Texas,Madison County,67.29,1
+48325000300,Texas,Medina County,22.98,0
+48335950200,Texas,Mitchell County,32.81,0
+48339693900,Texas,Montgomery County,16.07,0
+48347950600,Texas,Nacogdoches County,63.44,0
+48349970800,Texas,Navarro County,10.55,0
+48351950200,Texas,Newton County,11.6,0
+48353950100,Texas,Nolan County,10.43,0
+48355000800,Texas,Nueces County,18.25,0
+48355001100,Texas,Nueces County,16.15,0
+48355001200,Texas,Nueces County,11.67,0
+48355002706,Texas,Nueces County,99.84,1
+48355002900,Texas,Nueces County,11.4,0
+48355006400,Texas,Nueces County,34.61,0
+48359950100,Texas,Oldham County,13.74,0
+48367140502,Texas,Parker County,30.75,0
+48371950500,Texas,Pecos County,36.06,0
+48373210203,Texas,Polk County,57.55,0
+48375013200,Texas,Potter County,10.94,0
+48375014401,Texas,Potter County,71.69,1
+48375015400,Texas,Potter County,12.96,0
+48381021802,Texas,Randall County,23.61,0
+48389950100,Texas,Reeves County,70.25,1
+48401950400,Texas,Rusk County,12.0,0
+48401950502,Texas,Rusk County,43.94,0
+48401950700,Texas,Rusk County,39.71,0
+48411950200,Texas,San Saba County,17.7,0
+48415950100,Texas,Scurry County,26.73,0
+48423000500,Texas,Smith County,17.15,0
+48423000900,Texas,Smith County,27.69,0
+48427950500,Texas,Starr County,12.86,0
+48429950500,Texas,Stephens County,15.48,0
+48437950200,Texas,Swisher County,28.67,0
+48439100602,Texas,Tarrant County,48.39,0
+48439101700,Texas,Tarrant County,28.51,0
+48439104201,Texas,Tarrant County,53.88,0
+48439105902,Texas,Tarrant County,26.63,0
+48439122300,Texas,Tarrant County,33.8,0
+48439123200,Texas,Tarrant County,11.55,0
+48439123300,Texas,Tarrant County,37.08,0
+48439123400,Texas,Tarrant County,20.3,0
+48439123600,Texas,Tarrant County,10.66,0
+48441010100,Texas,Taylor County,25.35,0
+48441010200,Texas,Taylor County,22.42,0
+48441010300,Texas,Taylor County,10.96,0
+48441012100,Texas,Taylor County,99.79,1
+48441012300,Texas,Taylor County,14.64,0
+48441013000,Texas,Taylor County,99.36,1
+48445950300,Texas,Terry County,32.76,0
+48451001301,Texas,Tom Green County,23.18,0
+48451001500,Texas,Tom Green County,85.55,1
+48451001800,Texas,Tom Green County,19.46,0
+48453000203,Texas,Travis County,18.18,0
+48453000601,Texas,Travis County,91.19,1
+48453000603,Texas,Travis County,10.54,0
+48453000604,Texas,Travis County,33.79,0
+48453000700,Texas,Travis County,14.79,0
+48453000901,Texas,Travis County,12.09,0
+48453001100,Texas,Travis County,19.59,0
+48453001606,Texas,Travis County,100.0,1
+48453002208,Texas,Travis County,14.8,0
+48453002308,Texas,Travis County,17.96,0
+48453002319,Texas,Travis County,100.0,1
+48457950200,Texas,Tyler County,27.49,0
+48457950300,Texas,Tyler County,11.02,0
+48465950500,Texas,Val Verde County,22.86,0
+48469000100,Texas,Victoria County,20.68,0
+48471790101,Texas,Walker County,71.92,1
+48471790200,Texas,Walker County,14.11,0
+48471790400,Texas,Walker County,46.93,0
+48471790500,Texas,Walker County,21.08,0
+48471790600,Texas,Walker County,32.91,0
+48471790700,Texas,Walker County,16.61,0
+48471790800,Texas,Walker County,16.87,0
+48473680400,Texas,Waller County,100.0,1
+48477170400,Texas,Washington County,15.48,0
+48479001714,Texas,Webb County,21.87,0
+48479001817,Texas,Webb County,22.12,0
+48479001900,Texas,Webb County,10.78,0
+48485010100,Texas,Wichita County,22.35,0
+48485011500,Texas,Wichita County,16.14,0
+48485012000,Texas,Wichita County,12.35,0
+48485013100,Texas,Wichita County,44.89,0
+48485013401,Texas,Wichita County,88.29,1
+48487950500,Texas,Wilbarger County,18.31,0
+48489950400,Texas,Willacy County,39.21,0
+48491021000,Texas,Williamson County,14.34,0
+48491021300,Texas,Williamson County,26.04,0
+48491021401,Texas,Williamson County,12.25,0
+48491021402,Texas,Williamson County,28.43,0
+48499950200,Texas,Wood County,10.37,0
+48499950601,Texas,Wood County,11.69,0
+48507950301,Texas,Zavala County,15.44,0
+49005000600,Utah,Cache County,12.29,0
+49005000701,Utah,Cache County,15.0,0
+49005000702,Utah,Cache County,52.54,0
+49011125200,Utah,Davis County,14.7,0
+49011125600,Utah,Davis County,89.81,1
+49021110400,Utah,Iron County,14.56,0
+49035101400,Utah,Salt Lake County,26.25,0
+49035101900,Utah,Salt Lake County,12.7,0
+49035102500,Utah,Salt Lake County,29.36,0
+49035103300,Utah,Salt Lake County,11.65,0
+49035111600,Utah,Salt Lake County,30.73,0
+49035112818,Utah,Salt Lake County,100.0,1
+49039972300,Utah,Sanpete County,28.62,0
+49049001601,Utah,Utah County,47.91,0
+49049001602,Utah,Utah County,87.4,1
+49049001603,Utah,Utah County,44.11,0
+49049001900,Utah,Utah County,15.7,0
+49049002201,Utah,Utah County,25.46,0
+49049002400,Utah,Utah County,16.61,0
+49049002701,Utah,Utah County,10.38,0
+49049010503,Utah,Utah County,25.99,0
+49057201100,Utah,Weber County,21.72,0
+49057201900,Utah,Weber County,12.01,0
+49057210402,Utah,Weber County,11.8,0
+50001960300,Vermont,Addison County,11.13,0
+50001960800,Vermont,Addison County,54.62,0
+50003971000,Vermont,Bennington County,23.84,0
+50005957300,Vermont,Caledonia County,22.64,0
+50007000600,Vermont,Chittenden County,17.1,0
+50007000900,Vermont,Chittenden County,19.69,0
+50007002200,Vermont,Chittenden County,22.05,0
+50007003900,Vermont,Chittenden County,77.35,1
+50015953200,Vermont,Lamoille County,16.74,0
+50017959400,Vermont,Orange County,11.41,0
+50019951400,Vermont,Orleans County,20.67,0
+50021963600,Vermont,Rutland County,19.86,0
+50021963800,Vermont,Rutland County,10.96,0
+50023955500,Vermont,Washington County,24.67,0
+50025967700,Vermont,Windham County,17.88,0
+50025968200,Vermont,Windham County,11.96,0
+51003010901,Virginia,Albemarle County,29.89,0
+51003010902,Virginia,Albemarle County,72.27,1
+51003010903,Virginia,Albemarle County,98.55,1
+51003011303,Virginia,Albemarle County,15.68,0
+51009010200,Virginia,Amherst County,14.85,0
+51009010502,Virginia,Amherst County,51.64,0
+51013101701,Virginia,Arlington County,13.35,0
+51013103401,Virginia,Arlington County,75.54,1
+51015070100,Virginia,Augusta County,29.06,0
+51015070700,Virginia,Augusta County,11.33,0
+51021040100,Virginia,Bland County,16.33,0
+51025930201,Virginia,Brunswick County,14.0,0
+51025930202,Virginia,Brunswick County,100.0,1
+51027010600,Virginia,Buchanan County,18.71,0
+51029930201,Virginia,Buckingham County,39.32,0
+51041100600,Virginia,Chesterfield County,57.9,0
+51041100817,Virginia,Chesterfield County,19.21,0
+51047930501,Virginia,Culpeper County,25.83,0
+51053840400,Virginia,Dinwiddie County,49.86,0
+51059421900,Virginia,Fairfax County,11.69,0
+51059440502,Virginia,Fairfax County,75.64,1
+51065020101,Virginia,Fluvanna County,21.86,0
+51067020600,Virginia,Franklin County,25.38,0
+51069051102,Virginia,Frederick County,10.31,0
+51075400300,Virginia,Goochland County,90.75,1
+51081880102,Virginia,Greensville County,100.0,1
+51083930600,Virginia,Halifax County,11.4,0
+51085320601,Virginia,Hanover County,27.08,0
+51085320702,Virginia,Hanover County,19.01,0
+51087200301,Virginia,Henrico County,10.4,0
+51087200409,Virginia,Henrico County,29.33,0
+51095080102,Virginia,James City County,12.66,0
+51095080205,Virginia,James City County,10.82,0
+51105950300,Virginia,Lee County,28.49,0
+51111930100,Virginia,Lunenburg County,20.32,0
+51117930300,Virginia,Mecklenburg County,14.35,0
+51117930600,Virginia,Mecklenburg County,23.44,0
+51121020100,Virginia,Montgomery County,99.98,1
+51121020202,Virginia,Montgomery County,14.97,0
+51135000300,Virginia,Nottoway County,23.53,0
+51135980100,Virginia,Nottoway County,38.24,0
+51143010500,Virginia,Pittsylvania County,13.98,0
+51145500300,Virginia,Powhatan County,85.14,1
+51147930201,Virginia,Prince Edward County,23.76,0
+51147930203,Virginia,Prince Edward County,97.42,1
+51147930300,Virginia,Prince Edward County,13.53,0
+51149850100,Virginia,Prince George County,87.78,1
+51153901100,Virginia,Prince William County,14.92,0
+51153901232,Virginia,Prince William County,19.18,0
+51155210600,Virginia,Pulaski County,16.91,0
+51159040200,Virginia,Richmond County,33.17,0
+51161030203,Virginia,Roanoke County,12.13,0
+51161030500,Virginia,Roanoke County,19.53,0
+51165011500,Virginia,Rockingham County,19.22,0
+51169030200,Virginia,Scott County,13.53,0
+51173030500,Virginia,Smyth County,10.9,0
+51175200300,Virginia,Southampton County,99.14,1
+51179010201,Virginia,Stafford County,97.77,1
+51179010204,Virginia,Stafford County,16.89,0
+51183870201,Virginia,Sussex County,36.98,0
+51183870202,Virginia,Sussex County,100.0,1
+51185020100,Virginia,Tazewell County,27.72,0
+51191010502,Virginia,Washington County,17.69,0
+51191010602,Virginia,Washington County,24.56,0
+51195930700,Virginia,Wise County,21.39,0
+51195931200,Virginia,Wise County,19.49,0
+51195931400,Virginia,Wise County,14.21,0
+51199050900,Virginia,York County,12.47,0
+51510200201,Virginia,Alexandria city,13.97,0
+51510200702,Virginia,Alexandria city,10.9,0
+51540000600,Virginia,Charlottesville city,13.7,0
+51540000700,Virginia,Charlottesville city,17.06,0
+51540001000,Virginia,Charlottesville city,10.06,0
+51550021005,Virginia,Chesapeake city,19.87,0
+51550021102,Virginia,Chesapeake city,19.19,0
+51590000500,Virginia,Danville city,16.07,0
+51590000700,Virginia,Danville city,11.31,0
+51590001302,Virginia,Danville city,15.13,0
+51630000301,Virginia,Fredericksburg city,87.99,1
+51650010200,Virginia,Hampton city,60.31,0
+51650010601,Virginia,Hampton city,10.52,0
+51650011400,Virginia,Hampton city,81.47,1
+51660000206,Virginia,Harrisonburg city,97.64,1
+51660000207,Virginia,Harrisonburg city,21.06,0
+51660000401,Virginia,Harrisonburg city,21.57,0
+51678930500,Virginia,Lexington city,36.45,0
+51680000100,Virginia,Lynchburg city,11.6,0
+51680000203,Virginia,Lynchburg city,85.53,1
+51680000600,Virginia,Lynchburg city,18.63,0
+51680001100,Virginia,Lynchburg city,10.9,0
+51680001400,Virginia,Lynchburg city,92.83,1
+51700030100,Virginia,Newport News city,22.16,0
+51700031701,Virginia,Newport News city,46.64,0
+51700031702,Virginia,Newport News city,17.19,0
+51700032113,Virginia,Newport News city,10.34,0
+51700032300,Virginia,Newport News city,44.51,0
+51710000901,Virginia,Norfolk city,30.61,0
+51710000902,Virginia,Norfolk city,60.35,0
+51710002500,Virginia,Norfolk city,52.15,0
+51710002600,Virginia,Norfolk city,45.29,0
+51710003800,Virginia,Norfolk city,88.36,1
+51710004700,Virginia,Norfolk city,82.98,1
+51710004900,Virginia,Norfolk city,39.8,0
+51730811300,Virginia,Petersburg city,15.44,0
+51740210900,Virginia,Portsmouth city,18.0,0
+51740212701,Virginia,Portsmouth city,24.7,0
+51740213200,Virginia,Portsmouth city,16.91,0
+51740980100,Virginia,Portsmouth city,100.0,1
+51750010102,Virginia,Radford city,45.2,0
+51760011100,Virginia,Richmond city,26.84,0
+51760020400,Virginia,Richmond city,29.31,0
+51760030200,Virginia,Richmond city,23.21,0
+51760030500,Virginia,Richmond city,21.27,0
+51760040200,Virginia,Richmond city,16.08,0
+51760040300,Virginia,Richmond city,76.2,1
+51760050500,Virginia,Richmond city,50.54,0
+51770001100,Virginia,Roanoke city,48.34,0
+51770002600,Virginia,Roanoke city,19.78,0
+51775010200,Virginia,Salem city,18.17,0
+51790000500,Virginia,Staunton city,24.92,0
+51800075401,Virginia,Suffolk city,34.59,0
+51810040000,Virginia,Virginia Beach city,60.84,0
+51810040200,Virginia,Virginia Beach city,13.95,0
+51810043200,Virginia,Virginia Beach city,12.87,0
+51810045000,Virginia,Virginia Beach city,92.53,1
+51810045200,Virginia,Virginia Beach city,24.18,0
+51810045423,Virginia,Virginia Beach city,16.2,0
+51830370100,Virginia,Williamsburg city,15.71,0
+51830370300,Virginia,Williamsburg city,48.75,0
+51840000301,Virginia,Winchester city,17.43,0
+53005010901,Washington,Benton County,12.06,0
+53009000200,Washington,Clallam County,50.25,0
+53011042400,Washington,Clark County,47.42,0
+53015002100,Washington,Cowlitz County,18.96,0
+53021020800,Washington,Franklin County,17.49,0
+53027001600,Washington,Grays Harbor County,29.59,0
+53029970200,Washington,Island County,65.16,0
+53031950702,Washington,Jefferson County,18.25,0
+53033004302,Washington,King County,21.46,0
+53033005301,Washington,King County,34.33,0
+53033005302,Washington,King County,95.78,1
+53033005802,Washington,King County,10.87,0
+53033005900,Washington,King County,19.41,0
+53033008002,Washington,King County,13.41,0
+53033008100,Washington,King County,17.13,0
+53033008500,Washington,King County,44.39,0
+53033008600,Washington,King County,34.3,0
+53033009200,Washington,King County,19.79,0
+53033009300,Washington,King County,17.84,0
+53033022702,Washington,King County,10.81,0
+53033028801,Washington,King County,31.53,0
+53033029203,Washington,King County,19.28,0
+53035081400,Washington,Kitsap County,96.07,1
+53035090300,Washington,Kitsap County,36.62,0
+53037975401,Washington,Kittitas County,25.01,0
+53037975600,Washington,Kittitas County,17.63,0
+53045960600,Washington,Mason County,30.96,0
+53045960800,Washington,Mason County,10.34,0
+53053060200,Washington,Pierce County,65.77,0
+53053060700,Washington,Pierce County,15.22,0
+53053061400,Washington,Pierce County,39.17,0
+53053061601,Washington,Pierce County,10.86,0
+53053061602,Washington,Pierce County,19.46,0
+53053071504,Washington,Pierce County,27.01,0
+53053072105,Washington,Pierce County,17.82,0
+53053072504,Washington,Pierce County,17.83,0
+53053072603,Washington,Pierce County,22.08,0
+53053072901,Washington,Pierce County,13.44,0
+53053072903,Washington,Pierce County,38.66,0
+53053072906,Washington,Pierce County,94.9,1
+53057950900,Washington,Skagit County,11.89,0
+53061040100,Washington,Snohomish County,27.2,0
+53061040700,Washington,Snohomish County,31.38,0
+53061040800,Washington,Snohomish County,11.99,0
+53061052209,Washington,Snohomish County,50.29,0
+53063002400,Washington,Spokane County,28.1,0
+53063002500,Washington,Spokane County,35.67,0
+53063003200,Washington,Spokane County,16.91,0
+53063003500,Washington,Spokane County,23.08,0
+53063010401,Washington,Spokane County,34.97,0
+53063010900,Washington,Spokane County,24.66,0
+53063013800,Washington,Spokane County,18.48,0
+53063013900,Washington,Spokane County,12.43,0
+53063014001,Washington,Spokane County,28.49,0
+53063014500,Washington,Spokane County,12.07,0
+53067010510,Washington,Thurston County,11.39,0
+53067011200,Washington,Thurston County,10.04,0
+53067012000,Washington,Thurston County,10.09,0
+53071920400,Washington,Walla Walla County,99.27,1
+53071920802,Washington,Walla Walla County,30.08,0
+53073000600,Washington,Whatcom County,33.58,0
+53073001000,Washington,Whatcom County,50.5,0
+53075000100,Washington,Whitman County,53.42,0
+53075000500,Washington,Whitman County,70.49,1
+53077000100,Washington,Yakima County,30.24,0
+54001965600,West Virginia,Barbour County,11.28,0
+54009031600,West Virginia,Brooke County,18.06,0
+54011000500,West Virginia,Cabell County,68.19,1
+54011000600,West Virginia,Cabell County,21.33,0
+54011010400,West Virginia,Cabell County,11.79,0
+54011010900,West Virginia,Cabell County,10.47,0
+54017965100,West Virginia,Doddridge County,13.84,0
+54019020800,West Virginia,Fayette County,21.39,0
+54021967700,West Virginia,Gilmer County,27.75,0
+54021967800,West Virginia,Gilmer County,20.23,0
+54033031600,West Virginia,Harrison County,10.41,0
+54037972201,West Virginia,Jefferson County,16.16,0
+54037972204,West Virginia,Jefferson County,12.05,0
+54039000900,West Virginia,Kanawha County,22.73,0
+54039001500,West Virginia,Kanawha County,14.76,0
+54039010400,West Virginia,Kanawha County,25.53,0
+54049020100,West Virginia,Marion County,12.73,0
+54049020200,West Virginia,Marion County,23.3,0
+54053954801,West Virginia,Mason County,16.33,0
+54055001100,West Virginia,Mercer County,11.39,0
+54057010600,West Virginia,Mineral County,10.63,0
+54061010101,West Virginia,Monongalia County,55.2,0
+54061010102,West Virginia,Monongalia County,40.31,0
+54061010201,West Virginia,Monongalia County,12.61,0
+54061011000,West Virginia,Monongalia County,27.67,0
+54061012000,West Virginia,Monongalia County,36.56,0
+54069001400,West Virginia,Ohio County,22.69,0
+54069002100,West Virginia,Ohio County,25.4,0
+54069002700,West Virginia,Ohio County,25.05,0
+54073962100,West Virginia,Pleasants County,16.18,0
+54077963800,West Virginia,Preston County,30.84,0
+54081000400,West Virginia,Raleigh County,11.78,0
+54081000802,West Virginia,Raleigh County,35.48,0
+54083966500,West Virginia,Randolph County,24.9,0
+54089000600,West Virginia,Summers County,23.41,0
+54097966700,West Virginia,Upshur County,30.17,0
+55001950502,Wisconsin,Adams County,30.79,0
+55003950300,Wisconsin,Ashland County,14.24,0
+55009001000,Wisconsin,Brown County,20.09,0
+55009001801,Wisconsin,Brown County,13.66,0
+55009001802,Wisconsin,Brown County,24.94,0
+55009010201,Wisconsin,Brown County,34.16,0
+55009021100,Wisconsin,Brown County,100.0,1
+55017010500,Wisconsin,Chippewa County,10.23,0
+55017010800,Wisconsin,Chippewa County,21.78,0
+55021970400,Wisconsin,Columbia County,13.68,0
+55023960600,Wisconsin,Crawford County,17.56,0
+55025001000,Wisconsin,Dane County,18.25,0
+55025001102,Wisconsin,Dane County,94.19,1
+55025001604,Wisconsin,Dane County,22.98,0
+55025001606,Wisconsin,Dane County,53.47,0
+55025001704,Wisconsin,Dane County,32.62,0
+55025002302,Wisconsin,Dane County,25.19,0
+55025012502,Wisconsin,Dane County,15.52,0
+55027960300,Wisconsin,Dodge County,39.04,0
+55027960500,Wisconsin,Dodge County,34.98,0
+55027961100,Wisconsin,Dodge County,16.29,0
+55031020500,Wisconsin,Douglas County,22.01,0
+55033970700,Wisconsin,Dunn County,10.98,0
+55033970800,Wisconsin,Dunn County,32.43,0
+55035001101,Wisconsin,Eau Claire County,19.24,0
+55035001700,Wisconsin,Eau Claire County,65.07,0
+55039041600,Wisconsin,Fond du Lac County,15.8,0
+55043960200,Wisconsin,Grant County,10.92,0
+55043961000,Wisconsin,Grant County,34.84,0
+55053960100,Wisconsin,Jackson County,27.64,0
+55055101600,Wisconsin,Jefferson County,26.69,0
+55057100400,Wisconsin,Juneau County,20.99,0
+55059000300,Wisconsin,Kenosha County,31.83,0
+55059000601,Wisconsin,Kenosha County,20.19,0
+55059001000,Wisconsin,Kenosha County,16.9,0
+55063000300,Wisconsin,La Crosse County,14.4,0
+55063000400,Wisconsin,La Crosse County,13.44,0
+55063000500,Wisconsin,La Crosse County,58.68,0
+55073000100,Wisconsin,Marathon County,10.74,0
+55075960200,Wisconsin,Marinette County,11.01,0
+55079007400,Wisconsin,Milwaukee County,66.33,0
+55079007900,Wisconsin,Milwaukee County,21.81,0
+55079010800,Wisconsin,Milwaukee County,12.35,0
+55079011000,Wisconsin,Milwaukee County,10.82,0
+55079011300,Wisconsin,Milwaukee County,20.23,0
+55079012800,Wisconsin,Milwaukee County,16.16,0
+55079013600,Wisconsin,Milwaukee County,15.11,0
+55079014400,Wisconsin,Milwaukee County,20.6,0
+55079014600,Wisconsin,Milwaukee County,51.8,0
+55079014700,Wisconsin,Milwaukee County,28.41,0
+55079014800,Wisconsin,Milwaukee County,14.9,0
+55079170500,Wisconsin,Milwaukee County,10.32,0
+55079186200,Wisconsin,Milwaukee County,10.55,0
+55079186300,Wisconsin,Milwaukee County,63.31,0
+55079186400,Wisconsin,Milwaukee County,71.09,1
+55079186800,Wisconsin,Milwaukee County,22.24,0
+55079186900,Wisconsin,Milwaukee County,13.29,0
+55079187200,Wisconsin,Milwaukee County,33.43,0
+55079187400,Wisconsin,Milwaukee County,10.29,0
+55087010100,Wisconsin,Outagamie County,22.3,0
+55087010500,Wisconsin,Outagamie County,24.4,0
+55089660202,Wisconsin,Ozaukee County,19.25,0
+55093960300,Wisconsin,Pierce County,42.24,0
+55097960400,Wisconsin,Portage County,40.81,0
+55101000200,Wisconsin,Racine County,12.34,0
+55101001702,Wisconsin,Racine County,27.43,0
+55101980000,Wisconsin,Racine County,90.65,1
+55105001500,Wisconsin,Rock County,53.78,0
+55117010200,Wisconsin,Sheboygan County,11.68,0
+55117011100,Wisconsin,Sheboygan County,28.63,0
+55127000501,Wisconsin,Walworth County,40.68,0
+55133202600,Wisconsin,Waukesha County,29.3,0
+55133203000,Wisconsin,Waukesha County,25.41,0
+55133203703,Wisconsin,Waukesha County,10.11,0
+55135100500,Wisconsin,Waupaca County,24.24,0
+55137960700,Wisconsin,Waushara County,23.44,0
+55139000700,Wisconsin,Winnebago County,58.13,0
+55139001600,Wisconsin,Winnebago County,33.45,0
+55139001700,Wisconsin,Winnebago County,44.22,0
+56001963500,Wyoming,Albany County,70.28,1
+56007967600,Wyoming,Carbon County,27.82,0
+56015957900,Wyoming,Goshen County,13.23,0
+56021001100,Wyoming,Laramie County,16.37,0
+56025000902,Wyoming,Natrona County,13.68,0
+56025001200,Wyoming,Natrona County,12.07,0
+56029965200,Wyoming,Park County,11.47,0
+56035000101,Wyoming,Sublette County,12.15,0
+56037970903,Wyoming,Sweetwater County,13.06,0

@@ -1,15 +1,38 @@
 # Comprehensive Implementation Plan
 ## Health Resilience Mapping Platform
 
-**Date**: January 31, 2025  
-**Status**: APPROVED by Core Team  
-**Timeline**: 8 weeks to MVP, 12 weeks to production
+**Original Date**: January 31, 2025
+**Last Updated**: December 24, 2025
+**Status**: REVISED - Data Quality Sprint Required Before Platform Build
+**Timeline**: 2-week data sprint + 8 weeks to MVP + tiered launch
+
+> ⚠️ **CRITICAL UPDATE (December 24, 2025)**: Leadership team deep dive identified catastrophic data quality issues. See `docs/team-profiles/team-management/STATE_OF_THE_UNION_2025-12-24.md` for full analysis.
+
+---
+
+## 🚨 BLOCKING PREREQUISITE: Data Quality Sprint
+
+**Before ANY platform development proceeds, the following must be completed:**
+
+### Phase 0 Checklist (2 weeks)
+- [x] Fix state fixed effects bug in `app/backend/expected.go`
+- [ ] Filter institutional populations (>10% group quarters)
+- [ ] Re-run analysis with corrected model
+- [ ] Validate top 100 resilient communities
+- [ ] Compare old vs new findings, document changes
+- [ ] Get research team sign-off
+- [ ] Begin community consent outreach (parallel track)
+
+**Owner**: Miguel Santos (Data), Keisha Williams (Community)
+**Gate Keeper**: Cannot proceed to Phase 1 until research sign-off obtained
 
 ---
 
 ## 🎯 Executive Summary
 
-We're building three interconnected websites on a modern JAMstack architecture using Next.js, Supabase, and Vercel/Fly.io. The platform will serve 1,059 resilient communities with dignity, beauty, and bulletproof reliability while maintaining community ownership of all narratives.
+We're building three interconnected websites on a modern JAMstack architecture using Next.js, Supabase, and Vercel/Fly.io. The platform will serve **validated** resilient communities (count TBD after data cleanup) with dignity, beauty, and bulletproof reliability while maintaining community ownership of all narratives.
+
+**Key Change**: Original 1,059 communities count may change significantly after removing institutional populations and fixing regression bug.
 
 ---
 
@@ -390,73 +413,108 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
 ---
 
-## 🚀 Implementation Phases
+## 🚀 Implementation Phases (REVISED December 2025)
 
-### Phase 1: Foundation (Week 1-2)
+### Phase 0: Data Quality Sprint (Week 1-2) - BLOCKING
+> **This phase must complete before platform development begins**
 
 #### Week 1 Deliverables
-- [x] Monorepo setup with Turborepo
+- [x] Fix state fixed effects bug in regression model
+- [ ] Filter institutional populations (>10% group quarters)
+- [ ] Re-run full analysis pipeline
+- [ ] Generate comparison report (old vs new scores)
+- [ ] Identify communities that changed status
+
+#### Week 2 Deliverables
+- [ ] Manually validate top 100 resilient communities
+- [ ] Document methodology changes
+- [ ] Research team sign-off obtained
+- [ ] Begin community advisory board recruitment
+- [ ] Initial community outreach started
+
+### Phase 1: Foundation (Week 3-4)
+
+#### Week 3 Deliverables
+- [ ] Monorepo setup with Turborepo
 - [ ] Base Next.js apps scaffolded
 - [ ] Supabase local development environment
 - [ ] Design token system implemented
 - [ ] Component library foundation (5 core components)
 - [ ] CI/CD pipeline configured
 
-#### Week 2 Deliverables
+#### Week 4 Deliverables
 - [ ] Authentication flow complete
-- [ ] Database schema deployed
+- [ ] Database schema deployed (with validated data)
 - [ ] Row-level security configured
 - [ ] Basic routing for all three sites
 - [ ] Shared navigation component
 - [ ] Development environment documented
 
-### Phase 2: Core Features (Week 3-4)
+### Phase 2: Core Features (Week 5-6)
 
-#### Week 3 Deliverables
+#### Week 5 Deliverables
 - [ ] Community pages (static generation from Supabase)
 - [ ] Search implementation with Typesense
 - [ ] Map integration with MapboxGL
 - [ ] Story display pages
 - [ ] Basic analytics tracking (privacy-compliant)
 
-#### Week 4 Deliverables
+#### Week 6 Deliverables
 - [ ] Story submission flow
 - [ ] Community admin dashboard
 - [ ] Research data explorer
 - [ ] Policy brief templates
 - [ ] Cross-site navigation
 
-### Phase 3: Three Sites MVP (Week 5-6)
+### Phase 3: Three Sites MVP (Week 7-8)
 
-#### Week 5 Deliverables
+#### Week 7 Deliverables
 - [ ] Stories site complete MVP
 - [ ] Research site complete MVP
 - [ ] Policy site complete MVP
 - [ ] Content management integration
 - [ ] Email notifications
 
-#### Week 6 Deliverables
+#### Week 8 Deliverables
 - [ ] Mobile optimizations
 - [ ] Offline support (PWA)
 - [ ] Performance optimizations
 - [ ] SEO implementation
 - [ ] Documentation site
 
-### Phase 4: Production Readiness (Week 7-8)
+### Phase 4: Production Readiness (Week 9-10)
 
-#### Week 7 Deliverables
+#### Week 9 Deliverables
 - [ ] Security audit complete
 - [ ] Accessibility audit (WCAG AAA)
 - [ ] Load testing (10K concurrent users)
 - [ ] Disaster recovery tested
 - [ ] Legal review complete
 
-#### Week 8 Deliverables
+#### Week 10 Deliverables
 - [ ] Community testing feedback incorporated
 - [ ] Performance targets met
 - [ ] Monitoring dashboards configured
 - [ ] Deployment runbooks created
 - [ ] Launch readiness review
+
+### Phase 5: Tiered Launch (Week 11+)
+
+#### Research Site Launch (Week 11)
+- [ ] Aggregate data and methodology only
+- [ ] No individual community stories yet
+- [ ] Download capabilities with attribution
+- [ ] Contact form for community engagement
+
+#### Stories Site Launch (Week 13)
+- [ ] Only communities with explicit consent
+- [ ] Start with 10-20 validated communities
+- [ ] Community admin capabilities enabled
+
+#### Policy Site Launch (Week 15)
+- [ ] Full platform operational
+- [ ] Policy brief tools active
+- [ ] Legislator contact features enabled
 
 ---
 
@@ -770,5 +828,7 @@ jobs:
 
 *This plan is a living document. Updates will be made based on community feedback and technical discoveries.*
 
-**Last Updated**: January 31, 2025  
-**Next Review**: February 7, 2025 (Week 1 Complete)
+**Original Date**: January 31, 2025
+**Last Updated**: December 24, 2025
+**Status**: Revised after leadership deep dive - Data quality sprint now required before platform build
+**Next Review**: After Phase 0 (Data Quality Sprint) completion
