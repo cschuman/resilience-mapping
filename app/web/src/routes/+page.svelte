@@ -12,10 +12,27 @@
 	<div class="container mx-auto px-4 py-16">
 		<header class="text-center mb-16">
 			<h1 class="text-5xl font-bold mb-4">Community Resilience Mapping</h1>
-			<p class="text-xl text-slate-300 max-w-2xl mx-auto">
+			<p class="text-xl text-slate-300 max-w-2xl mx-auto mb-8">
 				Identifying communities with strong social ties and shared experiences
 				that aren't captured by traditional demographic metrics.
 			</p>
+			<div class="flex flex-wrap justify-center gap-4">
+				<a
+					href="/map"
+					class="bg-emerald-600 hover:bg-emerald-500 px-8 py-4 rounded-lg font-semibold text-lg transition inline-flex items-center gap-2"
+				>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+						<path fill-rule="evenodd" d="M8.157 2.175a1.5 1.5 0 00-1.147 0l-4.084 1.69A1.5 1.5 0 002 5.251v10.877a1.5 1.5 0 002.074 1.386l3.51-1.453 4.26 1.763a1.5 1.5 0 001.146 0l4.084-1.69A1.5 1.5 0 0018 14.748V3.873a1.5 1.5 0 00-2.073-1.386l-3.51 1.452-4.26-1.763zM7.58 5a.75.75 0 01.75.75v6.5a.75.75 0 01-1.5 0v-6.5A.75.75 0 017.58 5zm5.59 2.75a.75.75 0 00-1.5 0v6.5a.75.75 0 001.5 0v-6.5z" clip-rule="evenodd" />
+					</svg>
+					Explore the Map
+				</a>
+				<a
+					href="/about"
+					class="bg-slate-600 hover:bg-slate-500 px-8 py-4 rounded-lg font-semibold text-lg transition"
+				>
+					Learn About the Methodology
+				</a>
+			</div>
 		</header>
 
 		<section class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">

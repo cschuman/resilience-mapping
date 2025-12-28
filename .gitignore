@@ -8,6 +8,8 @@ __pycache__/
 # Data files (too large)
 data/input/*
 data/output/*
+data/processed/tracts.mbtiles
+data/processed/tracts_enriched.geojson
 !data/input/.gitkeep
 !data/output/.gitkeep
 !data/*/README.md

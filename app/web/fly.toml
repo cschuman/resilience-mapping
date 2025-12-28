@@ -13,7 +13,18 @@ primary_region = 'ord'
   min_machines_running = 0
   processes = ['app']
 
+# Cache static assets aggressively
+[[http_service.headers]]
+  for = "/tiles/*"
+  [http_service.headers.values]
+    Cache-Control = "public, max-age=86400, immutable"
+
+[[http_service.headers]]
+  for = "/_app/*"
+  [http_service.headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 [[vm]]
-  memory = '256mb'
+  memory = '512mb'
   cpu_kind = 'shared'
   cpus = 1
