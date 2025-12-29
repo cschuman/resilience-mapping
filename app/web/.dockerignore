@@ -1,0 +1,63 @@
+# Dependencies - will be installed fresh in container
+node_modules
+
+# Build outputs - will be built fresh in container
+build
+.svelte-kit
+
+# Git
+.git
+.gitignore
+
+# Environment files - NEVER include secrets in images
+.env
+.env.*
+!.env.example
+
+# IDE and editor configs
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test files - not needed in production
+*.test.ts
+*.spec.ts
+src/tests
+coverage
+.nyc_output
+
+# Documentation - not needed in production
+*.md
+docs
+LICENSE
+
+# Development tools
+.eslintrc*
+.prettierrc*
+prettier.config.*
+eslint.config.*
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Data files - should be mounted or fetched separately
+data
+*.csv
+*.geojson
+*.pmtiles
+
+# Scripts only needed locally
+scripts
+
+# Fly.io local config
+.fly

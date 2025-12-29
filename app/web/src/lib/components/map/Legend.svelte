@@ -160,18 +160,18 @@
 
 	.category-label {
 		font-size: 0.8125rem;
-		color: #334155;
+		color: #1e293b; /* slate-800 - 12.6:1 contrast on white */
 	}
 
 	.category-range {
 		font-size: 0.75rem;
-		color: #64748b;
+		color: #475569; /* slate-600 - 5.9:1 contrast on white */
 		font-family: ui-monospace, monospace;
 	}
 
 	.legend-note {
 		font-size: 0.6875rem;
-		color: #94a3b8;
+		color: #475569; /* slate-600 - 5.9:1 contrast for WCAG AA */
 		margin: 0;
 		padding: 0.5rem 1rem 0.75rem;
 		border-top: 1px solid #e2e8f0;

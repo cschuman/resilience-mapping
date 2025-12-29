@@ -10,21 +10,30 @@ primary_region = 'ord'
   force_https = true
   auto_stop_machines = 'stop'
   auto_start_machines = true
-  min_machines_running = 0
+  min_machines_running = 1
   processes = ['app']
 
-# Cache static assets aggressively
-[[http_service.headers]]
-  for = "/tiles/*"
-  [http_service.headers.values]
-    Cache-Control = "public, max-age=86400, immutable"
+  [http_service.concurrency]
+    type = "requests"
+    hard_limit = 250
+    soft_limit = 200
 
-[[http_service.headers]]
-  for = "/_app/*"
-  [http_service.headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+  # Health check - Fly.io will restart unhealthy instances
+  [[http_service.checks]]
+    interval = "10s"
+    timeout = "2s"
+    grace_period = "5s"
+    method = "GET"
+    path = "/health"
 
 [[vm]]
-  memory = '512mb'
+  memory = '1gb'
   cpu_kind = 'shared'
   cpus = 1
+
+[processes]
+  app = "node build"
+
+[experimental]
+  kill_signal = "SIGTERM"
+  kill_timeout = "30s"

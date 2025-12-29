@@ -10,7 +10,7 @@
 	/>
 </svelte:head>
 
-<main class="about-page">
+<main id="main-content" class="about-page">
 	<div class="container">
 		<!-- Header -->
 		<header class="page-header">

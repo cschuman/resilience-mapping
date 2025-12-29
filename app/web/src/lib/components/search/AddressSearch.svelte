@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { onMount, onDestroy } from 'svelte';
+	import { browser } from '$app/environment';
 	import type { GeocoderResponse, GeocoderResult, ScoreCategory } from '$lib/components/map/types';
 	import { SCORE_COLORS } from '$lib/components/map/types';
 
@@ -21,8 +23,24 @@
 	let inputElement: HTMLInputElement;
 	let debounceTimeout: ReturnType<typeof setTimeout>;
 
-	// Generate unique IDs for ARIA
-	const listboxId = `search-results-${Math.random().toString(36).slice(2)}`;
+	// AbortController for cancelling in-flight requests
+	let abortController: AbortController | null = null;
+
+	// Generate unique IDs for ARIA (only in browser to avoid hydration mismatch)
+	let listboxId = $state('search-results');
+
+	onMount(() => {
+		// Generate unique ID only in browser to avoid hydration mismatch
+		listboxId = `search-results-${crypto.randomUUID().slice(0, 8)}`;
+	});
+
+	// Cleanup on destroy
+	onDestroy(() => {
+		// Clear any pending debounce
+		clearTimeout(debounceTimeout);
+		// Abort any in-flight request
+		abortController?.abort();
+	});
 
 	/**
 	 * Debounced search function.
@@ -45,18 +63,43 @@
 	}
 
 	/**
-	 * Perform the geocode search.
+	 * Perform the geocode search with AbortController to cancel stale requests.
 	 */
 	async function performSearch(): Promise<void> {
-		if (inputValue.trim().length < 3) {
+		const searchValue = inputValue.trim();
+
+		if (searchValue.length < 3) {
 			isLoading = false;
 			return;
 		}
 
+		// Abort any previous in-flight request
+		abortController?.abort();
+		abortController = new AbortController();
+
 		try {
 			const response = await fetch(
-				`/api/geocode?address=${encodeURIComponent(inputValue.trim())}`
+				`/api/geocode?address=${encodeURIComponent(searchValue)}`,
+				{ signal: abortController.signal }
 			);
+
+			// Handle HTTP error responses with specific messages
+			if (!response.ok) {
+				if (response.status === 429) {
+					const data = await response.json();
+					error = data.error || 'Too many requests. Please wait.';
+				} else if (response.status === 504) {
+					error = 'Search is taking too long. Please try again.';
+				} else if (response.status === 502 || response.status === 503) {
+					error = 'Geocoding service is temporarily unavailable.';
+				} else {
+					error = 'Search failed. Please try again.';
+				}
+				results = [];
+				isOpen = true;
+				return;
+			}
+
 			const data: GeocoderResponse = await response.json();
 
 			if (!data.success) {
@@ -71,8 +114,13 @@
 			}
 
 			isOpen = results.length > 0 || error !== null;
-		} catch {
-			error = 'Network error. Please try again.';
+		} catch (err) {
+			// Ignore abort errors - they're expected when we cancel stale requests
+			if (err instanceof Error && err.name === 'AbortError') {
+				return;
+			}
+
+			error = 'Network error. Please check your connection.';
 			results = [];
 			isOpen = true;
 		} finally {
@@ -149,8 +197,8 @@
 	/**
 	 * Format score for display.
 	 */
-	function formatScore(score: number | null): string {
-		if (score === null) return 'N/A';
+	function formatScore(score: number | null | undefined): string {
+		if (score == null) return 'N/A';
 		return score >= 0 ? `+${score.toFixed(2)}` : score.toFixed(2);
 	}
 
@@ -424,7 +472,7 @@
 	.result-fips {
 		font-size: 0.75rem;
 		font-family: ui-monospace, monospace;
-		color: #64748b;
+		color: #94a3b8; /* slate-400 - 5.6:1 contrast on dark bg */
 		white-space: nowrap;
 	}
 
@@ -437,7 +485,7 @@
 
 	.result-location {
 		font-size: 0.75rem;
-		color: #94a3b8;
+		color: #cbd5e1; /* slate-300 - 8.1:1 contrast on dark bg */
 	}
 
 	.result-score {
@@ -453,7 +501,7 @@
 
 	.result-no-data {
 		font-size: 0.75rem;
-		color: #64748b;
+		color: #94a3b8; /* slate-400 - 5.6:1 contrast on dark bg */
 		font-style: italic;
 	}
 </style>

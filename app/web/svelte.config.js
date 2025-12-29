@@ -3,15 +3,28 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// Consult https://svelte.dev/docs/kit/integrations
-	// for more information about preprocessors
 	preprocess: vitePreprocess(),
 
 	kit: {
-		// adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.
-		// If your environment is not supported, or you settled on a specific environment, switch out the adapter.
-		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
-		adapter: adapter()
+		adapter: adapter(),
+
+		// Content Security Policy with nonces for inline scripts
+		csp: {
+			mode: 'auto',
+			directives: {
+				'default-src': ['self'],
+				'script-src': ['self'],
+				'style-src': ['self', 'unsafe-inline'], // MapLibre GL needs inline styles
+				'img-src': ['self', 'data:', 'blob:', 'https://basemaps.cartocdn.com', 'https://*.cartocdn.com'],
+				'font-src': ['self'],
+				'connect-src': ['self', 'https://geocoding.geo.census.gov', 'https://basemaps.cartocdn.com', 'https://*.cartocdn.com'],
+				'worker-src': ['self', 'blob:'],
+				'frame-ancestors': ['self'],
+				'form-action': ['self'],
+				'base-uri': ['self'],
+				'object-src': ['none']
+			}
+		}
 	}
 };
 

@@ -71,10 +71,11 @@ func ExpectedBurden(burdened [][]string, fara [][]string, cfg *config.Config) ([
 		if cfg.Model.IncludeNoVehicle {
 			x = append(x, parse(geo[fh("LA1and10_NoVehicle")]))
 		}
-		// state FE
+		// state FE - FIXED Dec 24, 2025: renamed inner loop var to avoid shadowing outer loop's i
 		if cfg.Model.StateFixedEffects {
-			for i:=1; i<len(stateList); i++ {
-				if burdened[i][bh("StateAbbr")] == stateList[i] { // wrong index, fix below
+			currentState := burdened[i][bh("StateAbbr")] // capture current row's state using outer loop i
+			for si := 1; si < len(stateList); si++ {
+				if currentState == stateList[si] {
 					x = append(x, 1.0)
 				} else {
 					x = append(x, 0.0)
@@ -92,15 +93,19 @@ func ExpectedBurden(burdened [][]string, fara [][]string, cfg *config.Config) ([
 		yvals = append(yvals, y)
 	}
 
-	// Correct state FE construction (we mistakenly used i above), rebuild with proper loop per row
+	// State FE validation (original bug fixed above on Dec 24, 2025, this now serves as redundant validation)
+	// This block rebuilds state FE to ensure correctness - now matches the fixed code above
 	for ridx := range rows {
-		// remove old FE part and rebuild
 		x := rows[ridx].x[:]
 		baseLen := 1 + 3 + btoi(cfg.Model.IncludeNoVehicle) // intercept + 3 covariates + optional
 		x = x[:baseLen]
 		st := rows[ridx].keys[1]
-		for i:=1; i<len(stateList); i++ {
-			if st == stateList[i] { x = append(x, 1.0) } else { x = append(x, 0.0) }
+		for si := 1; si < len(stateList); si++ {
+			if st == stateList[si] {
+				x = append(x, 1.0)
+			} else {
+				x = append(x, 0.0)
+			}
 		}
 		rows[ridx].x = x
 	}

@@ -1,13 +1,52 @@
 <script lang="ts">
-	import { Map, Legend } from '$lib/components/map';
+	import { onMount, onDestroy } from 'svelte';
+	import { goto } from '$app/navigation';
 	import type { MapApi, TractProperties, GeocoderResult } from '$lib/components/map';
+	import type { Component } from 'svelte';
 	import { AddressSearch } from '$lib/components/search';
+
+	// Lazy-loaded components - using `any` props type for dynamic imports
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	let MapComponent: Component<any> | null = $state(null);
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	let LegendComponent: Component<any> | null = $state(null);
+	let isLoading = $state(true);
+	let loadError = $state<string | null>(null);
 
 	// State for map API and legend visibility
 	let mapApi: MapApi | undefined = $state();
 	let showLegend = $state(true);
 	let selectedTract: TractProperties | null = $state(null);
 	let hoveredTract: TractProperties | null = $state(null);
+
+	// Track timeouts for cleanup
+	let selectTractTimeout: ReturnType<typeof setTimeout> | null = null;
+
+	// Lazy load heavy map components on mount
+	onMount(async () => {
+		try {
+			const [mapModule, legendModule] = await Promise.all([
+				import('$lib/components/map/Map.svelte'),
+				import('$lib/components/map/Legend.svelte')
+			]);
+			MapComponent = mapModule.default;
+			LegendComponent = legendModule.default;
+		} catch (err) {
+			console.error('Failed to load map components:', err);
+			loadError = 'Failed to load map. Please refresh the page.';
+		} finally {
+			isLoading = false;
+		}
+	});
+
+	// Cleanup on destroy
+	onDestroy(() => {
+		// Clear any pending timeout to prevent memory leaks
+		if (selectTractTimeout) {
+			clearTimeout(selectTractTimeout);
+			selectTractTimeout = null;
+		}
+	});
 
 	/**
 	 * Handle tract click - update selected tract info.
@@ -28,10 +67,16 @@
 	 */
 	function handleSearchSelect(result: GeocoderResult): void {
 		if (mapApi) {
+			// Clear any previous timeout
+			if (selectTractTimeout) {
+				clearTimeout(selectTractTimeout);
+			}
+
 			mapApi.flyTo(result.lng, result.lat, 12);
 			// Small delay to let the map fly, then select the tract
-			setTimeout(() => {
+			selectTractTimeout = setTimeout(() => {
 				mapApi?.selectTract(result.tractFips);
+				selectTractTimeout = null;
 			}, 1600);
 		}
 	}
@@ -44,10 +89,10 @@
 	}
 
 	/**
-	 * Navigate back to home.
+	 * Navigate back to home using SvelteKit navigation (no full page reload).
 	 */
 	function goHome(): void {
-		window.location.href = '/';
+		goto('/');
 	}
 </script>
 
@@ -115,24 +160,49 @@
 	</header>
 
 	<!-- Map Container -->
-	<main class="map-container">
-		<Map
-			bind:api={mapApi}
-			onTractClick={handleTractClick}
-			onTractHover={handleTractHover}
-		/>
-		<Legend visible={showLegend} onClose={() => (showLegend = false)} />
-
-		<!-- Hover info tooltip -->
-		{#if hoveredTract && !selectedTract}
-			<div class="hover-info" role="status" aria-live="polite">
-				<span class="hover-fips">{hoveredTract.GEOID}</span>
-				{#if hoveredTract.resilience_score !== null}
-					<span class="hover-score">
-						{hoveredTract.resilience_score >= 0 ? '+' : ''}{hoveredTract.resilience_score.toFixed(2)}
-					</span>
-				{/if}
+	<main id="main-content" class="map-container">
+		{#if isLoading}
+			<div class="loading-overlay">
+				<div class="loading-spinner"></div>
+				<span>Loading map...</span>
 			</div>
+		{:else if loadError}
+			<div class="error-overlay">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					fill="currentColor"
+					class="error-icon"
+					aria-hidden="true"
+				>
+					<path
+						fill-rule="evenodd"
+						d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003zM12 8.25a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V9a.75.75 0 01.75-.75zm0 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z"
+						clip-rule="evenodd"
+					/>
+				</svg>
+				<span>{loadError}</span>
+				<button type="button" onclick={() => window.location.reload()}>Retry</button>
+			</div>
+		{:else if MapComponent && LegendComponent}
+			<MapComponent
+				bind:api={mapApi}
+				onTractClick={handleTractClick}
+				onTractHover={handleTractHover}
+			/>
+			<LegendComponent visible={showLegend} onClose={() => (showLegend = false)} />
+
+			<!-- Hover info tooltip -->
+			{#if hoveredTract && !selectedTract}
+				<div class="hover-info" role="status" aria-live="polite">
+					<span class="hover-fips">{hoveredTract.GEOID}</span>
+					{#if hoveredTract.resilience_score != null}
+						<span class="hover-score">
+							{hoveredTract.resilience_score >= 0 ? '+' : ''}{hoveredTract.resilience_score.toFixed(2)}
+						</span>
+					{/if}
+				</div>
+			{/if}
 		{/if}
 	</main>
 </div>
@@ -261,6 +331,59 @@
 		overflow: hidden;
 	}
 
+	.loading-overlay,
+	.error-overlay {
+		position: absolute;
+		inset: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background: rgba(15, 23, 42, 0.95);
+		color: white;
+		gap: 1rem;
+		z-index: 20;
+	}
+
+	.loading-spinner {
+		width: 48px;
+		height: 48px;
+		border: 3px solid rgba(255, 255, 255, 0.2);
+		border-top-color: #10b981;
+		border-radius: 50%;
+		animation: spin 1s linear infinite;
+	}
+
+	@keyframes spin {
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	.error-overlay {
+		color: #f87171;
+	}
+
+	.error-icon {
+		width: 48px;
+		height: 48px;
+	}
+
+	.error-overlay button {
+		margin-top: 0.5rem;
+		padding: 0.5rem 1rem;
+		background: #334155;
+		border: none;
+		border-radius: 6px;
+		color: white;
+		cursor: pointer;
+		transition: background 0.15s ease;
+	}
+
+	.error-overlay button:hover {
+		background: #475569;
+	}
+
 	.hover-info {
 		position: absolute;
 		top: 1rem;
@@ -292,15 +415,52 @@
 	/* Responsive adjustments */
 	@media (max-width: 640px) {
 		.header {
-			padding: 0.5rem;
+			flex-wrap: wrap;
+			padding: 0.5rem 0.75rem;
+			gap: 0.5rem;
+		}
+
+		.header-left {
+			flex: 1;
+			min-width: 0;
 		}
 
 		.title {
 			font-size: 0.875rem;
+			overflow: hidden;
+			text-overflow: ellipsis;
 		}
 
 		.header-center {
-			display: none;
+			order: 3;
+			width: 100%;
+			max-width: 100%;
+			flex: none;
+		}
+
+		.header-right {
+			gap: 0.5rem;
+		}
+
+		/* Increase touch targets to 44px minimum for accessibility */
+		.back-button,
+		.icon-button {
+			width: 44px;
+			height: 44px;
+		}
+
+		.nav-link {
+			padding: 0.625rem 0.875rem;
+			min-height: 44px;
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	/* Tablet adjustments */
+	@media (min-width: 641px) and (max-width: 768px) {
+		.header-center {
+			max-width: 280px;
 		}
 	}
 </style>
