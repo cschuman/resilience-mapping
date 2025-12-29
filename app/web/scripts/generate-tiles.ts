@@ -20,11 +20,12 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = resolve(__dirname, '../../..');
 const WEB_ROOT = resolve(__dirname, '..');
 
-// File paths
-const RESILIENCE_CSV = resolve(PROJECT_ROOT, 'data/processed/model_table_corrected.csv');
-const TRACTS_GEOJSON = resolve(PROJECT_ROOT, 'data/input/tracts_full.geojson');
-const ENRICHED_GEOJSON = resolve(PROJECT_ROOT, 'data/processed/tracts_enriched.geojson');
-const MBTILES_OUTPUT = resolve(PROJECT_ROOT, 'data/processed/tracts.mbtiles');
+// File paths - Using 2023 boundaries for Connecticut Planning Regions compatibility
+// Note: CDC PLACES 2024 uses CT Planning Region codes (09110-09190) which only exist in 2022+ boundaries
+const RESILIENCE_CSV = resolve(PROJECT_ROOT, 'data/processed/2020_boundaries/model_table_2020.csv');
+const TRACTS_GEOJSON = resolve(PROJECT_ROOT, 'data/input/tracts_2023.geojson');
+const ENRICHED_GEOJSON = resolve(PROJECT_ROOT, 'data/processed/2020_boundaries/tracts_enriched_2023.geojson');
+const MBTILES_OUTPUT = resolve(PROJECT_ROOT, 'data/processed/2020_boundaries/tracts_2023.mbtiles');
 const PMTILES_OUTPUT = resolve(WEB_ROOT, 'static/tiles/tracts.pmtiles');
 
 // Score category thresholds
@@ -135,6 +136,7 @@ async function generateTiles(): Promise<void> {
 			score: number;
 			burden: number;
 			state: string;
+			county: string;
 			category: ScoreCategory;
 		}
 	>();
@@ -149,6 +151,7 @@ async function generateTiles(): Promise<void> {
 			score: isNaN(score) ? 0 : score,
 			burden: isNaN(burden) ? 0 : burden,
 			state: row.StateAbbr || '',
+			county: row.CountyName || '',
 			category: getScoreCategory(isNaN(score) ? null : score)
 		});
 	}
@@ -182,6 +185,7 @@ async function generateTiles(): Promise<void> {
 			feature.properties.resilience_score = data.score;
 			feature.properties.burden = data.burden;
 			feature.properties.state_abbr = data.state;
+			feature.properties.county_name = data.county;
 			feature.properties.score_category = data.category;
 			matched++;
 		} else {
@@ -189,6 +193,7 @@ async function generateTiles(): Promise<void> {
 			feature.properties.resilience_score = null;
 			feature.properties.burden = null;
 			feature.properties.state_abbr = feature.properties.STATEFP || null;
+			feature.properties.county_name = null;
 			feature.properties.score_category = 'no-data';
 			unmatched++;
 

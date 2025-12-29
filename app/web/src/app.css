@@ -1,1 +1,150 @@
+/* Design tokens first */
+@import '$lib/styles/design-tokens.css';
+
+/* Tailwind for utilities */
 @import 'tailwindcss';
+
+/* ==========================================
+ * GLOBAL STYLES
+ * Foundation for the entire application
+ * ========================================== */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: var(--font-body);
+	font-size: var(--text-base);
+	line-height: var(--leading-normal);
+	color: var(--color-text-primary);
+	background: var(--color-foundation-deepest);
+	min-height: 100vh;
+}
+
+/* ==========================================
+ * TYPOGRAPHY DEFAULTS
+ * ========================================== */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-display);
+	font-weight: var(--font-weight-normal);
+	letter-spacing: var(--tracking-tight);
+	line-height: var(--leading-tight);
+	margin: 0;
+}
+
+p {
+	margin: 0;
+	line-height: var(--leading-relaxed);
+	color: var(--color-text-secondary);
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+strong, b {
+	font-weight: var(--font-weight-semibold);
+}
+
+code, pre {
+	font-family: var(--font-mono);
+}
+
+/* ==========================================
+ * SELECTION STYLES
+ * ========================================== */
+
+::selection {
+	background: var(--color-accent-primary);
+	color: white;
+}
+
+/* ==========================================
+ * SCROLLBAR STYLES
+ * Subtle, sophisticated scrollbars
+ * ========================================== */
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--color-foundation-deep);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--color-foundation-elevated);
+	border-radius: var(--radius-full);
+	border: 2px solid var(--color-foundation-deep);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--color-text-muted);
+}
+
+/* Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: var(--color-foundation-elevated) var(--color-foundation-deep);
+}
+
+/* ==========================================
+ * FOCUS STYLES
+ * Accessible focus indicators
+ * ========================================== */
+
+:focus-visible {
+	outline: 2px solid var(--color-accent-primary);
+	outline-offset: 2px;
+}
+
+/* Remove default focus for mouse users */
+:focus:not(:focus-visible) {
+	outline: none;
+}
+
+/* ==========================================
+ * FORM ELEMENTS
+ * ========================================== */
+
+input, textarea, select, button {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+	background: none;
+	padding: 0;
+}
+
+/* ==========================================
+ * REDUCED MOTION
+ * Respect user preferences
+ * ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

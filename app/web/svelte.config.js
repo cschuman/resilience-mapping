@@ -14,9 +14,9 @@ const config = {
 			directives: {
 				'default-src': ['self'],
 				'script-src': ['self'],
-				'style-src': ['self', 'unsafe-inline'], // MapLibre GL needs inline styles
+				'style-src': ['self', 'unsafe-inline', 'https://fonts.googleapis.com'], // MapLibre GL needs inline styles
 				'img-src': ['self', 'data:', 'blob:', 'https://basemaps.cartocdn.com', 'https://*.cartocdn.com'],
-				'font-src': ['self'],
+				'font-src': ['self', 'https://fonts.gstatic.com'],
 				'connect-src': ['self', 'https://geocoding.geo.census.gov', 'https://basemaps.cartocdn.com', 'https://*.cartocdn.com'],
 				'worker-src': ['self', 'blob:'],
 				'frame-ancestors': ['self'],

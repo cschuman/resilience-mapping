@@ -3,17 +3,13 @@
 	import { SCORE_COLORS, SCORE_LABELS, SCORE_RANGES } from './types';
 
 	interface Props {
-		/** Whether the legend is visible */
 		visible?: boolean;
-		/** Position of the legend */
 		position?: 'bottom-left' | 'bottom-right' | 'top-left' | 'top-right';
-		/** Callback when close button is clicked */
 		onClose?: () => void;
 	}
 
 	let { visible = true, position = 'bottom-left', onClose }: Props = $props();
 
-	// Categories in display order (high to low)
 	const categories: ScoreCategory[] = [
 		'very-high',
 		'high',
@@ -23,7 +19,6 @@
 		'no-data'
 	];
 
-	// Position classes
 	const positionClasses: Record<string, string> = {
 		'bottom-left': 'bottom-4 left-4',
 		'bottom-right': 'bottom-4 right-4',
@@ -38,45 +33,33 @@
 		role="region"
 		aria-label="Map legend showing resilience score categories"
 	>
-		<div class="legend-content">
-			<div class="legend-header">
-				<h3 class="legend-title">Resilience Score</h3>
+		<div class="legend__content">
+			<div class="legend__header">
+				<h3 class="legend__title">Resilience Score</h3>
 				{#if onClose}
-					<button
-						type="button"
-						class="close-button"
-						onclick={onClose}
-						aria-label="Close legend"
-					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 20 20"
-							fill="currentColor"
-							class="w-4 h-4"
-							aria-hidden="true"
-						>
-							<path
-								d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"
-							/>
+					<button type="button" class="legend__close" onclick={onClose} aria-label="Close legend">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+							<path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
 						</svg>
 					</button>
 				{/if}
 			</div>
-			<ul class="legend-items" role="list">
+			<ul class="legend__items" role="list">
 				{#each categories as category}
-					<li class="legend-item">
+					<li class="legend__item">
 						<span
-							class="color-swatch"
+							class="legend__swatch"
 							style="background-color: {SCORE_COLORS[category]}"
 							aria-hidden="true"
 						></span>
-						<span class="category-label">{SCORE_LABELS[category]}</span>
-						<span class="category-range">{SCORE_RANGES[category]}</span>
+						<span class="legend__label">{SCORE_LABELS[category]}</span>
+						<span class="legend__range">{SCORE_RANGES[category]}</span>
 					</li>
 				{/each}
 			</ul>
-			<p class="legend-note">
-				Scores represent deviation from predicted health burden
+			<p class="legend__note">
+				Teal = thriving communities<br />
+				Terra cotta = needs support
 			</p>
 		</div>
 	</div>
@@ -87,33 +70,33 @@
 		pointer-events: auto;
 	}
 
-	.legend-content {
-		background: rgba(255, 255, 255, 0.95);
-		backdrop-filter: blur(8px);
-		border-radius: 8px;
-		box-shadow:
-			0 4px 6px -1px rgba(0, 0, 0, 0.1),
-			0 2px 4px -2px rgba(0, 0, 0, 0.1);
+	.legend__content {
+		background: rgba(255, 255, 255, 0.96);
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+		border-radius: var(--radius-xl, 14px);
+		box-shadow: var(--shadow-lg, 0 8px 24px rgba(0, 0, 0, 0.25));
 		min-width: 200px;
 		overflow: hidden;
 	}
 
-	.legend-header {
+	.legend__header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding: 0.75rem 1rem;
-		border-bottom: 1px solid #e2e8f0;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 	}
 
-	.legend-title {
+	.legend__title {
+		font-family: var(--font-body, system-ui);
 		font-size: 0.875rem;
 		font-weight: 600;
 		color: #0f172a;
 		margin: 0;
 	}
 
-	.close-button {
+	.legend__close {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -127,23 +110,23 @@
 		transition: all 0.15s ease;
 	}
 
-	.close-button:hover {
+	.legend__close svg {
+		width: 16px;
+		height: 16px;
+	}
+
+	.legend__close:hover {
 		background: #f1f5f9;
 		color: #0f172a;
 	}
 
-	.close-button:focus-visible {
-		outline: 2px solid #10b981;
-		outline-offset: 2px;
-	}
-
-	.legend-items {
+	.legend__items {
 		list-style: none;
 		margin: 0;
 		padding: 0.5rem 0;
 	}
 
-	.legend-item {
+	.legend__item {
 		display: grid;
 		grid-template-columns: 16px 1fr auto;
 		gap: 0.5rem;
@@ -151,30 +134,29 @@
 		padding: 0.375rem 1rem;
 	}
 
-	.color-swatch {
+	.legend__swatch {
 		width: 16px;
 		height: 16px;
-		border-radius: 3px;
-		border: 1px solid rgba(0, 0, 0, 0.1);
+		border-radius: 4px;
 	}
 
-	.category-label {
+	.legend__label {
 		font-size: 0.8125rem;
-		color: #1e293b; /* slate-800 - 12.6:1 contrast on white */
+		color: #1C1410;
 	}
 
-	.category-range {
+	.legend__range {
+		font-family: var(--font-mono, ui-monospace);
 		font-size: 0.75rem;
-		color: #475569; /* slate-600 - 5.9:1 contrast on white */
-		font-family: ui-monospace, monospace;
+		color: #64748b;
 	}
 
-	.legend-note {
+	.legend__note {
 		font-size: 0.6875rem;
-		color: #475569; /* slate-600 - 5.9:1 contrast for WCAG AA */
+		color: #64748b;
 		margin: 0;
 		padding: 0.5rem 1rem 0.75rem;
-		border-top: 1px solid #e2e8f0;
+		border-top: 1px solid rgba(0, 0, 0, 0.06);
 		line-height: 1.4;
 	}
 </style>

@@ -100,15 +100,17 @@
 
 		// Escape all user-controllable strings
 		const geoid = escapeHtml(props.GEOID);
-		const state = escapeHtml(props.state_abbr || props.STATEFP);
-		const county = escapeHtml(props.COUNTYFP);
+		const stateAbbr = escapeHtml(props.state_abbr || props.STATEFP);
+		const countyName = escapeHtml(props.county_name);
 		const categoryLabel = escapeHtml(getCategoryLabel(category));
+
+		// Format location: "County Name, ST" or fall back to state only
+		const location = countyName ? `${countyName}, ${stateAbbr}` : stateAbbr;
 
 		return `
 			<div class="tract-popup">
 				<div class="popup-header">
-					<span class="popup-fips">${geoid}</span>
-					<span class="popup-state">${state}</span>
+					<span class="popup-location">${location}</span>
 				</div>
 				<div class="popup-score" style="border-left: 4px solid ${color}">
 					<div class="score-value">${score}</div>
@@ -120,8 +122,8 @@
 						<span class="detail-value">${burden}</span>
 					</div>
 					<div class="detail-row">
-						<span class="detail-label">County:</span>
-						<span class="detail-value">${county}</span>
+						<span class="detail-label">Tract:</span>
+						<span class="detail-value">${geoid}</span>
 					</div>
 				</div>
 			</div>
@@ -254,10 +256,10 @@
 				'line-color': [
 					'case',
 					['boolean', ['feature-state', 'selected'], false],
-					'#1e293b', // slate-800 for selected
+					'#D16847', // burnt persimmon for selected
 					['boolean', ['feature-state', 'hover'], false],
-					'#475569', // slate-600 for hover
-					'#94a3b8' // slate-400 default
+					'#E8A547', // golden miso for hover
+					'rgba(212, 196, 184, 0.4)' // warm gray default
 				],
 				'line-width': [
 					'case',
@@ -712,8 +714,8 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		background: rgba(15, 23, 42, 0.9);
-		color: white;
+		background: rgba(12, 10, 8, 0.92);
+		color: #F5EDE4;
 		gap: 1rem;
 		z-index: 10;
 	}
@@ -730,16 +732,16 @@
 	.error-overlay button {
 		margin-top: 0.5rem;
 		padding: 0.5rem 1rem;
-		background: #334155;
+		background: #332A22;
 		border: none;
 		border-radius: 6px;
-		color: white;
+		color: #F5EDE4;
 		cursor: pointer;
 		transition: background 0.15s ease;
 	}
 
 	.error-overlay button:hover {
-		background: #475569;
+		background: #3D3228;
 	}
 
 	.loading-spinner {
@@ -774,48 +776,37 @@
 	}
 
 	:global(.popup-header) {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
 		padding: 0.75rem 1rem;
-		background: #1e293b;
-		color: white;
+		background: #1C1410;
+		color: #F5EDE4;
 	}
 
-	:global(.popup-fips) {
-		font-family: ui-monospace, monospace;
-		font-size: 0.875rem;
+	:global(.popup-location) {
+		font-size: 0.9375rem;
 		font-weight: 600;
-	}
-
-	:global(.popup-state) {
-		font-size: 0.75rem;
-		color: #94a3b8;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
 	}
 
 	:global(.popup-score) {
 		padding: 0.75rem 1rem;
-		background: #f8fafc;
+		background: #261E18;
 	}
 
 	:global(.score-value) {
 		font-size: 1.5rem;
 		font-weight: 700;
-		color: #0f172a;
+		color: #F5EDE4;
 	}
 
 	:global(.score-label) {
 		font-size: 0.75rem;
-		color: #64748b;
+		color: #A89A8C;
 		margin-top: 0.25rem;
 	}
 
 	:global(.popup-details) {
 		padding: 0.75rem 1rem;
-		background: white;
-		border-top: 1px solid #e2e8f0;
+		background: #332A22;
+		border-top: 1px solid rgba(212, 196, 184, 0.15);
 	}
 
 	:global(.detail-row) {
@@ -826,22 +817,22 @@
 	}
 
 	:global(.detail-label) {
-		color: #64748b;
+		color: #A89A8C;
 	}
 
 	:global(.detail-value) {
-		color: #0f172a;
+		color: #F5EDE4;
 		font-weight: 500;
 	}
 
 	:global(.maplibregl-popup-close-button) {
 		font-size: 1.25rem;
 		padding: 0.25rem 0.5rem;
-		color: #94a3b8;
+		color: #A89A8C;
 	}
 
 	:global(.maplibregl-popup-close-button:hover) {
-		color: white;
+		color: #F5EDE4;
 		background: transparent;
 	}
 </style>

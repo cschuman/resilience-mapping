@@ -149,13 +149,14 @@ function getScoreCategory(score: number | null): ScoreCategory {
 async function getTractData(
 	tractFips: string,
 	correlationId: string
-): Promise<{ resilienceScore: number | null; percentile: number | null }> {
+): Promise<{ resilienceScore: number | null; percentile: number | null; countyName: string | null }> {
 	try {
 		// Optimized query: avoids full table scan for PERCENT_RANK
 		// Uses the new idx_tracts_resilience_asc index
 		const result = await sql`
 			SELECT
 				t.resilience_score,
+				t.county,
 				(
 					SELECT COUNT(*) * 100.0 / NULLIF((SELECT COUNT(*) FROM tracts WHERE resilience_score IS NOT NULL), 0)
 					FROM tracts
@@ -167,7 +168,7 @@ async function getTractData(
 		`;
 
 		if (result.length === 0) {
-			return { resilienceScore: null, percentile: null };
+			return { resilienceScore: null, percentile: null, countyName: null };
 		}
 
 		// Validate database result with Zod
@@ -178,12 +179,13 @@ async function getTractData(
 				tractFips,
 				errors: parsed.error.issues
 			});
-			return { resilienceScore: null, percentile: null };
+			return { resilienceScore: null, percentile: null, countyName: null };
 		}
 
 		return {
 			resilienceScore: parsed.data.resilience_score,
-			percentile: parsed.data.percentile !== null ? Math.round(parsed.data.percentile) : null
+			percentile: parsed.data.percentile !== null ? Math.round(parsed.data.percentile) : null,
+			countyName: (result[0] as { county?: string }).county || null
 		};
 	} catch (err) {
 		logger.error('Database error fetching tract data', {
@@ -191,7 +193,7 @@ async function getTractData(
 			tractFips,
 			error: err instanceof Error ? err.message : 'Unknown error'
 		});
-		return { resilienceScore: null, percentile: null };
+		return { resilienceScore: null, percentile: null, countyName: null };
 	}
 }
 
@@ -370,7 +372,7 @@ export const GET: RequestHandler = async ({ url, request, getClientAddress }) =>
 			if (!tract) continue;
 
 			const tractFips = tract.GEOID.padStart(11, '0');
-			const { resilienceScore, percentile } = await getTractData(tractFips, correlationId);
+			const { resilienceScore, percentile, countyName } = await getTractData(tractFips, correlationId);
 
 			results.push({
 				lat: match.coordinates.y,
@@ -378,7 +380,7 @@ export const GET: RequestHandler = async ({ url, request, getClientAddress }) =>
 				tractFips,
 				matchedAddress: match.matchedAddress,
 				state: STATE_ABBR[tract.STATE] || tract.STATE,
-				county: tract.COUNTY,
+				county: countyName || tract.COUNTY, // Use county name from DB, fall back to FIPS
 				resilienceScore,
 				percentile,
 				scoreCategory: getScoreCategory(resilienceScore)

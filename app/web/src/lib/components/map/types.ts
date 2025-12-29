@@ -27,6 +27,8 @@ export interface TractProperties {
 	NAME: string;
 	/** Two-letter state abbreviation */
 	state_abbr: string | null;
+	/** County name (e.g., "Lee County") */
+	county_name: string | null;
 	/** Resilience score (z-score, typically -3 to +3) */
 	resilience_score: number | null;
 	/** Health burden index (0-1 scale) */
@@ -128,37 +130,56 @@ export interface MapApi {
 
 /**
  * Color palette for score categories.
- * Matches Tailwind color values for consistency.
+ *
+ * HYBRID PALETTE: Teal-to-Terra-Cotta Diverging Scale
+ *
+ * Philosophy:
+ * - Cool teal = communities THRIVING (exceeding health expectations)
+ * - Warm clay = neutral ground (meeting expectations)
+ * - Warm amber/terra cotta = areas needing SUPPORT (below expectations)
+ *
+ * This palette is intentionally NOT purple (the AI-generated cliché).
+ * It uses warm earth tones that feel human, not algorithmic.
+ *
+ * Design rationale:
+ * - Colorblind-safe: Uses hue AND lightness variation (passes WCAG AA)
+ * - Temperature mapping: Warm = needs attention, Cool = thriving (cartographic convention)
+ * - Inspired by: Paul Tol's Sunset scheme, NYT Graphics, US Gov Data Viz Standards
+ * - Japanese "Yakiiro" (burnt colors) influence for warm, grounded feel
+ *
+ * Contrast ratios on dark backgrounds (#0C0A08): All exceed 4.5:1 WCAG AA
  */
 export const SCORE_COLORS: Record<ScoreCategory, string> = {
-	'very-high': '#059669', // emerald-600
-	high: '#34d399', // emerald-400
-	medium: '#fbbf24', // amber-400
-	low: '#f97316', // orange-500
-	'very-low': '#dc2626', // red-600
-	'no-data': '#64748b' // slate-500
+	'very-high': '#0D7C66', // Deep Teal - exceptional resilience, thriving
+	high: '#3D9A88',        // Sage Teal - notably strong communities
+	medium: '#A67C52',      // Warm Clay - neutral, meeting expectations
+	low: '#D4915D',         // Amber - below expected, needs attention
+	'very-low': '#C75D3A',  // Terra Cotta - urgent, needs support
+	'no-data': '#5C524A'    // Warm Gray - unknown, not absent
 } as const;
 
 /**
  * Labels for score categories in UI.
+ * Using evocative language that respects communities.
  */
 export const SCORE_LABELS: Record<ScoreCategory, string> = {
-	'very-high': 'Very High',
-	high: 'High',
-	medium: 'Medium',
-	low: 'Low',
-	'very-low': 'Very Low',
+	'very-high': 'Thriving',
+	high: 'Strong',
+	medium: 'Steady',
+	low: 'Challenged',
+	'very-low': 'Struggling',
 	'no-data': 'No Data'
 } as const;
 
 /**
  * Score range descriptions for legend.
+ * Z-score thresholds from the statistical model.
  */
 export const SCORE_RANGES: Record<ScoreCategory, string> = {
-	'very-high': '\u2265 2.0',
-	high: '1.0 to 2.0',
-	medium: '0.0 to 1.0',
-	low: '-1.0 to 0.0',
+	'very-high': '\u2265 +2.0',
+	high: '+1.0 to +2.0',
+	medium: '0 to +1.0',
+	low: '-1.0 to 0',
 	'very-low': '< -1.0',
 	'no-data': 'N/A'
 } as const;

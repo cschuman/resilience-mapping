@@ -4,6 +4,11 @@
 	import type { MapApi, TractProperties, GeocoderResult } from '$lib/components/map';
 	import type { Component } from 'svelte';
 	import { AddressSearch } from '$lib/components/search';
+	import { updateUrlParams } from '$lib/utils';
+	import type { PageData } from './$types';
+
+	// Page data from +page.ts
+	let { data }: { data: PageData } = $props();
 
 	// Lazy-loaded components - using `any` props type for dynamic imports
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -21,6 +26,7 @@
 
 	// Track timeouts for cleanup
 	let selectTractTimeout: ReturnType<typeof setTimeout> | null = null;
+	let initialParamsApplied = false;
 
 	// Lazy load heavy map components on mount
 	onMount(async () => {
@@ -39,6 +45,36 @@
 		}
 	});
 
+	// Apply initial URL params when map API becomes available
+	$effect(() => {
+		if (mapApi && !initialParamsApplied) {
+			initialParamsApplied = true;
+			applyInitialParams();
+		}
+	});
+
+	/**
+	 * Apply initial URL parameters to the map.
+	 */
+	function applyInitialParams(): void {
+		if (!mapApi) return;
+
+		// If we have initial coordinates, fly there
+		if (data.initialCenter && data.initialZoom) {
+			mapApi.flyTo(data.initialCenter[0], data.initialCenter[1], data.initialZoom);
+		} else if (data.initialCenter) {
+			mapApi.flyTo(data.initialCenter[0], data.initialCenter[1], 10);
+		}
+
+		// If we have an initial tract, select it after a delay
+		if (data.initialTract) {
+			selectTractTimeout = setTimeout(() => {
+				mapApi?.selectTract(data.initialTract!);
+				selectTractTimeout = null;
+			}, data.initialCenter ? 1600 : 500);
+		}
+	}
+
 	// Cleanup on destroy
 	onDestroy(() => {
 		// Clear any pending timeout to prevent memory leaks
@@ -49,10 +85,12 @@
 	});
 
 	/**
-	 * Handle tract click - update selected tract info.
+	 * Handle tract click - update selected tract info and URL.
 	 */
 	function handleTractClick(properties: TractProperties): void {
 		selectedTract = properties;
+		// Update URL with selected tract
+		updateUrlParams({ tract: properties.GEOID });
 	}
 
 	/**
@@ -73,6 +111,13 @@
 			}
 
 			mapApi.flyTo(result.lng, result.lat, 12);
+			// Update URL with tract and coordinates
+			updateUrlParams({
+				tract: result.tractFips,
+				lat: result.lat.toFixed(4),
+				lng: result.lng.toFixed(4),
+				zoom: '12'
+			});
 			// Small delay to let the map fly, then select the tract
 			selectTractTimeout = setTimeout(() => {
 				mapApi?.selectTract(result.tractFips);
@@ -107,13 +152,12 @@
 <div class="map-page">
 	<!-- Header -->
 	<header class="header">
-		<div class="header-left">
-			<button type="button" class="back-button" onclick={goHome} aria-label="Go to home page">
+		<div class="header__left">
+			<button type="button" class="header__back" onclick={goHome} aria-label="Go to home page">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 20 20"
 					fill="currentColor"
-					class="w-5 h-5"
 					aria-hidden="true"
 				>
 					<path
@@ -123,20 +167,23 @@
 					/>
 				</svg>
 			</button>
-			<h1 class="title">Community Resilience Map</h1>
+			<div class="header__brand">
+				<span class="header__mark">R</span>
+				<h1 class="header__title">Resilience Map</h1>
+			</div>
 		</div>
 
-		<div class="header-center">
+		<div class="header__center">
 			<AddressSearch
 				placeholder="Search by address..."
 				onSelect={handleSearchSelect}
 			/>
 		</div>
 
-		<div class="header-right">
+		<div class="header__right">
 			<button
 				type="button"
-				class="icon-button"
+				class="header__action"
 				onclick={toggleLegend}
 				aria-label={showLegend ? 'Hide legend' : 'Show legend'}
 				aria-pressed={showLegend}
@@ -145,7 +192,6 @@
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 20 20"
 					fill="currentColor"
-					class="w-5 h-5"
 					aria-hidden="true"
 				>
 					<path
@@ -155,24 +201,24 @@
 					/>
 				</svg>
 			</button>
-			<a href="/about" class="nav-link">About</a>
+			<a href="/about" class="header__link">About</a>
 		</div>
 	</header>
 
 	<!-- Map Container -->
 	<main id="main-content" class="map-container">
 		{#if isLoading}
-			<div class="loading-overlay">
-				<div class="loading-spinner"></div>
-				<span>Loading map...</span>
+			<div class="loading">
+				<div class="loading__spinner"></div>
+				<span class="loading__text">Loading map...</span>
 			</div>
 		{:else if loadError}
-			<div class="error-overlay">
+			<div class="error">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 24 24"
 					fill="currentColor"
-					class="error-icon"
+					class="error__icon"
 					aria-hidden="true"
 				>
 					<path
@@ -181,8 +227,10 @@
 						clip-rule="evenodd"
 					/>
 				</svg>
-				<span>{loadError}</span>
-				<button type="button" onclick={() => window.location.reload()}>Retry</button>
+				<span class="error__message">{loadError}</span>
+				<button type="button" class="error__retry" onclick={() => window.location.reload()}>
+					Retry
+				</button>
 			</div>
 		{:else if MapComponent && LegendComponent}
 			<MapComponent
@@ -195,9 +243,9 @@
 			<!-- Hover info tooltip -->
 			{#if hoveredTract && !selectedTract}
 				<div class="hover-info" role="status" aria-live="polite">
-					<span class="hover-fips">{hoveredTract.GEOID}</span>
+					<span class="hover-info__fips">{hoveredTract.GEOID}</span>
 					{#if hoveredTract.resilience_score != null}
-						<span class="hover-score">
+						<span class="hover-info__score">
 							{hoveredTract.resilience_score >= 0 ? '+' : ''}{hoveredTract.resilience_score.toFixed(2)}
 						</span>
 					{/if}
@@ -211,72 +259,100 @@
 	.map-page {
 		display: flex;
 		flex-direction: column;
-		height: 100vh;
-		width: 100vw;
+		height: 100%;
+		width: 100%;
 		overflow: hidden;
-		background: #0f172a;
+		background: var(--color-foundation-deepest);
 	}
 
+	/* Header */
 	.header {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 0.75rem 1rem;
-		background: #1e293b;
-		border-bottom: 1px solid #334155;
+		padding: var(--space-3) var(--space-4);
+		background: var(--color-foundation-mid);
+		border-bottom: 1px solid var(--color-border-subtle);
 		flex-shrink: 0;
-		gap: 1rem;
+		gap: var(--space-4);
 	}
 
-	.header-left {
+	.header__left {
 		display: flex;
 		align-items: center;
-		gap: 0.75rem;
+		gap: var(--space-3);
 	}
 
-	.header-center {
+	.header__brand {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+	}
+
+	.header__mark {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 28px;
+		height: 28px;
+		background: var(--color-accent-primary);
+		border-radius: var(--radius-md);
+		color: white;
+		font-family: var(--font-display);
+		font-size: var(--text-base);
+		font-weight: var(--font-weight-medium);
+	}
+
+	.header__center {
 		flex: 1;
 		max-width: 400px;
 	}
 
-	.header-right {
+	.header__right {
 		display: flex;
 		align-items: center;
-		gap: 0.75rem;
+		gap: var(--space-3);
 	}
 
-	.back-button {
+	.header__back {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		width: 36px;
 		height: 36px;
 		border: none;
-		background: #334155;
-		color: #e2e8f0;
-		border-radius: 8px;
+		background: var(--color-foundation-surface);
+		color: var(--color-text-secondary);
+		border-radius: var(--radius-lg);
 		cursor: pointer;
-		transition: all 0.15s ease;
+		transition: all var(--duration-fast) var(--ease-out);
 	}
 
-	.back-button:hover {
-		background: #475569;
+	.header__back svg {
+		width: 20px;
+		height: 20px;
 	}
 
-	.back-button:focus-visible {
-		outline: 2px solid #10b981;
+	.header__back:hover {
+		background: var(--color-foundation-elevated);
+		color: var(--color-text-primary);
+	}
+
+	.header__back:focus-visible {
+		outline: 2px solid var(--color-accent-primary);
 		outline-offset: 2px;
 	}
 
-	.title {
-		font-size: 1.125rem;
-		font-weight: 600;
-		color: white;
+	.header__title {
+		font-family: var(--font-display);
+		font-size: var(--text-lg);
+		font-weight: var(--font-weight-normal);
+		color: var(--color-text-primary);
 		margin: 0;
 		white-space: nowrap;
 	}
 
-	.icon-button {
+	.header__action {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -284,74 +360,85 @@
 		height: 36px;
 		border: none;
 		background: transparent;
-		color: #94a3b8;
-		border-radius: 8px;
+		color: var(--color-text-muted);
+		border-radius: var(--radius-lg);
 		cursor: pointer;
-		transition: all 0.15s ease;
+		transition: all var(--duration-fast) var(--ease-out);
 	}
 
-	.icon-button:hover {
-		background: #334155;
-		color: white;
+	.header__action svg {
+		width: 20px;
+		height: 20px;
 	}
 
-	.icon-button:focus-visible {
-		outline: 2px solid #10b981;
+	.header__action:hover {
+		background: var(--color-foundation-surface);
+		color: var(--color-text-primary);
+	}
+
+	.header__action:focus-visible {
+		outline: 2px solid var(--color-accent-primary);
 		outline-offset: 2px;
 	}
 
-	.icon-button[aria-pressed='true'] {
-		background: #334155;
-		color: #10b981;
+	.header__action[aria-pressed='true'] {
+		background: var(--color-foundation-surface);
+		color: var(--color-accent-primary);
 	}
 
-	.nav-link {
-		font-size: 0.875rem;
-		font-weight: 500;
-		color: #94a3b8;
+	.header__link {
+		font-size: var(--text-sm);
+		font-weight: var(--font-weight-medium);
+		color: var(--color-text-muted);
 		text-decoration: none;
-		padding: 0.5rem 0.75rem;
-		border-radius: 6px;
-		transition: all 0.15s ease;
+		padding: var(--space-2) var(--space-3);
+		border-radius: var(--radius-md);
+		transition: all var(--duration-fast) var(--ease-out);
 	}
 
-	.nav-link:hover {
-		color: white;
-		background: #334155;
+	.header__link:hover {
+		color: var(--color-text-primary);
+		background: var(--color-foundation-surface);
 	}
 
-	.nav-link:focus-visible {
-		outline: 2px solid #10b981;
+	.header__link:focus-visible {
+		outline: 2px solid var(--color-accent-primary);
 		outline-offset: 2px;
 	}
 
+	/* Map Container */
 	.map-container {
 		flex: 1;
 		position: relative;
 		overflow: hidden;
 	}
 
-	.loading-overlay,
-	.error-overlay {
+	/* Loading State */
+	.loading {
 		position: absolute;
 		inset: 0;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		background: rgba(15, 23, 42, 0.95);
-		color: white;
-		gap: 1rem;
-		z-index: 20;
+		background: var(--color-foundation-deepest);
+		color: var(--color-text-primary);
+		gap: var(--space-4);
+		z-index: var(--z-modal);
 	}
 
-	.loading-spinner {
+	.loading__spinner {
 		width: 48px;
 		height: 48px;
-		border: 3px solid rgba(255, 255, 255, 0.2);
-		border-top-color: #10b981;
-		border-radius: 50%;
+		border: 3px solid var(--color-border-subtle);
+		border-top-color: var(--color-accent-primary);
+		border-radius: var(--radius-full);
 		animation: spin 1s linear infinite;
+	}
+
+	.loading__text {
+		font-size: var(--text-sm);
+		color: var(--color-text-secondary);
 	}
 
 	@keyframes spin {
@@ -360,106 +447,137 @@
 		}
 	}
 
-	.error-overlay {
-		color: #f87171;
+	/* Error State */
+	.error {
+		position: absolute;
+		inset: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background: var(--color-foundation-deepest);
+		gap: var(--space-4);
+		z-index: var(--z-modal);
 	}
 
-	.error-icon {
+	.error__icon {
 		width: 48px;
 		height: 48px;
+		color: var(--color-error);
 	}
 
-	.error-overlay button {
-		margin-top: 0.5rem;
-		padding: 0.5rem 1rem;
-		background: #334155;
-		border: none;
-		border-radius: 6px;
-		color: white;
+	.error__message {
+		color: var(--color-error);
+		font-size: var(--text-sm);
+	}
+
+	.error__retry {
+		margin-top: var(--space-2);
+		padding: var(--space-2) var(--space-4);
+		background: var(--color-foundation-surface);
+		border: 1px solid var(--color-border-default);
+		border-radius: var(--radius-lg);
+		color: var(--color-text-primary);
+		font-size: var(--text-sm);
+		font-weight: var(--font-weight-medium);
 		cursor: pointer;
-		transition: background 0.15s ease;
+		transition: all var(--duration-fast) var(--ease-out);
 	}
 
-	.error-overlay button:hover {
-		background: #475569;
+	.error__retry:hover {
+		background: var(--color-foundation-elevated);
+		border-color: var(--color-border-strong);
 	}
 
+	/* Hover Info Tooltip */
 	.hover-info {
 		position: absolute;
-		top: 1rem;
+		top: var(--space-4);
 		left: 50%;
 		transform: translateX(-50%);
 		display: flex;
 		align-items: center;
-		gap: 0.75rem;
-		padding: 0.5rem 1rem;
-		background: rgba(15, 23, 42, 0.9);
-		backdrop-filter: blur(8px);
-		border-radius: 8px;
-		color: white;
-		font-size: 0.875rem;
+		gap: var(--space-3);
+		padding: var(--space-2) var(--space-4);
+		background: rgba(10, 14, 26, 0.92);
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+		border: 1px solid var(--color-border-subtle);
+		border-radius: var(--radius-lg);
+		color: var(--color-text-primary);
+		font-size: var(--text-sm);
 		pointer-events: none;
-		z-index: 10;
+		z-index: var(--z-tooltip);
 	}
 
-	.hover-fips {
-		font-family: ui-monospace, monospace;
-		color: #e2e8f0;
+	.hover-info__fips {
+		font-family: var(--font-mono);
+		font-size: var(--text-xs);
+		color: var(--color-text-secondary);
 	}
 
-	.hover-score {
-		font-weight: 600;
-		color: #10b981;
+	.hover-info__score {
+		font-weight: var(--font-weight-semibold);
+		color: var(--color-score-very-high);  /* Deep Teal for positive scores */
 	}
 
-	/* Responsive adjustments */
+	/* Responsive */
 	@media (max-width: 640px) {
 		.header {
 			flex-wrap: wrap;
-			padding: 0.5rem 0.75rem;
-			gap: 0.5rem;
+			padding: var(--space-2) var(--space-3);
+			gap: var(--space-2);
 		}
 
-		.header-left {
+		.header__left {
 			flex: 1;
 			min-width: 0;
 		}
 
-		.title {
-			font-size: 0.875rem;
+		.header__brand {
+			gap: var(--space-2);
+		}
+
+		.header__mark {
+			width: 24px;
+			height: 24px;
+			font-size: var(--text-sm);
+		}
+
+		.header__title {
+			font-size: var(--text-base);
 			overflow: hidden;
 			text-overflow: ellipsis;
 		}
 
-		.header-center {
+		.header__center {
 			order: 3;
 			width: 100%;
 			max-width: 100%;
 			flex: none;
 		}
 
-		.header-right {
-			gap: 0.5rem;
+		.header__right {
+			gap: var(--space-2);
 		}
 
-		/* Increase touch targets to 44px minimum for accessibility */
-		.back-button,
-		.icon-button {
+		/* Touch-friendly targets */
+		.header__back,
+		.header__action {
 			width: 44px;
 			height: 44px;
 		}
 
-		.nav-link {
-			padding: 0.625rem 0.875rem;
+		.header__link {
+			padding: var(--space-3) var(--space-3);
 			min-height: 44px;
 			display: flex;
 			align-items: center;
 		}
 	}
 
-	/* Tablet adjustments */
 	@media (min-width: 641px) and (max-width: 768px) {
-		.header-center {
+		.header__center {
 			max-width: 280px;
 		}
 	}
