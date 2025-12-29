@@ -1,9 +1,8 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
 	import { goto } from '$app/navigation';
-	import type { MapApi, TractProperties, GeocoderResult } from '$lib/components/map';
+	import type { MapApi, TractProperties } from '$lib/components/map';
 	import type { Component } from 'svelte';
-	import { AddressSearch } from '$lib/components/search';
 	import { updateUrlParams } from '$lib/utils';
 	import type { PageData } from './$types';
 
@@ -101,32 +100,6 @@
 	}
 
 	/**
-	 * Handle search result selection - fly to location and select tract.
-	 */
-	function handleSearchSelect(result: GeocoderResult): void {
-		if (mapApi) {
-			// Clear any previous timeout
-			if (selectTractTimeout) {
-				clearTimeout(selectTractTimeout);
-			}
-
-			mapApi.flyTo(result.lng, result.lat, 12);
-			// Update URL with tract and coordinates
-			updateUrlParams({
-				tract: result.tractFips,
-				lat: result.lat.toFixed(4),
-				lng: result.lng.toFixed(4),
-				zoom: '12'
-			});
-			// Small delay to let the map fly, then select the tract
-			selectTractTimeout = setTimeout(() => {
-				mapApi?.selectTract(result.tractFips);
-				selectTractTimeout = null;
-			}, 1600);
-		}
-	}
-
-	/**
 	 * Toggle legend visibility.
 	 */
 	function toggleLegend(): void {
@@ -171,13 +144,6 @@
 				<span class="header__mark">R</span>
 				<h1 class="header__title">Resilience Map</h1>
 			</div>
-		</div>
-
-		<div class="header__center">
-			<AddressSearch
-				placeholder="Search by address..."
-				onSelect={handleSearchSelect}
-			/>
 		</div>
 
 		<div class="header__right">
@@ -301,11 +267,6 @@
 		font-family: var(--font-display);
 		font-size: var(--text-base);
 		font-weight: var(--font-weight-medium);
-	}
-
-	.header__center {
-		flex: 1;
-		max-width: 400px;
 	}
 
 	.header__right {
@@ -550,13 +511,6 @@
 			text-overflow: ellipsis;
 		}
 
-		.header__center {
-			order: 3;
-			width: 100%;
-			max-width: 100%;
-			flex: none;
-		}
-
 		.header__right {
 			gap: var(--space-2);
 		}
@@ -576,9 +530,4 @@
 		}
 	}
 
-	@media (min-width: 641px) and (max-width: 768px) {
-		.header__center {
-			max-width: 280px;
-		}
-	}
 </style>

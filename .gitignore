@@ -10,9 +10,17 @@ data/input/*
 data/output/*
 data/processed/tracts.mbtiles
 data/processed/tracts_enriched.geojson
+data/processed/2020_boundaries/*.mbtiles
+data/processed/2020_boundaries/*.geojson
+data/processed/2020_boundaries/*.csv
+data/raw/places_2024/*.csv
+data/raw/places_2023/*.csv
+data/raw/crosswalks/*.txt
 !data/input/.gitkeep
 !data/output/.gitkeep
 !data/*/README.md
+!data/processed/2020_boundaries/README.md
+!data/processed/2020_boundaries/*.sha256
 
 # OS
 .DS_Store
