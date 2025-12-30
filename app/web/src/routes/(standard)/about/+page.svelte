@@ -30,7 +30,7 @@
 			<h2 id="stats-heading" class="sr-only">Dataset Statistics</h2>
 			<div class="stats__grid">
 				<div class="stats__item">
-					<span class="stats__value">83,117</span>
+					<span class="stats__value">64,419</span>
 					<span class="stats__label">Census Tracts</span>
 				</div>
 				<div class="stats__item">
@@ -178,9 +178,10 @@
 				<h3>Note on Group Quarters</h3>
 				<p>
 					Tracts where more than 10% of the population lives in group quarters (college dorms,
-					military barracks, correctional facilities, nursing homes) are flagged but not excluded.
-					These populations may have health outcomes driven by institutional factors rather than
-					community characteristics.
+					military barracks, correctional facilities, nursing homes) are <strong>excluded</strong> from
+					the analysis. These populations have health outcomes driven by institutional factors rather
+					than community characteristics. This filter removed approximately 14,000 tracts from the
+					original ~78,000, leaving 64,419 tracts in the final dataset.
 				</p>
 			</Accordion>
 
