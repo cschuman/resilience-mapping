@@ -1,8 +1,8 @@
-# Paper 2: The Fundamental Unpredictability of Community Health Trajectories
+# Paper 2: Why CDC PLACES-Based Trajectory Prediction Fails
 
-**Working Title:** "Why Community Health Trajectories Resist Prediction: Distinguishing Measurement Noise from Structural Chaos"
+**Working Title:** "Regression to the Mean in Small-Area Health Estimates: Why CDC PLACES-Based Trajectory Prediction Fails"
 
-**Target Journal:** Epidemiology / Milbank Quarterly
+**Target Journal:** American Journal of Epidemiology / Epidemiology
 
 ---
 
