@@ -5,12 +5,13 @@ import { env } from '$env/dynamic/private';
 const dbUrl = env.DATABASE_URL || '';
 
 // SSL configuration:
-// - Production external connections: require SSL
-// - Fly.io internal network (.internal hostnames): SSL not needed
+// - Fly.io internal network: SSL not needed (6pn addresses)
 // - Local development: SSL not needed
-const isInternalFlyNetwork = dbUrl.includes('.internal');
+// Note: On Fly.io we use internal networking which doesn't require SSL
+const isInternalFlyNetwork = dbUrl.includes('.internal') || dbUrl.includes('.flycast');
 const isLocalDev = dbUrl.includes('localhost') || dbUrl.includes('127.0.0.1');
-const requireSSL = !isInternalFlyNetwork && !isLocalDev && env.NODE_ENV === 'production';
+const isFlyEnvironment = !!env.FLY_APP_NAME;
+const requireSSL = !isInternalFlyNetwork && !isLocalDev && !isFlyEnvironment && env.NODE_ENV === 'production';
 
 export const sql = postgres(dbUrl, {
 	ssl: requireSSL ? 'require' : false,
