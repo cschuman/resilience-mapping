@@ -166,8 +166,8 @@ def compute_spatial_features(
         'neighbor_avg_change': None,
     }
 
-    # Get tract's own CHBI
-    tract_data = tract_years.get(tract_id, {}).get(year, {})
+    # Get tract's own CHBI (use T-1, the prior year, to avoid temporal leakage)
+    tract_data = tract_years.get(tract_id, {}).get(year - 1, {})
     tract_chbi = tract_data.get('CHBI')
 
     # Get neighbors
@@ -185,14 +185,18 @@ def compute_spatial_features(
 
     for neighbor_id in tract_neighbors:
         neighbor_data = tract_years.get(neighbor_id, {})
-        curr = neighbor_data.get(year, {}).get('CHBI')
-        prev = neighbor_data.get(year - 1, {}).get('CHBI')
+        # FIX: Use LAGGED data for neighbor change
+        # For prediction year T, use neighbor's CHBI from year T-1 (not T)
+        # and neighbor's change from T-2 to T-1 (not T-1 to T)
+        prev = neighbor_data.get(year - 1, {}).get('CHBI')  # Neighbor CHBI at T-1
+        prev2 = neighbor_data.get(year - 2, {}).get('CHBI')  # Neighbor CHBI at T-2
 
-        if curr is not None:
-            neighbor_chbis.append(curr)
+        if prev is not None:
+            neighbor_chbis.append(prev)  # Use T-1 CHBI, not T
 
-        if curr is not None and prev is not None:
-            change = curr - prev
+        # CRITICAL FIX: Compute LAGGED change (T-2 to T-1), not contemporaneous (T-1 to T)
+        if prev is not None and prev2 is not None:
+            change = prev - prev2  # Change from T-2 to T-1 (properly lagged)
             neighbor_changes.append(change)
             if change < -0.1:  # Improved (CHBI decreased)
                 n_improving += 1
