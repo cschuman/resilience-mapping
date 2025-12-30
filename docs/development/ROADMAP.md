@@ -1,331 +1,371 @@
-# 🗺️ Health Resilience Mapping - Development Roadmap
+# Health Resilience Mapping - Development Roadmap
 
-> **Last Updated**: December 24, 2025
-> **Status**: CRITICAL DATA QUALITY SPRINT IN PROGRESS
-> **Reference**: See `docs/team-profiles/team-management/STATE_OF_THE_UNION_2025-12-24.md` for full leadership analysis
-
----
-
-## 🚨 PHASE 0: DATA QUALITY SPRINT (BLOCKING - Week 1-2)
-
-**All platform development is blocked until these issues are resolved.**
-
-### 0.1 Fix State Fixed Effects Bug ✅ FIXED
-- **Issue**: `app/backend/expected.go:77-82` inner loop variable `i` shadowed outer loop
-- **Impact**: CATASTROPHIC - All 68,170 resilience scores were potentially wrong
-- **Root Cause**: Inner loop `for i:=1; i<len(stateList); i++` shadowed outer loop, causing `burdened[i]` to use wrong index
-- **Fix Applied**: Renamed inner loop variable to `si` to avoid shadowing
-- **File**: `app/backend/expected.go`
-- **Status**: COMPLETED December 24, 2025
-
-### 0.2 Filter Institutional Populations (CRITICAL)
-- **Issue**: 498 tracts with >20% group quarters (prisons/dorms) contaminate analysis
-- **Impact**: Top "resilient" tract is 98.8% prison population
-- **Actions**:
-  - Add group quarters filter to data pipeline
-  - Exclude tracts with >10% institutional population (stricter threshold)
-  - Document exclusion criteria
-  - Re-run analysis with clean dataset
-- **Files**: `app/analytics/analyze_resilience.py`
-- **Owner**: Miguel Santos
-- **Estimated effort**: 2 days
-
-### 0.3 Re-run Analysis & Validate
-- **Issue**: Current 1,059 communities list based on buggy analysis
-- **Actions**:
-  - Execute corrected model
-  - Compare new vs old resilience scores
-  - Validate top 100 communities manually
-  - Document changes in findings
-- **Owner**: Miguel Santos + Research Team
-- **Estimated effort**: 1 week
-
-### 0.4 Add Data Validation
-- **Issue**: No validation of downloaded data integrity
-- **Actions**:
-  - Add checksums for downloaded files
-  - Validate CSV/Excel structure before processing
-  - Check for required columns in PLACES and FARA data
-- **Estimated effort**: 3 hours
+> **Last Updated**: December 30, 2025
+> **Status**: POST-WORKSHOP REALIGNMENT
+> **Reference**: `docs/development/LINEAR_TICKETS_2025-12-30.md` for detailed tickets
 
 ---
 
-## 📊 Priority 1: Data Quality Improvements (Week 2-3)
+## Executive Summary: Workshop Outcomes
 
-### 1.1 Handle Temporal Misalignment
-- **Issue**: 4-year gap between FARA (2019) and PLACES (2023)
-- **Actions**:
-  - Document temporal assumptions in README
-  - Add temporal alignment validation
-  - Consider using PLACES 2019 data if available
-  - Add sensitivity analysis for temporal effects
-- **Estimated effort**: 4 hours
+On December 30, 2025, the full 8-person core team conducted an all-day strategic workshop. Key findings:
 
-### 2.2 Census Tract Version Reconciliation
-- **Issue**: Mixed 2010/2020 census tract definitions
-- **Actions**:
-  - Standardize to single census year
-  - Create crosswalk table for tract changes
-  - Document tract version in output files
-- **Estimated effort**: 6 hours
+### Critical Assessment
+| Domain | Workshop Verdict | Action Required |
+|--------|-----------------|-----------------|
+| **Data Quality** | Prison tracts in top rankings | BLOCKING - Must fix before growth |
+| **Performance** | 2.3MB bundle, fails 3G test | P1 - Excludes poor communities |
+| **Accessibility** | Keyboard trap, SR broken | P1 - Excludes disabled users |
+| **Infrastructure** | No backups, no monitoring | P0 - One incident from disaster |
+| **Community** | Zero consent, zero CAB | P0 - Extraction not partnership |
 
-### 2.3 Confidence Interval Filtering
-- **Issue**: Some PLACES estimates have very wide confidence intervals
-- **Actions**:
-  - Add CI width to burden calculation
-  - Flag high-uncertainty tracts
-  - Optional filtering based on CI threshold
-- **Files**: `internal/feature/burden.go`, `analyze_resilience.py`
-- **Estimated effort**: 3 hours
+### Strategic Shift
+1. **Table-first, map-second** — Accessibility drives architecture
+2. **Data quality before growth** — Pause promotion until data validated
+3. **Community Advisory Board** — $2,500/month, non-negotiable
+4. **Performance budget** — Nothing ships without device testing
+5. **Consent protocol** — No stories without explicit agreement
 
-## 🧪 Priority 3: Testing Infrastructure (Week 2)
+---
 
-### 3.1 Unit Tests for Go Modules
-- **Coverage targets**:
-  - `internal/data`: CSV/Excel loading, pivoting
-  - `internal/feature`: Burden calculation
-  - `internal/model`: OLS regression
-  - `internal/geo`: GeoJSON processing
-- **Framework**: Go standard testing package
-- **Estimated effort**: 8 hours
+## PHASE 0: CRITICAL FOUNDATION (Now - Jan 13)
 
-### 3.2 Integration Tests
-- **Test scenarios**:
-  - Full pipeline: download → model → map
-  - Different configuration options
-  - Missing/corrupt data handling
-- **Estimated effort**: 4 hours
+**All other work is blocked until Phase 0 complete.**
 
-### 3.3 Python Test Suite
-- **Coverage**:
-  - Statistical analysis functions
-  - Table generation
-  - Resilience scoring validation
-- **Framework**: pytest
-- **Estimated effort**: 4 hours
+### 0.1 Data Quality Sprint
+**Owner**: Miguel Santos | **Status**: IN PROGRESS
 
-### 3.4 Data Validation Tests
-- **Checks**:
-  - GEOID format consistency
-  - Value ranges for health outcomes
-  - LILA classification accuracy
-- **Estimated effort**: 3 hours
+- [ ] Filter institutional populations (>10% group quarters)
+- [ ] Re-run regression with corrected state fixed effects
+- [ ] Manually validate top 100 communities
+- [ ] Document all changes publicly in DATA_CORRECTIONS.md
+- [ ] Update live database with corrected scores
 
-## 🔬 Priority 4: Methodology Enhancements (Week 3)
+**Why Blocking**: Top "resilient" community is 98.8% prison population. Publishing this discredits entire project.
 
-### 4.1 Implement PCA Option for Burden Index
-- **Current**: Simple z-score mean
-- **Enhancement**: Principal Component Analysis option
-- **Benefits**: Better capture of health outcome correlations
-- **Files**: `internal/feature/burden.go`
-- **Estimated effort**: 6 hours
+### 0.2 Infrastructure Safety
+**Owner**: Aaliyah Muhammad | **Status**: CRITICAL
 
-### 4.2 Add Spatial Autocorrelation Controls
-- **Issue**: Neighboring tracts may not be independent
-- **Actions**:
-  - Calculate Moran's I for residuals
-  - Add spatial lag terms to regression
-  - Document spatial clustering patterns
-- **Files**: New `internal/spatial` package
-- **Estimated effort**: 8 hours
+- [x] Database backups configured (MUST BE TODAY)
+- [ ] Health monitoring and alerts
+- [ ] Staging environment
+- [ ] Disaster recovery runbook
+- [ ] Incident response plan
 
-### 4.3 Robust Standard Errors
-- **Issue**: Heteroskedasticity in residuals
-- **Actions**:
-  - Implement White/Huber robust standard errors
-  - Add to regression output table
-  - Update significance testing
-- **Files**: `internal/model/expected.go`
-- **Estimated effort**: 4 hours
+**Why Blocking**: No backups = complete data loss risk. "Hope is not a strategy."
 
-### 4.4 Sensitivity Analysis Framework
-- **Components**:
-  - Multiple LILA thresholds
-  - Different outcome combinations
-  - Bootstrap confidence intervals
-  - Leave-one-state-out validation
-- **Files**: New `internal/sensitivity` package
-- **Estimated effort**: 6 hours
+### 0.3 Community Advisory Board Formation
+**Owner**: Rev. Dr. Keisha Williams | **Status**: IN PROGRESS
 
-## 🛠️ Priority 5: Infrastructure Improvements (Month 2)
+- [ ] Recruit 5 members from mapped communities
+- [ ] Establish stipend payments ($500/month each)
+- [ ] Schedule first meeting (target: Jan 13)
+- [ ] Draft governance charter
+- [ ] Define veto powers and decision rights
 
-### 5.1 Logging Framework
-- **Requirements**:
-  - Structured logging (JSON format)
-  - Log levels (DEBUG, INFO, WARN, ERROR)
-  - Performance metrics
-  - Progress indicators for long operations
-- **Library**: `zerolog` or `zap`
-- **Estimated effort**: 4 hours
+**Why Blocking**: "Nothing about us without us." We're building for communities not at the table.
 
-### 5.2 Configuration Enhancements
-- **Features**:
-  - Multiple environment support (dev/prod)
-  - Configuration validation
-  - Default values documentation
-  - CLI flag overrides
-- **Estimated effort**: 3 hours
+---
 
-### 5.3 Error Handling Standardization
-- **Actions**:
-  - Consistent error wrapping
-  - Better error messages
-  - Recovery from partial failures
-  - Error reporting to user
-- **Estimated effort**: 4 hours
+## PHASE 1: ACCESSIBILITY & PERFORMANCE (Jan 13 - Jan 27)
 
-### 5.4 Performance Optimization
-- **Targets**:
-  - Parallel processing for tract analysis
-  - Streaming CSV processing for large files
-  - Caching of intermediate results
-  - Memory usage optimization
-- **Estimated effort**: 6 hours
+### 1.1 Accessible Data Table (PRIMARY)
+**Owner**: David Chen-Williams + Jordan Park + Yuki Nakamura-Jackson
 
-## 📈 Priority 6: Analysis Extensions (Month 3)
+Build fully accessible data table as the PRIMARY interface. Map becomes progressive enhancement.
 
-### 6.1 Demographic Deep Dive
-- **Analysis**:
-  - Race/ethnicity stratification
-  - Age distribution effects
-  - Income inequality measures
-  - Education level impacts
-- **Output**: Enhanced demographic tables
-- **Estimated effort**: 8 hours
+- [ ] Searchable, sortable table with all tracts
+- [ ] Full keyboard navigation
+- [ ] Screen reader optimized (ARIA, announcements)
+- [ ] WCAG AA minimum, target AAA
+- [ ] Virtual scrolling for 68K rows
+- [ ] Server-side pagination
 
-### 6.2 Longitudinal Analysis
-- **Requirements**:
-  - Multi-year PLACES data
-  - Tract change tracking
-  - Trend analysis
-  - Policy intervention timing
-- **Estimated effort**: 12 hours
+**Philosophy**: "I don't see your interface. I experience its soul." — David
 
-### 6.3 Machine Learning Models
-- **Algorithms**:
-  - Random Forest for feature importance
-  - XGBoost for non-linear relationships
-  - LASSO for variable selection
-  - Neural networks for pattern detection
-- **Files**: New `ml_analysis.py`
-- **Estimated effort**: 10 hours
+### 1.2 Map Accessibility Fixes
+**Owner**: David Chen-Williams
 
-### 6.4 Qualitative Integration Framework
-- **Components**:
-  - Interview data structure
-  - Coding schema
-  - Mixed-methods integration
-  - Case study selection criteria
-- **Estimated effort**: 8 hours
+- [ ] Fix keyboard trap (Escape exits focus)
+- [ ] Add screen reader announcements for interactions
+- [ ] Focus management on tract selection
+- [ ] High contrast mode toggle
+- [ ] Reduced motion option
 
-## 📚 Priority 7: Documentation & Dissemination (Ongoing)
+### 1.3 Performance Optimization
+**Owner**: Jordan Park
 
-### 7.1 Technical Documentation
-- **Components**:
-  - API documentation (godoc)
-  - Statistical methodology whitepaper
-  - Data dictionary
-  - Reproducibility guide
-- **Estimated effort**: 6 hours
+**Target**: 3-second load on 3G, works on 5-year-old phones
 
-### 7.2 User Guide
-- **Sections**:
-  - Installation instructions
-  - Configuration guide
-  - Troubleshooting
-  - FAQ
-- **Estimated effort**: 4 hours
+- [ ] Reduce bundle to <500KB initial load
+- [ ] Lazy load MapLibre (only on /map)
+- [ ] Progressive map loading (placeholder → outline → details)
+- [ ] Service worker for offline core data
+- [ ] Test on real devices, not emulators
 
-### 7.3 Research Outputs
-- **Deliverables**:
-  - Peer-reviewed manuscript
-  - Policy brief
-  - Interactive dashboard
-  - Conference presentations
-- **Estimated effort**: 20 hours
+**The Jordan Test**: "On my grandma's phone, in Korea, on spotty 2G, with her glasses forgotten"
 
-### 7.4 Community Engagement
-- **Activities**:
-  - GitHub issues templates
-  - Contributing guidelines
-  - Code of conduct
-  - Example analyses
-- **Estimated effort**: 3 hours
+### 1.4 Performance Budget CI
+**Owner**: Jordan Park + Aaliyah Muhammad
 
-## 🎯 Success Metrics
+- [ ] Lighthouse CI in GitHub Actions
+- [ ] Fail PR if performance budget exceeded
+- [ ] Track metrics over time
+
+**Budgets**:
+- Performance score: >70
+- First Contentful Paint: <2s
+- Bundle size: <500KB gzipped
+
+---
+
+## PHASE 2: DESIGN SYSTEM & CONSENT (Jan 27 - Feb 10)
+
+### 2.1 Community Consent Protocol
+**Owner**: Keisha Williams + Amara Chen-Rodriguez + Legal
+
+- [ ] Design consent flow (CAB review)
+- [ ] Legal consent document
+- [ ] Consent management in database
+- [ ] Opt-out functionality
+- [ ] Data deletion procedures
+
+**The Keisha Test**: "Would I be proud to preach about this on Sunday?"
+
+### 2.2 Design System V1
+**Owner**: Yuki Nakamura-Jackson
+
+Build accessible-first design system.
+
+- [ ] Typography scale (min 16px body, proper hierarchy)
+- [ ] Color system (all combinations pass WCAG AA)
+- [ ] Spacing tokens
+- [ ] Core components: Button, Card, Table, Form, Modal
+- [ ] Storybook documentation with a11y audits
+
+**Philosophy**: "Every gradient is political. Design is never neutral."
+
+### 2.3 Stories Framework
+**Owner**: Yuki + Keisha
+
+- [ ] Story submission system (with consent)
+- [ ] Community review workflow
+- [ ] Photography guidelines (dignity, not poverty porn)
+- [ ] Story display templates
+- [ ] Moderation tools
+
+**Requirement**: NO STORIES WITHOUT CONSENT. Empty page is better than extracted story.
+
+---
+
+## PHASE 3: LOCALIZATION & ADVOCACY (Feb 10 - Feb 24)
+
+### 3.1 Spanish Localization
+**Owner**: Yuki Nakamura-Jackson + Miguel Santos
+
+- [ ] i18n framework setup (svelte-i18n)
+- [ ] Extract all UI strings
+- [ ] Professional translation
+- [ ] Community review of translations
+- [ ] Language switcher
+- [ ] Persist preference
+
+**Why**: 40% of food-insecure households speak Spanish primarily.
+
+### 3.2 Advocacy Toolkit
+**Owner**: Amara Chen-Rodriguez + Yuki
+
+- [ ] Print-friendly tract reports (one-page PDF)
+- [ ] Talking points generator
+- [ ] Embeddable widgets
+- [ ] Social share cards
+- [ ] Citation generator
+
+### 3.3 Policy Tracker
+**Owner**: Amara Chen-Rodriguez
+
+- [ ] Connect resilience data to policy outcomes
+- [ ] Track legislation affecting mapped communities
+- [ ] Success stories from advocacy
+
+---
+
+## PHASE 4: RESEARCH PLATFORM (Feb 24 - Mar 10)
+
+### 4.1 Enhanced API
+**Owner**: Marcus Thompson
+
+- [ ] Rate limiting
+- [ ] API keys for researchers
+- [ ] Usage analytics
+- [ ] Bulk data exports
+- [ ] Attribution enforcement
+
+### 4.2 Compare Tool
+**Owner**: Jordan Park + Miguel Santos
+
+- [ ] "Show me communities like mine"
+- [ ] Multi-tract comparison view
+- [ ] Demographic filtering
+- [ ] Exportable comparisons
+
+### 4.3 Overlay Layers
+**Owner**: Miguel Santos
+
+- [ ] Churches/faith institutions
+- [ ] FQHCs and clinics
+- [ ] Farmers markets
+- [ ] Food banks
+- [ ] Environmental justice data (EPA)
+
+---
+
+## PHASE 5: COMMUNITY OWNERSHIP (Mar 10 - Ongoing)
+
+### 5.1 Community Data Dashboards
+- [ ] Each consenting community gets own page
+- [ ] Community-controlled content
+- [ ] Local data they choose to share
+- [ ] Their stories, their way
+
+### 5.2 Ownership Transfer Framework
+- [ ] Legal structure for community ownership
+- [ ] Technical handoff documentation
+- [ ] Sustainability plan
+- [ ] Target: Community ownership by 2027
+
+---
+
+## Quality Gates
+
+### Before Any Growth/Marketing
+- [x] Platform deployed and accessible
+- [ ] Data quality issues resolved (institutional filter)
+- [ ] WCAG AA compliance verified
+- [ ] Community Advisory Board operational
+- [ ] Community consent obtained (min 10)
+- [ ] Legal review completed
+- [ ] Load testing passed (100x current traffic)
+
+### Before Community Story Launch
+- [ ] Consent protocol approved by CAB
+- [ ] Legal review of consent documents
+- [ ] 5 pilot communities with signed consent
+- [ ] Story moderation workflow tested
+- [ ] Harm assessment process documented
+
+---
+
+## Decision Framework
+
+Per team charter, decisions follow weighted voting:
+
+### Technical Decisions
+Marcus (35%) + Aaliyah (25%) + Miguel (15%) + Jordan (10%) + Others (15%)
+
+### Design Decisions
+Yuki (40%) + David (20%) + Jordan (15%) + Keisha (10%) + Amara (10%) + Marcus (5%)
+
+### Community Decisions
+**Keisha (60%) + VETO POWER** + Amara (10%) + David (10%) + Others (20%)
+
+### Keisha's Veto
+Rev. Dr. Keisha Williams holds absolute veto on any decision that could harm communities. This has never been exercised but is non-negotiable.
+
+---
+
+## Team Tensions (Healthy Conflict)
+
+| Tension | Resolution Approach |
+|---------|---------------------|
+| Jordan (ship fast) ↔ Aaliyah (ship safe) | Feature flags + gradual rollouts |
+| Amara (narrative window) ↔ Keisha (community timeline) | Community milestones in sprints |
+| Yuki (visual beauty) ↔ David (universal access) | Co-design from start, user testing settles |
+| Marcus (over-engineer) ↔ Jordan (under-test) | Clear SLAs and performance budgets |
+
+---
+
+## Success Metrics
 
 ### Technical Metrics
-- [ ] 80% test coverage
-- [ ] <5% data quality issues
-- [ ] <2 second model runtime
-- [ ] Zero critical bugs
+- [ ] Lighthouse Performance: >70 (currently 34)
+- [ ] Lighthouse Accessibility: >90 (currently 67)
+- [ ] P99 latency: <200ms
+- [ ] Uptime: 99.9%
+- [ ] Zero data loss incidents
 
-### Research Metrics
-- [ ] Reproduce all published findings
-- [ ] Identify 10+ new insights
-- [ ] 3+ sensitivity analyses
-- [ ] Peer review acceptance
+### Community Metrics
+- [ ] Advisory Board: 5 members, monthly meetings
+- [ ] Consented communities: 10 by March
+- [ ] Community feedback sessions: Monthly
+- [ ] Harm reports: Zero
 
 ### Impact Metrics
-- [ ] 100+ GitHub stars
-- [ ] 5+ citations
-- [ ] 2+ policy adoptions
-- [ ] 10+ community contributions
-
-## 📅 Revised Timeline (December 2025)
-
-### PHASE 0: Data Quality Sprint (Week 1-2) - BLOCKING
-- Week 1: Fix state FE bug ✅, filter institutional populations, re-run analysis
-- Week 2: Validate top 100 communities, document findings changes, research sign-off
-
-### PHASE 1: Community Trust Building (Weeks 1-6) - PARALLEL
-- Week 2: Form Community Advisory Board
-- Weeks 3-5: Pilot engagement with 5 communities
-- Week 4: Develop consent protocols
-- Week 5: Legal review
-
-### PHASE 2: Technical Build (Weeks 3-10)
-- Weeks 3-4: Monorepo setup, design system, infrastructure
-- Weeks 5-6: Core features (map, search, community pages)
-- Weeks 7-8: Three-site MVP
-- Weeks 9-10: Performance, accessibility, security audits
-
-### PHASE 3: Tiered Launch
-- Research Site: After data quality sprint complete
-- Stories Site: 2 weeks after research site (with consented communities)
-- Policy Site: 4 weeks after research site
-
-### Ongoing
-- Community support and consent building
-- Bug fixes and data quality monitoring
-- Feature requests (post-launch)
-- Research updates and peer review
-
-## 🤝 Contributors Needed
-
-### Expertise Sought
-- Spatial statisticians
-- Public health researchers
-- Go developers
-- Data visualization experts
-- Policy analysts
-- Community partners
-
-### How to Contribute
-1. Check open issues
-2. Read contributing guidelines
-3. Fork and create feature branch
-4. Add tests for new features
-5. Submit pull request
-
-## 📝 Notes
-
-- All estimates assume single developer
-- Priorities may shift based on user feedback
-- Some tasks can be parallelized
-- Community contributions welcome for any priority level
+- [ ] Policy citations: 5+
+- [ ] Academic citations: 10+
+- [ ] Journalist embeds: 20+
+- [ ] Community advocacy uses: 50+
 
 ---
 
-*Last Updated: December 24, 2025*
-*Version: 2.0.0 - Post Leadership Deep Dive*
+## Team Principles (Workshop Reaffirmed)
+
+1. **"Downtime equals harm"** — System reliability is moral imperative
+2. **"Data without dignity is violence"** — Respectful representation
+3. **"Performance is justice"** — Slow sites exclude poor communities
+4. **"Nothing about us without us"** — Community ownership of narratives
+5. **"Every bug is someone's hungry night"** — Technical failures have human costs
+6. **"Table-first, map-second"** — Accessibility drives architecture
+
+---
+
+## Calendar View
+
+```
+December 2025
+├── Dec 30: Workshop complete, roadmap realigned
+├── Dec 30: Database backups (AALIYAH - TODAY)
+└── Dec 31: Data quality sprint begins
+
+January 2025
+├── Week 1 (Jan 1-5): Institutional filter + monitoring
+├── Week 2 (Jan 6-12): Validation + CAB recruitment
+├── Jan 13: CAB first meeting, Sprint 2 begins
+├── Week 3-4 (Jan 13-26): Accessibility + performance sprint
+└── Jan 27: Design system sprint begins
+
+February 2025
+├── Week 5-6 (Jan 27 - Feb 9): Design system + consent protocol
+├── Feb 10: Localization sprint begins
+├── Week 7-8 (Feb 10-23): Spanish + advocacy toolkit
+└── Feb 24: Research platform sprint begins
+
+March 2025
+├── Week 9-10 (Feb 24 - Mar 9): API + compare + overlays
+├── Mar 10: Community ownership phase begins
+└── Mar 31: Original launch target (now: "ready when ready")
+```
+
+---
+
+## Contributors Welcome
+
+### Expertise Sought
+- Spatial statisticians (validate methodology)
+- Public health researchers (ground truth findings)
+- Accessibility specialists (audit and improve)
+- Community organizers (connect us to communities)
+- Policy analysts (translate data to action)
+- Translators (Spanish, other languages)
+
+### How to Contribute
+1. Read this roadmap
+2. Check open issues on GitHub
+3. Join community call (schedule TBD)
+4. Propose changes via PR
+
+---
+
+*Last Updated: December 30, 2025*
+*Previous Version: December 24, 2025*
+*Workshop Transcript: Available on request*
