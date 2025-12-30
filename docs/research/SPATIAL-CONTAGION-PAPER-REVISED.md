@@ -113,33 +113,44 @@ With contemporaneous features, `neighbor_avg_change` appeared 16.7 times more im
 
 Table 2 shows model performance under different feature sets.
 
-**Table 2. Ablation Experiment Results (Macro-F1)**
+**Table 2. Ablation Experiment Results (Macro-F1 with 95% Bootstrap CIs)**
 
-| Model | Contemporaneous | Properly Lagged |
-|-------|-----------------|-----------------|
-| Full model (all features) | 0.320 | 0.260 |
-| No spatial features | 0.261 | 0.261 |
-| Spatial features only | 0.415 | 0.259 |
+| Model | Contemporaneous | Properly Lagged [95% CI] |
+|-------|-----------------|--------------------------|
+| Full model (all features) | 0.320 | 0.260 [0.259, 0.261] |
+| No spatial features | 0.261 | 0.261 [0.260, 0.263] |
+| Spatial features only | 0.415 | 0.259 [0.258, 0.260] |
 | **Spatial contribution** | **+18.2%** | **-0.4%** |
 
-With leaked features, spatial-only models (F1=0.415) dramatically outperformed the full model—an impossibility in proper machine learning that signals data leakage. After correction, spatial features contributed nothing (-0.4%).
+With leaked features, spatial-only models (F1=0.415) dramatically outperformed the full model—an impossibility in proper machine learning that signals data leakage. After correction, **confidence intervals for all three model specifications overlap**, confirming no statistically significant difference. Spatial features contributed nothing (-0.4%, within sampling error).
 
 ### 3.3 Spatial Autocorrelation
 
-Global Moran's I analysis revealed:
-- CHBI levels: I = 0.76 (very strong positive autocorrelation)
-- Trajectory outcomes: I = 0.21 (moderate clustering)
+Global Moran's I analysis with permutation-based inference (999 permutations) revealed:
 
-This confirms strong spatial structure in health outcomes—communities near each other have similar health burdens. However, this spatial clustering does not translate to predictive contagion.
+**Table 3. Global Moran's I with Significance Testing**
 
-### 3.4 Linear Regression Baseline
+| Variable | Moran's I | Z-score | p-value | Interpretation |
+|----------|-----------|---------|---------|----------------|
+| CHBI levels | 0.757 | 254.0 | <0.001 | Very strong positive autocorrelation |
+| Trajectory outcomes | 0.211 | 69.7 | <0.001 | Moderate clustering |
 
-Simple OLS comparison:
+Both statistics are highly significant (p<0.001), confirming strong spatial structure in health outcomes. Communities near each other have similar health burdens (I=0.76) and somewhat similar trajectory outcomes (I=0.21). However, this spatial clustering does not translate to predictive contagion—knowing neighbor *levels* does not help predict focal *changes*.
+
+### 3.4 Linear Regression Baseline and R² Reconciliation
+
+Simple OLS regression predicting continuous CHBI change:
 - Without spatial features: R² = 0.065
 - With spatial features (lagged): R² = 0.093
 - Improvement: 43.3% relative, but only 0.028 absolute
 
-Spatial features provide modest explanatory power for contemporaneous variation but minimal predictive value for future trajectories.
+This raises an apparent contradiction: if spatial features improve R² by 43%, why don't they improve classification? The resolution lies in the distinction between explaining variance and crossing classification thresholds:
+
+1. **Both R² values are very low** (<0.10). Even with spatial features, we explain only 9% of variance in CHBI change.
+2. **Classification requires crossing thresholds** (±0.3 SD). Small improvements in predicted values rarely move predictions across these boundaries.
+3. **Spatial features help explain variance but not enough to change class assignments.** Classification accuracy improves only 3.4 percentage points (34.5% → 37.9%).
+
+The signal is real but too weak to be actionable: spatial features capture genuine spatial synchrony in continuous outcomes, but this synchrony is not strong enough to predict discrete trajectory categories.
 
 ---
 
@@ -147,7 +158,11 @@ Spatial features provide modest explanatory power for contemporaneous variation 
 
 ### 4.1 Principal Findings
 
-Our central finding is methodological: the apparent "spatial contagion" in community health trajectories was an artifact of temporal data leakage. When neighbor trajectory features were computed contemporaneously with the outcome period (year T-1 to T), they appeared 16.7 times more predictive than a community's own historical trend. After correcting to properly lagged features (year T-2 to T-1), this advantage vanished entirely.
+Our central finding is methodological: the apparent "spatial contagion" in community health trajectories was an artifact of temporal data leakage.
+
+**A note on baseline model performance:** Even with the full feature set, our best model achieves only F1=0.26 and balanced accuracy=0.33—essentially chance performance for a 3-class problem. This means that **no features we examined—spatial or otherwise—enable meaningful prediction of trajectory class**. The negative finding about spatial features is thus "they don't help a model that already cannot predict." This may reflect fundamental unpredictability of health trajectories at this temporal resolution, inadequate feature engineering, or inherent noise in the CDC PLACES estimates. Future work should explore whether longer lag periods, different outcome definitions, or richer data sources improve baseline predictability before re-examining spatial effects.
+
+When neighbor trajectory features were computed contemporaneously with the outcome period (year T-1 to T), they appeared 16.7 times more predictive than a community's own historical trend. After correcting to properly lagged features (year T-2 to T-1), this advantage vanished entirely.
 
 This represents **spatial synchrony**, not spatial contagion. Communities near each other experience health changes at the same time—likely due to shared exposures, economic shocks, policy changes, or healthcare system factors—but prior neighbor trajectories do not predict future focal trajectories.
 
@@ -164,6 +179,22 @@ The distinction between synchrony and contagion has critical policy implications
 - Apparent spatial patterns reflect shared causes, not causal spillovers
 - Targeting clusters may help efficiency but not due to propagation effects
 - Interventions must address root causes, not rely on geographic diffusion
+
+---
+
+**BOX 1: KEY MESSAGES FOR POLICY AND PRACTICE**
+
+1. **No evidence of geographic "spillover" effects.** Health improvements in one community do not appear to spread to neighbors. Do not design interventions expecting diffusion.
+
+2. **Communities change together due to shared causes.** Regional patterns reflect common exposures (labor markets, healthcare systems, policy) not causal contagion.
+
+3. **Target root causes, not geography.** Effective interventions must address the shared factors driving regional patterns, not assume geographic proximity enables diffusion.
+
+4. **Prediction of trajectories remains difficult.** Current data and methods cannot reliably predict which communities will improve or decline. "Early warning systems" based on these models would generate mostly false alarms.
+
+5. **Methodological caution for researchers.** Spatial features must use only pre-outcome data. Temporal leakage can create dramatic but spurious findings.
+
+---
 
 ### 4.3 Implications for Spatial Health Research
 
@@ -193,15 +224,19 @@ These reflect **common causes**, not causal diffusion between communities.
 
 Several limitations warrant acknowledgment:
 
-1. **CDC PLACES provides modeled estimates**, not direct measurements. Spatial smoothing in the MRP methodology may contribute to apparent spatial patterns.
+1. **CDC PLACES provides modeled estimates**, not direct measurements. Spatial smoothing in the MRP methodology may contribute to apparent spatial patterns—the observed Moran's I of 0.76 may partially reflect estimation methodology rather than true spatial clustering.
 
-2. **The COVID-19 pandemic** (2020-2024 study period) created unprecedented correlated health shocks that may not reflect normal spatial dynamics.
+2. **The COVID-19 pandemic** (2020-2024 study period) created unprecedented correlated health shocks that may not reflect normal spatial dynamics. The "spatial synchrony" finding may partly reflect pandemic simultaneity. Year-stratified analysis would help assess robustness.
 
-3. **Census tracts are arbitrary boundaries**. The Modifiable Areal Unit Problem (MAUP) means findings may differ at other scales.
+3. **Census tracts are arbitrary boundaries**. The Modifiable Areal Unit Problem (MAUP) means findings may differ at other scales. Future work should test whether patterns hold at block group or county levels.
 
-4. **We did not conduct equity analysis** by neighborhood racial composition, which is essential for policy application.
+4. **Spatial weights specification was not sensitivity-tested.** We used Queen contiguity exclusively (mean 6.2 neighbors). Alternative specifications—Rook contiguity, k-nearest neighbors, distance bands—might yield different results. Full sensitivity analysis requires tract centroid coordinates, which were not available for this analysis.
 
-5. **Our lagged specification (T-2 to T-1)** may not capture slower spatial processes. However, extending the lag further would reduce sample size and statistical power.
+5. **We did not conduct equity analysis** by neighborhood racial composition, which is essential for policy application. Future work should examine: (a) whether model performance differs by neighborhood racial/ethnic composition, (b) whether predicted decline rates are disproportionately concentrated in marginalized communities, and (c) whether spatial synchrony patterns differ by community demographics. This is a critical gap for responsible policy translation.
+
+6. **Our lagged specification (T-2 to T-1)** may not capture slower spatial processes. However, extending the lag further would reduce sample size and statistical power.
+
+7. **Baseline model performance is poor** (F1=0.26, balanced accuracy=0.33). The negative finding about spatial features is situated within a context where no features predict well. This limits our ability to conclude definitively that spatial information has no value—only that it has no value within our current modeling framework.
 
 ### 4.6 Conclusions
 
@@ -231,7 +266,7 @@ This finding underscores the critical importance of methodological rigor in spat
 
 ## DATA AND CODE AVAILABILITY
 
-All data are from publicly available CDC PLACES releases. Code for data processing, feature engineering, model training, and the methodological correction analysis is available at: https://github.com/[repository]
+All data are from publicly available CDC PLACES releases. Code for data processing, feature engineering, model training, and the methodological correction analysis is available at: https://github.com/cschuman/resilience-mapping
 
 ---
 
@@ -254,12 +289,14 @@ We thank the anonymous peer reviewers whose rigorous critique identified the tem
 | **Lagged** | **No Spatial** | **0.261** | **0.334** | **0.003** |
 | **Lagged** | **Spatial Only** | **0.259** | **0.333** | **0.000** |
 
-### Table S2. Global Moran's I Results
+### Table S2. Global Moran's I Results with Significance Testing
 
-| Variable | Moran's I | Interpretation |
-|----------|-----------|----------------|
-| CHBI (levels) | 0.757 | Very strong spatial autocorrelation |
-| Trajectory outcome | 0.211 | Moderate spatial clustering |
+| Variable | Moran's I | Z-score | p-value | Interpretation |
+|----------|-----------|---------|---------|----------------|
+| CHBI (levels) | 0.757 | 254.0 | <0.001 | Very strong spatial autocorrelation |
+| Trajectory outcome | 0.211 | 69.7 | <0.001 | Moderate spatial clustering |
+
+Note: P-values computed via permutation inference (999 permutations). Both are highly significant, confirming non-random spatial structure.
 
 ### Table S3. Top 15 Features by Permutation Importance (Properly Lagged)
 
