@@ -495,7 +495,7 @@ def main():
         logger.info(f"Output directory: {directory}")
 
     # Load data (use rich feature set)
-    data_path = PROCESSED_DATA_DIR / "prediction_dataset_rich.csv"
+    data_path = PROCESSED_DATA_DIR / "prediction_dataset_spatial.csv"
     df = load_prediction_dataset(data_path, logger)
 
     # Prepare features and targets

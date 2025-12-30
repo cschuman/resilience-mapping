@@ -35,6 +35,9 @@ models/
 results/
 figures/
 data/processed/prediction_dataset_rich.csv
+data/processed/prediction_dataset_spatial.csv
+data/processed/tract_predictions.csv
+data/processed/tract_neighbors.json
 
 # OS
 .DS_Store
