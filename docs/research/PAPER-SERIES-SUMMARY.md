@@ -20,32 +20,34 @@ A series of 4 papers derived from the CDC PLACES-based Community Health Trajecto
 
 ---
 
-## Paper 2: The Unpredictability of Community Health Trajectories 📊 ANALYSIS COMPLETE
+## Paper 2: Regression to the Mean in Small-Area Health Estimates ✅ PEER REVIEWED
 
-**Title:** "Mean Reversion, Not Momentum: Why Community Health Trajectories Resist Prediction"
+**Title:** "Regression to the Mean in Small-Area Health Estimates: Why CDC PLACES-Based Trajectory Prediction Fails"
 
-**Status:** Scope complete, initial analysis complete
+**Status:** Peer-reviewed and accepted (3 rounds, 4/4 reviewers Accept)
+
+**Target Journal:** American Journal of Epidemiology
 
 **Files:**
 - `docs/research/PAPER-2-UNPREDICTABILITY-SCOPE.md`
-- `app/analytics/trajectory_prediction/unpredictability_analysis.py`
+- `app/analytics/trajectory_prediction/unpredictability_analysis_v2.py`
 
-**Key Findings (from initial analysis):**
-1. **Strong mean reversion** (r = -0.40 to -0.58 between adjacent year changes)
-2. **Levels are 99.7% persistent** - healthy tracts stay healthy
-3. **Changes exhibit mean reversion** - improvements followed by declines
-4. **Geography explains 28% of variance** in change magnitude
-5. **Classification is inherently unstable** due to mean reversion
+**Key Findings (validated through peer review):**
+1. **Quintile gradient diagnostic of RTM**: Q1 r=-0.05 → Q5 r=-0.61 (12x stronger for extreme changes)
+2. **Variance gradient confirms RTM**: Q1 var=0.020 → Q5 var=0.041 (doubles with extremity)
+3. **Levels are 99.7% persistent** - healthy tracts stay healthy
+4. **Classification is inherently unstable** - training on extreme changes = training on noise
+5. **Geography explains 28% of variance** in change magnitude
 
-**Primary Insight:** The F1=0.26 performance reflects mean reversion dynamics, not noise. Communities oscillate around stable equilibria rather than following persistent trajectories.
+**Primary Insight:** The F1=0.26 performance is caused by regression to the mean, not health dynamics. The quintile gradient (12x stronger reversion for extreme vs. moderate changes) is the diagnostic signature of RTM - true biological mean reversion would show uniform reversion regardless of magnitude.
 
 **Policy Implications:**
-- Don't label communities as "improving" or "declining"
-- Focus on current burden levels (stable, actionable)
-- Use multi-year averages for trend assessment
-- Target high-burden tracts, not "declining" ones
+- Avoid annual trajectory-based resource allocation (classify noise as signal)
+- Use 3-5 year rolling averages for trend assessment
+- Prioritize current burden levels over trajectory classifications
+- Invest in reducing measurement error before building prediction systems
 
-**Next Steps:** Write full paper manuscript (~5,000 words)
+**Next Steps:** Write full manuscript for journal submission
 
 ---
 
@@ -136,9 +138,9 @@ Paper 4 (Equity)
    - Ready for submission
    - Methodological correction, high value
 
-2. **Paper 2** (Unpredictability) → Epidemiology / Milbank Quarterly
-   - Needs manuscript writing
-   - Novel finding (mean reversion), high policy value
+2. **Paper 2** (RTM in Small-Area Estimates) → American Journal of Epidemiology
+   - Ready for submission (passed 3 rounds peer review)
+   - Novel finding: quintile gradient diagnostic of RTM
 
 3. **Paper 3** (CHBI Validation) → Health Services Research / Medical Care
    - Needs external data + expert survey
@@ -155,7 +157,7 @@ Paper 4 (Equity)
 | Paper | Analysis Script | Status |
 |-------|-----------------|--------|
 | Paper 1 | `peer_review_fixes.py`, `round2_fixes.py` | Complete |
-| Paper 2 | `unpredictability_analysis.py` | Complete |
+| Paper 2 | `unpredictability_analysis_v2.py` | Complete (peer-reviewed) |
 | Paper 3 | Not yet created | Needed |
 | Paper 4 | Not yet created | Needed |
 
@@ -166,7 +168,7 @@ Paper 4 (Equity)
 | Paper | Analysis | Writing | Review | Total |
 |-------|----------|---------|--------|-------|
 | Paper 1 | Complete | Complete | Complete | **Ready** |
-| Paper 2 | Complete | 1 week | 1 week | **2-3 weeks** |
+| Paper 2 | Complete | Complete | Complete | **Ready** |
 | Paper 3 | 1 week | 1 week | 1 week | **3-4 weeks** |
 | Paper 4 | 1 week | 1 week | 1 week | **3-4 weeks** |
 
