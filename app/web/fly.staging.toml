@@ -1,0 +1,38 @@
+# fly.staging.toml - Resilience Mapping Platform (Staging)
+
+app = 'resilience-mapping-staging'
+primary_region = 'ord'
+
+[build]
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0  # Can stop when not in use
+  processes = ['app']
+
+  [http_service.concurrency]
+    type = "requests"
+    hard_limit = 100
+    soft_limit = 80
+
+  [[http_service.checks]]
+    interval = "30s"  # Less frequent for staging
+    timeout = "5s"
+    grace_period = "10s"
+    method = "GET"
+    path = "/health"
+
+[[vm]]
+  memory = '512mb'  # Smaller for staging
+  cpu_kind = 'shared'
+  cpus = 1
+
+[processes]
+  app = "node build"
+
+[experimental]
+  kill_signal = "SIGTERM"
+  kill_timeout = "30s"
