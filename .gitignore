@@ -30,6 +30,12 @@ data/interim/places_*.csv
 !data/processed/tract_trajectories.csv
 !data/processed/prediction_dataset.csv
 
+# ML model outputs (regenerate with train_models.py)
+models/
+results/
+figures/
+data/processed/prediction_dataset_rich.csv
+
 # OS
 .DS_Store
 Thumbs.db
