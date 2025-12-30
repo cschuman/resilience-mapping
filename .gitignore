@@ -34,3 +34,6 @@ Thumbs.db
 # Build artifacts
 *.exe
 app/backend/resilience
+
+# Local Netlify folder
+.netlify
