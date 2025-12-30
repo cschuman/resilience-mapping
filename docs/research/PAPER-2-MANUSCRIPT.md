@@ -14,11 +14,11 @@
 
 **Background:** Predicting community health trajectories could enable proactive resource allocation to communities expected to decline. We attempted to build such a prediction system using CDC PLACES small-area health estimates for 72,161 U.S. census tracts across five years (2020-2024). Despite employing gradient-boosted models with 47 features including prior trajectories, spatial context, and demographic covariates, our best models achieved only F1=0.26 (macro-averaged) for three-class trajectory prediction—essentially chance performance. This study investigates why.
 
-**Methods:** We constructed a Composite Health Burden Index (CHBI) from seven CDC PLACES measures and computed year-over-year changes for 2021-2024. We analyzed the autocorrelation structure of changes, decomposed variance by geographic and temporal components, and conducted diagnostic tests to distinguish regression to the mean from true mean-reverting dynamics.
+**Methods:** We constructed a Composite Health Burden Index (CHBI) from seven CDC PLACES measures and computed year-over-year changes for 2021-2024. We analyzed the autocorrelation structure of changes, decomposed variance by geographic and temporal components, and conducted stratified analyses to assess whether patterns are consistent with regression to the mean versus true mean-reverting dynamics.
 
-**Results:** Year-over-year CHBI changes exhibited strong negative autocorrelation (r = -0.40 to -0.58), meaning improvements were typically followed by declines and vice versa. However, this pattern showed a diagnostic gradient across prior change magnitude: near-zero correlation (r = -0.05) for small prior changes versus strong negative correlation (r = -0.61) for extreme prior changes—a 12-fold difference. This gradient is the signature of regression to the mean, not true health dynamics. CHBI levels remained highly stable (R² = 99.7%), indicating that health status itself is persistent while year-over-year changes reflect measurement artifact.
+**Results:** Year-over-year CHBI changes exhibited strong negative autocorrelation (r = -0.22 to -0.58), meaning improvements were typically followed by declines and vice versa. Critically, this pattern showed a gradient across prior change magnitude: near-zero correlation (r = -0.05) for small prior changes versus strong negative correlation (r = -0.61) for extreme prior changes. In variance-explained terms, prior change magnitude explained only 0.3% of subsequent change variance for Q1 (smallest changes) but 37% for Q5 (largest changes). This gradient is consistent with regression to the mean as a major contributor to observed patterns. CHBI levels remained highly stable (R² = 99.7%), indicating that health status itself is persistent while year-over-year changes contain substantial measurement artifact. However, substantial instability between year-pairs (r = -0.58 vs. r = -0.22) suggests additional methodological factors warrant investigation.
 
-**Conclusions:** The failure of trajectory prediction stems from regression to the mean in CDC PLACES estimates, not from fundamental unpredictability of community health. Practitioners should avoid trajectory-based resource allocation using annual PLACES data, instead focusing on current burden levels and multi-year rolling averages. These findings may not generalize to better-measured data sources or longer time horizons.
+**Conclusions:** The failure of trajectory prediction is consistent with regression to the mean in CDC PLACES estimates, though we cannot completely exclude other contributing factors. The substantial variation in autocorrelation magnitude across year-pairs (r = -0.58 vs. r = -0.22) warrants caution in interpreting specific parameter estimates. Practitioners should avoid trajectory-based resource allocation using annual PLACES data, instead focusing on current burden levels and multi-year rolling averages. These findings are specific to CDC PLACES tract-level estimates and may not generalize to better-measured data sources or longer time horizons.
 
 **Keywords:** small-area estimation, regression to the mean, health disparities, CDC PLACES, trajectory prediction, measurement error
 
@@ -36,7 +36,7 @@ This counterintuitive finding demanded explanation. Poor prediction performance 
 
 Understanding which mechanism drives prediction failure has practical implications. If measurement error dominates, investment in better data collection could enable prediction. If key predictors are missing, incorporating policy and economic data might help. If dynamics are chaotic, prediction efforts should be abandoned entirely in favor of responsive monitoring systems. Different diagnoses lead to different recommendations.
 
-This paper reports a systematic investigation into why trajectory prediction fails for CDC PLACES data. We analyze the autocorrelation structure of year-over-year changes, decompose variance by geographic and temporal components, and conduct diagnostic tests to distinguish regression to the mean (a measurement artifact) from true mean-reverting dynamics (a genuine property of health systems). Our findings have implications for the growing literature on predictive analytics in population health and for practitioners considering trajectory-based resource allocation strategies.
+This paper reports a systematic investigation into why trajectory prediction fails for CDC PLACES data. We analyze the autocorrelation structure of year-over-year changes, decompose variance by geographic and temporal components, and conduct stratified analyses to assess whether patterns are consistent with regression to the mean (a measurement artifact) versus true mean-reverting dynamics (a genuine property of health systems). Our findings have implications for the growing literature on predictive analytics in population health and for practitioners considering trajectory-based resource allocation strategies.
 
 ### The Stakes of Trajectory Prediction
 
@@ -99,15 +99,17 @@ We computed these correlations separately for adjacent year-pairs (2022-2023 and
 
 ### Distinguishing Regression to the Mean from True Dynamics
 
-A critical analytical challenge is distinguishing regression to the mean (RTM)—a statistical artifact arising from measurement error—from true mean-reverting dynamics in health systems. We employed a diagnostic test based on the relationship between prior change magnitude and subsequent correlation.
+A critical analytical challenge is distinguishing regression to the mean (RTM)—a statistical artifact arising from measurement error—from true mean-reverting dynamics in health systems. We employed a stratified analysis based on the relationship between prior change magnitude and subsequent correlation.
 
-Under regression to the mean, the negative autocorrelation should be stronger for extreme prior changes, because extreme observations are more likely to reflect measurement error and thus more likely to regress toward the population mean (9). Under true mean-reverting dynamics, the correlation should be relatively uniform across all prior change magnitudes, as the reversion reflects genuine system dynamics rather than measurement artifact.
+Under regression to the mean, the negative autocorrelation should be stronger for extreme prior changes, because extreme observations are more likely to reflect measurement error and thus more likely to regress toward the population mean (9). Under true mean-reverting dynamics, the correlation might be relatively uniform across prior change magnitudes if reversion reflects genuine system dynamics. However, we note that some true mean-reverting processes could theoretically produce similar gradients if health changes have natural limits, so this test provides evidence consistent with RTM rather than definitive proof.
 
 We stratified tracts into quintiles based on the absolute magnitude of their prior year change and computed the autocorrelation separately within each quintile:
 
 $$r_q = \text{corr}(\Delta\text{CHBI}_{t-1 \to t}, \Delta\text{CHBI}_{t \to t+1}) \text{ for } q \in \{Q1, Q2, Q3, Q4, Q5\}$$
 
 where $Q1$ contains the smallest absolute prior changes and $Q5$ contains the largest. A monotonically increasing gradient from $r_{Q1} \approx 0$ to strongly negative $r_{Q5}$ would indicate RTM dominates; uniform correlations across quintiles would indicate true dynamics.
+
+We note a potential subtlety in this approach: if measurement error is heteroscedastic, then stratifying by observed change magnitude partially stratifies by error magnitude, which could contribute to the observed gradient independently of RTM. However, this concern reinforces rather than undermines our conclusions, as it suggests an additional mechanism by which extreme observed changes may be unreliable.
 
 We also examined variance in subsequent changes by quintile. Under RTM, variance should be relatively constant; under true dynamics, variance might scale with prior change magnitude if extreme changes trigger cascade effects.
 
@@ -157,11 +159,11 @@ Figure 1 shows the autocorrelation between consecutive year-over-year changes. F
 
 The substantial difference between year-pairs (z = 84.3, p < 0.001 by Fisher z-transformation test) suggests instability in the autocorrelation structure, which may reflect COVID-19 pandemic effects on the 2022-2023 transition, changes in CDC PLACES methodology between releases, or differential sample attrition across years.
 
-### The Quintile Gradient: Diagnostic Test for RTM
+### The Quintile Gradient: Testing for RTM Contributions
 
-Table 2 presents the critical diagnostic test. When stratified by prior change magnitude, the autocorrelation exhibited a strong monotonic gradient:
+Table 2 presents the stratified analysis. When stratified by prior change magnitude, the autocorrelation exhibited a strong monotonic gradient:
 
-**Table 2. Autocorrelation by Prior Change Magnitude (RTM Diagnostic Test)**
+**Table 2. Autocorrelation by Prior Change Magnitude (Stratified RTM Analysis)**
 
 | Prior Change Quintile | Correlation (r) | 95% Bootstrap CI | Variance of Next Change |
 |-----------------------|-----------------|------------------|------------------------|
@@ -171,11 +173,11 @@ Table 2 presents the critical diagnostic test. When stratified by prior change m
 | Q4 | -0.421 | -0.443, -0.399 | 0.0318 |
 | Q5 (largest changes) | -0.614 | -0.632, -0.596 | 0.0405 |
 
-The correlation increased 12-fold in magnitude from Q1 (r = -0.05) to Q5 (r = -0.61). Confidence intervals were non-overlapping between adjacent quintiles, indicating statistically significant differences. Notably, for Q1 (smallest prior changes), the correlation was near zero, indicating essentially no mean reversion among tracts with stable prior trajectories.
+In variance-explained terms, prior change magnitude explained only 0.3% of subsequent change variance for Q1 (r² = 0.002) but 37% for Q5 (r² = 0.37)—a substantial gradient. Confidence intervals were non-overlapping between adjacent quintiles, indicating statistically significant differences. Notably, for Q1 (smallest prior changes), the correlation was near zero, indicating essentially no mean reversion among tracts with stable prior trajectories.
 
-This gradient is diagnostic of regression to the mean. Under true mean-reverting dynamics, we would expect similar correlations across quintiles—the reversion would reflect genuine health system dynamics affecting all tracts similarly. The observed pattern, where only extreme prior changes show strong negative autocorrelation, indicates that extreme changes are more likely to reflect measurement error than true health changes.
+This gradient is consistent with regression to the mean as a major contributor, though we note that true mean-reverting dynamics cannot be completely excluded. Under pure measurement error, we would expect extreme observations to regress toward the population mean while small changes remain stable—precisely what we observe. However, genuine health system dynamics (e.g., communities reaching carrying capacity for improvement or decline) could theoretically produce similar patterns. The gradient alone cannot definitively distinguish these mechanisms.
 
-Variance in subsequent changes also increased with prior change magnitude (Table 2, final column), from 0.020 for Q1 to 0.041 for Q5—approximately doubling. This pattern is consistent with RTM, where extreme observations return toward the mean with additional random variation.
+Variance in subsequent changes also increased with prior change magnitude (Table 2, final column), from 0.020 for Q1 to 0.041 for Q5—approximately doubling. This increasing variance is not predicted by a pure RTM model (which would predict constant variance) and suggests additional stochastic processes beyond simple measurement error regression. Possible explanations include heteroscedastic measurement error (larger changes having proportionally larger uncertainty) or genuine heterogeneity in community health dynamics.
 
 ### Level Persistence
 
@@ -198,7 +200,7 @@ Table 3 presents the variance decomposition of CHBI changes:
 | Residual (unexplained) | 0.0211 | 71.0% |
 | **Total** | **0.0297** | **100%** |
 
-Geographic factors (persistent tract-level differences in volatility) explained 28% of variance in changes. Year-specific effects explained less than 1%, indicating no strong secular trends across the study period. The majority of variance (71%) remained unexplained, consistent with measurement error dominating observed changes.
+Geographic factors (persistent tract-level differences in volatility) explained 28% of variance in changes. Year-specific effects explained less than 1%, indicating no strong secular trends across the study period. The majority of variance (71%) remained unexplained. This residual variance conflates measurement error with true idiosyncratic health changes that vary unpredictably across tracts and years; the decomposition cannot distinguish between these components. However, the large residual fraction is consistent with substantial measurement error contribution, even if it cannot quantify that contribution precisely.
 
 ### Biological Plausibility Assessment
 
@@ -226,17 +228,27 @@ Autocorrelations were similar in both samples (r = -0.56 vs. r = -0.58 for 2022-
 
 ### Principal Findings
 
-Our attempt to predict community health trajectories using CDC PLACES small-area estimates failed, with models achieving only chance-level performance (F1=0.26). Investigation revealed that this failure stems from regression to the mean in PLACES estimates, not from fundamental unpredictability of community health.
+Our attempt to predict community health trajectories using CDC PLACES small-area estimates failed, with models achieving only chance-level performance (F1=0.26). Investigation revealed that this failure is consistent with regression to the mean in PLACES estimates, though we cannot entirely exclude contributions from genuine mean-reverting health dynamics.
 
-The diagnostic quintile gradient—showing 12-fold stronger negative autocorrelation for extreme prior changes compared to small prior changes—provides strong evidence that RTM dominates observed patterns. This gradient is a signature of measurement artifact: extreme observations are statistically more likely to reflect error and thus more likely to regress toward the population mean. True mean-reverting health dynamics would produce uniform correlations regardless of prior change magnitude.
+The quintile gradient—showing that prior change magnitude explains 37% of subsequent change variance for Q5 (extreme changes) versus only 0.3% for Q1 (small changes)—provides evidence consistent with RTM as a major contributor. Under measurement error, extreme observations are statistically more likely to reflect error and thus more likely to regress toward the population mean. However, we acknowledge that some true mean-reverting dynamics could theoretically produce similar patterns if health changes have natural limits or trigger compensatory responses.
 
 The practical implication is clear: year-over-year changes in CDC PLACES estimates contain substantial measurement error that makes trajectory prediction unreliable. The F1=0.26 performance is not a failure of our modeling approach but rather reflects fundamental limitations in the data—there is insufficient true signal in annual changes to support prediction.
+
+### Year-Pair Instability: An Unresolved Question
+
+A striking finding that warrants prominent discussion is the substantial instability in autocorrelation between year-pairs: r = -0.58 for the 2022-2023 transition versus r = -0.22 for 2023-2024. This nearly threefold difference (z = 84.3, p < 0.001) exceeds what sampling variation alone would predict and suggests systematic differences between periods.
+
+Several explanations are possible but cannot be distinguished with available data: (1) COVID-19 pandemic effects may have created unusual health dynamics in 2022-2023 that did not persist; (2) CDC PLACES methodology changes between releases may have introduced artifacts; (3) differential sample attrition (24% of tracts dropped between 2022-2024) may have selectively removed volatile tracts. Each explanation has implications for interpretation.
+
+If the stronger autocorrelation (r = -0.58) reflects pandemic-era artifacts, then the weaker correlation (r = -0.22) may better represent typical RTM magnitude. Conversely, if methodology changes generated the difference, both estimates are potentially biased. This instability itself argues for caution: if the fundamental autocorrelation structure varies substantially across short time periods, trajectory-based inference becomes even less reliable.
+
+Future research should investigate this instability through simulation studies comparing CDC PLACES releases, validation against directly-measured health outcomes during the same periods, and formal tests for structural breaks in the autocorrelation time series. Until this instability is understood, our conclusions about RTM magnitude should be interpreted with appropriate uncertainty.
 
 ### Implications for Practice
 
 These findings have direct implications for public health practitioners considering trajectory-based resource allocation:
 
-**Avoid trajectory labels.** Classifying tracts as "improving" or "declining" based on single-year PLACES changes is unreliable. Our analysis suggests approximately 40% of tracts would change classification from year to year due to measurement artifact alone. Such labels should be removed from Community Health Improvement Plans and public dashboards.
+**Avoid trajectory labels.** Classifying tracts as "improving" or "declining" based on single-year PLACES changes is unreliable. The strong negative autocorrelation (r = -0.22 to -0.58) means that a tract classified as "improving" in one year is more likely to be classified as "declining" the next than to remain "improving"—a pattern inconsistent with stable underlying trajectories. Such labels should be removed from Community Health Improvement Plans and public dashboards.
 
 **Focus on levels, not changes.** CHBI levels are 99.7% persistent and highly reliable. High-burden tracts remain high-burden; this is actionable information. Rather than predicting which tracts will decline, practitioners should prioritize tracts with persistently high burden.
 
@@ -272,6 +284,8 @@ The framing of our findings requires careful attention to equity implications. W
 
 Indeed, our findings strengthen the case for persistent investment in high-burden communities. If health improvements are difficult to achieve (as the stable levels suggest), then interventions must be sustained over years, not withdrawn after single-year fluctuations. The finding that apparent "improvements" often reflect measurement noise rather than true progress counsels against reducing investment based on single-year data.
 
+**Differential measurement error.** An important equity concern is whether measurement error varies systematically across community types. CDC PLACES estimates rely on BRFSS survey responses, and survey nonresponse and social desirability bias may differ by community characteristics. If measurement error is larger in historically marginalized communities—due to lower survey participation, language barriers, or mistrust of government data collection—then RTM effects could be more pronounced in these communities. This would mean that apparent "improvements" in high-burden, predominantly minority communities are even more likely to reflect noise rather than genuine progress. We note that this concern is currently speculative; empirical investigation of differential measurement error across community types is an important direction for future research. In the interim, practitioners should be particularly cautious about interpreting single-year improvements in communities with characteristics associated with lower survey quality.
+
 Practitioners should frame community health data using asset-based language that emphasizes structural causes and potential for change, rather than deficit framing that stigmatizes communities. High burden reflects barriers to health, not community deficits. Persistent burden reflects inadequate investment, not intractable problems.
 
 ### Alternative Approaches to Community Health Assessment
@@ -290,7 +304,7 @@ Our findings suggest several alternative approaches that may be more productive 
 
 For researchers developing predictive models using small-area health estimates, our findings suggest several methodological recommendations:
 
-1. **Conduct RTM diagnostic tests.** Before interpreting negative autocorrelation as mean reversion, stratify by prior change magnitude. If correlation scales with extremity, RTM is likely dominant.
+1. **Conduct stratified RTM analysis.** Before interpreting negative autocorrelation as mean reversion, stratify by prior change magnitude. If correlation scales with extremity, RTM is likely a major contributor, though true mean-reverting dynamics cannot be entirely excluded.
 
 2. **Report confidence intervals for predictions.** Given measurement uncertainty, point predictions without uncertainty quantification may convey false precision.
 
@@ -304,7 +318,7 @@ For researchers developing predictive models using small-area health estimates, 
 
 ## Conclusions
 
-The failure of CDC PLACES-based trajectory prediction (F1=0.26) reflects regression to the mean in small-area health estimates, not fundamental unpredictability of community health. The diagnostic signature of RTM—a 12-fold gradient in autocorrelation from small to extreme prior changes—indicates that measurement error, not health dynamics, drives observed patterns.
+The failure of CDC PLACES-based trajectory prediction (F1=0.26) is consistent with regression to the mean in small-area health estimates. The quintile gradient—where prior change magnitude explains 37% of subsequent change variance for extreme changes but only 0.3% for small changes—suggests that measurement error contributes substantially to observed patterns, though we cannot entirely exclude genuine mean-reverting health dynamics.
 
 Our investigation ruled out several alternative explanations. The pattern is not driven by sample attrition (correlations were similar in the consistent sample), not explained by geographic heterogeneity (the gradient appears within regions), and not consistent with biological disease dynamics (chronic disease prevalence does not oscillate at observed magnitudes). The quintile gradient provides strong evidence that extreme year-over-year changes in PLACES data predominantly reflect measurement noise rather than genuine community health changes.
 
@@ -318,7 +332,7 @@ Practitioners should avoid trajectory-based resource allocation using annual PLA
 
 4. Target communities with persistently high burden (three or more years above threshold) rather than those predicted to decline.
 
-5. Build responsive monitoring systems rather than predictive early warning systems, accepting that trajectories cannot be reliably forecast.
+5. Build responsive monitoring systems rather than predictive early warning systems. Specifically: implement quarterly reviews of three-year rolling average CHBI; flag communities crossing the 75th percentile threshold for enhanced attention; update dashboards to show confidence intervals; and establish protocols for rapid community health needs assessment when rolling averages show sustained deterioration over 2+ years.
 
 These findings redirect attention from prediction to monitoring, from trajectory classification to level assessment, and from single-year signals to multi-year patterns. For small-area health data, simplicity and reliability trump complexity and false precision.
 
@@ -396,8 +410,8 @@ CDC PLACES data are publicly available at https://www.cdc.gov/places/. Analysis 
 
 ### Supplementary Figure S1. Quintile Gradient in Autocorrelation
 
-[Description: Line plot showing correlation coefficient (y-axis, ranging from 0 to -0.7) versus prior change magnitude quintile (x-axis, Q1 to Q5). Line shows monotonic decrease from near 0 at Q1 to approximately -0.61 at Q5. Error bars show 95% bootstrap confidence intervals. Caption: The gradient demonstrates the signature of regression to the mean: only extreme prior changes show strong negative autocorrelation.]
+[Description: Line plot showing correlation coefficient (y-axis, ranging from 0 to -0.7) versus prior change magnitude quintile (x-axis, Q1 to Q5). Line shows monotonic decrease from near 0 at Q1 to approximately -0.61 at Q5. Error bars show 95% bootstrap confidence intervals. Caption: The gradient is consistent with regression to the mean as a major contributor: only extreme prior changes show strong negative autocorrelation, though true mean-reverting dynamics cannot be entirely excluded.]
 
 ### Supplementary Figure S2. Variance by Prior Change Quintile
 
-[Description: Bar chart showing variance of subsequent change (y-axis, 0.015 to 0.045) by prior change quintile (x-axis, Q1 to Q5). Bars increase monotonically from Q1 (0.020) to Q5 (0.041). Caption: Variance approximately doubles from smallest to largest prior changes, consistent with regression to the mean where extreme observations return toward the mean with additional random variation.]
+[Description: Bar chart showing variance of subsequent change (y-axis, 0.015 to 0.045) by prior change quintile (x-axis, Q1 to Q5). Bars increase monotonically from Q1 (0.020) to Q5 (0.041). Caption: Variance approximately doubles from smallest to largest prior changes. This increasing variance is not predicted by a pure RTM model (which would predict constant variance) and suggests additional stochastic processes beyond simple measurement error regression.]
