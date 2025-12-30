@@ -22,6 +22,14 @@ data/raw/crosswalks/*.txt
 !data/processed/2020_boundaries/README.md
 !data/processed/2020_boundaries/*.sha256
 
+# CDC PLACES trajectory data (2.5GB+ raw, download via script)
+data/raw/places_tract_*.csv
+data/interim/places_*.csv
+
+# Keep processed analysis outputs (smaller)
+!data/processed/tract_trajectories.csv
+!data/processed/prediction_dataset.csv
+
 # OS
 .DS_Store
 Thumbs.db
