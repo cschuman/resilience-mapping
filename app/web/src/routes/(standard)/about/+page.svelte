@@ -25,6 +25,17 @@
 			</p>
 		</header>
 
+		<!-- Quick Links -->
+		<nav class="quick-links" aria-label="Quick navigation">
+			<a href="#research">Research Question</a>
+			<a href="#data-sources">Data Sources</a>
+			<a href="#methodology">Methodology</a>
+			<a href="#limitations">Limitations</a>
+			<a href="#appropriate-use">Appropriate Uses</a>
+			<a href="#api">API Access</a>
+			<a href="#citation">Citation</a>
+		</nav>
+
 		<!-- Stats Overview -->
 		<section class="stats" aria-labelledby="stats-heading">
 			<h2 id="stats-heading" class="sr-only">Dataset Statistics</h2>
@@ -120,16 +131,20 @@
 				</div>
 				<ul>
 					<li>
-						<strong>CDC PLACES 2024</strong> &mdash; Census tract-level health outcomes (BRFSS 2022)
+						<a href="https://www.cdc.gov/places/" target="_blank" rel="noopener"><strong>CDC PLACES 2024</strong></a> &mdash; Census tract-level health outcomes (BRFSS 2022)
 						including obesity, diabetes, hypertension, heart disease, and physical inactivity.
 						Kentucky and Pennsylvania use PLACES 2023 data (BRFSS 2021) as a fallback.
 					</li>
 					<li>
-						<strong>USDA Food Access Research Atlas 2019</strong> &mdash; Low-income, low-access
+						<a href="https://www.ers.usda.gov/data-products/food-access-research-atlas/" target="_blank" rel="noopener"><strong>USDA Food Access Research Atlas 2019</strong></a> &mdash; Low-income, low-access
 						(LILA) classification identifying food deserts (crosswalked to 2020 boundaries)
 					</li>
 					<li>
-						<strong>Census Bureau 2020</strong> &mdash; Population data and tract boundary relationship
+						<a href="https://www.census.gov/programs-surveys/acs" target="_blank" rel="noopener"><strong>Census Bureau ACS 5-Year Estimates</strong></a> &mdash; Socioeconomic indicators
+						including poverty, education, and insurance coverage
+					</li>
+					<li>
+						<a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html" target="_blank" rel="noopener"><strong>Census Bureau 2020</strong></a> &mdash; Population data and tract boundary relationship
 						files for geographic crosswalking
 					</li>
 				</ul>
@@ -179,9 +194,10 @@
 				<p>
 					Tracts where more than 10% of the population lives in group quarters (college dorms,
 					military barracks, correctional facilities, nursing homes) are <strong>excluded</strong> from
-					the analysis. These populations have health outcomes driven by institutional factors rather
-					than community characteristics. This filter removed approximately 14,000 tracts from the
-					original ~78,000, leaving 64,419 tracts in the final dataset.
+					the main analysis. These populations have health outcomes driven by institutional factors rather
+					than community characteristics, leaving {data.stats.totalTracts.toLocaleString()} residential tracts
+					in the final dataset. For research on these special populations, see our
+					<a href="/research/special-populations">Special Populations Analysis</a>.
 				</p>
 			</Accordion>
 
@@ -229,10 +245,10 @@
 					<div class="use-card use-card--appropriate">
 						<h4>Appropriate</h4>
 						<ul>
-							<li>Exploratory research into community health patterns</li>
+							<li><a href="/research">Exploratory research</a> into community health patterns</li>
 							<li>Identifying communities for qualitative follow-up research</li>
-							<li>Asset-based community development planning</li>
-							<li>Understanding geographic variation in health outcomes</li>
+							<li><a href="/for-policy">Asset-based community development planning</a></li>
+							<li><a href="/map">Understanding geographic variation</a> in health outcomes</li>
 							<li>Educational purposes and data literacy</li>
 						</ul>
 					</div>
@@ -247,12 +263,17 @@
 						</ul>
 					</div>
 				</div>
+				<p class="use-audience-links">
+					See detailed guidance for <a href="/for-researchers">researchers</a>,
+					<a href="/for-journalists">journalists</a>, and
+					<a href="/for-policy">policy analysts</a>.
+				</p>
 			</Accordion>
 
 			<Accordion id="api" title="API Access" defaultOpen>
 				<div class="eli5">
-					Access the data programmatically through these endpoints, or
-					<a href="/api/tracts?format=csv" download>download the full dataset as CSV</a>.
+					Access the data programmatically through these endpoints, or visit the
+					<a href="/data">Data page</a> to browse and download the full dataset.
 				</div>
 				<div class="api">
 					<div class="api__endpoint">
@@ -339,6 +360,34 @@
 		color: var(--color-text-secondary);
 		max-width: 480px;
 		margin: 0 auto;
+	}
+
+	/* Quick Links */
+	.quick-links {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: var(--space-2) var(--space-4);
+		margin-bottom: var(--space-10);
+		padding: var(--space-4);
+		background: var(--color-foundation-mid);
+		border-radius: var(--radius-xl);
+		border: 1px solid var(--color-border-subtle);
+	}
+
+	.quick-links a {
+		font-size: var(--text-sm);
+		font-weight: var(--font-weight-medium);
+		color: var(--color-text-secondary);
+		text-decoration: none;
+		padding: var(--space-1) var(--space-2);
+		border-radius: var(--radius-md);
+		transition: all var(--duration-fast) var(--ease-out);
+	}
+
+	.quick-links a:hover {
+		color: var(--color-accent-primary);
+		background: var(--color-accent-primary-glow);
 	}
 
 	/* Stats */
@@ -543,6 +592,18 @@
 		margin-top: 0;
 	}
 
+	/* Links in lists */
+	:global(.about ul a),
+	:global(.about p a) {
+		color: var(--color-accent-primary);
+		text-decoration: none;
+	}
+
+	:global(.about ul a:hover),
+	:global(.about p a:hover) {
+		text-decoration: underline;
+	}
+
 	:global(.about h4) {
 		font-family: var(--font-body);
 		font-size: var(--text-sm);
@@ -584,6 +645,30 @@
 	.use-card li {
 		font-size: var(--text-sm);
 		margin-bottom: var(--space-1);
+	}
+
+	.use-card li a {
+		color: var(--color-accent-primary);
+		text-decoration: none;
+	}
+
+	.use-card li a:hover {
+		text-decoration: underline;
+	}
+
+	.use-audience-links {
+		margin-top: var(--space-4);
+		font-size: var(--text-sm);
+		color: var(--color-text-secondary);
+	}
+
+	.use-audience-links a {
+		color: var(--color-accent-primary);
+		text-decoration: none;
+	}
+
+	.use-audience-links a:hover {
+		text-decoration: underline;
 	}
 
 	/* API Endpoints */

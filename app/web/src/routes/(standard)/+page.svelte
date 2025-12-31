@@ -25,10 +25,10 @@
 </script>
 
 <svelte:head>
-	<title>Community Resilience Mapping</title>
+	<title>Where You Live Explains 28% of Your Health | odds.health</title>
 	<meta
 		name="description"
-		content="Discover which communities demonstrate better health outcomes than predicted. Explore 64,000+ census tracts with interactive maps and data."
+		content="Geography explains more health variance than income or education. Explore 54,000+ census tracts to find communities that defy prediction."
 	/>
 </svelte:head>
 
@@ -36,15 +36,15 @@
 	<!-- Hero Section -->
 	<section class="hero">
 		<div class="hero__content">
-			<p class="hero__eyebrow">Free Open Data for Research</p>
+			<p class="hero__eyebrow">Research Finding</p>
 			<h1 class="hero__title">
-				What Can <em>Resilient</em> Communities
-				Teach Us?
+				<em>Where</em> You Live Explains
+				28% of Your Health
 			</h1>
 			<p class="hero__subtitle">
-				We analyzed 54,000+ census tracts to identify communities with health outcomes
-				that exceed socioeconomic predictions. This open dataset reveals where
-				community factors may buffer against structural disadvantage.
+				Our analysis of 54,000+ census tracts reveals geography alone explains more
+				health variance than income, education, or access combined. But some communities
+				defy prediction—with outcomes far better than their circumstances suggest.
 			</p>
 
 			<!-- Actions -->
@@ -88,6 +88,27 @@
 	<!-- Map Preview -->
 	<section class="map-preview">
 		<MiniMap />
+	</section>
+
+	<!-- Latest Research - Prominent CTA -->
+	<section class="latest-research" aria-labelledby="research-heading">
+		<div class="latest-research__content">
+			<p class="latest-research__eyebrow">New Research</p>
+			<h2 id="research-heading" class="latest-research__title">
+				Health doesn't "spread" between neighborhoods
+			</h2>
+			<p class="latest-research__description">
+				Our first peer-reviewed paper corrects a methodological error that made it appear
+				health improvements spread from community to community. They don't—but communities
+				<em>do</em> change together due to shared causes.
+			</p>
+			<a href="/research/papers/spatial-synchrony" class="latest-research__cta">
+				<span>Read the Paper</span>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+					<path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
+				</svg>
+			</a>
+		</div>
 	</section>
 
 	<!-- Top Performing Tracts -->
@@ -182,7 +203,7 @@
 	<section class="audiences" aria-labelledby="audiences-heading">
 		<h2 id="audiences-heading" class="sr-only">Who uses this data</h2>
 		<div class="audiences__grid">
-			<div class="audience">
+			<a href="/for-researchers" class="audience">
 				<div class="audience__icon">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
 						<path d="M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0A50.009 50.009 0 007.5 12.174v-.224c0-.131.067-.248.172-.311a54.614 54.614 0 014.653-2.52.75.75 0 00-.65-1.352 56.129 56.129 0 00-4.78 2.589 1.858 1.858 0 00-.859 1.228 49.803 49.803 0 00-4.634-1.527.75.75 0 01-.231-1.337A60.653 60.653 0 0111.7 2.805z" />
@@ -195,8 +216,8 @@
 					Validated tract-level resilience scores with full methodology documentation
 					and API access for large-scale analysis.
 				</p>
-			</div>
-			<div class="audience">
+			</a>
+			<a href="/for-journalists" class="audience">
 				<div class="audience__icon">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
 						<path fill-rule="evenodd" d="M4.125 3C3.089 3 2.25 3.84 2.25 4.875V18a3 3 0 003 3h15a3 3 0 01-3-3V4.875C17.25 3.839 16.41 3 15.375 3H4.125zM12 9.75a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H12zm-.75-2.25a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5H12a.75.75 0 01-.75-.75zM6 12.75a.75.75 0 000 1.5h7.5a.75.75 0 000-1.5H6zm-.75 3.75a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5H6a.75.75 0 01-.75-.75zM6 6.75a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h3a.75.75 0 00.75-.75v-3A.75.75 0 009 6.75H6z" clip-rule="evenodd" />
@@ -208,8 +229,8 @@
 					Story-ready data with state and county comparisons. Find the
 					resilience outliers in your coverage area.
 				</p>
-			</div>
-			<div class="audience">
+			</a>
+			<a href="/for-policy" class="audience">
 				<div class="audience__icon">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
 						<path fill-rule="evenodd" d="M8.25 6.75a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0zM15.75 9.75a3 3 0 116 0 3 3 0 01-6 0zM2.25 9.75a3 3 0 116 0 3 3 0 01-6 0zM6.31 15.117A6.745 6.745 0 0112 12a6.745 6.745 0 016.709 7.498.75.75 0 01-.372.568A12.696 12.696 0 0112 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 01-.372-.568 6.787 6.787 0 011.019-4.38z" clip-rule="evenodd" />
@@ -221,7 +242,7 @@
 					Evidence for place-based interventions. Identify communities
 					with successful health outcomes despite economic challenges.
 				</p>
-			</div>
+			</a>
 		</div>
 	</section>
 
@@ -300,7 +321,8 @@
 		font-family: var(--font-display);
 		font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
 		font-weight: var(--font-weight-normal);
-		line-height: var(--leading-tight);
+		line-height: var(--leading-snug);
+		letter-spacing: var(--tracking-display);
 		color: var(--color-text-primary);
 		margin-bottom: var(--space-6);
 		opacity: 0;
@@ -386,6 +408,87 @@
 		padding: 0 var(--space-6) var(--space-12);
 		max-width: var(--container-md);
 		margin: 0 auto;
+	}
+
+	/* ==========================================
+	 * LATEST RESEARCH SECTION
+	 * ========================================== */
+
+	.latest-research {
+		padding: var(--space-12) var(--space-6);
+		max-width: var(--container-lg);
+		margin: 0 auto;
+	}
+
+	.latest-research__content {
+		background: linear-gradient(135deg, var(--color-foundation-mid), var(--color-accent-primary-glow));
+		border: 2px solid var(--color-accent-primary);
+		border-radius: var(--radius-2xl);
+		padding: var(--space-10);
+		text-align: center;
+	}
+
+	.latest-research__eyebrow {
+		font-size: var(--text-xs);
+		font-weight: var(--font-weight-bold);
+		color: var(--color-accent-primary);
+		text-transform: uppercase;
+		letter-spacing: var(--tracking-widest);
+		margin-bottom: var(--space-4);
+	}
+
+	.latest-research__title {
+		font-family: var(--font-display);
+		font-size: clamp(var(--text-2xl), 4vw, var(--text-3xl));
+		font-weight: var(--font-weight-normal);
+		line-height: var(--leading-snug);
+		letter-spacing: var(--tracking-display);
+		color: var(--color-text-primary);
+		margin-bottom: var(--space-4);
+	}
+
+	.latest-research__description {
+		font-size: var(--text-lg);
+		color: var(--color-text-secondary);
+		line-height: var(--leading-relaxed);
+		max-width: 600px;
+		margin: 0 auto var(--space-8);
+	}
+
+	.latest-research__description em {
+		font-style: italic;
+		color: var(--color-text-primary);
+	}
+
+	.latest-research__cta {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--space-3);
+		padding: var(--space-4) var(--space-8);
+		font-size: var(--text-lg);
+		font-weight: var(--font-weight-bold);
+		color: white;
+		background: var(--color-accent-primary);
+		border-radius: var(--radius-xl);
+		text-decoration: none;
+		transition: all var(--duration-normal) var(--ease-out);
+		box-shadow: var(--shadow-lg), var(--shadow-glow-accent);
+	}
+
+	.latest-research__cta:hover {
+		background: var(--color-accent-primary-hover);
+		transform: translateY(-2px);
+		box-shadow: var(--shadow-xl), 0 0 32px rgba(209, 104, 71, 0.4);
+	}
+
+	.latest-research__cta svg {
+		width: 20px;
+		height: 20px;
+		transition: transform var(--duration-fast) var(--ease-spring);
+	}
+
+	.latest-research__cta:hover svg {
+		transform: translateX(4px);
 	}
 
 	/* ==========================================
@@ -626,16 +729,22 @@
 	}
 
 	.audience {
+		display: block;
 		background: var(--color-foundation-mid);
 		border: 1px solid var(--color-border-subtle);
 		border-radius: var(--radius-xl);
 		padding: var(--space-6);
+		text-decoration: none;
+		color: inherit;
+		cursor: pointer;
 		transition: all var(--duration-normal) var(--ease-out);
 	}
 
 	.audience:hover {
 		border-color: var(--color-accent-primary);
 		background: var(--color-foundation-surface);
+		box-shadow: var(--shadow-lg);
+		transform: translateY(-2px);
 	}
 
 	.audience__icon {

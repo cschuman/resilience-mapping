@@ -20,23 +20,74 @@
 </script>
 
 <svelte:head>
-	<title>Research | Community Resilience Mapping</title>
+	<title>College vs Prison: A 4 Standard Deviation Health Divide | odds.health Research</title>
 	<meta
 		name="description"
-		content="Research papers and key findings from the Community Resilience Mapping project. Explore our methodology and download the dataset."
+		content="College communities average +2.95 resilience. Prison communities average -0.98. Same country, same healthcare system, 4 SD apart. What's protecting students that's failing inmates?"
 	/>
 </svelte:head>
 
 <div class="research">
 	<div class="container">
-		<!-- Header -->
+		<!-- Header - LEAD WITH A FINDING -->
 		<header class="header">
-			<p class="header__eyebrow">Open Research</p>
-			<h1 class="header__title">Research & Findings</h1>
+			<p class="header__eyebrow">Key Discovery</p>
+			<h1 class="header__title">College Towns vs Prison Towns: A 4 SD Health Divide</h1>
 			<p class="header__subtitle">
-				Peer-reviewed methodology and key insights from the Community Resilience Mapping project.
+				College communities average <strong class="positive">+2.95</strong> resilience.
+				Prison communities average <strong class="negative">-0.98</strong>.
+				Same country, same healthcare system, 4 standard deviations apart.
 			</p>
 		</header>
+
+		<!-- Headline Findings - NOW FIRST -->
+		<section class="headlines" aria-labelledby="headlines-heading">
+			<h2 id="headlines-heading" class="section-title">What We Found</h2>
+			<p class="headlines__intro">
+				Counterintuitive patterns and surprising discoveries that challenge assumptions.
+			</p>
+
+			<div class="headlines__grid">
+				<a href="/research/special-populations" class="headline-card headline-card--featured">
+					<div class="headline-card__badge">Featured</div>
+					<h3 class="headline-card__title">The 4 Standard Deviation Gap</h3>
+					<p class="headline-card__text">
+						College communities average <strong class="positive">+2.95</strong> resilience
+						while prison communities average <strong class="negative">-0.98</strong>.
+						Education vs. incarceration: the starkest divide in American health.
+					</p>
+					<span class="headline-card__link">Explore Special Populations &rarr;</span>
+				</a>
+
+				<a href="/research/ohio-bifurcation" class="headline-card headline-card--link">
+					<h3 class="headline-card__title">Ohio's Bifurcation</h3>
+					<p class="headline-card__text">
+						Columbus has 4 of the nation's top 10 tracts.
+						Cleveland has 3 of the bottom 10.
+						Same state, 60 miles apart, 10+ standard deviations difference.
+					</p>
+					<span class="headline-card__link">Explore Ohio →</span>
+				</a>
+
+				<a href="/research/inequality-chasm" class="headline-card headline-card--link">
+					<h3 class="headline-card__title">The 9-Point Chasm</h3>
+					<p class="headline-card__text">
+						Cleveland and New Orleans each have 9+ point gaps between their
+						best and worst neighborhoods. Same county, vastly different outcomes.
+					</p>
+					<span class="headline-card__link">Explore Inequality →</span>
+				</a>
+
+				<a href="/research/west-virginia-paradox" class="headline-card headline-card--link">
+					<h3 class="headline-card__title">West Virginia Paradox</h3>
+					<p class="headline-card__text">
+						Highest health burden in America (+1.0), yet resilience near average (-0.04).
+						Something is protecting these communities despite terrible metrics.
+					</p>
+					<span class="headline-card__link">Explore WV Paradox →</span>
+				</a>
+			</div>
+		</section>
 
 		<!-- Papers Section -->
 		<section class="papers" aria-labelledby="papers-heading">
@@ -46,13 +97,65 @@
 				<article class="paper paper--primary">
 					<div class="paper__badge">Paper 1</div>
 					<h3 class="paper__title">
+						Spatial Synchrony, Not Contagion: A Methodological Correction in Community Health Trajectory Prediction
+					</h3>
+					<p class="paper__abstract">
+						We demonstrate that apparent "spatial contagion" in community health trajectories
+						was an artifact of temporal data leakage. Communities exhibit spatial synchrony—they
+						change together—but prior neighbor trajectories do not predict future focal trajectories.
+						This finding has important implications for spatial health modeling.
+					</p>
+					<div class="paper__meta">
+						<span class="paper__status paper__status--review">Pre-print</span>
+						<span class="paper__date">December 2024</span>
+					</div>
+					<div class="paper__topics">
+						<span class="topic">Spatial Epidemiology</span>
+						<span class="topic">Methodology</span>
+						<span class="topic">CDC PLACES</span>
+					</div>
+					<div class="paper__actions">
+						<a href="/research/papers/spatial-synchrony" class="btn btn--primary">
+							Read Paper
+						</a>
+					</div>
+				</article>
+
+				<article class="paper paper--secondary">
+					<div class="paper__badge">Paper 2</div>
+					<h3 class="paper__title">
+						Regression to the Mean in Small-Area Health Estimates: Why Trajectory Prediction Fails
+					</h3>
+					<p class="paper__abstract">
+						We tried to predict which communities would get healthier or sicker—and failed
+						completely (F1=0.26, chance performance). The "quintile gradient" reveals why:
+						extreme year-over-year changes regress to the mean, not genuine health dynamics.
+					</p>
+					<div class="paper__meta">
+						<span class="paper__status paper__status--review">Pre-print</span>
+						<span class="paper__date">December 2024</span>
+					</div>
+					<div class="paper__topics">
+						<span class="topic">Regression to Mean</span>
+						<span class="topic">Measurement Error</span>
+						<span class="topic">Prediction</span>
+					</div>
+					<div class="paper__actions">
+						<a href="/research/papers/regression-to-mean" class="btn btn--primary">
+							Read Paper
+						</a>
+					</div>
+				</article>
+
+				<article class="paper">
+					<div class="paper__badge">Paper 3</div>
+					<h3 class="paper__title">
 						Community Health Resilience: A Multi-Level Analysis of Census Tract Outcomes
 					</h3>
 					<p class="paper__abstract">
 						This foundational paper introduces the concept of community health resilience
-						and develops the methodology for measuring it at the census tract level.
-						We use residual analysis from regression models predicting health outcomes
-						from socioeconomic indicators to identify communities that exceed expectations.
+						and develops the methodology for measuring it at the census tract level using
+						residual analysis from regression models predicting health outcomes.
 					</p>
 					<div class="paper__meta">
 						<span class="paper__status paper__status--draft">Working Paper</span>
@@ -65,33 +168,6 @@
 					<div class="paper__actions">
 						<a href="/about" class="btn btn--outline">
 							Read Methodology
-						</a>
-					</div>
-				</article>
-
-				<article class="paper paper--secondary">
-					<div class="paper__badge">Paper 2</div>
-					<h3 class="paper__title">
-						Geographic Patterns of Community Health Resilience Across the United States
-					</h3>
-					<p class="paper__abstract">
-						This follow-up paper analyzes the geographic distribution of resilience scores
-						across all 54,000+ census tracts. We examine regional patterns, urban-rural
-						differences, and the relationship between community characteristics and
-						resilience outcomes.
-					</p>
-					<div class="paper__meta">
-						<span class="paper__status paper__status--review">Peer Review Complete</span>
-						<span class="paper__date">2025</span>
-					</div>
-					<div class="paper__topics">
-						<span class="topic">Geographic Analysis</span>
-						<span class="topic">Regional Patterns</span>
-						<span class="topic">Policy Implications</span>
-					</div>
-					<div class="paper__actions">
-						<a href="/map" class="btn btn--outline">
-							Explore the Map
 						</a>
 					</div>
 				</article>
@@ -160,54 +236,6 @@
 						Our analysis covers <strong>{(data.stats.totalPopulation / 1_000_000).toFixed(0)}+ million</strong> people
 						across <strong>{data.stats.totalTracts.toLocaleString()}</strong> residential census tracts,
 						providing comprehensive national coverage.
-					</p>
-				</div>
-			</div>
-		</section>
-
-		<!-- Headline Findings -->
-		<section class="headlines" aria-labelledby="headlines-heading">
-			<h2 id="headlines-heading" class="section-title">Headline Findings</h2>
-			<p class="headlines__intro">
-				Counterintuitive patterns and surprising discoveries from our analysis.
-			</p>
-
-			<div class="headlines__grid">
-				<a href="/research/special-populations" class="headline-card headline-card--featured">
-					<div class="headline-card__badge">New Research</div>
-					<h3 class="headline-card__title">The 4 Standard Deviation Gap</h3>
-					<p class="headline-card__text">
-						College communities average <strong class="positive">+2.95</strong> resilience
-						while prison communities average <strong class="negative">-0.98</strong>.
-						Education vs. incarceration: a 4 SD divide.
-					</p>
-					<span class="headline-card__link">Explore Special Populations &rarr;</span>
-				</a>
-
-				<div class="headline-card">
-					<h3 class="headline-card__title">Ohio's Bifurcation</h3>
-					<p class="headline-card__text">
-						Columbus (Franklin County) has 4 of the nation's top 10 tracts.
-						Cleveland (Cuyahoga County) has 3 of the bottom 10.
-						Same state, 60 miles apart, 10+ standard deviations difference.
-					</p>
-				</div>
-
-				<div class="headline-card">
-					<h3 class="headline-card__title">The 9-Point Chasm</h3>
-					<p class="headline-card__text">
-						Cleveland and New Orleans each have 9+ point gaps between their
-						best and worst neighborhoods. Same county governance,
-						vastly different health outcomes.
-					</p>
-				</div>
-
-				<div class="headline-card">
-					<h3 class="headline-card__title">West Virginia Paradox</h3>
-					<p class="headline-card__text">
-						Highest health burden in America (+1.0), yet resilience near average (-0.04).
-						Tight-knit communities may provide protective factors
-						despite objectively poor health metrics.
 					</p>
 				</div>
 			</div>
@@ -427,6 +455,8 @@
 		font-family: var(--font-display);
 		font-size: clamp(var(--text-3xl), 5vw, var(--text-4xl));
 		font-weight: var(--font-weight-normal);
+		line-height: var(--leading-snug);
+		letter-spacing: var(--tracking-display);
 		color: var(--color-text-primary);
 		margin-bottom: var(--space-4);
 	}
@@ -436,6 +466,16 @@
 		color: var(--color-text-secondary);
 		max-width: 600px;
 		margin: 0 auto;
+	}
+
+	.header__subtitle strong.positive {
+		color: var(--color-score-high);
+		font-weight: var(--font-weight-bold);
+	}
+
+	.header__subtitle strong.negative {
+		color: var(--color-score-low);
+		font-weight: var(--font-weight-bold);
 	}
 
 	/* ==========================================
@@ -680,6 +720,18 @@
 
 	.headline-card__text strong.negative {
 		color: var(--color-score-low);
+	}
+
+	.headline-card--link {
+		text-decoration: none;
+		color: inherit;
+		cursor: pointer;
+	}
+
+	.headline-card--link:hover {
+		border-color: var(--color-accent-primary);
+		box-shadow: var(--shadow-lg);
+		transform: translateY(-2px);
 	}
 
 	.headline-card__link {

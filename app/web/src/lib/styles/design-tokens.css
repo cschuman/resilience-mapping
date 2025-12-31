@@ -95,9 +95,9 @@
 
 	/* ========================================
 	 * TYPOGRAPHY
-	 * Instrument Serif for gravitas, Inter for clarity
+	 * Playfair Display for gravitas, Inter for clarity
 	 * ======================================== */
-	--font-display: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+	--font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
 	--font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 	--font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
 
@@ -125,11 +125,12 @@
 	--leading-relaxed: 1.65;
 
 	/* Letter spacing */
-	--tracking-tight: -0.02em;
-	--tracking-normal: 0;
-	--tracking-wide: 0.02em;
+	--tracking-tight: -0.01em;
+	--tracking-normal: 0.01em;
+	--tracking-wide: 0.025em;
 	--tracking-wider: 0.05em;
 	--tracking-widest: 0.1em;
+	--tracking-display: 0.02em;  /* Slightly open for display headings */
 
 	/* ========================================
 	 * SPACING
