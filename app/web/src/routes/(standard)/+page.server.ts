@@ -17,24 +17,20 @@ const STATE_NAMES: Record<string, string> = {
 };
 
 export const load: PageServerLoad = async () => {
+	// Use materialized views for faster stats
 	const [stats] = await sql`
 		SELECT
-			COUNT(*) as total_tracts,
-			AVG(resilience_score) as avg_resilience,
-			MAX(resilience_score) as max_resilience,
-			SUM(total_pop) as total_population
-		FROM tracts
-		WHERE resilience_score IS NOT NULL
+			residential_tracts as total_tracts,
+			avg_resilience,
+			max_resilience,
+			total_population
+		FROM mv_overall_stats
+		WHERE category = 'all'
 	`;
 
-	// Get total count for percentile calculation
-	const [totalCount] = await sql`
-		SELECT COUNT(*) as count FROM tracts WHERE resilience_score IS NOT NULL
-	`;
-	const total = parseInt(totalCount.count);
+	const total = parseInt(stats.total_tracts);
 
-	// Get top tracts with their rank for percentile calculation
-	// Exclude tracts with 0 population (missing Census data)
+	// Get top residential tracts with their rank
 	const topTracts = await sql`
 		SELECT
 			tract_fips,
@@ -43,13 +39,14 @@ export const load: PageServerLoad = async () => {
 			total_pop,
 			RANK() OVER (ORDER BY resilience_score DESC) as rank
 		FROM tracts
-		WHERE resilience_score IS NOT NULL AND total_pop > 100
+		WHERE is_residential = TRUE
 		ORDER BY resilience_score DESC
 		LIMIT 6
 	`;
 
-	const stateCount = await sql`
-		SELECT COUNT(DISTINCT state_abbr) as count FROM tracts
+	// Get state count from materialized view
+	const [stateCount] = await sql`
+		SELECT COUNT(*) as count FROM mv_state_stats
 	`;
 
 	return {
@@ -58,12 +55,11 @@ export const load: PageServerLoad = async () => {
 			avgResilience: parseFloat(stats.avg_resilience).toFixed(3),
 			maxResilience: parseFloat(stats.max_resilience).toFixed(3),
 			totalPopulation: parseInt(stats.total_population),
-			stateCount: parseInt(stateCount[0].count)
+			stateCount: parseInt(stateCount.count)
 		},
 		topTracts: topTracts.map((t) => {
 			const rank = parseInt(t.rank);
 			// Calculate "Top X%" - what percentage of tracts this one outperforms
-			// Rank 1 of 64419 = top 0.0015%, show as "Top 1%"
 			const topPercent = Math.max(1, Math.ceil((rank / total) * 100));
 			const stateName = STATE_NAMES[t.state_abbr] || t.state_abbr;
 			return {
