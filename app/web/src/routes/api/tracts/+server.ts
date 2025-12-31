@@ -80,6 +80,10 @@ export const GET: RequestHandler = async ({ url }) => {
 	const sortBy = validateSortField(url.searchParams.get('sort'));
 	const order = url.searchParams.get('order') === 'asc' ? 'ASC' : 'DESC';
 
+	// By default, only show residential tracts (excludes prisons, military bases, zero-pop)
+	// Set include_all=true to include non-residential tracts (for research purposes)
+	const includeAll = url.searchParams.get('include_all') === 'true';
+
 	// Validate logical consistency
 	if (minScore > maxScore) {
 		throw error(400, 'min_score cannot be greater than max_score');
@@ -93,11 +97,13 @@ export const GET: RequestHandler = async ({ url }) => {
 		if (state) {
 			tracts = await sql`
 				SELECT tract_fips, state_abbr, total_pop, resilience_score, burden,
-					   gq_college_pct, gq_military_pct, gq_correctional_pct, gq_nursing_pct
+					   gq_college_pct, gq_military_pct, gq_correctional_pct, gq_nursing_pct,
+					   is_residential, tract_type
 				FROM tracts
 				WHERE state_abbr = ${state}
 				  AND resilience_score >= ${minScore}
 				  AND resilience_score <= ${maxScore}
+				  AND (${includeAll} OR is_residential = TRUE)
 				ORDER BY ${sql(sortBy)} ${sql.unsafe(order)}
 				LIMIT ${limit} OFFSET ${offset}
 			`;
@@ -106,14 +112,17 @@ export const GET: RequestHandler = async ({ url }) => {
 				WHERE state_abbr = ${state}
 				  AND resilience_score >= ${minScore}
 				  AND resilience_score <= ${maxScore}
+				  AND (${includeAll} OR is_residential = TRUE)
 			`;
 		} else {
 			tracts = await sql`
 				SELECT tract_fips, state_abbr, total_pop, resilience_score, burden,
-					   gq_college_pct, gq_military_pct, gq_correctional_pct, gq_nursing_pct
+					   gq_college_pct, gq_military_pct, gq_correctional_pct, gq_nursing_pct,
+					   is_residential, tract_type
 				FROM tracts
 				WHERE resilience_score >= ${minScore}
 				  AND resilience_score <= ${maxScore}
+				  AND (${includeAll} OR is_residential = TRUE)
 				ORDER BY ${sql(sortBy)} ${sql.unsafe(order)}
 				LIMIT ${limit} OFFSET ${offset}
 			`;
@@ -121,6 +130,7 @@ export const GET: RequestHandler = async ({ url }) => {
 				SELECT COUNT(*) as count FROM tracts
 				WHERE resilience_score >= ${minScore}
 				  AND resilience_score <= ${maxScore}
+				  AND (${includeAll} OR is_residential = TRUE)
 			`;
 		}
 	} catch (err) {
@@ -138,13 +148,19 @@ export const GET: RequestHandler = async ({ url }) => {
 			gqCollege: parseFloat(t.gq_college_pct),
 			gqMilitary: parseFloat(t.gq_military_pct),
 			gqCorrectional: parseFloat(t.gq_correctional_pct),
-			gqNursing: parseFloat(t.gq_nursing_pct)
+			gqNursing: parseFloat(t.gq_nursing_pct),
+			isResidential: t.is_residential,
+			tractType: t.tract_type
 		})),
 		pagination: {
 			total: parseInt(total.count),
 			limit,
 			offset,
 			hasMore: offset + tracts.length < parseInt(total.count)
+		},
+		filters: {
+			includeAll,
+			residentialOnly: !includeAll
 		}
 	});
 };

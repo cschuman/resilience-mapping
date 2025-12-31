@@ -238,7 +238,7 @@
 
 				// Handle geolocation errors
 				if ('code' in err) {
-					const geoErr = err as GeolocationPositionError;
+					const geoErr = err as unknown as GeolocationPositionError;
 					switch (geoErr.code) {
 						case 1: // PERMISSION_DENIED
 							error = 'Location access denied. Please enable location permissions.';

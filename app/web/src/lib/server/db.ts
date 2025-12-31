@@ -32,6 +32,9 @@ export interface Tract {
 	gq_college_pct: number;
 	gq_military_pct: number;
 	gq_correctional_pct: number;
+	gq_nursing_pct: number;
+	is_residential: boolean;
+	tract_type: 'residential' | 'small_pop' | 'correctional' | 'military' | 'college' | 'other';
 	geometry?: unknown; // PostGIS geometry
 	created_at: Date;
 }
