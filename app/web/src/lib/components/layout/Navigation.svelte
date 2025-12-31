@@ -13,7 +13,7 @@
 		{ href: '/', label: 'Home' },
 		{ href: '/map', label: 'Map' },
 		{ href: '/data', label: 'Data' },
-		{ href: '/stories', label: 'Stories' },
+		{ href: '/research', label: 'Research' },
 		{ href: '/about', label: 'About' }
 	];
 
