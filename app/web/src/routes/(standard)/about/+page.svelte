@@ -30,15 +30,15 @@
 			<h2 id="stats-heading" class="sr-only">Dataset Statistics</h2>
 			<div class="stats__grid">
 				<div class="stats__item">
-					<span class="stats__value">64,419</span>
+					<span class="stats__value">{data.stats.totalTracts.toLocaleString()}</span>
 					<span class="stats__label">Census Tracts</span>
 				</div>
 				<div class="stats__item">
-					<span class="stats__value">50</span>
+					<span class="stats__value">{data.stats.stateCount}</span>
 					<span class="stats__label">States + DC</span>
 				</div>
 				<div class="stats__item">
-					<span class="stats__value">330M+</span>
+					<span class="stats__value">{Math.round(data.stats.totalPopulation / 1_000_000)}M+</span>
 					<span class="stats__label">People</span>
 				</div>
 				<div class="stats__item">

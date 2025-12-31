@@ -16,20 +16,34 @@ const STATE_NAMES: Record<string, string> = {
 	WY: 'Wyoming', PR: 'Puerto Rico', VI: 'Virgin Islands', GU: 'Guam', AS: 'American Samoa'
 };
 
+// Parse and validate numeric parameter
+function parseNumber(value: string | null, defaultValue: number, min: number, max: number): number {
+	if (!value) return defaultValue;
+	const num = parseFloat(value);
+	if (isNaN(num)) return defaultValue;
+	return Math.max(min, Math.min(max, num));
+}
+
 export const load: PageServerLoad = async ({ url }) => {
-	const page = parseInt(url.searchParams.get('page') || '1');
+	// Pagination
+	const page = Math.max(1, parseInt(url.searchParams.get('page') || '1') || 1);
 	const limit = 50;
 	const offset = (page - 1) * limit;
+
+	// Sorting
 	const sort = url.searchParams.get('sort') || 'resilience_score';
 	const order = url.searchParams.get('order') || 'desc';
-	const state = url.searchParams.get('state') || '';
-
-	// Validate sort column
-	const validSorts = ['resilience_score', 'total_pop', 'state_abbr', 'tract_fips'];
+	const validSorts = ['resilience_score', 'total_pop', 'state_abbr', 'tract_fips', 'burden'];
 	const sortCol = validSorts.includes(sort) ? sort : 'resilience_score';
 	const sortOrder = order === 'asc' ? 'ASC' : 'DESC';
 
-	// Build query with optional state filter
+	// Filters
+	const state = url.searchParams.get('state') || '';
+	const minScore = parseNumber(url.searchParams.get('min_score'), -10, -10, 10);
+	const maxScore = parseNumber(url.searchParams.get('max_score'), 10, -10, 10);
+	const minPop = parseNumber(url.searchParams.get('min_pop'), 0, 0, 1000000);
+
+	// Build dynamic query
 	let tracts;
 	let totalCount;
 
@@ -41,10 +55,16 @@ export const load: PageServerLoad = async ({ url }) => {
 				county,
 				resilience_score,
 				total_pop,
-				burden
+				burden,
+				is_residential,
+				tract_type
 			FROM tracts
 			WHERE resilience_score IS NOT NULL
+				AND is_residential = TRUE
 				AND state_abbr = ${state}
+				AND resilience_score >= ${minScore}
+				AND resilience_score <= ${maxScore}
+				AND (total_pop >= ${minPop} OR total_pop IS NULL)
 			ORDER BY ${sql.unsafe(sortCol)} ${sql.unsafe(sortOrder)} NULLS LAST
 			LIMIT ${limit}
 			OFFSET ${offset}
@@ -54,7 +74,11 @@ export const load: PageServerLoad = async ({ url }) => {
 			SELECT COUNT(*) as count
 			FROM tracts
 			WHERE resilience_score IS NOT NULL
+				AND is_residential = TRUE
 				AND state_abbr = ${state}
+				AND resilience_score >= ${minScore}
+				AND resilience_score <= ${maxScore}
+				AND (total_pop >= ${minPop} OR total_pop IS NULL)
 		`;
 		totalCount = parseInt(count.count);
 	} else {
@@ -65,9 +89,15 @@ export const load: PageServerLoad = async ({ url }) => {
 				county,
 				resilience_score,
 				total_pop,
-				burden
+				burden,
+				is_residential,
+				tract_type
 			FROM tracts
 			WHERE resilience_score IS NOT NULL
+				AND is_residential = TRUE
+				AND resilience_score >= ${minScore}
+				AND resilience_score <= ${maxScore}
+				AND (total_pop >= ${minPop} OR total_pop IS NULL)
 			ORDER BY ${sql.unsafe(sortCol)} ${sql.unsafe(sortOrder)} NULLS LAST
 			LIMIT ${limit}
 			OFFSET ${offset}
@@ -77,17 +107,31 @@ export const load: PageServerLoad = async ({ url }) => {
 			SELECT COUNT(*) as count
 			FROM tracts
 			WHERE resilience_score IS NOT NULL
+				AND is_residential = TRUE
+				AND resilience_score >= ${minScore}
+				AND resilience_score <= ${maxScore}
+				AND (total_pop >= ${minPop} OR total_pop IS NULL)
 		`;
 		totalCount = parseInt(count.count);
 	}
 
-	// Get list of states for filter
+	// Get list of states for filter (from materialized view for speed)
 	const states = await sql`
-		SELECT DISTINCT state_abbr
-		FROM tracts
-		WHERE state_abbr IS NOT NULL
+		SELECT state_abbr
+		FROM mv_state_stats
 		ORDER BY state_abbr
 	`;
+
+	// Build CSV export URL with current filters
+	const csvParams = new URLSearchParams();
+	if (state) csvParams.set('state', state);
+	if (minScore > -10) csvParams.set('min_score', minScore.toString());
+	if (maxScore < 10) csvParams.set('max_score', maxScore.toString());
+	if (minPop > 0) csvParams.set('min_pop', minPop.toString());
+	csvParams.set('sort', sortCol);
+	csvParams.set('order', order);
+	csvParams.set('limit', '10000'); // Max export limit
+	const csvUrl = `/api/tracts?${csvParams.toString()}`;
 
 	return {
 		tracts: tracts.map((t) => {
@@ -97,22 +141,31 @@ export const load: PageServerLoad = async ({ url }) => {
 				fips: t.tract_fips,
 				location,
 				state: t.state_abbr,
+				stateName,
+				county: t.county,
 				score: t.resilience_score ? parseFloat(t.resilience_score).toFixed(2) : null,
 				population: t.total_pop,
-				burden: t.burden ? parseFloat(t.burden).toFixed(3) : null
+				burden: t.burden ? parseFloat(t.burden).toFixed(3) : null,
+				tractType: t.tract_type
 			};
 		}),
 		pagination: {
 			page,
 			limit,
 			total: totalCount,
-			totalPages: Math.ceil(totalCount / limit)
+			totalPages: Math.ceil(totalCount / limit),
+			hasNext: page < Math.ceil(totalCount / limit),
+			hasPrev: page > 1
 		},
 		filters: {
 			sort: sortCol,
 			order,
-			state
+			state,
+			minScore,
+			maxScore,
+			minPop
 		},
-		states: states.map((s) => s.state_abbr)
+		states: states.map((s) => s.state_abbr),
+		csvUrl
 	};
 };

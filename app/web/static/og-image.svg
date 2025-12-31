@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#14b8a6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Decorative grid pattern -->
+  <g opacity="0.1" stroke="#94a3b8" stroke-width="1">
+    <line x1="200" y1="0" x2="200" y2="630"/>
+    <line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="800" y1="0" x2="800" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+    <line x1="0" y1="126" x2="1200" y2="126"/>
+    <line x1="0" y1="252" x2="1200" y2="252"/>
+    <line x1="0" y1="378" x2="1200" y2="378"/>
+    <line x1="0" y1="504" x2="1200" y2="504"/>
+  </g>
+
+  <!-- Accent bar -->
+  <rect x="0" y="0" width="8" height="630" fill="url(#accent)"/>
+
+  <!-- Logo mark -->
+  <rect x="80" y="80" width="64" height="64" rx="12" fill="url(#accent)"/>
+  <text x="112" y="128" font-family="Georgia, serif" font-size="40" fill="white" text-anchor="middle">R</text>
+
+  <!-- Title -->
+  <text x="80" y="280" font-family="Georgia, serif" font-size="56" fill="#f1f5f9">Community</text>
+  <text x="80" y="350" font-family="Georgia, serif" font-size="56" fill="#f1f5f9">Resilience Mapping</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="420" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8">
+    Explore census tract-level health resilience across the United States
+  </text>
+
+  <!-- Stats -->
+  <g font-family="system-ui, sans-serif">
+    <text x="80" y="540" font-size="32" fill="#10b981" font-weight="600">64,000+</text>
+    <text x="80" y="570" font-size="16" fill="#64748b">Census Tracts</text>
+
+    <text x="300" y="540" font-size="32" fill="#10b981" font-weight="600">51</text>
+    <text x="300" y="570" font-size="16" fill="#64748b">States + DC</text>
+
+    <text x="450" y="540" font-size="32" fill="#10b981" font-weight="600">330M+</text>
+    <text x="450" y="570" font-size="16" fill="#64748b">People</text>
+  </g>
+
+  <!-- URL -->
+  <text x="1120" y="590" font-family="monospace" font-size="14" fill="#64748b" text-anchor="end">resilience-mapping.fly.dev</text>
+</svg>

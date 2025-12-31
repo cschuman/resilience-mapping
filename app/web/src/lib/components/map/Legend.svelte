@@ -120,6 +120,11 @@
 		color: #0f172a;
 	}
 
+	.legend__close:focus-visible {
+		outline: 2px solid #10b981;
+		outline-offset: 2px;
+	}
+
 	.legend__items {
 		list-style: none;
 		margin: 0;

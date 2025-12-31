@@ -123,8 +123,13 @@
 </svelte:head>
 
 <div class="map-page">
+	<!-- Skip link to bypass the interactive map -->
+	<a href="#map-controls" class="skip-map-link">
+		Skip to map controls
+	</a>
+
 	<!-- Header -->
-	<header class="header">
+	<header class="header" id="map-controls">
 		<div class="header__left">
 			<button type="button" class="header__back" onclick={goHome} aria-label="Go to home page">
 				<svg
@@ -204,7 +209,11 @@
 				onTractClick={handleTractClick}
 				onTractHover={handleTractHover}
 			/>
-			<LegendComponent visible={showLegend} onClose={() => (showLegend = false)} />
+			<!-- Skip link after map to reach legend -->
+			<a href="#map-legend" class="skip-to-legend">Skip to legend</a>
+			<div id="map-legend">
+				<LegendComponent visible={showLegend} onClose={() => (showLegend = false)} />
+			</div>
 
 			<!-- Hover info tooltip -->
 			{#if hoveredTract && !selectedTract}
@@ -480,6 +489,49 @@
 	.hover-info__score {
 		font-weight: var(--font-weight-semibold);
 		color: var(--color-score-very-high);  /* Deep Teal for positive scores */
+	}
+
+	/* Skip Links */
+	.skip-map-link,
+	.skip-to-legend {
+		position: absolute;
+		left: -9999px;
+		z-index: 9999;
+		padding: 0.75rem 1.5rem;
+		background: var(--color-accent-primary);
+		color: white;
+		font-weight: 600;
+		font-size: var(--text-sm);
+		text-decoration: none;
+		border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+		transition: left 0.2s ease;
+	}
+
+	.skip-map-link:focus,
+	.skip-to-legend:focus {
+		left: 50%;
+		transform: translateX(-50%);
+		outline: 2px solid white;
+		outline-offset: 2px;
+	}
+
+	.skip-to-legend {
+		top: auto;
+		bottom: 0;
+		border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+	}
+
+	.skip-to-legend:focus {
+		bottom: 0;
+	}
+
+	/* Legend wrapper for focus target */
+	#map-legend {
+		display: contents;
+	}
+
+	#map-legend:target {
+		scroll-margin-top: 1rem;
 	}
 
 	/* Responsive */

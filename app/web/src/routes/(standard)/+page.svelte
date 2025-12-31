@@ -136,6 +136,48 @@
 		</div>
 	</section>
 
+	<!-- Research Findings -->
+	<section class="findings" aria-labelledby="findings-heading">
+		<header class="findings__header">
+			<p class="findings__eyebrow">Research Insights</p>
+			<h2 id="findings-heading" class="findings__title">What We've Learned</h2>
+		</header>
+		<div class="findings__grid">
+			<div class="finding">
+				<span class="finding__number">99.7%</span>
+				<h3 class="finding__title">Stable Health Levels</h3>
+				<p class="finding__description">
+					Community health levels are remarkably consistent year-to-year.
+					The factors that make communities resilient are deeply structural.
+				</p>
+			</div>
+			<div class="finding">
+				<span class="finding__number">28%</span>
+				<h3 class="finding__title">Geographic Variation</h3>
+				<p class="finding__description">
+					Geography alone explains over a quarter of health outcome variance.
+					Where you live matters as much as how you live.
+				</p>
+			</div>
+			<div class="finding">
+				<span class="finding__number">r = -0.72</span>
+				<h3 class="finding__title">Burden Correlation</h3>
+				<p class="finding__description">
+					Strong inverse relationship between community burden and resilience.
+					Communities facing the most challenges often show the least resilience.
+				</p>
+			</div>
+		</div>
+		<div class="findings__cta">
+			<a href="/research" class="btn btn--outline-teal">
+				Read Full Research
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+					<path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
+				</svg>
+			</a>
+		</div>
+	</section>
+
 	<!-- Audience Segments -->
 	<section class="audiences" aria-labelledby="audiences-heading">
 		<h2 id="audiences-heading" class="sr-only">Who uses this data</h2>
@@ -474,6 +516,96 @@
 
 	.featured__cta {
 		text-align: center;
+	}
+
+	/* ==========================================
+	 * RESEARCH FINDINGS
+	 * ========================================== */
+
+	.findings {
+		padding: var(--space-12) var(--space-6);
+		max-width: var(--container-lg);
+		margin: 0 auto;
+		border-top: 1px solid var(--color-border-subtle);
+	}
+
+	.findings__header {
+		text-align: center;
+		margin-bottom: var(--space-10);
+	}
+
+	.findings__eyebrow {
+		font-size: var(--text-xs);
+		font-weight: var(--font-weight-semibold);
+		color: var(--color-accent-secondary);
+		text-transform: uppercase;
+		letter-spacing: var(--tracking-widest);
+		margin-bottom: var(--space-3);
+	}
+
+	.findings__title {
+		font-family: var(--font-display);
+		font-size: var(--text-3xl);
+		color: var(--color-text-primary);
+	}
+
+	.findings__grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: var(--space-6);
+		margin-bottom: var(--space-10);
+	}
+
+	.finding {
+		background: var(--color-foundation-mid);
+		border: 1px solid var(--color-border-subtle);
+		border-radius: var(--radius-xl);
+		padding: var(--space-6);
+		text-align: center;
+		transition: all var(--duration-normal) var(--ease-out);
+	}
+
+	.finding:hover {
+		border-color: var(--color-accent-secondary);
+		background: var(--color-foundation-surface);
+	}
+
+	.finding__number {
+		display: block;
+		font-family: var(--font-display);
+		font-size: var(--text-4xl);
+		color: var(--color-accent-secondary);
+		line-height: 1;
+		margin-bottom: var(--space-3);
+	}
+
+	.finding__title {
+		font-family: var(--font-body);
+		font-size: var(--text-lg);
+		font-weight: var(--font-weight-semibold);
+		color: var(--color-text-primary);
+		margin-bottom: var(--space-2);
+	}
+
+	.finding__description {
+		font-size: var(--text-sm);
+		color: var(--color-text-secondary);
+		line-height: var(--leading-relaxed);
+	}
+
+	.findings__cta {
+		text-align: center;
+	}
+
+	.btn--outline-teal {
+		background: transparent;
+		color: var(--color-accent-secondary);
+		border: 1px solid var(--color-accent-secondary);
+	}
+
+	.btn--outline-teal:hover {
+		background: var(--color-accent-secondary);
+		color: var(--color-foundation-deep);
 	}
 
 	/* ==========================================

@@ -89,10 +89,19 @@
 	}
 
 	/**
+	 * Extended tract data fetched from API.
+	 */
+	interface ExtendedTractData {
+		population: number | null;
+		percentile: string | null;
+		stateRank: { rank: number; total: number } | null;
+	}
+
+	/**
 	 * Create popup HTML content for a tract.
 	 * All dynamic values are HTML-escaped to prevent XSS.
 	 */
-	function createPopupContent(props: TractProperties): string {
+	function createPopupContent(props: TractProperties, extended?: ExtendedTractData): string {
 		const score = formatScore(props.resilience_score);
 		const burden = props.burden != null ? props.burden.toFixed(2) : 'N/A';
 		const category = props.score_category || 'no-data';
@@ -107,16 +116,42 @@
 		// Format location: "County Name, ST" or fall back to state only
 		const location = countyName ? `${countyName}, ${stateAbbr}` : stateAbbr;
 
+		// Format percentile as "Top X%"
+		const percentileDisplay = extended?.percentile
+			? `Top ${(100 - parseFloat(extended.percentile)).toFixed(0)}%`
+			: null;
+
+		// Format state ranking
+		const stateRankDisplay = extended?.stateRank
+			? `#${extended.stateRank.rank.toLocaleString()} of ${extended.stateRank.total.toLocaleString()}`
+			: null;
+
+		// Format population
+		const populationDisplay = extended?.population
+			? extended.population.toLocaleString()
+			: 'N/A';
+
 		return `
 			<div class="tract-popup">
 				<div class="popup-header">
 					<span class="popup-location">${location}</span>
+					${percentileDisplay ? `<span class="popup-percentile">${percentileDisplay}</span>` : ''}
 				</div>
 				<div class="popup-score" style="border-left: 4px solid ${color}">
 					<div class="score-value">${score}</div>
 					<div class="score-label">${categoryLabel}</div>
 				</div>
 				<div class="popup-details">
+					<div class="detail-row">
+						<span class="detail-label">Population:</span>
+						<span class="detail-value">${populationDisplay}</span>
+					</div>
+					${stateRankDisplay ? `
+					<div class="detail-row">
+						<span class="detail-label">State Rank:</span>
+						<span class="detail-value">${stateRankDisplay}</span>
+					</div>
+					` : ''}
 					<div class="detail-row">
 						<span class="detail-label">Health Burden:</span>
 						<span class="detail-value">${burden}</span>
@@ -126,8 +161,31 @@
 						<span class="detail-value">${geoid}</span>
 					</div>
 				</div>
+				<div class="popup-actions">
+					<a href="/data?state=${stateAbbr}&sort=resilience_score&order=desc" class="popup-link">
+						View in Data Explorer
+					</a>
+				</div>
 			</div>
 		`;
+	}
+
+	/**
+	 * Fetch extended tract data from API.
+	 */
+	async function fetchExtendedTractData(fips: string): Promise<ExtendedTractData | null> {
+		try {
+			const response = await fetch(`/api/tracts/${fips}`);
+			if (!response.ok) return null;
+			const data = await response.json();
+			return {
+				population: data.population,
+				percentile: data.percentile,
+				stateRank: data.stateRank
+			};
+		} catch {
+			return null;
+		}
 	}
 
 	/**
@@ -407,8 +465,9 @@
 
 	/**
 	 * Show popup at location with tract details.
+	 * Fetches extended data asynchronously and updates the popup.
 	 */
-	function showPopup(lngLat: maplibregl.LngLat, props: TractProperties): void {
+	async function showPopup(lngLat: maplibregl.LngLat, props: TractProperties): Promise<void> {
 		if (!map) return;
 
 		// Remove existing popup and its handler
@@ -420,23 +479,19 @@
 			popup.remove();
 		}
 
-		// Capture current selected tract ID for the closure
-		const currentSelectedId = selectedTractId;
-
-		// Create new popup
+		// Create popup with initial content (will be updated when extended data loads)
 		popup = new maplibregl.Popup({
 			closeButton: true,
 			closeOnClick: false,
-			maxWidth: '300px',
+			maxWidth: '320px',
 			className: 'tract-popup-container'
 		})
 			.setLngLat(lngLat)
 			.setHTML(createPopupContent(props))
 			.addTo(map);
 
-		// Handle popup close - use captured ID to avoid stale closure
+		// Handle popup close
 		popupCloseHandler = () => {
-			// Use the component's current selectedTractId, not the captured one
 			if (selectedTractId && map) {
 				map.setFeatureState(
 					{ source: TILES_CONFIG.sourceId, sourceLayer: TILES_CONFIG.sourceLayer, id: selectedTractId },
@@ -448,6 +503,12 @@
 		};
 
 		popup.on('close', popupCloseHandler);
+
+		// Fetch extended data and update popup
+		const extendedData = await fetchExtendedTractData(props.GEOID);
+		if (extendedData && popup) {
+			popup.setHTML(createPopupContent(props, extendedData));
+		}
 	}
 
 	/**
@@ -552,12 +613,16 @@
 
 	/**
 	 * Handle keyboard navigation for the map.
+	 * Note: Tab key is intentionally NOT handled to allow natural focus flow.
 	 */
 	function handleKeydown(e: KeyboardEvent): void {
 		if (!map || !isLoaded) return;
 
 		// Only handle when map container is focused
 		if (document.activeElement !== mapContainer) return;
+
+		// Allow Tab to pass through for natural focus navigation
+		if (e.key === 'Tab') return;
 
 		switch (e.key) {
 			case 'ArrowUp':
@@ -779,11 +844,25 @@
 		padding: 0.75rem 1rem;
 		background: #1C1410;
 		color: #F5EDE4;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 0.5rem;
 	}
 
 	:global(.popup-location) {
 		font-size: 0.9375rem;
 		font-weight: 600;
+	}
+
+	:global(.popup-percentile) {
+		font-size: 0.75rem;
+		font-weight: 600;
+		color: #0D7C66;
+		background: rgba(13, 124, 102, 0.15);
+		padding: 0.25rem 0.5rem;
+		border-radius: 4px;
+		white-space: nowrap;
 	}
 
 	:global(.popup-score) {
@@ -823,6 +902,30 @@
 	:global(.detail-value) {
 		color: #F5EDE4;
 		font-weight: 500;
+	}
+
+	:global(.popup-actions) {
+		padding: 0.75rem 1rem;
+		background: #261E18;
+		border-top: 1px solid rgba(212, 196, 184, 0.15);
+	}
+
+	:global(.popup-link) {
+		display: block;
+		text-align: center;
+		padding: 0.5rem;
+		font-size: 0.8125rem;
+		font-weight: 500;
+		color: #10b981;
+		text-decoration: none;
+		background: rgba(16, 185, 129, 0.1);
+		border-radius: 4px;
+		transition: background 0.15s ease;
+	}
+
+	:global(.popup-link:hover) {
+		background: rgba(16, 185, 129, 0.2);
+		text-decoration: none;
 	}
 
 	:global(.maplibregl-popup-close-button) {

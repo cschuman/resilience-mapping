@@ -23,7 +23,26 @@ export const load: PageServerLoad = async () => {
 		}
 	});
 
+	// Get overall stats from materialized view
+	const [overallStats] = await sql`
+		SELECT
+			residential_tracts,
+			total_population
+		FROM mv_overall_stats
+		WHERE category = 'all'
+	`;
+
+	// Get state count
+	const [stateCount] = await sql`
+		SELECT COUNT(*) as count FROM mv_state_stats
+	`;
+
 	return {
-		distribution: buckets
+		distribution: buckets,
+		stats: {
+			totalTracts: parseInt(overallStats.residential_tracts),
+			totalPopulation: parseInt(overallStats.total_population),
+			stateCount: parseInt(stateCount.count)
+		}
 	};
 };
