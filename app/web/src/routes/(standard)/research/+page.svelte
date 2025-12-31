@@ -55,8 +55,7 @@
 						from socioeconomic indicators to identify communities that exceed expectations.
 					</p>
 					<div class="paper__meta">
-						<span class="paper__status paper__status--published">Published</span>
-						<span class="paper__date">2024</span>
+						<span class="paper__status paper__status--draft">Working Paper</span>
 					</div>
 					<div class="paper__topics">
 						<span class="topic">Methodology</span>
@@ -213,6 +212,63 @@
 			</div>
 		</section>
 
+		<!-- County Rankings -->
+		<section class="rankings" aria-labelledby="county-rankings-heading">
+			<h2 id="county-rankings-heading" class="section-title">County Rankings</h2>
+			<p class="rankings__intro">
+				Rankings based on {data.stats.countyCount.toLocaleString()} counties with at least 10 census tracts for statistical reliability.
+			</p>
+
+			<div class="rankings__grid rankings__grid--three">
+				<!-- Top Counties -->
+				<div class="ranking">
+					<h3 class="ranking__title">Most Resilient Counties</h3>
+					<ol class="ranking__list ranking__list--compact">
+						{#each data.topCounties.slice(0, 10) as county, i}
+							<li class="ranking__item">
+								<span class="ranking__rank">{i + 1}</span>
+								<span class="ranking__county">{county.county}, {county.state}</span>
+								<span class="ranking__score" class:positive={county.avgResilience > 0}>
+									{county.avgResilience > 0 ? '+' : ''}{county.avgResilience.toFixed(3)}
+								</span>
+							</li>
+						{/each}
+					</ol>
+				</div>
+
+				<!-- Bottom Counties -->
+				<div class="ranking">
+					<h3 class="ranking__title">Struggling Counties</h3>
+					<ol class="ranking__list ranking__list--compact">
+						{#each data.bottomCounties.slice(0, 10) as county, i}
+							<li class="ranking__item">
+								<span class="ranking__rank ranking__rank--bottom">{data.stats.countyCount - i}</span>
+								<span class="ranking__county">{county.county}, {county.state}</span>
+								<span class="ranking__score negative">
+									{county.avgResilience > 0 ? '+' : ''}{county.avgResilience.toFixed(3)}
+								</span>
+							</li>
+						{/each}
+					</ol>
+				</div>
+
+				<!-- Most Unequal Counties -->
+				<div class="ranking">
+					<h3 class="ranking__title">Widest Internal Gaps</h3>
+					<p class="ranking__subtitle">Largest difference between best and worst tracts</p>
+					<ol class="ranking__list ranking__list--compact">
+						{#each data.mostUnequalCounties as county, i}
+							<li class="ranking__item ranking__item--gap">
+								<span class="ranking__rank">{i + 1}</span>
+								<span class="ranking__county">{county.county}, {county.state}</span>
+								<span class="ranking__gap">{county.range.toFixed(1)} pts</span>
+							</li>
+						{/each}
+					</ol>
+				</div>
+			</div>
+		</section>
+
 		<!-- Data Access -->
 		<section class="access" aria-labelledby="access-heading">
 			<h2 id="access-heading" class="section-title">Access the Data</h2>
@@ -276,7 +332,7 @@
 		<section class="citation" aria-labelledby="citation-heading">
 			<h2 id="citation-heading" class="section-title">How to Cite</h2>
 			<div class="citation__block">
-				<code>Community Resilience Mapping Project (2025). Census tract-level health resilience scores for the United States. https://resilience-mapping.fly.dev</code>
+				<code>Community Resilience Mapping Project (2025). Census tract-level health resilience scores for the United States. https://odds.health</code>
 			</div>
 			<p class="citation__note">
 				This dataset is provided under open access terms. Please cite when using in publications.
@@ -411,6 +467,11 @@
 		font-weight: var(--font-weight-medium);
 		padding: var(--space-1) var(--space-2);
 		border-radius: var(--radius-sm);
+	}
+
+	.paper__status--draft {
+		background: rgba(148, 163, 184, 0.15);
+		color: var(--color-text-secondary);
 	}
 
 	.paper__status--published {
@@ -596,6 +657,59 @@
 
 	.ranking__score.negative {
 		color: var(--color-score-low);
+	}
+
+	.rankings__intro {
+		font-size: var(--text-sm);
+		color: var(--color-text-secondary);
+		margin-bottom: var(--space-6);
+	}
+
+	.rankings__grid--three {
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	}
+
+	.ranking__subtitle {
+		font-size: var(--text-xs);
+		color: var(--color-text-muted);
+		margin-top: calc(var(--space-2) * -1);
+		margin-bottom: var(--space-4);
+	}
+
+	.ranking__list--compact .ranking__item {
+		padding: var(--space-2) 0;
+	}
+
+	.ranking__list--compact .ranking__rank {
+		width: 24px;
+		height: 24px;
+		font-size: var(--text-xs);
+	}
+
+	.ranking__rank--bottom {
+		background: var(--color-score-low);
+		background: rgba(209, 104, 71, 0.15);
+		color: var(--color-score-low);
+	}
+
+	.ranking__county {
+		flex: 1;
+		font-size: var(--text-sm);
+		color: var(--color-text-primary);
+	}
+
+	.ranking__gap {
+		font-family: var(--font-mono);
+		font-size: var(--text-xs);
+		font-weight: var(--font-weight-semibold);
+		color: var(--color-warning);
+		background: rgba(232, 165, 71, 0.15);
+		padding: var(--space-1) var(--space-2);
+		border-radius: var(--radius-sm);
+	}
+
+	.ranking__item--gap {
+		gap: var(--space-2);
 	}
 
 	/* ==========================================

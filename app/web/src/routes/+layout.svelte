@@ -7,7 +7,7 @@
 
 	const siteTitle = 'Community Resilience Mapping';
 	const siteDescription = 'Explore census tract-level community health resilience across the United States. Discover which neighborhoods thrive beyond what statistics predict.';
-	const siteUrl = 'https://resilience-mapping.fly.dev';
+	const siteUrl = 'https://odds.health';
 </script>
 
 <svelte:head>

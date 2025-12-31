@@ -290,7 +290,7 @@
 				<pre><code>@misc&#123;resilience-mapping,
   title = &#123;Community Resilience Mapping&#125;,
   year = &#123;2025&#125;,
-  url = &#123;https://resilience-mapping.fly.dev&#125;,
+  url = &#123;https://odds.health&#125;,
   note = &#123;Census tract-level analysis of community
          health resilience using CDC PLACES 2024
          and USDA Food Access Research Atlas data,
