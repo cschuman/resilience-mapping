@@ -165,6 +165,54 @@
 			</div>
 		</section>
 
+		<!-- Headline Findings -->
+		<section class="headlines" aria-labelledby="headlines-heading">
+			<h2 id="headlines-heading" class="section-title">Headline Findings</h2>
+			<p class="headlines__intro">
+				Counterintuitive patterns and surprising discoveries from our analysis.
+			</p>
+
+			<div class="headlines__grid">
+				<a href="/research/special-populations" class="headline-card headline-card--featured">
+					<div class="headline-card__badge">New Research</div>
+					<h3 class="headline-card__title">The 4 Standard Deviation Gap</h3>
+					<p class="headline-card__text">
+						College communities average <strong class="positive">+2.95</strong> resilience
+						while prison communities average <strong class="negative">-0.98</strong>.
+						Education vs. incarceration: a 4 SD divide.
+					</p>
+					<span class="headline-card__link">Explore Special Populations &rarr;</span>
+				</a>
+
+				<div class="headline-card">
+					<h3 class="headline-card__title">Ohio's Bifurcation</h3>
+					<p class="headline-card__text">
+						Columbus (Franklin County) has 4 of the nation's top 10 tracts.
+						Cleveland (Cuyahoga County) has 3 of the bottom 10.
+						Same state, 60 miles apart, 10+ standard deviations difference.
+					</p>
+				</div>
+
+				<div class="headline-card">
+					<h3 class="headline-card__title">The 9-Point Chasm</h3>
+					<p class="headline-card__text">
+						Cleveland and New Orleans each have 9+ point gaps between their
+						best and worst neighborhoods. Same county governance,
+						vastly different health outcomes.
+					</p>
+				</div>
+
+				<div class="headline-card">
+					<h3 class="headline-card__title">West Virginia Paradox</h3>
+					<p class="headline-card__text">
+						Highest health burden in America (+1.0), yet resilience near average (-0.04).
+						Tight-knit communities may provide protective factors
+						despite objectively poor health metrics.
+					</p>
+				</div>
+			</div>
+		</section>
+
 		<!-- State Rankings -->
 		<section class="rankings" aria-labelledby="rankings-heading">
 			<h2 id="rankings-heading" class="section-title">State-Level Patterns</h2>
@@ -558,6 +606,94 @@
 		font-size: var(--text-sm);
 		color: var(--color-text-secondary);
 		line-height: var(--leading-relaxed);
+	}
+
+	/* ==========================================
+	 * HEADLINES
+	 * ========================================== */
+
+	.headlines {
+		margin-bottom: var(--space-16);
+	}
+
+	.headlines__intro {
+		font-size: var(--text-sm);
+		color: var(--color-text-secondary);
+		margin-bottom: var(--space-6);
+	}
+
+	.headlines__grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: var(--space-5);
+	}
+
+	.headline-card {
+		background: var(--color-foundation-mid);
+		border: 1px solid var(--color-border-subtle);
+		border-radius: var(--radius-xl);
+		padding: var(--space-5);
+		transition: all var(--duration-normal) var(--ease-out);
+	}
+
+	.headline-card--featured {
+		grid-column: span 2;
+		background: linear-gradient(135deg, var(--color-foundation-mid), var(--color-accent-primary-glow));
+		border-color: var(--color-accent-primary);
+		text-decoration: none;
+		color: inherit;
+	}
+
+	.headline-card--featured:hover {
+		border-color: var(--color-accent-primary);
+		box-shadow: var(--shadow-lg);
+		transform: translateY(-2px);
+	}
+
+	.headline-card__badge {
+		display: inline-block;
+		font-size: var(--text-xs);
+		font-weight: var(--font-weight-bold);
+		color: var(--color-accent-primary);
+		background: var(--color-accent-primary-glow);
+		padding: var(--space-1) var(--space-3);
+		border-radius: var(--radius-full);
+		margin-bottom: var(--space-3);
+	}
+
+	.headline-card__title {
+		font-size: var(--text-lg);
+		font-weight: var(--font-weight-semibold);
+		color: var(--color-text-primary);
+		margin-bottom: var(--space-2);
+	}
+
+	.headline-card__text {
+		font-size: var(--text-sm);
+		color: var(--color-text-secondary);
+		line-height: var(--leading-relaxed);
+	}
+
+	.headline-card__text strong.positive {
+		color: var(--color-score-high);
+	}
+
+	.headline-card__text strong.negative {
+		color: var(--color-score-low);
+	}
+
+	.headline-card__link {
+		display: inline-block;
+		margin-top: var(--space-3);
+		font-size: var(--text-sm);
+		font-weight: var(--font-weight-medium);
+		color: var(--color-accent-primary);
+	}
+
+	@media (max-width: 700px) {
+		.headline-card--featured {
+			grid-column: span 1;
+		}
 	}
 
 	.finding__text strong {
