@@ -277,7 +277,7 @@
 
 		<h3>2.1 Data Source and Sample</h3>
 		<p>
-			We analyzed CDC PLACES tract-level health estimates from 2020-2025 releases, harmonized to a
+			We analyzed CDC PLACES tract-level health estimates from 2020-2026 releases, harmonized to a
 			consistent panel structure. The analytic sample comprised <strong>189,566 tract-year
 			observations</strong> from <strong>72,161 unique census tracts</strong> across 51 states and
 			territories, with prediction years 2022, 2023, and 2024.

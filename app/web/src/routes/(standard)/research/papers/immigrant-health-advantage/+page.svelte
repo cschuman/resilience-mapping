@@ -12,7 +12,7 @@
 	const paper = {
 		title: 'Beyond the Hispanic Paradox: Immigrant Health Advantage, Structural Poverty, and the Aggregation Artifact in Community Health Resilience',
 		authors: ['Corey Schuman'],
-		publishedDate: '2025-01-01',
+		publishedDate: '2026-01-01',
 		version: '1.0.0',
 		status: 'preprint' as const,
 		pdfUrl: '/research/papers/immigrant-health-advantage-v1.0.0.pdf'
@@ -128,7 +128,7 @@
 	<!-- Google Scholar -->
 	<meta name="citation_title" content={paper.title} />
 	<meta name="citation_author" content="Schuman, Corey" />
-	<meta name="citation_publication_date" content="2025/01/01" />
+	<meta name="citation_publication_date" content="2026/01/01" />
 	<meta name="citation_journal_title" content="odds.health Research" />
 </svelte:head>
 

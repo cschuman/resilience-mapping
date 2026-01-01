@@ -197,7 +197,7 @@
 		<section class="citation" aria-labelledby="citation-heading">
 			<h2 id="citation-heading" class="section-title">How to Cite</h2>
 			<div class="citation-block">
-				<code>Community Resilience Mapping Project (2025). Census tract-level health resilience scores for the United States. https://odds.health</code>
+				<code>Community Resilience Mapping Project (2026). Census tract-level health resilience scores for the United States. https://odds.health</code>
 			</div>
 			<p class="citation-note">
 				This dataset is provided under open access terms for academic research. Please cite when publishing.

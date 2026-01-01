@@ -12,7 +12,7 @@
 	const paper = {
 		title: 'Structural Correlates of Community Health Resilience: A Cross-Sectional Analysis of 53,889 U.S. Census Tracts',
 		authors: ['Corey Schuman'],
-		publishedDate: '2025-01-01',
+		publishedDate: '2026-01-01',
 		version: '1.0.0',
 		status: 'preprint' as const,
 		pdfUrl: '/research/papers/health-equity-v1.0.0.pdf'
@@ -128,7 +128,7 @@
 	<!-- Google Scholar -->
 	<meta name="citation_title" content={paper.title} />
 	<meta name="citation_author" content="Schuman, Corey" />
-	<meta name="citation_publication_date" content="2025/01/01" />
+	<meta name="citation_publication_date" content="2026/01/01" />
 	<meta name="citation_journal_title" content="odds.health Research" />
 </svelte:head>
 

@@ -185,7 +185,7 @@
 					</p>
 					<div class="paper__meta">
 						<span class="paper__status paper__status--review">Pre-print</span>
-						<span class="paper__date">January 2025</span>
+						<span class="paper__date">January 2026</span>
 					</div>
 					<div class="paper__topics">
 						<span class="topic">Health Equity</span>
@@ -212,7 +212,7 @@
 					</p>
 					<div class="paper__meta">
 						<span class="paper__status paper__status--review">Pre-print</span>
-						<span class="paper__date">January 2025</span>
+						<span class="paper__date">January 2026</span>
 					</div>
 					<div class="paper__topics">
 						<span class="topic">Hispanic Paradox</span>
@@ -462,7 +462,7 @@
 		<section class="citation" aria-labelledby="citation-heading">
 			<h2 id="citation-heading" class="section-title">How to Cite</h2>
 			<div class="citation__block">
-				<code>Community Resilience Mapping Project (2025). Census tract-level health resilience scores for the United States. https://odds.health</code>
+				<code>Community Resilience Mapping Project (2026). Census tract-level health resilience scores for the United States. https://odds.health</code>
 			</div>
 			<p class="citation__note">
 				This dataset is provided under open access terms. Please cite when using in publications.

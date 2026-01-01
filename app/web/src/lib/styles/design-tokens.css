@@ -380,3 +380,117 @@
 	white-space: nowrap;
 	border: 0;
 }
+
+/* ==========================================
+ * LIST STYLES
+ * Restore semantic list styling (Tailwind Preflight removes these)
+ * Note: Uses :where() for low specificity, allowing component overrides
+ * ========================================== */
+
+/* Default list styling for content areas */
+:where(ul):not(
+	[class*="ranking"],
+	[class*="tract-list"],
+	[class*="sources-list"],
+	[class*="grid"],
+	[class*="nav"],
+	[class*="menu"],
+	[class*="topic"]
+) {
+	margin: var(--space-4) 0;
+	padding-left: var(--space-6);
+	color: var(--color-text-secondary);
+	list-style-type: disc;
+	list-style-position: outside;
+}
+
+:where(ol):not(
+	[class*="ranking"],
+	[class*="grid"],
+	[class*="nav"],
+	[class*="menu"]
+) {
+	margin: var(--space-4) 0;
+	padding-left: var(--space-6);
+	color: var(--color-text-secondary);
+	list-style-type: decimal;
+	list-style-position: outside;
+}
+
+/* List items */
+:where(ul):not(
+	[class*="ranking"],
+	[class*="tract-list"],
+	[class*="sources-list"],
+	[class*="grid"],
+	[class*="nav"],
+	[class*="menu"],
+	[class*="topic"]
+) li,
+:where(ol):not(
+	[class*="ranking"],
+	[class*="grid"],
+	[class*="nav"],
+	[class*="menu"]
+) li {
+	margin-bottom: var(--space-2);
+	line-height: var(--leading-relaxed);
+	padding-left: var(--space-2);
+}
+
+/* Marker color */
+:where(ul):not(
+	[class*="ranking"],
+	[class*="tract-list"],
+	[class*="sources-list"],
+	[class*="grid"],
+	[class*="nav"],
+	[class*="menu"],
+	[class*="topic"]
+) li::marker,
+:where(ol):not(
+	[class*="ranking"],
+	[class*="grid"],
+	[class*="nav"],
+	[class*="menu"]
+) li::marker {
+	color: var(--color-text-muted);
+}
+
+/* Nested lists */
+:where(ul) ul,
+:where(ol) ol,
+:where(ul) ol,
+:where(ol) ul {
+	margin-top: var(--space-2);
+	margin-bottom: var(--space-2);
+}
+
+/* Nested unordered lists - circles then squares */
+:where(ul) ul {
+	list-style-type: circle;
+}
+
+:where(ul) ul ul {
+	list-style-type: square;
+}
+
+/* Nested ordered lists - different numbering styles */
+:where(ol) ol {
+	list-style-type: lower-alpha;
+}
+
+:where(ol) ol ol {
+	list-style-type: lower-roman;
+}
+
+/* First and last list items */
+:where(ul) li:first-child,
+:where(ol) li:first-child {
+	margin-top: 0;
+}
+
+:where(ul) li:last-child,
+:where(ol) li:last-child {
+	margin-bottom: 0;
+}

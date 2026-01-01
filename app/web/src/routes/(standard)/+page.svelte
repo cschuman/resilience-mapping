@@ -258,7 +258,7 @@
 				No registration required. Please cite when publishing.
 			</p>
 			<div class="citation__block">
-				<code>Community Resilience Mapping Project (2025). Census tract-level health resilience scores for the United States. https://odds.health</code>
+				<code>Community Resilience Mapping Project (2026). Census tract-level health resilience scores for the United States. https://odds.health</code>
 			</div>
 			<div class="citation__actions">
 				<a href="/data" class="btn btn--secondary">

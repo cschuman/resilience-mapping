@@ -335,13 +335,21 @@
 
 	.use-card ul {
 		margin: 0;
-		padding-left: var(--space-5);
+		padding-left: var(--space-6);
+		list-style-type: disc;
+		list-style-position: outside;
 	}
 
 	.use-card li {
 		font-size: var(--text-sm);
 		color: var(--color-text-secondary);
 		margin-bottom: var(--space-2);
+		line-height: var(--leading-relaxed);
+		padding-left: var(--space-2);
+	}
+
+	.use-card li::marker {
+		color: var(--color-text-muted);
 	}
 
 	/* Interventions */

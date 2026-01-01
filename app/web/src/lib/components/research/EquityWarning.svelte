@@ -6,7 +6,7 @@
 
 	let {
 		status = 'Equity analysis in progress',
-		estimatedCompletion = 'January 2025'
+		estimatedCompletion = 'January 2026'
 	}: Props = $props();
 </script>
 

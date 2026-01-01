@@ -173,7 +173,7 @@
 				or provide context for stories. The data is open access—no restrictions on use.
 			</p>
 			<p class="contact-text">
-				<strong>Citation:</strong> Community Resilience Mapping Project (2025). https://odds.health
+				<strong>Citation:</strong> Community Resilience Mapping Project (2026). https://odds.health
 			</p>
 		</section>
 	</div>
