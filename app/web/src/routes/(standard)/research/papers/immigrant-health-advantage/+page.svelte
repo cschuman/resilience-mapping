@@ -274,7 +274,7 @@
 		<ul>
 			<li>
 				<strong>Spatial autocorrelation:</strong> County-clustered standard errors are 5x larger
-				than unclustered estimates. All findings remain significant (p < 0.001).
+				than unclustered estimates. All findings remain significant (p &lt; 0.001).
 			</li>
 			<li>
 				<strong>Medicaid expansion:</strong> Texas hasn't expanded Medicaid; Illinois has.

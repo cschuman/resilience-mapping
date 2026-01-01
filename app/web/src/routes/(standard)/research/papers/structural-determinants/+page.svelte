@@ -98,7 +98,7 @@
 		{
 			title: 'Heteroscedasticity present',
 			description:
-				'Breusch-Pagan test confirmed significant heteroscedasticity (LM = 4281, p < 0.001). HC3 robust standard errors were 1.17x OLS standard errors—a modest adjustment that does not change inference.'
+				'Breusch-Pagan test confirmed significant heteroscedasticity (LM = 4281, p &lt; 0.001). HC3 robust standard errors were 1.17x OLS standard errors—a modest adjustment that does not change inference.'
 		},
 		{
 			title: 'Community voice absent',
@@ -108,7 +108,7 @@
 		{
 			title: 'Random slopes model',
 			description:
-				'A random slopes model allowing race-resilience relationships to vary by state showed significantly better fit (LR χ² = 2535.9, p < 0.001). Fixed-effects estimates represent average effects across states.'
+				'A random slopes model allowing race-resilience relationships to vary by state showed significantly better fit (LR χ² = 2535.9, p &lt; 0.001). Fixed-effects estimates represent average effects across states.'
 		},
 		{
 			title: 'No pre-registration',
@@ -121,7 +121,7 @@
 		{
 			title: 'A 0.43 SD national resilience gap exists',
 			description:
-				'Using multilevel models, majority-minority communities average 0.43 SD lower resilience than majority-white communities (z=-41.83, p<0.001). This is a structural failure.'
+				'Using multilevel models, majority-minority communities average 0.43 SD lower resilience than majority-white communities (z=-41.83, p&lt;0.001). This is a structural failure.'
 		},
 		{
 			title: 'Two states show robust reversed patterns',

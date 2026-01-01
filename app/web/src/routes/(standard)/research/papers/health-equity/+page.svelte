@@ -287,7 +287,7 @@
 		<h3>3.1 Overall Disparity</h3>
 		<p>
 			Majority-minority communities averaged 0.43 SD lower resilience than majority-white
-			communities (z = -41.83, p < 0.001). The bottom 10% of tracts by resilience were 56.2%
+			communities (z = -41.83, p &lt; 0.001). The bottom 10% of tracts by resilience were 56.2%
 			majority-minority, compared to 26.4% nationally.
 		</p>
 
