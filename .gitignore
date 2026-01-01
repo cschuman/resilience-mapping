@@ -8,6 +8,8 @@ __pycache__/
 # Data files (too large)
 data/input/*
 data/output/*
+data/external/*.csv
+data/processed/model_table_with_florida.csv
 data/processed/tracts.mbtiles
 data/processed/tracts_enriched.geojson
 data/processed/2020_boundaries/*.mbtiles

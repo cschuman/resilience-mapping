@@ -55,6 +55,28 @@
 					</p>
 					<a href="/research/west-virginia-paradox" class="insight-card__link">Explore Data →</a>
 				</div>
+
+				<div class="insight-card insight-card--new">
+					<span class="insight-badge">New Research</span>
+					<div class="insight-card__number">0.43</div>
+					<h3 class="insight-card__title">Health Equity Gap (Modifiable)</h3>
+					<p class="insight-card__description">
+						Majority-minority communities average 0.43 SD lower resilience—but state variation
+						from +1.87 SD (DC) to -0.89 SD (Mississippi) proves structural factors determine outcomes.
+					</p>
+					<a href="/research/papers/health-equity" class="insight-card__link">Read Paper →</a>
+				</div>
+
+				<div class="insight-card insight-card--new">
+					<span class="insight-badge">New Research</span>
+					<div class="insight-card__number">2.6</div>
+					<h3 class="insight-card__title">Hispanic Paradox Is an Artifact</h3>
+					<p class="insight-card__description">
+						Aggregate Hispanic data masks 2.6 SD gap within Texas. South American communities thrive
+						(+0.147) while Mexican-American border communities struggle (-1.08 SD). Policy implications differ.
+					</p>
+					<a href="/research/papers/immigrant-health-advantage" class="insight-card__link">Read Paper →</a>
+				</div>
 			</div>
 		</section>
 
@@ -253,6 +275,23 @@
 
 	.insight-card__link:hover {
 		text-decoration: underline;
+	}
+
+	.insight-card--new {
+		border-color: var(--color-score-high);
+		position: relative;
+	}
+
+	.insight-badge {
+		position: absolute;
+		top: var(--space-3);
+		right: var(--space-3);
+		font-size: var(--text-xs);
+		font-weight: var(--font-weight-bold);
+		color: var(--color-score-high);
+		background: rgba(34, 197, 94, 0.2);
+		padding: var(--space-1) var(--space-2);
+		border-radius: var(--radius-full);
 	}
 
 	/* Use Cases */

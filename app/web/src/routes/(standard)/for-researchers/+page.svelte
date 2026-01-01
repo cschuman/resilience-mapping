@@ -44,6 +44,47 @@
 			</div>
 		</section>
 
+		<!-- Recent Papers -->
+		<section class="papers" aria-labelledby="papers-heading">
+			<h2 id="papers-heading" class="section-title">Recent Papers</h2>
+			<div class="papers-grid">
+				<a href="/research/papers/immigrant-health-advantage" class="paper-card paper-card--new">
+					<span class="paper-badge">New</span>
+					<h3>Immigrant Health Advantage Analysis</h3>
+					<p>
+						Testing whether the "Hispanic Paradox" reflects genuine community resilience or aggregation
+						artifacts. Finds dramatic heterogeneity across origin groups and a 2.6 SD gap within Texas.
+					</p>
+					<span class="paper-link">Read Paper →</span>
+				</a>
+				<a href="/research/papers/health-equity" class="paper-card paper-card--new">
+					<span class="paper-badge">New</span>
+					<h3>Structural Correlates of Resilience</h3>
+					<p>
+						Examines the 0.43 SD resilience gap between majority-white and majority-minority communities.
+						State-level variation from +1.87 to -0.89 SD proves structural factors are modifiable.
+					</p>
+					<span class="paper-link">Read Paper →</span>
+				</a>
+				<a href="/research/papers/structural-determinants" class="paper-card">
+					<h3>Structural Determinants Paper</h3>
+					<p>
+						Core methodology paper establishing the resilience framework and analyzing structural
+						predictors across 53,889 census tracts.
+					</p>
+					<span class="paper-link">Read Paper →</span>
+				</a>
+				<a href="/research" class="paper-card paper-card--all">
+					<h3>View All Research</h3>
+					<p>
+						Browse all published papers, working papers, and research findings from the
+						Community Resilience Mapping Project.
+					</p>
+					<span class="paper-link">Browse All →</span>
+				</a>
+			</div>
+		</section>
+
 		<!-- Data Access -->
 		<section class="data-access" aria-labelledby="access-heading">
 			<h2 id="access-heading" class="section-title">Data Access</h2>
@@ -246,6 +287,75 @@
 		margin-bottom: var(--space-6);
 		padding-bottom: var(--space-3);
 		border-bottom: 1px solid var(--color-border-subtle);
+	}
+
+	/* Papers */
+	.papers {
+		margin-bottom: var(--space-12);
+	}
+
+	.papers-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: var(--space-4);
+	}
+
+	.paper-card {
+		background: var(--color-foundation-mid);
+		border: 1px solid var(--color-border-subtle);
+		border-radius: var(--radius-xl);
+		padding: var(--space-5);
+		text-decoration: none;
+		color: inherit;
+		transition: all var(--duration-normal) var(--ease-out);
+		position: relative;
+	}
+
+	.paper-card:hover {
+		border-color: var(--color-accent-primary);
+		box-shadow: var(--shadow-lg);
+		transform: translateY(-2px);
+	}
+
+	.paper-card--new {
+		border-color: var(--color-score-high);
+	}
+
+	.paper-card--all {
+		border-style: dashed;
+	}
+
+	.paper-badge {
+		position: absolute;
+		top: var(--space-3);
+		right: var(--space-3);
+		font-size: var(--text-xs);
+		font-weight: var(--font-weight-bold);
+		color: var(--color-score-high);
+		background: rgba(34, 197, 94, 0.2);
+		padding: var(--space-1) var(--space-2);
+		border-radius: var(--radius-full);
+	}
+
+	.paper-card h3 {
+		font-size: var(--text-base);
+		font-weight: var(--font-weight-semibold);
+		color: var(--color-text-primary);
+		margin-bottom: var(--space-2);
+		padding-right: var(--space-10);
+	}
+
+	.paper-card p {
+		font-size: var(--text-sm);
+		color: var(--color-text-secondary);
+		line-height: var(--leading-relaxed);
+		margin-bottom: var(--space-3);
+	}
+
+	.paper-link {
+		font-size: var(--text-sm);
+		font-weight: var(--font-weight-medium);
+		color: var(--color-accent-primary);
 	}
 
 	/* Data Access */

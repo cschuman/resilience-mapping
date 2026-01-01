@@ -9,11 +9,20 @@
 </script>
 
 <svelte:head>
-	<title>Ohio's Bifurcation | Community Resilience Mapping</title>
+	<title>Ohio's Health Divide: Columbus vs Cleveland | odds.health</title>
 	<meta
 		name="description"
-		content="Columbus vs Cleveland: How Ohio's two major metros represent opposite ends of community resilience, despite being only 140 miles apart."
+		content="Columbus has 4 of America's top 10 healthiest tracts. Cleveland has 3 of the bottom 10. Same state, 140 miles apart, 10+ standard deviations different."
 	/>
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Ohio's Health Divide: 140 Miles, 10+ Standard Deviations" />
+	<meta
+		property="og:description"
+		content="Columbus has 4 of the top 10 healthiest tracts nationally. Cleveland has 3 of the bottom 10. Same state, opposite outcomes."
+	/>
+	<meta property="og:image" content="https://odds.health/og-ohio.svg" />
 </svelte:head>
 
 <div class="finding-page">

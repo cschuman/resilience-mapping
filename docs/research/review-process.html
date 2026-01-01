@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Review Process | Health Resilience Mapping</title>
+    <style>
+        :root {
+            --primary: #1e40af;
+            --primary-light: #3b82f6;
+            --danger: #dc2626;
+            --warning: #f59e0b;
+            --success: #16a34a;
+            --neutral: #6b7280;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .stage {
+            margin-bottom: 3rem;
+        }
+
+        .stage-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stage-number {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .stage-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .stage-subtitle {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            border-left: 4px solid var(--primary);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            color: var(--text);
+        }
+
+        .card .specialty {
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .verdict {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .verdict-reject {
+            background: #fef2f2;
+            color: var(--danger);
+        }
+
+        .verdict-major {
+            background: #fff7ed;
+            color: var(--warning);
+        }
+
+        .verdict-accept {
+            background: #f0fdf4;
+            color: var(--success);
+        }
+
+        .card ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .card li {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f1f5f9;
+            padding-left: 1.25rem;
+            position: relative;
+        }
+
+        .card li:last-child {
+            border-bottom: none;
+        }
+
+        .card li::before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            color: var(--danger);
+            font-weight: bold;
+        }
+
+        .flow-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 3rem 0;
+        }
+
+        .flow-arrow {
+            width: 2px;
+            height: 40px;
+            background: linear-gradient(to bottom, var(--primary), var(--primary-light));
+            position: relative;
+        }
+
+        .flow-arrow::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 10px solid var(--primary-light);
+        }
+
+        .summary-box {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .summary-box h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .grade-comparison {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            align-items: center;
+            padding: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .grade-box {
+            text-align: center;
+        }
+
+        .grade {
+            font-size: 4rem;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .grade-original {
+            color: var(--neutral);
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+
+        .grade-revised {
+            color: var(--danger);
+        }
+
+        .grade-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+        }
+
+        .arrow-between {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .retraction-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .retraction-table th,
+        .retraction-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 0.9rem;
+        }
+
+        .retraction-table th {
+            background: #f8fafc;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .action-deleted {
+            color: var(--danger);
+            font-weight: 600;
+        }
+
+        .action-revised {
+            color: var(--warning);
+            font-weight: 600;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 7px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary-light);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 1.5rem;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -2rem;
+            top: 0.25rem;
+            width: 12px;
+            height: 12px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px var(--primary-light);
+        }
+
+        .timeline-time {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        .timeline-content {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .team-member {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+
+        .team-member h4 {
+            font-size: 0.95rem;
+            color: var(--text);
+            margin-bottom: 0.25rem;
+        }
+
+        .team-member .role {
+            font-size: 0.8rem;
+            color: var(--primary);
+        }
+
+        .team-member .focus {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+        }
+
+        .lessons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .lesson {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%);
+            border-radius: 8px;
+        }
+
+        .lesson-number {
+            width: 30px;
+            height: 30px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .lesson-text h4 {
+            font-size: 0.95rem;
+            color: var(--text);
+            margin-bottom: 0.25rem;
+        }
+
+        .lesson-text p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 1rem;
+            }
+
+            header h1 {
+                font-size: 1.75rem;
+            }
+
+            .grade {
+                font-size: 3rem;
+            }
+
+            .grade-comparison {
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Research Review Process</h1>
+            <p>Health Resilience Mapping Platform | December 30, 2025</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Stage 1: Research Analysts -->
+        <section class="stage">
+            <div class="stage-header">
+                <div class="stage-number">1</div>
+                <div>
+                    <h2 class="stage-title">Initial Research & Analysis</h2>
+                    <p class="stage-subtitle">Three domain experts authored the original findings</p>
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Dr. Sarah Chen</h3>
+                            <span class="specialty">Epidemiology</span>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Disease burden analysis</li>
+                        <li>Population health patterns</li>
+                        <li>CDC PLACES interpretation</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Dr. Marcus Williams</h3>
+                            <span class="specialty">Health Geography</span>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Spatial analysis</li>
+                        <li>Regional disparities</li>
+                        <li>Geographic clustering</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Dr. James Park</h3>
+                            <span class="specialty">Biostatistics</span>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Statistical methodology</li>
+                        <li>Model specification</li>
+                        <li>Uncertainty quantification</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="flow-container">
+            <div class="flow-arrow"></div>
+        </div>
+
+        <!-- Stage 2: Peer Review Panel -->
+        <section class="stage">
+            <div class="stage-header">
+                <div class="stage-number">2</div>
+                <div>
+                    <h2 class="stage-title">Peer Review Panel</h2>
+                    <p class="stage-subtitle">Four elite reviewers conducted independent, rigorous reviews</p>
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Dr. Helena Voss</h3>
+                            <span class="specialty">Biostatistician</span>
+                        </div>
+                        <span class="verdict verdict-major">Major Revisions</span>
+                    </div>
+                    <ul>
+                        <li>Resilience score is mathematically tautological</li>
+                        <li>Zero-population tracts in extremes is "disqualifying"</li>
+                        <li>12 SD range is a red flag</li>
+                        <li>B+ self-grade is "self-delusion"</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Dr. Kwame Asante</h3>
+                            <span class="specialty">Epidemiologist</span>
+                        </div>
+                        <span class="verdict verdict-major">Major Revisions</span>
+                    </div>
+                    <ul>
+                        <li>"5-7 years life expectancy" claim FABRICATED</li>
+                        <li>Health Outcomes Table has no basis</li>
+                        <li>No age standardization</li>
+                        <li>Population claims are "arithmetic, not epidemiology"</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Dr. Margaret Chen-Ramirez</h3>
+                            <span class="specialty">Policy Economist</span>
+                        </div>
+                        <span class="verdict verdict-major">Major Revisions</span>
+                    </div>
+                    <ul>
+                        <li>"Health Opportunity Zones" has NO evidence</li>
+                        <li>Medicaid recommendation doesn't follow</li>
+                        <li>Targeting 30% is not targeting</li>
+                        <li>Zero cost estimates provided</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Dr. Richard Thornton</h3>
+                            <span class="specialty">Journal Editor</span>
+                        </div>
+                        <span class="verdict verdict-reject">Desk Reject</span>
+                    </div>
+                    <ul>
+                        <li>"What is actually new here? Almost nothing."</li>
+                        <li>Stroke Belt is 40+ years old</li>
+                        <li>Analyst personas appear suspicious</li>
+                        <li>"Resilience" is buzzword for residuals</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="flow-container">
+            <div class="flow-arrow"></div>
+        </div>
+
+        <!-- Grade Revision -->
+        <section class="summary-box">
+            <h3>Methodology Grade Revision</h3>
+            <div class="grade-comparison">
+                <div class="grade-box">
+                    <div class="grade grade-original">B+</div>
+                    <div class="grade-label">Original Self-Assessment</div>
+                </div>
+                <div class="arrow-between">&rarr;</div>
+                <div class="grade-box">
+                    <div class="grade grade-revised">C-</div>
+                    <div class="grade-label">Revised Honest Assessment</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="flow-container">
+            <div class="flow-arrow"></div>
+        </div>
+
+        <!-- Stage 3: Response Team -->
+        <section class="stage">
+            <div class="stage-header">
+                <div class="stage-number">3</div>
+                <div>
+                    <h2 class="stage-title">Response & Remediation</h2>
+                    <p class="stage-subtitle">Comprehensive response to peer review feedback</p>
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Dr. Sarah Chen</h3>
+                            <span class="specialty">Epidemiologist</span>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Literature review for proper citations</li>
+                        <li>Identified claims requiring retraction</li>
+                        <li>Grounded "Burden Belt" in existing literature</li>
+                        <li>Age standardization clarification</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Dr. James Park, Ph.D.</h3>
+                            <span class="specialty">Biostatistician</span>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Tautological construct remediation</li>
+                        <li>Population threshold (n &ge; 500)</li>
+                        <li>Uncertainty quantification strategy</li>
+                        <li>External validation plan</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Claims Retracted -->
+        <section class="summary-box">
+            <h3>Claims Retracted or Revised</h3>
+            <table class="retraction-table">
+                <thead>
+                    <tr>
+                        <th>Claim</th>
+                        <th>Problem</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>"5-7 years life expectancy difference"</td>
+                        <td>No citation, no methodology</td>
+                        <td class="action-deleted">DELETED</td>
+                    </tr>
+                    <tr>
+                        <td>Life expectancy gap table (5.3 years, 2.1 years)</td>
+                        <td>Fabricated precision</td>
+                        <td class="action-deleted">DELETED</td>
+                    </tr>
+                    <tr>
+                        <td>"Syndemic Effects" section</td>
+                        <td>Doesn't meet Singer's criteria</td>
+                        <td class="action-revised">REVISED</td>
+                    </tr>
+                    <tr>
+                        <td>"Burden Belt" as novel discovery</td>
+                        <td>Appropriates existing terminology</td>
+                        <td class="action-revised">REVISED with citations</td>
+                    </tr>
+                    <tr>
+                        <td>"Health Opportunity Zones" recommendation</td>
+                        <td>No evidence base</td>
+                        <td class="action-deleted">DELETED</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <div class="flow-container">
+            <div class="flow-arrow"></div>
+        </div>
+
+        <!-- Stage 4: Core Leadership -->
+        <section class="stage">
+            <div class="stage-header">
+                <div class="stage-number">4</div>
+                <div>
+                    <h2 class="stage-title">Core Leadership Review</h2>
+                    <p class="stage-subtitle">8-person team providing specialized domain oversight</p>
+                </div>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-member">
+                    <h4>Amara Chen-Rodriguez</h4>
+                    <div class="role">Product Leader</div>
+                    <div class="focus">Story framing, stakeholder communication</div>
+                </div>
+                <div class="team-member">
+                    <h4>Marcus Thompson</h4>
+                    <div class="role">Technical Architect</div>
+                    <div class="focus">Data pipeline integrity</div>
+                </div>
+                <div class="team-member">
+                    <h4>Rev. Dr. Keisha Williams</h4>
+                    <div class="role">Community Trust Broker</div>
+                    <div class="focus">Harm prevention, ethical framing</div>
+                </div>
+                <div class="team-member">
+                    <h4>Yuki Nakamura-Jackson</h4>
+                    <div class="role">Creative Director</div>
+                    <div class="focus">Visual presentation</div>
+                </div>
+                <div class="team-member">
+                    <h4>Jordan Park</h4>
+                    <div class="role">Frontend Developer</div>
+                    <div class="focus">Data visualization</div>
+                </div>
+                <div class="team-member">
+                    <h4>Miguel Santos</h4>
+                    <div class="role">Data Engineer</div>
+                    <div class="focus">Geographic accuracy</div>
+                </div>
+                <div class="team-member">
+                    <h4>Aaliyah Muhammad</h4>
+                    <div class="role">DevOps/SRE</div>
+                    <div class="focus">Reproducibility</div>
+                </div>
+                <div class="team-member">
+                    <h4>David Chen-Williams</h4>
+                    <div class="role">Accessibility Specialist</div>
+                    <div class="focus">Accessible presentation</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="flow-container">
+            <div class="flow-arrow"></div>
+        </div>
+
+        <!-- Stage 5: Community Advisory Board -->
+        <section class="stage">
+            <div class="stage-header">
+                <div class="stage-number">5</div>
+                <div>
+                    <h2 class="stage-title">Community Advisory Board</h2>
+                    <p class="stage-subtitle">Community oversight and consent (recruiting)</p>
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Pastor James Whitfield</h3>
+                            <span class="specialty">Rutherford County, TN</span>
+                        </div>
+                        <span class="verdict verdict-major">Interested</span>
+                    </div>
+                    <ul>
+                        <li>AME church, 30 years experience</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Maria Gonzalez</h3>
+                            <span class="specialty">Pickens County, SC</span>
+                        </div>
+                        <span class="verdict verdict-accept">Verbal Yes</span>
+                    </div>
+                    <ul>
+                        <li>CHW, clinic coordinator</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Elder Ruth Johnson</h3>
+                            <span class="specialty">Birmingham, AL</span>
+                        </div>
+                        <span class="verdict verdict-accept">Strong Yes</span>
+                    </div>
+                    <ul>
+                        <li>Retired nurse, church mother</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Carlos Mendez</h3>
+                            <span class="specialty">Warren County, KY</span>
+                        </div>
+                        <span class="verdict verdict-major">Pending</span>
+                    </div>
+                    <ul>
+                        <li>Restaurant owner, community leader</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="summary-box">
+            <h3>Timeline: December 30, 2025</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-time">09:00</div>
+                    <div class="timeline-content">Original reports submitted for review</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">11:00</div>
+                    <div class="timeline-content">Peer Review Panel convenes (4 reviewers)</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">14:00</div>
+                    <div class="timeline-content">Verdicts delivered: Major Revisions / Desk Reject</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">15:00</div>
+                    <div class="timeline-content">Response team begins literature review</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">17:00</div>
+                    <div class="timeline-content">Methodological critique completed</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">19:00</div>
+                    <div class="timeline-content">Remediation plan finalized</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">21:00</div>
+                    <div class="timeline-content">Revised documents prepared</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lessons Learned -->
+        <section class="stage">
+            <div class="stage-header">
+                <div class="stage-number" style="background: var(--success);">&#10003;</div>
+                <div>
+                    <h2 class="stage-title">Lessons Learned</h2>
+                    <p class="stage-subtitle">Key takeaways from the review process</p>
+                </div>
+            </div>
+
+            <div class="lessons">
+                <div class="lesson">
+                    <div class="lesson-number">1</div>
+                    <div class="lesson-text">
+                        <h4>Citation Discipline</h4>
+                        <p>Every quantitative claim requires a source</p>
+                    </div>
+                </div>
+                <div class="lesson">
+                    <div class="lesson-number">2</div>
+                    <div class="lesson-text">
+                        <h4>Construct Validity</h4>
+                        <p>Residual-based measures need external validation</p>
+                    </div>
+                </div>
+                <div class="lesson">
+                    <div class="lesson-number">3</div>
+                    <div class="lesson-text">
+                        <h4>Humility in Self-Assessment</h4>
+                        <p>Expert review revealed blind spots</p>
+                    </div>
+                </div>
+                <div class="lesson">
+                    <div class="lesson-number">4</div>
+                    <div class="lesson-text">
+                        <h4>Community Consent</h4>
+                        <p>Research about communities requires community involvement</p>
+                    </div>
+                </div>
+                <div class="lesson">
+                    <div class="lesson-number">5</div>
+                    <div class="lesson-text">
+                        <h4>Transparency</h4>
+                        <p>Documenting corrections strengthens credibility</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Health Resilience Mapping Platform | Research Review Process Documentation</p>
+        <p>The self-correcting nature of this process demonstrates commitment to scientific integrity.</p>
+    </footer>
+</body>
+</html>

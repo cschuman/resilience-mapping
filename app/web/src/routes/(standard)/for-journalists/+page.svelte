@@ -61,6 +61,26 @@
 					</p>
 					<span class="story-card__link">Explore →</span>
 				</a>
+
+				<a href="/research/papers/immigrant-health-advantage" class="story-card story-card--new">
+					<span class="story-card__badge story-card__badge--new">New</span>
+					<h3 class="story-card__title">The Hispanic Paradox Is an Artifact</h3>
+					<p class="story-card__description">
+						South American communities: +0.147 correlation. Mexican communities: -0.029.
+						The aggregate statistic masks a 2.6 SD gap within Texas alone.
+					</p>
+					<span class="story-card__link">Read the Paper →</span>
+				</a>
+
+				<a href="/research/papers/health-equity" class="story-card story-card--new">
+					<span class="story-card__badge story-card__badge--new">New</span>
+					<h3 class="story-card__title">0.43 SD Health Equity Gap</h3>
+					<p class="story-card__description">
+						Majority-minority communities show lower resilience on average—but DC shows
+						+1.87 SD advantage while Mississippi shows -0.89 SD disadvantage. Equity is achievable.
+					</p>
+					<span class="story-card__link">Read the Paper →</span>
+				</a>
 			</div>
 		</section>
 
@@ -118,6 +138,30 @@
 						residential tracts in our dataset.
 					</p>
 				</div>
+			</div>
+		</section>
+
+		<!-- Press Materials -->
+		<section class="press-kit" aria-labelledby="press-heading">
+			<h2 id="press-heading" class="section-title">Press Materials</h2>
+			<div class="press-grid">
+				<a href="https://github.com/cschuman/resilience-mapping/blob/main/docs/press/PRESS-RELEASE-COLLEGE-VS-PRISON.md" class="press-card press-card--featured" target="_blank" rel="noopener">
+					<span class="press-badge">Featured</span>
+					<h3>Press Release: College vs Prison</h3>
+					<p>The 4 standard deviation health gap between education and incarceration communities.</p>
+				</a>
+				<a href="https://github.com/cschuman/resilience-mapping/blob/main/docs/press/PRESS-RELEASE-HISPANIC-PARADOX.md" class="press-card" target="_blank" rel="noopener">
+					<h3>Press Release: Hispanic Paradox</h3>
+					<p>Why aggregate Hispanic health data masks dramatic heterogeneity.</p>
+				</a>
+				<a href="https://github.com/cschuman/resilience-mapping/blob/main/docs/press/PRESS-RELEASE-OHIO-BIFURCATION.md" class="press-card" target="_blank" rel="noopener">
+					<h3>Press Release: Ohio's Health Divide</h3>
+					<p>Columbus vs Cleveland: 140 miles apart, 10+ standard deviations different.</p>
+				</a>
+				<a href="https://github.com/cschuman/resilience-mapping/blob/main/docs/press/FACT-SHEET-JOURNALISTS.md" class="press-card" target="_blank" rel="noopener">
+					<h3>Journalist Fact Sheet</h3>
+					<p>Quick-reference guide to all major findings with interpretation guidelines.</p>
+				</a>
 			</div>
 		</section>
 
@@ -227,6 +271,15 @@
 		margin-bottom: var(--space-3);
 	}
 
+	.story-card__badge--new {
+		color: var(--color-score-high);
+		background: rgba(34, 197, 94, 0.2);
+	}
+
+	.story-card--new {
+		border-color: var(--color-score-high);
+	}
+
 	.story-card__title {
 		font-size: var(--text-lg);
 		font-weight: var(--font-weight-semibold);
@@ -297,6 +350,64 @@
 	}
 
 	.metric-card p {
+		font-size: var(--text-sm);
+		color: var(--color-text-secondary);
+		line-height: var(--leading-relaxed);
+	}
+
+	/* Press Kit */
+	.press-kit {
+		margin-bottom: var(--space-12);
+	}
+
+	.press-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: var(--space-4);
+	}
+
+	.press-card {
+		background: var(--color-foundation-mid);
+		border: 1px solid var(--color-border-subtle);
+		border-radius: var(--radius-xl);
+		padding: var(--space-5);
+		text-decoration: none;
+		color: inherit;
+		transition: all var(--duration-normal) var(--ease-out);
+		position: relative;
+	}
+
+	.press-card:hover {
+		border-color: var(--color-accent-secondary);
+		box-shadow: var(--shadow-lg);
+		transform: translateY(-2px);
+	}
+
+	.press-card--featured {
+		border-color: var(--color-accent-secondary);
+		background: linear-gradient(135deg, var(--color-foundation-mid), var(--color-accent-secondary-glow));
+	}
+
+	.press-badge {
+		position: absolute;
+		top: var(--space-3);
+		right: var(--space-3);
+		font-size: var(--text-xs);
+		font-weight: var(--font-weight-bold);
+		color: var(--color-accent-secondary);
+		background: rgba(232, 165, 71, 0.2);
+		padding: var(--space-1) var(--space-2);
+		border-radius: var(--radius-full);
+	}
+
+	.press-card h3 {
+		font-size: var(--text-base);
+		font-weight: var(--font-weight-semibold);
+		color: var(--color-text-primary);
+		margin-bottom: var(--space-2);
+	}
+
+	.press-card p {
 		font-size: var(--text-sm);
 		color: var(--color-text-secondary);
 		line-height: var(--leading-relaxed);

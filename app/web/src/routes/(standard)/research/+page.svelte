@@ -147,27 +147,81 @@
 					</div>
 				</article>
 
-				<article class="paper">
+				<article class="paper paper--secondary">
 					<div class="paper__badge">Paper 3</div>
 					<h3 class="paper__title">
-						Community Health Resilience: A Multi-Level Analysis of Census Tract Outcomes
+						Structural Determinants of Community Health Resilience: A Tract-Level Analysis of 53,889 U.S. Communities
 					</h3>
 					<p class="paper__abstract">
-						This foundational paper introduces the concept of community health resilience
-						and develops the methodology for measuring it at the census tract level using
-						residual analysis from regression models predicting health outcomes.
+						A 0.38 SD resilience gap exists between majority-white and majority-minority communities.
+						But state variation from +1.87 SD (DC) to -0.53 SD (Oregon) proves structural factors—not
+						race—determine resilience. Education is the strongest correlate (r=+0.41).
 					</p>
 					<div class="paper__meta">
-						<span class="paper__status paper__status--draft">Working Paper</span>
+						<span class="paper__status paper__status--review">Pre-print</span>
+						<span class="paper__date">December 2024</span>
 					</div>
 					<div class="paper__topics">
-						<span class="topic">Methodology</span>
-						<span class="topic">Residual Analysis</span>
-						<span class="topic">Health Outcomes</span>
+						<span class="topic">Health Equity</span>
+						<span class="topic">Racial Disparities</span>
+						<span class="topic">Structural Determinants</span>
 					</div>
 					<div class="paper__actions">
-						<a href="/about" class="btn btn--outline">
-							Read Methodology
+						<a href="/research/papers/structural-determinants" class="btn btn--primary">
+							Read Paper
+						</a>
+					</div>
+				</article>
+
+				<article class="paper paper--secondary">
+					<div class="paper__badge">Paper 4</div>
+					<h3 class="paper__title">
+						Structural Correlates of Community Health Resilience: A Cross-Sectional Analysis of 53,889 U.S. Census Tracts
+					</h3>
+					<p class="paper__abstract">
+						A 0.43 SD resilience gap exists between majority-white and majority-minority communities.
+						But state variation from +1.87 SD (DC) to -0.42 SD (Washington) proves structural factors—not
+						immutable characteristics—determine resilience. Education is the strongest correlate (r=+0.41).
+					</p>
+					<div class="paper__meta">
+						<span class="paper__status paper__status--review">Pre-print</span>
+						<span class="paper__date">January 2025</span>
+					</div>
+					<div class="paper__topics">
+						<span class="topic">Health Equity</span>
+						<span class="topic">Racial Disparities</span>
+						<span class="topic">State Variation</span>
+					</div>
+					<div class="paper__actions">
+						<a href="/research/papers/health-equity" class="btn btn--primary">
+							Read Paper
+						</a>
+					</div>
+				</article>
+
+				<article class="paper paper--featured">
+					<div class="paper__badge">Paper 5</div>
+					<div class="paper__new">NEW</div>
+					<h3 class="paper__title">
+						Beyond the Hispanic Paradox: Immigrant Health Advantage, Structural Poverty, and the Aggregation Artifact
+					</h3>
+					<p class="paper__abstract">
+						The "Hispanic Paradox" is an aggregation artifact: South American (r=+0.147) vs Mexican (r=-0.029)
+						cancel to r≈0. Black immigrants show STRONGER health advantage than Hispanic immigrants.
+						Same ethnicity, same state: Austin (+1.53 SD) vs Border (-1.08 SD)—2.61 SD gap.
+					</p>
+					<div class="paper__meta">
+						<span class="paper__status paper__status--review">Pre-print</span>
+						<span class="paper__date">January 2025</span>
+					</div>
+					<div class="paper__topics">
+						<span class="topic">Hispanic Paradox</span>
+						<span class="topic">Immigrant Health</span>
+						<span class="topic">Texas Border</span>
+					</div>
+					<div class="paper__actions">
+						<a href="/research/papers/immigrant-health-advantage" class="btn btn--primary">
+							Read Paper
 						</a>
 					</div>
 				</article>
@@ -1035,6 +1089,17 @@
 	.btn--outline:hover {
 		background: var(--color-accent-primary);
 		color: white;
+	}
+
+	.btn--primary {
+		background: var(--color-accent-primary);
+		color: white;
+		border: none;
+	}
+
+	.btn--primary:hover {
+		background: var(--color-accent-primary-hover, #6B8AFF);
+		transform: translateY(-1px);
 	}
 
 	/* ==========================================

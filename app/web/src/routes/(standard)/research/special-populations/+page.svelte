@@ -24,11 +24,20 @@
 </script>
 
 <svelte:head>
-	<title>Special Populations | Community Resilience Mapping</title>
+	<title>College vs Prison: A 4 SD Health Divide | odds.health</title>
 	<meta
 		name="description"
-		content="Analysis of health resilience in college towns, military bases, and correctional facilities. Discover the 4 standard deviation gap between education and incarceration."
+		content="College towns average +2.95 resilience. Prison towns average -0.98. Same country, same healthcare system, 4 standard deviations apart."
 	/>
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="College vs Prison: A 4 Standard Deviation Health Divide" />
+	<meta
+		property="og:description"
+		content="Communities built around education show +2.95 resilience. Communities built around incarceration show -0.98. The starkest divide in American health."
+	/>
+	<meta property="og:image" content="https://odds.health/og-college-prison.svg" />
 </svelte:head>
 
 <div class="special-populations">

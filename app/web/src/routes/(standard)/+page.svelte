@@ -93,17 +93,17 @@
 	<!-- Latest Research - Prominent CTA -->
 	<section class="latest-research" aria-labelledby="research-heading">
 		<div class="latest-research__content">
-			<p class="latest-research__eyebrow">New Research</p>
+			<p class="latest-research__eyebrow">Key Finding</p>
 			<h2 id="research-heading" class="latest-research__title">
-				Health doesn't "spread" between neighborhoods
+				College Towns vs Prison Towns: A 4 SD Health Divide
 			</h2>
 			<p class="latest-research__description">
-				Our first peer-reviewed paper corrects a methodological error that made it appear
-				health improvements spread from community to community. They don't—but communities
-				<em>do</em> change together due to shared causes.
+				Communities built around education show <strong class="positive">+2.95</strong> resilience.
+				Communities built around incarceration show <strong class="negative">-0.98</strong>.
+				Same country, same healthcare system—4 standard deviations apart.
 			</p>
-			<a href="/research/papers/spatial-synchrony" class="latest-research__cta">
-				<span>Read the Paper</span>
+			<a href="/research/special-populations" class="latest-research__cta">
+				<span>Explore the Data</span>
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
 					<path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
 				</svg>
