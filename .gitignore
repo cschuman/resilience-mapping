@@ -57,3 +57,8 @@ app/backend/resilience
 
 # Local Netlify folder
 .netlify
+# Paradox study data (large, regenerable from scripts)
+data/external/EJI_2022_United_States/
+data/external/eji_2022_us.zip
+data/external/holc_tracts_2020.geojson
+data/processed/paradox_study/

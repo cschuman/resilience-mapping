@@ -2,7 +2,7 @@
 
 ## Overview
 
-A series of 4 papers derived from the CDC PLACES-based Community Health Trajectory Prediction system. Each paper addresses a distinct question while contributing to a coherent research program.
+A series of 5 papers derived from the CDC PLACES-based Community Health Trajectory Prediction system. Each paper addresses a distinct question while contributing to a coherent research program.
 
 ---
 
@@ -109,6 +109,47 @@ A series of 4 papers derived from the CDC PLACES-based Community Health Trajecto
 
 ---
 
+## Paper 5: The Grocery Store Paradox ✅ DRAFT COMPLETE
+
+**Title:** "The Grocery Store Paradox: Why Food Access Alone Cannot Heal Structurally Harmed Communities"
+
+**Status:** Draft complete (January 2026)
+
+**Target Journal:** American Journal of Public Health / Health Affairs
+
+**File:** `docs/research/PAPER-5-PARADOX-STUDY.md`
+
+**Key Findings:**
+1. **7,102 paradox tracts identified**: Communities with good food access but poor health outcomes (>1 SD worse than predicted)
+2. **Racial composition is strongest predictor**: 26.9% majority-Black vs. 3.7% in non-paradox (Cohen's d = 0.76)
+3. **Historical redlining persists**: Paradox tracts 1.65x more likely to be in redlined areas (p < 0.0001)
+4. **Social vulnerability concentrated**: 46.5% in highest SVI quartile (vs. 25% expected)
+5. **Geographic clustering**: Chicago, Detroit, Cleveland, Philadelphia, Baltimore—cities with documented segregation histories
+
+**Primary Insight:** The "paradox" is not paradoxical. These are communities that were systematically harmed by policy (redlining, disinvestment) and remain structurally disadvantaged. A grocery store cannot undo 90 years of cumulative harm.
+
+**Policy Implications:**
+- Food access is necessary but not sufficient
+- Investment must be proportional to historical harm
+- Single-factor interventions cannot address cumulative disadvantage
+- Reparative frameworks may be more appropriate than ameliorative ones
+
+**Data Sources Used:**
+- CDC PLACES 2023
+- USDA Food Access Research Atlas 2019
+- American Community Survey 2022
+- CDC Social Vulnerability Index 2022
+- HOLC Redlining Maps (digitized)
+
+**Limitations:**
+- Cross-sectional design
+- EPA EJSCREEN not available (environmental hazards not analyzed)
+- 76% of within-paradox variance unexplained
+
+**Next Steps:** Internal review, community input, journal submission
+
+---
+
 ## Paper Dependencies
 
 ```
@@ -126,6 +167,12 @@ Paper 3 (CHBI Validation)
 Paper 4 (Equity)
     └── Uses Paper 1's predictions for equity audit
     └── Uses Paper 2's findings to contextualize trajectories
+
+Paper 5 (Paradox Study) ← NEW
+    └── Inverts the resilience question
+    └── Uses same model infrastructure as Papers 1-4
+    └── Connects to Paper 4's equity framing
+    └── Strongest policy implications
 ```
 
 ---
@@ -160,6 +207,7 @@ Paper 4 (Equity)
 | Paper 2 | `unpredictability_analysis_v2.py` | Complete (peer-reviewed) |
 | Paper 3 | Not yet created | Needed |
 | Paper 4 | Not yet created | Needed |
+| Paper 5 | `paradox_study.py`, `paradox_structural_analysis.py`, `paradox_svi_analysis.py`, `paradox_holc_analysis.py` | Complete |
 
 ---
 
@@ -171,18 +219,22 @@ Paper 4 (Equity)
 | Paper 2 | Complete | Complete | Complete | **Ready** |
 | Paper 3 | 1 week | 1 week | 1 week | **3-4 weeks** |
 | Paper 4 | 1 week | 1 week | 1 week | **3-4 weeks** |
+| Paper 5 | Complete | Complete | Pending | **Draft Ready** |
 
-Papers 3 and 4 can be developed in parallel.
+Papers 3 and 4 can be developed in parallel. Paper 5 is ready for internal review.
 
 ---
 
 ## Summary
 
-This research program transforms a failed prediction system into four valuable contributions:
+This research program transforms a failed prediction system into five valuable contributions:
 
 1. **Methodological warning** about temporal leakage in spatial features
 2. **Theoretical insight** about mean reversion in community health
 3. **Validated metric** for measuring community health burden
 4. **Equity analysis** of burden distribution and prediction fairness
+5. **Policy critique** showing that food access alone cannot heal structurally harmed communities
 
 The finding that prediction fails is itself valuable—it prevents investment in systems that cannot work and redirects attention to current burden levels rather than unstable trajectory classifications.
+
+Paper 5 (The Grocery Store Paradox) may be the most policy-relevant of the series: it directly challenges the assumption underlying billions of dollars in food access investment.
