@@ -12,7 +12,7 @@
 	const paper = {
 		title: 'Structural Correlates of Community Health Resilience: A Cross-Sectional Analysis of 53,889 U.S. Census Tracts',
 		authors: ['Corey Schuman'],
-		publishedDate: '2024-12-31',
+		publishedDate: '2025-12-31',
 		version: '2.0.0',
 		status: 'preprint' as const,
 		pdfUrl: '/research/papers/structural-correlates-v2.0.0.pdf'

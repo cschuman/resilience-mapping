@@ -6,7 +6,7 @@ export const load: PageServerLoad = async () => {
 			slug: 'spatial-synchrony',
 			title: 'Spatial Synchrony, Not Contagion: A Methodological Correction in Community Health Trajectory Prediction',
 			authors: ['Corey Schuman'],
-			publishedDate: '2024-12-30',
+			publishedDate: '2025-12-30',
 			version: '1.0.0',
 			status: 'preprint',
 			doi: null,

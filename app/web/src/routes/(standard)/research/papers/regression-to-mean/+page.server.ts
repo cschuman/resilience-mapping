@@ -6,7 +6,7 @@ export const load: PageServerLoad = async () => {
 			slug: 'regression-to-mean',
 			title: 'Regression to the Mean in Small-Area Health Estimates: Why CDC PLACES-Based Trajectory Prediction Fails',
 			authors: ['Corey Schuman'],
-			publishedDate: '2024-12-31',
+			publishedDate: '2025-12-31',
 			version: '1.0.0',
 			status: 'preprint',
 			doi: null,

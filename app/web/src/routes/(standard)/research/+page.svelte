@@ -107,7 +107,7 @@
 					</p>
 					<div class="paper__meta">
 						<span class="paper__status paper__status--review">Pre-print</span>
-						<span class="paper__date">December 2024</span>
+						<span class="paper__date">December 2025</span>
 					</div>
 					<div class="paper__topics">
 						<span class="topic">Spatial Epidemiology</span>
@@ -133,7 +133,7 @@
 					</p>
 					<div class="paper__meta">
 						<span class="paper__status paper__status--review">Pre-print</span>
-						<span class="paper__date">December 2024</span>
+						<span class="paper__date">December 2025</span>
 					</div>
 					<div class="paper__topics">
 						<span class="topic">Regression to Mean</span>
@@ -159,7 +159,7 @@
 					</p>
 					<div class="paper__meta">
 						<span class="paper__status paper__status--review">Pre-print</span>
-						<span class="paper__date">December 2024</span>
+						<span class="paper__date">December 2025</span>
 					</div>
 					<div class="paper__topics">
 						<span class="topic">Health Equity</span>

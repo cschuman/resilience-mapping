@@ -12,7 +12,7 @@
 	const paper = {
 		title: 'Spatial Synchrony, Not Contagion: A Methodological Correction in Community Health Trajectory Prediction',
 		authors: ['Corey Schuman'],
-		publishedDate: '2024-12-30',
+		publishedDate: '2025-12-30',
 		version: '1.0.0',
 		status: 'preprint' as const,
 		pdfUrl: '/research/papers/spatial-synchrony-v1.0.0.pdf'
