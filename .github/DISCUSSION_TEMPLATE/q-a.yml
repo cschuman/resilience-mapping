@@ -1,0 +1,33 @@
+title: "[Question]: "
+labels:
+  - question
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask questions about the data, methodology, or how to use the platform.
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic
+      options:
+        - Data sources & methodology
+        - Using the interactive map
+        - API & data access
+        - Interpreting results
+        - Replicating the analysis
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: What would you like to know?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Any relevant background (your research area, how you're using this, etc.)

@@ -1,0 +1,131 @@
+# GitHub Labels Configuration
+# Apply with: gh label import .github/labels.yml
+# Or use https://github.com/marketplace/actions/label-sync
+
+# Type labels
+- name: bug
+  color: d73a4a
+  description: Something isn't working
+
+- name: enhancement
+  color: a2eeef
+  description: New feature or request
+
+- name: documentation
+  color: 0075ca
+  description: Improvements or additions to documentation
+
+- name: question
+  color: d876e3
+  description: Further information is requested
+
+# Priority labels
+- name: priority:critical
+  color: b60205
+  description: Critical priority - immediate attention required
+
+- name: priority:high
+  color: d93f0b
+  description: High priority
+
+- name: priority:medium
+  color: fbca04
+  description: Medium priority
+
+- name: priority:low
+  color: 0e8a16
+  description: Low priority
+
+# Status labels
+- name: triage
+  color: ededed
+  description: Needs initial triage
+
+- name: help-wanted
+  color: 008672
+  description: Extra attention is needed
+
+- name: good-first-issue
+  color: 7057ff
+  description: Good for newcomers
+
+- name: wontfix
+  color: ffffff
+  description: This will not be worked on
+
+- name: duplicate
+  color: cfd3d7
+  description: This issue or pull request already exists
+
+- name: stale
+  color: fef2c0
+  description: Inactive issue or PR
+
+# Component labels
+- name: component:map
+  color: 1d76db
+  description: Interactive map component
+
+- name: component:api
+  color: 5319e7
+  description: API and backend
+
+- name: component:analytics
+  color: f9d0c4
+  description: Python analytics scripts
+
+- name: component:docs
+  color: 0366d6
+  description: Documentation
+
+# Domain labels
+- name: data
+  color: bfd4f2
+  description: Data sources or data processing
+
+- name: research
+  color: c2e0c6
+  description: Research methodology or findings
+
+- name: community
+  color: fef2c0
+  description: Community stories or feedback
+
+- name: accessibility
+  color: 84b6eb
+  description: Accessibility improvements
+
+# Dependency labels
+- name: dependencies
+  color: 0366d6
+  description: Pull requests that update a dependency file
+
+- name: javascript
+  color: f1e05a
+  description: JavaScript/TypeScript related
+
+- name: python
+  color: 3572a5
+  description: Python related
+
+- name: go
+  color: 00add8
+  description: Go related
+
+- name: ci
+  color: 555555
+  description: CI/CD related
+
+- name: docker
+  color: 0db7ed
+  description: Docker related
+
+# Security
+- name: security
+  color: d73a4a
+  description: Security-related issue
+
+# Special
+- name: pinned
+  color: 006b75
+  description: Pinned issue - will not go stale

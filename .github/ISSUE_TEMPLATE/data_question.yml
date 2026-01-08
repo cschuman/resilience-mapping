@@ -1,0 +1,46 @@
+name: Data Question
+description: Ask about the data, methodology, or findings
+title: "[Data]: "
+labels: ["question", "data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have questions about the data or methodology? We're happy to help clarify!
+
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Question Topic
+      options:
+        - Data sources (CDC PLACES, USDA FARA)
+        - Methodology / Statistical approach
+        - Interpreting results
+        - Specific community/tract data
+        - Data access / API
+        - Replication / Reproducing analysis
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What would you like to know?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Any background that might help us answer better (your research area, how you're using the data, etc.)
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have reviewed the documentation in the /docs folder
+        - label: I have checked existing issues/discussions for similar questions

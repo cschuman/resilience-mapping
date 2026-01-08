@@ -1,0 +1,21 @@
+# Code Owners for Health Resilience Mapping
+# These owners will be requested for review when someone opens a pull request
+
+# Default owner for everything
+* @cschuman
+
+# Web application
+/app/web/ @cschuman
+
+# Analytics and data processing
+/app/analytics/ @cschuman
+
+# Documentation
+/docs/ @cschuman
+
+# Infrastructure and CI/CD
+/.github/ @cschuman
+/Dockerfile @cschuman
+
+# Data files (careful review needed)
+/data/ @cschuman

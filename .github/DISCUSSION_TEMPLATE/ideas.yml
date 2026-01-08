@@ -1,0 +1,31 @@
+title: "[Idea]: "
+labels:
+  - idea
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share your ideas for improving the Health Resilience Mapping project!
+  - type: textarea
+    id: idea
+    attributes:
+      label: What's your idea?
+      description: Describe your idea for a new feature, analysis approach, or improvement.
+    validations:
+      required: true
+  - type: textarea
+    id: benefit
+    attributes:
+      label: How would this benefit the research or community?
+      description: Explain the potential impact of your idea.
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - New analysis/metric
+        - Visualization improvement
+        - Data source integration
+        - User experience
+        - Research direction
+        - Other

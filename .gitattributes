@@ -1,1 +1,67 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Source code
+*.js text eol=lf
+*.ts text eol=lf
+*.svelte text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.go text eol=lf
+*.py text eol=lf
+*.sql text eol=lf
+*.sh text eol=lf
+
+# Config files
+.gitignore text eol=lf
+.gitattributes text eol=lf
+.editorconfig text eol=lf
+Dockerfile text eol=lf
+Makefile text eol=lf
+
+# Data files - treat as binary to prevent corruption
+*.csv binary
+*.xlsx binary
+*.zip binary
+
+# GeoJSON - can be large, treat as binary
+*.geojson binary
+
+# Shapefiles - binary
+*.shp binary
+*.shx binary
+*.dbf binary
+*.prj binary
+*.cpg binary
+*.xml binary
+
+# Images - binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg text
+
+# Fonts - binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+
+# Lock files - generated, don't diff
+package-lock.json -diff
+pnpm-lock.yaml -diff
+go.sum -diff
+
+# Git LFS
 *.pmtiles filter=lfs diff=lfs merge=lfs -text
+
+# Linguist overrides for GitHub language stats
+*.svelte linguist-language=Svelte
+docs/** linguist-documentation
+data/** linguist-vendored

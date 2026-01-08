@@ -1,0 +1,65 @@
+name: Community Story
+description: Share insights about a resilient community or research findings
+title: "[Community]: "
+labels: ["community", "research"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We'd love to hear stories about resilient communities! Sharing qualitative insights helps us understand what makes these communities thrive.
+
+  - type: input
+    id: location
+    attributes:
+      label: Community/Location
+      description: Which community or census tract is this about?
+      placeholder: "e.g., Warren County, KY or Tract 21227010400"
+
+  - type: textarea
+    id: story
+    attributes:
+      label: What have you observed or learned?
+      description: Share insights about what makes this community resilient, local programs, community initiatives, or research findings.
+      placeholder: Tell us about this community...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: source
+    attributes:
+      label: How did you learn this?
+      options:
+        - I live/work in this community
+        - Research or academic study
+        - News/media coverage
+        - Site visit or fieldwork
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: factors
+    attributes:
+      label: Potential Protective Factors
+      description: What factors do you think contribute to resilience?
+      placeholder: |
+        - Community gardens
+        - Faith-based food programs
+        - Strong social networks
+        - etc.
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References or Resources
+      description: Links to articles, studies, or resources about this community
+
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Sharing Consent
+      options:
+        - label: This information is appropriate to share publicly
+          required: true
+        - label: I consent to this information being used to improve the research
+          required: true

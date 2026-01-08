@@ -1,0 +1,25 @@
+title: "[Showcase]: "
+labels:
+  - showcase
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share how you're using Health Resilience Mapping in your research or work!
+  - type: textarea
+    id: project
+    attributes:
+      label: What are you working on?
+      description: Describe your project or research that uses this data/platform.
+    validations:
+      required: true
+  - type: textarea
+    id: findings
+    attributes:
+      label: Interesting findings
+      description: Share any interesting findings or insights from your work.
+  - type: textarea
+    id: links
+    attributes:
+      label: Links & resources
+      description: Links to your paper, article, visualization, or other resources.

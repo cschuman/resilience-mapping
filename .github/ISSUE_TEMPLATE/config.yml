@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discussions
+    url: https://github.com/cschuman/resilience-mapping/discussions
+    about: Ask questions, share ideas, or connect with other researchers
+  - name: Documentation
+    url: https://github.com/cschuman/resilience-mapping/tree/main/docs
+    about: Check out the research documentation and methodology
